@@ -713,7 +713,9 @@ kbd, .kbd {
 /* Version branch label below the logo */
 .wy-side-nav-search > div.version {
     color: var(--navbar-level-3-color);
-    opacity: 1;
+    opacity: 0;
+	margin-top: -20px;
+	margin-bottom: 0px;
 }
 
 /* First level of navigation items */
