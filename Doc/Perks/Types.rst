@@ -1111,7 +1111,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 ::
 
   "PerkType": ["NoAnus", "NoMouth"],
-  "EffectPower": ["0"],
+  "EffectPower": ["0",      "0"],
 
 .. _MonsterDamageBoostPerkTypes:
 
