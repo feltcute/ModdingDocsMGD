@@ -1,8 +1,8 @@
 /**
- * Lovingly borrowed from the Godot custom.css https://github.com/godotengine/godot-docs
- * Colors are to conform with the wiki and game. The goal is to be easy on the eyes, not blinding in pinks and purples.
- * As such, wiki is prefered priority for main background, and the game for highlights, intentionally eye-catching things, and flare.
- * A color that's a thing in the game that I don't see use for yet but I assume will be useful: #855F75
+ * Lovingly borrowed from the Godot custom.css https://github.com/godotengine/godot-docs - fcmcl
+ * Colors are to conform with the wiki and game. The goal is to be easy on the eyes, not blinding in pinks and purples. - fcmcl
+ * As such, wiki is prefered priority for main background, and the game for highlights, intentionally eye-catching things, and flare. - fcmcl
+ * A color that's a thing in the game that I don't see use for yet but I assume will be useful: #855F75 - fcmcl
  */
 
  /* Default theme colors */
@@ -10,7 +10,6 @@
     --body-color: rgba(255, 255, 255, 0.85);
     --content-wrap-background-color: #0C0C0C;
     --content-background-color: #111111;
-    /* Decrease the logo opacity when using the dark theme to be less distracting */
     --logo-opacity: 1;
     --navbar-background-color: #370322;
     --navbar-background-color-hover: #DF407D;
@@ -711,6 +710,7 @@ kbd, .kbd {
 }
 
 /* Version branch label below the logo */
+/* Disabled its visibility as it has no purpose with no branches - fcmcl */
 .wy-side-nav-search > div.version {
     color: var(--navbar-level-3-color);
     opacity: 0;
