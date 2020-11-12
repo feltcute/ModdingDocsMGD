@@ -42,8 +42,8 @@
 
     --search-input-background-color: var(--content-background-color);
     --search-match-color: var(--link-color);
-    --search-match-background-color: var(--content-wrap-background-color);
-    --search-active-color: #FFFFFF;
+    --search-match-background-color: #aaaaaa;
+    --search-active-color: var(--content-wrap-background-color);
     --search-credits-background-color: var(--content-wrap-background-color);
     --search-credits-color: #aaaaaa;
     --search-credits-link-color: var(--navbar-scrollbar-color);
