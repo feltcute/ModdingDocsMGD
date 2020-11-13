@@ -215,6 +215,38 @@ These take place after an action or condition is performed or met by either the 
     ]
   },
 
+**onPlayerEdge**
+"""""""""""""""""
+::
+
+  {
+  "lineTrigger": "onPlayerEdge",
+  "move": ["Thrust"],
+  "theText":[
+    "Displays when the player edges.",
+    "The "move": key can optionally be given a specific skill to check for.",
+    "It can also take stances, or be left blank to generally trigger."
+  ]
+  },
+
+See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
+
+**onEdge**
+"""""""""""
+::
+
+  {
+  "lineTrigger": "onEdge",
+  "move": ["Thrust"],
+  "theText":[
+    "Displays when the monster edges.",
+    "The "move": key can optionally be given a specific skill to check for.",
+    "It can also take stances, or be left blank to generally trigger."
+  ]
+  },
+
+See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
+
 .. _OnPlayerOrgasm:
 
 **OnPlayerOrgasm**
