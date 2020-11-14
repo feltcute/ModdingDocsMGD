@@ -237,7 +237,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
 
   {
   "lineTrigger": "onEdge",
-  "move": ["Thrust"],
+  "move": [""],
   "theText":[
     "Displays when the monster edges.",
     "The "move": key can optionally be given a specific skill to check for.",

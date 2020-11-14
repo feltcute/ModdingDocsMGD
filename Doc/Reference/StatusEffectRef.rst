@@ -31,9 +31,9 @@ The following are inherently and technically, status effects, though aren't comm
 
 **Hard Crowd Control**
 -----------------------
-* ``"Hypnotized"`` (Potency 11 of ``"Trance"``. Persistent)
+* ``"Hypnotized"`` (Equivalent to potency 11 of ``"Trance"``. Persistent)
 * ``"Paralysis"`` (Potency ranges from 1-10. Persistent)
-* ``"Paralyzed"`` (Potency 10 of ``"Paralysis"``. Persistent)
+* ``"Paralyzed"`` (Equivalent to potency 10 of ``"Paralysis"``. Persistent)
 * ``"Sleep"`` (Non-persistent)
 * ``"Stun"`` (Non-persistent)
 * ``"Trance"`` (Potency ranges from 1-11. Persistent)

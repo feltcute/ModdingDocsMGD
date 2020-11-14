@@ -20,7 +20,6 @@ Moves forward time. Note there are 6 chunks in a single day.
   "AdvanceTime", "1"
 
 ``"DelayNotifications"`` can be put after, to delay perk decay notifications until the next time jump, so you don't interrupt a scene.
-Note ``"RestPlayer"`` and ``"SleepPlayer"`` already include this functionality.
 
 **IfDelayingNotifications**
 ----------------------------
