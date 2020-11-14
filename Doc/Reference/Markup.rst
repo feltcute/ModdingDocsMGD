@@ -55,6 +55,7 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 ``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it is called is removed.
 
 ``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :ref:`Monster Creation`.
+It can also be used as the equivalent of a blank string for functions done via ``|f|``
 
 .. _Text Styling Markup:
 

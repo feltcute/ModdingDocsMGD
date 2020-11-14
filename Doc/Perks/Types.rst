@@ -703,7 +703,7 @@ Alters the delay between stun status effects. Positive values increase the delay
   "EffectPower": ["-50"],
 
 
-Alters the flat amount of energy lost per turn upon being afflicted by drowsy. Positive values increase drain energy, negative values reduce drained energy.
+Alters the flat amount of energy lost per turn upon being afflicted by Sleep. Positive values increase drain energy, negative values reduce drained energy.
 
 .. _ParalysisAmp:
 
