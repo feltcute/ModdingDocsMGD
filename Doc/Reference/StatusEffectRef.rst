@@ -26,7 +26,7 @@ The following are inherently and technically, status effects, though aren't comm
 -----------------------
 * ``"Aphrodisiac"`` (Potency is variable. Persistent)
 * ``"Charm"`` (Non-persistent)
-* ``"Drowzy"`` (``Sleep`` with a duration above 0, specifically for internal use. Non-persistent)
+* ``"Drowzy"`` (``Sleep`` with duration above 0, for internal use. Non-persistent)
 * ``"Restrain"`` (Non-persistent)
 
 **Hard Crowd Control**
@@ -34,7 +34,7 @@ The following are inherently and technically, status effects, though aren't comm
 * ``"Hypnotized"`` (Equivalent to potency 11 of ``"Trance"``. Persistent)
 * ``"Paralysis"`` (Potency ranges from 1-10. Persistent)
 * ``"Paralyzed"`` (Equivalent to potency 10 of ``"Paralysis"``. Persistent)
-* ``"Sleep"`` (Potency is variable, status is effective during actual player sleep. Non-persistent)
+* ``"Sleep"`` (Potency is variable, status is effective during actual sleep. Non-persistent)
 * ``"Stun"`` (Non-persistent)
 * ``"Trance"`` (Potency ranges from 1-11. Persistent)
 
