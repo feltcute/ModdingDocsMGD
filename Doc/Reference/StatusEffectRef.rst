@@ -26,7 +26,7 @@ The following are inherently and technically, status effects, though aren't comm
 -----------------------
 * ``"Aphrodisiac"`` (Potency is variable. Persistent)
 * ``"Charm"`` (Non-persistent)
-* ``"Drowzy"`` (``Sleep`` with duration above 0, for internal use. Non-persistent)
+* ``"Drowsy"`` (``"Sleep"`` with duration above 0, for internal use. Non-persistent)
 * ``"Restrain"`` (Non-persistent)
 
 **Hard Crowd Control**

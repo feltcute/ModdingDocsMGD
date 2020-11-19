@@ -131,7 +131,7 @@ You can combine it with text styling markup as you please.
 
   "Oh, I absolutely {Pink}LOVE THIS{ColorEnd}! {Pink}♥{ColorEnd}"
 
-``{SetTextColor}{Done}``` can be used for custom text color.
+``{SetTextColor}{Done}`` can be used for custom text color.
 Simply specify a `hex color code <https://www.color-hex.com/>`_ between ``{SetTextColor}`` and ``{Done}``.
 ``{ColorEnd}`` closes ``{SetTextColor}`` as well.
 
@@ -141,7 +141,7 @@ Simply specify a `hex color code <https://www.color-hex.com/>`_ between ``{SetTe
 
 ``{UseSetColor}`` is stored universally up to seven times for every use of ``{SetTextColor}`` in a given string.
 
-As an example, if you use``{SetTextColor}`` four times in a string, it will map the fourth use of ``{SetTextColor}`` to ``{UseSetColor4}``. Till
+As an example, if you use ``{SetTextColor}`` four times in a string, it will map the fourth use of ``{SetTextColor}`` to ``{UseSetColor4}``. Till
 another string uses ``{SetTextColor}`` four times, ``{UseSetColor4}`` will remain that color henceforth.
 
 .. code-block:: javascript
@@ -164,6 +164,9 @@ Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 ``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`
 
 ``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`
+
+``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
+To be used with :ref:`onPlayerOrgasm` and :ref:`onOrgasm` lineTriggers utilizing events respectively.
 
 .. _Damage Text Markup:
 

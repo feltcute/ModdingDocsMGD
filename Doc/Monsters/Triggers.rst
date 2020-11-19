@@ -269,6 +269,8 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
     ]
   },
 
+.. _onOrgasm:
+
 **onOrgasm**
 """""""""""""
 ::

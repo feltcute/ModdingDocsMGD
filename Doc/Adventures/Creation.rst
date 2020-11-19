@@ -61,9 +61,9 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
   "Deck": [
     "Event", "Name of an event",
-    "Monster", "Elf", "EndEncounter",
+    "Monster", "Elf", "EndLoop",
     "BreakSpot",
-    "Monster", "Blue Slime", "Elf", "EndEncounter",
+    "Monster", "Blue Slime", "Elf", "EndLoop",
     "RandomTreasure",
     "RandomEvent"
   ],
@@ -77,7 +77,7 @@ Below are examples of strings that can be put into the array:
   :widths: 1 5
 
   * - ``"Monster",``
-    - Introduces a monster encounter. Provide a string of the IDname of each included monster, close the list with "EndCounter".
+    - Introduces a monster encounter. Provide a string of the IDname of each included monster, close the list with ``"EndLoop"``.
   * - ``"RandomEvent",``
     - Puts a random event from the **RandomEvents** key below.
   * - ``"RandomMonsters",``
@@ -121,15 +121,15 @@ Requires use of the ``"MonsterGroups":``, found below.
 
   "MonsterGroups": [
     {
-    "Monsters": ["Blue Slime", "Elf"]
+    "Group": ["Blue Slime", "Elf"]
     },
 
     {
-    "Monsters": ["Lizard Girl"]
+    "Group": ["Lizard Girl"]
     }
   ],
 
-Decides the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Monsters":`` key will represent a different possible formation.
+Decides the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Group":`` key will represent a different possible formation.
 You can intermix different monsters via the arrays, even if the monster isn't present in ``"RandomMonsters":``.
 Repeat an object with a certain formation multiple times if you wish to make it more likely.
 Works the same as a :doc:`Location's </Doc/Locations/Creation>` ``"MonsterGroups":``.

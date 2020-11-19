@@ -104,7 +104,7 @@ You currently cannot replace existing scenes by copying their conditions and sce
 -------------------
 ::
 
-  combatDialogue": [
+  "combatDialogue": [
     {
     "lineTrigger": "UsesMove",
     "move": "Blowjob",
@@ -121,9 +121,10 @@ You currently cannot replace existing scenes by copying their conditions and sce
     }
   ],
 
-Appends to the existing array of objects.
-
-You can replace objects by copying their exact requirements. That means it will replace ``"theText":`` key data, not append to it.
+Appends to the existing array of objects, if there are no other objects that match it in exact requirements.
+Otherwise, if it matches the ``"move":`` and ``"lineTrigger":`` keys in values, it will replace ``"theText":`` key data, not append to it.
+Remember that ``"move":`` arrays is an *or* parameter,
+so any skills or stances listed across multiple objects for the same type of lineTrigger will add to the same pool.
 
 **pictures**
 -------------
