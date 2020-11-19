@@ -34,7 +34,7 @@ Alternatively, to get their current amount:
 --------------------------
 Above 100 is more sensitive, below 100 is less sensitive.
 
-* ``"Sex"``
+* ``"Sex"`` (Counts as the player's Cock sensitivity and the Monster's Pussy sensitivity respectively)
 * ``"Ass"``
 * ``"Breasts"`` (Counts as the player's Nipple sensitivity internally)
 * ``"Mouth"``
