@@ -16,7 +16,7 @@ Thankfully, most text editors gives you a character count when highlighting a se
 However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying length, it is generally impossible to tell if it will
 actually fit till you test it in-game. This is one of the many reasons play-testing your work is recommended.
 
-Lastly, if you know Renpy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
+Lastly, if you know RenPy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
 
 .. _Dialogue Text Markup:
 
