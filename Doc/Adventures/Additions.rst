@@ -40,7 +40,7 @@ Required so you can tell the game that you're wishing to make an addition. You c
     "Event", "Name of an event",
     "RandomTreasure",
     "BreakSpot",
-    "Monster", "Imp", "EndEncounter",
+    "Monster", "Imp", "EndLoop",
     "RandomEvent"
   ],
 
@@ -66,7 +66,7 @@ As such, you are only increasing the selection of events, not replacing, unlike 
   "RandomMonsters": ["Elf"],
   "MonsterGroups": [
     {
-    "Monsters": ["Elf", "Elf"]
+    "Group": ["Elf", "Elf"]
     }
   ],
 
