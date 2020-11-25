@@ -60,9 +60,13 @@ Changes how the game calls and utilizes the event. The possible choices for the 
 
 * ``"StepTaken"`` will trigger when players transition between events or encounters during adventures. Also useful for triggering player status effects. See *Events/TimePassing/StepTaken.json* as an example.
 
-* ``"EndOfTurn"`` will trigger specifically and only for the player in all combat events. See *Events/CombatEvents/PlayerEndOfTurn.json* as an example.
+* ``"EndOfTurn"`` will trigger specifically at the end of turn, primarily for player functions as they trigger every turn regardless of who's fighting. See *Events/CombatEvents/PlayerEndOfTurn.json* as an example.
 
 * ``"EndOfCombat"`` will trigger at the end of combat. For specific player skills such as Pin, see *Events/CombatEvents/Player/PlayerEndOfCombat.json* as an example.
+
+* ``"StartOfTurn"`` will trigger specifically at the start of turn, primarily for player functions as they trigger every turn regardless of who's fighting. See *Events/CombatEvents/PlayerStartOfTurn.json* as a blank example.
+
+* ``"StartOfCombat"`` will trigger at the start of every combat, generally for player combat event use. See *Events/CombatEvents/Player/PlayerStartOfCombat.json* as a blank example, or the EndOfCombat example for similar usage.
 
 * ``"PlayerOrgasm"`` will trigger every time the player orgasms, including out of combat. See *Events/CombatEvents/OrgasmEvents.json* as an example.
 
