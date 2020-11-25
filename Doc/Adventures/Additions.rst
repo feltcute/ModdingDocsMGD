@@ -40,7 +40,7 @@ Required so you can tell the game that you're wishing to make an addition. You c
     "Event", "Name of an event",
     "RandomTreasure",
     "BreakSpot",
-    "Monster", "Imp", "EndEncounter",
+    "Monster", "Imp", "EndLoop",
     "RandomEvent"
   ],
 
@@ -66,12 +66,12 @@ As such, you are only increasing the selection of events, not replacing, unlike 
   "RandomMonsters": ["Elf"],
   "MonsterGroups": [
     {
-    "Monsters": ["Elf", "Elf"]
+    "Group": ["Elf", "Elf"]
     }
   ],
 
 Using these keys in an addition adds to the existing arrays, so the strings provided in the original keys will still be present, and will not be overridden.
-As such, you are only increasing the selection of monster and monster groups, not replacing.
+As such, you are only increasing the selection of monster groups, not replacing.
 
 These keys are required, but the arrays can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
 
