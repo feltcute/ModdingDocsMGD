@@ -49,7 +49,7 @@ While the key must still be included, the array can be left empty if you do not 
 
 A more complex and optional key that checks for progress or a choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-You need to provide a value for ``"Progress":`` or ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
+You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
 
 If in use, you cannot exclude unused keys in the object, they must all be present.
