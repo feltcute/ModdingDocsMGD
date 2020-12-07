@@ -35,10 +35,10 @@ Required so the game knows you wish to make an addition, via providing the strin
 
   "MonsterGroups": [
     {
-    "Monsters": ["Blue Slime", "Blue Slime", "Blue Slime", "Blue Slime"]
+    "Group": ["Blue Slime", "Blue Slime", "Blue Slime", "Blue Slime"]
     },
     {
-    "Monsters": ["Demon Queen", "Blue Slime"]
+    "Group": ["Demon Queen", "Blue Slime"]
     }
   ],
 

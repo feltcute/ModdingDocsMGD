@@ -9,6 +9,7 @@
 
 **SetArousalToXUnlessHigherThanX**
 -----------------------------------
+
 Sets the player arousal to the first specified numerical value, unless the current arousal is higher than the specified value.
 This is mostly for cinematic purposes.
 
@@ -18,6 +19,7 @@ This is mostly for cinematic purposes.
 
 **SetArousalToXUnlessHigherThanXThenAddY**
 -------------------------------------------
+
 Same as the above, but if the current arousal is higher than the specified value, it will add the second given value instead.
 Also mostly for cinematic purposes.
 
@@ -27,10 +29,12 @@ Also mostly for cinematic purposes.
 
 **SetArousalToMax**
 --------------------
+
 ``"SetArousalToMax"`` sets the player's arousal to max. The player is not notified.
 
 **ChangeArousal & ChangeArousalQuietly**
 -----------------------------------------
+
 Will flatly alter the player's current arousal with the specified number. Can be negative.
 
 ::
@@ -41,6 +45,7 @@ Will flatly alter the player's current arousal with the specified number. Can be
 
 **ChangeEnergy & ChangeEnergyQuietly**
 ---------------------------------------
+
 Same as the above, but for the players current energy. Note negative values subtract.
 
 ::
@@ -51,6 +56,7 @@ Same as the above, but for the players current energy. Note negative values subt
 
 **ChangeArousalByPercent & ChangeEnergyByPercent**
 ---------------------------------------------------
+
 Changes players current amount of their arousal or energy respectively by a percent based on their maximum of the chosen stat. Can take negative values.
 It does not notify the player.
 
@@ -61,6 +67,7 @@ It does not notify the player.
 
 **SetSpirit**
 --------------
+
 Set the players current spirit to a number. It will be rounded to the maximum or 0 if the given number exceeds or is below respectively.
 
 ::
@@ -69,6 +76,7 @@ Set the players current spirit to a number. It will be rounded to the maximum or
 
 **ChangeSpirit & ChangeSpiritQuietly**
 ---------------------------------------
+
 Changes the players current spirit by the given amount. Can take a negative value.
 It will be rounded to the maximum or 0 if the given number exceeds or is below respectively.
 
@@ -86,6 +94,7 @@ It will be rounded to the maximum or 0 if the given number exceeds or is below r
 
 **DamagePlayerFromMonster**
 ----------------------------
+
 Deal randomized damage to the player via a skill and monster, the monster chosen is used as a stat reference.
 The skill chosen will not apply status effects. Displaying dialogue has to be done manually, it will not take dialogue from the skill.
 If you want to display the damage number from the skill, use {DamageToPlayer} in the following string after completing the function.
@@ -96,8 +105,18 @@ If you want to display the damage number from the skill, use {DamageToPlayer} in
 
 Check :ref:`HitPlayerWith` for a combat only equivalent.
 
+**ChangePerkDuration**
+-----------------------
+
+Changes the duration of the given perk the player possesses by the set amount. ``"6"`` would be a full day. See :ref:`TimeDuration` for reference.
+
+::
+
+    "ChangePerkDuration", "Rut", "9"
+
 **ApplyStatusEffect**
 ----------------------
+
 Applies a status effect to the player, specifically from skills. If used while in combat, it will utilize the focused monster's stats during application.
 It cannot miss.
 
@@ -109,6 +128,7 @@ It's recommended to use skills made specifically for this when out of combat, as
 
 **RemoveStatusEffect**
 -----------------------
+
 Removes the specified status effect, not the skill used to apply it from the above function.
 
 ::
@@ -119,20 +139,24 @@ You can choose from any within :ref:`Status Effects`.
 
 **ClearNonPersistentStatusEffects**
 ------------------------------------
+
 ``"ClearNonPersistentStatusEffects"`` clears non-persistent status effects, and perks with the perk type :ref:`NonPersistentEffect`.
 
 For clarity on persistent and non-persistent status effects, see :ref:`Status Effects`.
 
 **ClearPlayerStatusEffects**
 -----------------------------
+
 ``"ClearPlayerStatusEffects"`` clears the player of all currently applied status effects.
 
 **RefreshPlayer**
 ------------------
+
 ``"RefreshPlayer"`` fully heals the player and removes all currently applied status effects.
 
 **HoldCurrentVirility**
 ------------------------
+
 Using ``"HoldCurrentVirility"`` grabs the current virility of the player and uses it for all checks until ``"HoldCurrentVirilityEnd"`` is called.
 Persists across events and scenes.
 
@@ -144,6 +168,7 @@ Persists across events and scenes.
 
 **PlayerOrgasm**
 -----------------
+
 Forces the player to cum, resets arousal to zero, then lowers spirit by set amount. Displays no text/feedback.
 
 ::
@@ -152,5 +177,6 @@ Forces the player to cum, resets arousal to zero, then lowers spirit by set amou
 
 **PlayerOrgasmNoSpiritLoss**
 -----------------------------
+
 ``"PlayerOrgasmNoSpiritLoss"`` causes the player to orgasm, reseting current arousal, but they don't lose spirit.
 Used primarily to trigger relevant status effects and events where losing spirit is not desired from a design perspective, such as victory scenes.
