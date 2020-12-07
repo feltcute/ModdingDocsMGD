@@ -287,6 +287,38 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 
 The camelCase is known, and will be addressed at some point in the future during a breaking patch.
 
+.. _PostOrgasm:
+
+**PostOrgasm**
+"""""""""""""
+::
+
+  {
+  "lineTrigger": "PostOrgasm",
+  "move": [""],
+  "theText":[
+    "Displays after the monster orgasm line. This allows for some combat functions that may otherwise break up the orgasm line into janky parts.",
+    "The "move": key can optionally be given a specific skill to check for.",
+    "It can also take stances, or be left blank to generally trigger."
+    ]
+  },
+
+.. _OnLoss:
+
+**OnLoss**
+"""""""""""""
+::
+
+  {
+  "lineTrigger": "OnLoss",
+  "move": [""],
+  "theText":[
+    "Displays after the monster is defeated and taken out of the encounter. This has many uses, but take care not to call a function that would specify the original moster specifically, or it will crash the game.",
+    "The "move": key can optionally be given a specific skill to check for.",
+    "It can also take stances, or be left blank to generally trigger."
+    ]
+  },
+
 .. _Counters:
 
 **Counters**
