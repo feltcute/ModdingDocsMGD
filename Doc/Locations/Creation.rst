@@ -152,16 +152,16 @@ Set the choice of monsters that can be selected for exploration via the Grimoire
 
   "MonsterGroups": [
     {
-    "Monsters": ["Blue Slime", "Elf"]
+    "Group": ["Blue Slime", "Elf"]
     },
 
     {
-    "Monsters": ["Lizard Girl"]
+    "Group": ["Lizard Girl"]
     }
   ],
 
-Decides the possible formations monsters in exploration via the Grimoire can take. Each object with a ``"Monsters":`` key will represent a different possible formation.
-You can intermix different monsters via the arrays, even if the monster isn't present in the base ``"Monsters":`` key from the above section.
+Decides the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Group":`` key will represent a different possible formation.
+You can intermix different monsters via the arrays, even if the monster isn't present in ``"RandomMonsters":``.
 Repeat an object with a certain formation multiple times if you wish to make it more likely.
 Works the same as an :doc:`Adventure's </Doc/Adventures/Creation>` ``"MonsterGroups":``.
 

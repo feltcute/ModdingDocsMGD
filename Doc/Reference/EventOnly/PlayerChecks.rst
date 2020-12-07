@@ -13,13 +13,14 @@ Checks the following stat against the given number, if the stat is equal or high
 
 ::
 
-  "IfStatEqualsOrMore", "Power", "5", "SceneNameHere"
+  "StatEqualsOrMore", "Power", "5", "SceneNameHere"
 
 **HasErosLessThan**
 --------------------
 If player has less eros than the given amount, it jumps to the scene, else it continues.
 
 ::
+
   "HasErosLessThan", "100", "SceneNameHere"
 
 **VirilityEqualsOrGreater**

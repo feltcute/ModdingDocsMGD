@@ -45,9 +45,10 @@ Using ``"GiveSkill"`` gives player a skill if they don’t have it already.
 
 An example use case would be to remove skills at the end of combat you gave to the player at the start of combat. Say, a gimmick skill specific to the fight.
 
-**GiveSkillQuietly & RemoveSkillQuietly**
-------------------------------------------
-``"GiveSkillQuietly"`` & ``"RemoveSkillQuietly"`` are, as expected, quiet variants of the above functions that won't notify the player.
+**GiveSkillQuietly & RemoveSkillFromPlayerQuietly**
+----------------------------------------------------
+
+``"GiveSkillQuietly"`` & ``"RemoveSkillFromPlayerQuietly"`` are, as expected, quiet variants of the above functions that won't notify the player.
 
 
 **GivePerk & RemovePerk**

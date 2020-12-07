@@ -17,11 +17,11 @@ Gets an event and changes its progress based on the given value. Can be negative
 
 **GetEventAndSetProgress**
 ---------------------------
-Gets an event and sets its progress to on the given value. Can be negative.
+Gets an event and sets its progress to the given value. Can be negative.
 
 ::
 
-  "GetEventAndChangeProgress", "Mysterious Inn", "10"
+  "GetEventAndSetProgress", "Mysterious Inn", "10"
 
 **GetAnEventsProgressThenIfEquals**
 ------------------------------------
