@@ -39,8 +39,8 @@ you will want to go to the options menu and update your save to apply the change
 ----------------------------------------
 
 You can check your event’s scene jumping validity by turning on **LoadValidator**.
-If you want to turn it on, you'll need to go to line 9 of ``game/gamecode/LoadDatabase.rpy`` and change the value from ``False`` to ``True``.
-Then, on game start up, a .txt file will be printed out into the game/ folder, titled ``validator_log.txt``.
+If you want to turn it on, you'll need to go to line 9 of *game/gamecode/LoadDatabase.rpy* and change the value from ``False`` to ``True``.
+Then, on game start up, a .txt file will be printed out into the *game/* folder, titled ``validator_log.txt``.
 
 **None of these answered my question!**
 ----------------------------------------
