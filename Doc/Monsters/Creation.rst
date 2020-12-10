@@ -4,6 +4,7 @@
 
 **Monster Creation**
 =====================
+
 Breaks down the keys and strings used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
 
 Go to */Json/Monsters/*, and then see the .json files present for examples, and **_BlankMonster.json** for a template.
@@ -14,6 +15,7 @@ Assume all keys are required, unless stated otherwise.
 
 **name & IDname**
 ------------------
+
 ::
 
   "name": "monster name",
@@ -28,6 +30,7 @@ The internal name of the monster for use in json files. You will be working with
 
 **species**
 ------------
+
 ::
 
   "species": "Monster species",
@@ -38,6 +41,7 @@ When making a monster, you can refer to existing monster .jsons to see what thei
 
 **gender**
 -----------
+
 ::
 
   "gender": "female",
@@ -46,6 +50,7 @@ The gender of the monster. It primarily exists at the moment to distinguish norm
 
 **description & encyclopedia**
 -------------------------------
+
 ::
 
   "description": "Monster description goes here.\n\nNote how the markup was called twice, and that space wasn't used.",
@@ -66,6 +71,7 @@ The string can be left blank if you don't intend for the Monster to be available
 
 **tags**
 ---------
+
 ::
 
   "tags": "none",
@@ -74,6 +80,7 @@ Like ``"species":``, it currently has no functionality, but is best included in 
 
 **generic**
 ------------
+
 ::
 
   "generic": "True",
@@ -85,6 +92,7 @@ If they are generic, provide a value of ``"True"``. If they are unique, a value 
 
 **requires & requiresEvent**
 -----------------------------
+
 .. code-block:: javascript
 
   "requires": ["Vandal Note"],
@@ -111,6 +119,7 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
 **skillList**
 --------------
+
 ::
 
   "skillList": ["Caress", "Kiss", "Kiss"],
@@ -124,6 +133,7 @@ Provide a blank string if you don't wish to use the key.
 
 **perks**
 ----------
+
 ::
 
   "perks": ["Semen Eater", "Semen Eater", "Monster Pacing"],
@@ -137,6 +147,7 @@ Provide a blank string if you don't wish to use the key.
 
 **stats**
 ----------
+
 ::
 
   "stats": {
@@ -160,6 +171,7 @@ The stats of the monster in combat. While otherwise straightforward, there are t
 
 **Fetishes**
 -------------
+
 ::
 
   "Fetishes": ["Cock|/|50", "Anal|/|25"],
@@ -173,6 +185,7 @@ Provide a blank string if you don't wish to use the key.
 
 **BodySensitivity**
 --------------------
+
 ::
 
   "BodySensitivity": {
@@ -191,6 +204,7 @@ The sensitivities of the monster. Going above 100 makes them more sensitive, goi
 
 **resistancesStatusEffects**
 -----------------------------
+
 ::
 
   "resistancesStatusEffects": {
@@ -208,6 +222,7 @@ The status effect resistances of the monster. A positive value increases their r
 
 **moneyDropped & itemDropList**
 -------------------------------
+
 ::
 
   "moneyDropped": "25",
@@ -235,6 +250,7 @@ Make a new object for every additional item the monster can drop. Repeating item
 
 **lossScenes & victoryScenes**
 -------------------------------
+
 ::
 
   "lossScenes": [
@@ -269,6 +285,7 @@ Each object represents a scene that will play on loss. Each must be individually
 
 **Requirements**
 """""""""""""""""
+
 You can optionally provide parameters which allow certain scenes to take priority over other scenes depending on how the encounter ended.
 In order of priority, top to bottom...
 
@@ -306,6 +323,7 @@ Functions exactly the same as ``"lossScenes":``, but for when the player wins.
 
 **combatDialogue**
 -------------------
+
 ::
 
   "combatDialogue": [
@@ -334,13 +352,17 @@ It extends well beyond just dialogue responses and reactions during combat.
 ``"lineTrigger":`` decides what the trigger is checking for. **For a list of all possible triggers and how they work**, see :ref:`lineTriggers`.
 
 ``"move":`` a conditional parameter, most commonly used to represent a skill that was used.
-**Can be an array to compact responses into one object.**
+**Can be an array to compact responses into one object, as it is an** *or* **parameter, not an** *and***.**
 Compacting where possible is recommended as it does help reduce game load times.
 
 ``"theText":`` contains a list of all possible results of the trigger. It is random, but you can repeat strings to make some more common over others.
 
+Note all matching ``"lineTrigger":`` and ``"move":`` values will ultimately go into the same pool the game randomly pulls from, as the game takes every
+trigger in combatDialogue and translates the values from ``"theText:"`` into the same pool.
+
 **pictures**
 -------------
+
 ::
 
   "pictures": [

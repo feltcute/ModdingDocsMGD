@@ -24,9 +24,7 @@ Clears the current music and starts the given queue of music, playing in the ord
 
   "ChangeBGM-List",
   "music/Battle/Shiva_Dance.mp3", "music/Battle/Comet_Highway.mp3", "music/Battle/Goodbye.mp3",
-  "Endloop"
-
-.. This will need changed to EndLoop upon being fixed.
+  "EndLoop"
 
 .. _ChangeBGM-OverideCombatMusic:
 
