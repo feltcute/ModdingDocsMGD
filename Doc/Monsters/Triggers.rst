@@ -126,7 +126,7 @@ These take place after an action or condition is performed or met by either the 
   "theText":[
     "Text is displayed after successfully hitting a monster with a skill.",
     "Only shown after they are hit.",
-    "Note this can include skills used by items, or the item name itself."
+    "Note this can include skills used by items, or the item name itself.",
     "Biased towards Sex skills, but will use HitWithA pool as a fallback."
     ]
   },
@@ -139,7 +139,7 @@ These take place after an action or condition is performed or met by either the 
   "theText":[
     "Text is displayed after successfully hitting a monster with a skill.",
     "Only shown after they are hit.",
-    "Note this can include skills used by items, or the item name itself."
+    "Note this can include skills used by items, or the item name itself.",
     "Biased towards Anal skills, but will use HitWith pool as a fallback."
     ]
   },
@@ -199,7 +199,7 @@ These take place after an action or condition is performed or met by either the 
   "theText":[
     "Triggers upon reaching less than 30% of their max health.",
     "Only happens once, heals will not reset it.",
-    "The "move": key should be empty.",
+    "The "move": key should be empty."
     ]
   },
 
@@ -214,7 +214,7 @@ These take place after an action or condition is performed or met by either the 
   "theText":[
     "Triggers upon the player reaching less than 35% of their max health.",
     "Only happens once, resetting on orgasms.",
-    "The "move": key should be empty.
+    "The "move": key should be empty."
     ]
   },
 
@@ -303,9 +303,9 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
   "move": ["Deepthroat"],
   "theText":[
     "Displays when the player cums.",
-    "The "move": key can optionally be given a specific skill to check for."
-    "It can also take stances, or be left blank to generally trigger."
-    "This trigger is only meant to call a combat event for technical reasons."
+    "The "move": key can optionally be given a specific skill to check for.",
+    "It can also take stances, or be left blank to generally trigger.",
+    "This trigger is only meant to call a combat event for technical reasons.",
     "This can be done via providing it with exclusively the following string...",
     "|f|CallCombatEventAndScene|/|EventNameHere|/|SceneNameHere|n||c|",
     "From there, you can have the scene you pointed it to use SwapLineIf to pick a random string.",
@@ -559,7 +559,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
   "lineTrigger": "RestraintEscaped",
   "move": ["Soft Amber Embrace"],
   "theText":[
-    "Triggers if the player successfully escapes the specified restraint.",
+    "Triggers if the player successfully escapes the specified restraint."
     ]
   },
 
@@ -572,6 +572,6 @@ As the title suggests, contains lineTriggers specifically around stances and res
   "lineTrigger": "RestraintEscapedFail",
   "move": ["Soft Amber Embrace"],
   "theText":[
-    "Triggers if the player fails to escape the specified restraint.",
+    "Triggers if the player fails to escape the specified restraint."
     ]
   },
