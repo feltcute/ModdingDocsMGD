@@ -4,10 +4,12 @@
 
 **lineTriggers**
 =================
+
 See :ref:`combatDialogue` for general information on the keys used for lineTriggers.
 
 Remember that the "move": key can be given an array, for any lineTrigger seen here. **However, it is so responses can be made compact**.
 It does not at any point use the array as a multi-check requirement before it can trigger. That is, it is an *or* parameter, not an *and* parameter.
+All matching lineTriggers matching the same ``"move":`` value will ultimately go into the same pool for it to randomly pull from.
 
 For putting combat functions in strings, see :ref:`Dialogue Text Markup`
 
@@ -18,6 +20,7 @@ For putting combat functions in strings, see :ref:`Dialogue Text Markup`
 
 **SetMusicTo**
 """""""""""""""
+
 ::
 
   {
@@ -38,6 +41,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 
 **MonsterArrived**
 """""""""""""""""""
+
 ::
 
   {
@@ -55,6 +59,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 
 **StartOfCombat**
 """"""""""""""""""
+
 ::
 
   {
@@ -73,6 +78,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 
 **EndOfRound**
 """""""""""""""
+
 ::
 
   {
@@ -81,6 +87,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
   "theText":[
     "Triggers at the end of every round of combat, before status effects tick down.",
     "A round would be whenever the player and all monsters present have each had at least one turn.",
+    "Also must be called within the first 10 lineTriggers.",
     "Note that upon reaching the end of the round, it will trigger for each monster in the encounter."
     ]
   },
@@ -89,6 +96,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 
 **StartOfRound**
 """""""""""""""""
+
 ::
 
   {
@@ -97,16 +105,19 @@ Other monsters at the start of the encounter will append to the playlist. Does n
   "theText":[
     "Triggers at the start of a round.",
     "That is, when the player and all monsters have not yet had their turn.",
+    "Also must be called within the first 10 lineTriggers.",
     "Note that upon reaching the start of the round, it will trigger for each monster in the encounter."
     ]
   },
 
 **Reactions**
 --------------
+
 These take place after an action or condition is performed or met by either the player or monster.
 
-**HitWith**
-""""""""""""
+**HitWith & HitWithA**
+"""""""""""""""""""""""
+
 ::
 
   {
@@ -116,11 +127,26 @@ These take place after an action or condition is performed or met by either the 
     "Text is displayed after successfully hitting a monster with a skill.",
     "Only shown after they are hit.",
     "Note this can include skills used by items, or the item name itself."
+    "Biased towards Sex skills, but will use HitWithA pool as a fallback."
     ]
   },
 
-**UsesMove**
-"""""""""""""
+::
+
+  {
+  "lineTrigger": "HitWithA",
+  "move": ["Thrust"],
+  "theText":[
+    "Text is displayed after successfully hitting a monster with a skill.",
+    "Only shown after they are hit.",
+    "Note this can include skills used by items, or the item name itself."
+    "Biased towards Anal skills, but will use HitWith pool as a fallback."
+    ]
+  },
+
+**UsesMove & UsesMoveA**
+"""""""""""""""""""""""""
+
 ::
 
   {
@@ -129,11 +155,25 @@ These take place after an action or condition is performed or met by either the 
   "theText":[
     "Triggers when the specified skill is used by the monster.",
     "It is displayed before the move.",
+    "Biased towards Sex skills, but will use UsesMoveA pool as a fallback."
+    ]
+  },**
+
+::
+
+  {
+  "lineTrigger": "UsesMoveA",
+  "move": ["Tighten"],
+  "theText":[
+    "Triggers when the specified skill is used by the monster.",
+    "It is displayed before the move.",
+    "Biased towards Anal skills, but will use UsesMove pool as a fallback."
     ]
   },
 
 **Escape**
 """""""""""
+
 ::
 
   {
@@ -148,6 +188,7 @@ These take place after an action or condition is performed or met by either the 
 
 **LowHealth**
 """"""""""""""
+
 .. This might need a change to reset after orgasms? Verify if it isn't already the case.
 
 ::
@@ -164,6 +205,7 @@ These take place after an action or condition is performed or met by either the 
 
 **PlayerLowHealth**
 """"""""""""""""""""
+
 ::
 
   {
@@ -176,34 +218,34 @@ These take place after an action or condition is performed or met by either the 
     ]
   },
 
-**PlayerRecoil**
-"""""""""""""""""
+**PlayerRecoil & PlayerRecoilA**
+"""""""""""""""""""""""""""""""""
+
 ::
 
   {
   "lineTrigger": "PlayerRecoil",
   "move": ["Thrust"],
   "theText":[
-    "Checks if the specified skill the player used had recoil, triggering after the attack. Triggers before HitWith.",
-    "If in sex stance, it will take priority over PlayerRecoilA."
+    "Checks if the specified skill the player used had recoil, triggering after the attack. Triggers before HitWith/HitWithA.",
+    "Biased towards Sex skills, but will use PlayerRecoilA pool as a fallback."
     ]
   },
 
-**PlayerRecoilA**
-"""""""""""""""""
 ::
 
   {
   "lineTrigger": "PlayerRecoilA",
   "move": ["Thrust"],
   "theText":[
-    "Checks if the specified skill the player used had recoil, triggering after the attack. Triggers before HitWith.",
-    "If in anal stance, it will take priority PlayerRecoil."
+    "Checks if the specified skill the player used had recoil, triggering after the attack. Triggers before HitWith/HitWithA.",
+    "Biased towards Anal skills, but will use PlayerRecoil pool as a fallback."
     ]
   },
 
 **OnSurrender**
 """"""""""""""""
+
 ::
 
   {
@@ -217,6 +259,7 @@ These take place after an action or condition is performed or met by either the 
 
 **onPlayerEdge**
 """""""""""""""""
+
 ::
 
   {
@@ -233,6 +276,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
 
 **onEdge**
 """""""""""
+
 ::
 
   {
@@ -251,6 +295,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 
 **OnPlayerOrgasm**
 """""""""""""""""""
+
 ::
 
   {
@@ -273,6 +318,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 
 **onOrgasm**
 """""""""""""
+
 ::
 
   {
@@ -290,7 +336,8 @@ The camelCase is known, and will be addressed at some point in the future during
 .. _PostOrgasm:
 
 **PostOrgasm**
-"""""""""""""
+"""""""""""""""
+
 ::
 
   {
@@ -306,7 +353,8 @@ The camelCase is known, and will be addressed at some point in the future during
 .. _OnLoss:
 
 **OnLoss**
-"""""""""""""
+"""""""""""
+
 ::
 
   {
@@ -323,12 +371,14 @@ The camelCase is known, and will be addressed at some point in the future during
 
 **Counters**
 -------------
+
 These work to counter their various of conditions before they take place.
 
 The trigger order of priority for Counters matches the listed order, from top to bottom.
 
 **AutoCounter**
 """"""""""""""""
+
 ::
 
   {
@@ -343,6 +393,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 
 **AutoCounterSkillTag**
 """"""""""""""""""""""""
+
 ::
 
   {
@@ -355,6 +406,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 
 **AutoCounterSkillFetish**
 """""""""""""""""""""""""""
+
 ::
 
   {
@@ -367,6 +419,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 
 **OffenceCounter**
 """""""""""""""""""
+
 ::
 
   {
@@ -381,6 +434,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 
 **AnyCounter**
 """""""""""""""
+
 ::
 
   {
@@ -397,11 +451,13 @@ The trigger order of priority for Counters matches the listed order, from top to
 
 **Stance, Restraints**
 -----------------------
+
 As the title suggests, contains lineTriggers specifically around stances and restraints.
 
 
 **StanceStruggle**
 """""""""""""""""""
+
 ::
 
   {
@@ -416,6 +472,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **StanceStruggleFail**
 """""""""""""""""""""""
+
 ::
 
   {
@@ -428,6 +485,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **StanceStruggleComment**
 """"""""""""""""""""""""""
+
 ::
 
   {
@@ -441,6 +499,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **StanceStruggleFree**
 """""""""""""""""""""""
+
 ::
 
   {
@@ -452,6 +511,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **StanceStruggleFreeComment**
 """"""""""""""""""""""""""""""
+
 ::
 
   {
@@ -465,6 +525,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **RestaintStruggle**
 """""""""""""""""""""
+
 ::
 
   {
@@ -478,6 +539,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **RestraintStruggleCharmed**
 """""""""""""""""""""""""""""
+
 ::
 
   {
@@ -490,6 +552,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **RestraintEscaped**
 """""""""""""""""""""
+
 ::
 
   {
@@ -502,6 +565,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 
 **RestraintEscapedFail**
 """""""""""""""""""""""""
+
 ::
 
   {
