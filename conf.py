@@ -9,7 +9,7 @@ copyright = '2017-2020, Threshold.'
 # . is needed so the revision bit doesn't make it seem like the name is "Threshold Revision"
 # Not that anyone would probably think that, but, yeah.
 author = 'Threshold'
-release = 'v23.5'
+release = 'v23.5c'
 
 # -- General configuration ---------------------------------------------------
 
