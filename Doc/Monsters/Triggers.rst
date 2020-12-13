@@ -361,7 +361,7 @@ The camelCase is known, and will be addressed at some point in the future during
   "lineTrigger": "OnLoss",
   "move": [""],
   "theText":[
-    "Displays after the monster is defeated and taken out of the encounter. This has many uses, but take care not to call a function that would specify the original moster specifically, or it will crash the game.",
+    "Displays after the monster is defeated and taken out of the encounter. DOES NOT FUNCTION IN SINGLE MONSTER FIGHTS (game explodes otherwise). Intended for multi enemy fights, but this never triggers if it's the final monster in an encounter. This has many uses, but take care not to call a function that would specify the original moster specifically, or it will crash the game.",
     "The "move": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
     ]
