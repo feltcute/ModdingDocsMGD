@@ -72,6 +72,13 @@ Changes how the game calls and utilizes the event. The possible choices for the 
 
 * ``"Dream"`` will be called when the player sleeps, via the :ref:`SleepPlayer` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.
 
+.. _CardLimit:
+
+**CardLimit**
+"""""""""""""
+
+* ``"CardLimit": "0",`` sets the maximum limit of this event that can be added to an exploration. Can be left 0 if it's not selected from the exploration menu.
+
 **Description**
 ----------------
 .. code-block:: javascript
