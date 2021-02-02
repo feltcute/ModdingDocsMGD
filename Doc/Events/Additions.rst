@@ -89,30 +89,21 @@ it will override and replace the entirety of ``"theScene":`` with the one provid
 
 This is for avoiding compatibility issues with other mods making additions to menus, notably those adding additional choices to say, the night life menu
 for the Brothel. See the example below for details of the implementation.
+Be sure to add the new scenes for these options in the same file. Do not override the scene you're adding the menu to.
+
+If the menu you are adding to doesn't have a "FinalOption" for what is supposed to be the back-out choice you can safely add it to the choice in the scene under the presumption that other modders would do the same.
 
 ::
 
-  "EventText": [
-    {
-    "NameOfScene": "The Scene Name",
-    "theScene": [
-      "The text from the original scene.",
-      "This is needed so it has something to make a menu addition to within the same file to begin with, which is needed for technical reasons.",
-      "If the menu you are adding to doesn't have a "FinalOption" for what is supposed to be the back-out choice..."
-      "... you can safely add it to the choice in the scene under the presumption that other modders would do the same."
-      "Menu",
-        "A choice",
-        "Another choice",
-        "FinalOption", "Leave",
-      "EndLoop"
-      ]
-    },
+  "EventText": [ 
     {
     "NameOfScene": "The Scene Name",
     "theScene": [
       "MenuAddition",
         "New menu choice",
-        "RequiresEnergy", "50", "The other new menu choice",
+        "RequiresEnergy", "50",
+        "The other new menu choice",
+        "FinalOption", "Leave",
       "EndLoop"
       ]
     }
