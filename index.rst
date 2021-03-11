@@ -5,7 +5,7 @@
 **Introduction**
 =================
 
-**Welcome to the Monster Girl Dreams Modding Documentation for v23.5c**.
+**Welcome to the Monster Girl Dreams Modding Documentation for v23.5f**.
 Here you can find information, reference, and starter guides for all JSON modding related practices.
 It features general starter information, all existing functions, and code block examples for everything you can do within the games custom scripting system.
 It assumes you already have at least a fair bit of experience with the game,
@@ -14,6 +14,7 @@ understand its stats via hovering over them in your character profile, and a fam
 Potential game spoilers abound.
 
 .. note::
+
   The game is still in active alpha development. Mods you make aren't guaranteed to work with the latest version of the game.
   Your mods are entirely up to you to maintain, unless someone decides to patch your mod for you.
   Warning probably sounds scarier than it actually is.
