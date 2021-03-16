@@ -35,7 +35,7 @@ Moves forward time. Note there are 6 chunks in a single day.
 **SleepPlayer**
 ----------------
 
-``"SleepPlayer"`` advances time until morning and fully heals the player.
+``"SleepPlayer"`` advances time until morning and fully heals the player. Also will trigger a dream unless stated otherwise via 'DelayNotifications'.
 
 ``"DelayNotifications"`` can optionally be used thereafter, delaying perk decay notifications until the next time jump, so you don't interrupt a scene.
 
