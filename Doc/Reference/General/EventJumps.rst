@@ -55,7 +55,7 @@ Variant of ``"JumpToEventThenScene"``, but stays in in combat. Used for events w
 
 ::
 
-  "CallCombatEventThenScene", "EventNameHere", "SceneNameHere"
+  "CallCombatEventAndScene", "EventNameHere", "SceneNameHere"
 
 
 **JumpToNPCEventThenScene**
