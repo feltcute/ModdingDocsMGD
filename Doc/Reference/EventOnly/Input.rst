@@ -1,3 +1,6 @@
+.. meta::
+    :keywords: progress
+
 .. _Input:
 
 **Input**

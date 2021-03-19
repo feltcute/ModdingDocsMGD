@@ -1,3 +1,6 @@
+.. meta::
+    :keywords: jumptorandomscene, jumptorandom, call
+
 .. _Scene Jumps:
 
 **Scene Jumps**

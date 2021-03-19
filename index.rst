@@ -1,6 +1,4 @@
-.. _Introduction:
-
-.. _Homepage:
+:orphan:
 
 **Introduction**
 =================
