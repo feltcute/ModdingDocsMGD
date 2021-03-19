@@ -1,5 +1,5 @@
 .. meta::
-    :keywords: ifstatuseffect, ifstatus
+    :keywords: ifstatuseffect ifstatus
 
 .. _Monster Checks:
 

@@ -1,5 +1,5 @@
 .. meta::
-    :keywords: ifhas, ifstatus, ifstatuseffect
+    :keywords: ifhas ifstatus ifstatuseffect
 
 .. _Player Checks:
 

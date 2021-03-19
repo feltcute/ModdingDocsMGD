@@ -1,5 +1,5 @@
 .. meta::
-    :keywords: callevent, call
+    :keywords: callevent call
 
 .. _Event Jumps:
 
