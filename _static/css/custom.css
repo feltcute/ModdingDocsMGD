@@ -31,6 +31,7 @@
     --link-color-active: #E470B2;
     --link-color-visited: #E470B2;
 
+    --tab-border-color: #868686;
     --hr-color: #404040;
     --table-row-odd-background-color: #0C0C0C;
     --code-background-color: #221D20;
@@ -152,6 +153,31 @@ a {
 .sphinx-tabs .sphinx-menu a.item {
     /* Original definition has `!important` */
     color: var(--link-color) !important;
+    border: none;
+}
+
+.sphinx-tabs-panel {
+    border: 1px solid var(--tab-border-color);
+	border-radius: 0 0 0 0 !important;
+	background-color: var(--code-background-color) !important;
+}
+
+.sphinx-tabs-tab {
+	color: var(--link-color);
+}
+
+.sphinx-tabs-tab[aria-selected="true"] {
+	color: var(--link-color);
+	border: none;
+    border-top: 1px solid var(--tab-border-color);
+	border-left: 1px solid var(--tab-border-color);
+	border-right: 1px solid var(--tab-border-color);
+	border-radius: 0 0 0 0 !important;
+	background-color: var(--code-background-color) !important;
+}
+
+[role="tablist"] {
+	border-bottom: none;
 }
 
 a:hover {
@@ -432,8 +458,7 @@ code,
 
 /* Code tab display tweaks */
 
-.ui.tabular.menu .active.item,
-.ui.segment {
+.ui.tabular.menu .active.item, .ui.segment {
     background-color: var(--code-background-color);
 }
 
