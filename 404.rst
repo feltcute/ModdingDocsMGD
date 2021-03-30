@@ -11,7 +11,7 @@ to navigate somewhere safe.
 
 Or you can stay here with the original and forgotten Black Knight and keep her company. That would make her happy.
 
-.. image:: img/blackknight.png
+.. image:: ./img/blackknight.png
    :align: center
 
 .. This page should only be available in the online documentation.
