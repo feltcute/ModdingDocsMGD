@@ -56,7 +56,7 @@ An example use case would be to remove skills at the end of combat you gave to t
 **GiveSkillThatWasTemporarilyRemoved & RemoveSkillFromPlayerTemporarily**
 --------------------------------------------------------------------------
 
-``"GiveSkillThatWasTemporarilyRemoved"`` & ``"RemoveSkillFromPlayerTemporarily"`` a queit varient of give skill specifically for temporarily removing skills then giving them back, ensuring they go bakc into the the same spot in skill order to not disorganize player skills. Check Pin for an example. If you want to give the player a temp skill for a fight, like, tail cuddle, you do not need to use this set of functions.
+``"GiveSkillThatWasTemporarilyRemoved"`` & ``"RemoveSkillFromPlayerTemporarily"`` a quiet variant of give skill specifically for temporarily removing skills then giving them back, ensuring they go back into the same spot in skill order to not disorganize player skills. Check Pin for an example. If you want to give the player a temp skill for a fight, like, tail cuddle, you do not need to use this set of functions.
 
 **GivePerk & RemovePerk**
 --------------------------
