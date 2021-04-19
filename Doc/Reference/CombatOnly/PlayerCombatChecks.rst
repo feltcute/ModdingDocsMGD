@@ -1,3 +1,6 @@
+.. meta::
+    :keywords: ifstatuseffect ifstatus
+
 .. _Player Combat Checks:
 
 

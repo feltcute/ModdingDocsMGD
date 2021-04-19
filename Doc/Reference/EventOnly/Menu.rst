@@ -286,5 +286,5 @@ Using ``"RequiresChoiceFromEvent"`` checks for the specified choice from the giv
 ::
 
   "Menu",
-    "RequiresChoiceFromEvent", "3", "A choice.", "SceneName",
+    "RequiresChoiceFromEvent", "EventName", "3", "A choice.", "SceneName",
   "EndLoop"

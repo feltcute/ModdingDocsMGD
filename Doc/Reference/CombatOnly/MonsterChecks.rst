@@ -1,3 +1,6 @@
+.. meta::
+    :keywords: ifstatuseffect ifstatus
+
 .. _Monster Checks:
 
 **Monster Checks**

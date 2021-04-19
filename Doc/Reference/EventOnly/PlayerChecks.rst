@@ -1,3 +1,6 @@
+.. meta::
+    :keywords: ifhas ifstatus ifstatuseffect
+
 .. _Player Checks:
 
 **Player Checks**
