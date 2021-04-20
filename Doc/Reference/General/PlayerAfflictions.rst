@@ -103,6 +103,21 @@ If you want to display the damage number from the skill, use {DamageToPlayer} in
 
   "DamagePlayerFromMonster", "Imp", "Blowjob"
 
+
+.. _DamageMonsterFromMonster:
+
+**DamageMonsterFromMonster**
+----------------------------
+
+Deal randomized damage to the focused monster via a skill and called monster, the monster chosen is used as a stat reference and doesn't need to be in the active combat encounter.
+The skill chosen will not apply status effects. Displaying dialogue has to be done manually, it will not take dialogue from the skill.
+If you want to display the damage number from the skill, use {DamageToMonster} in the following string after completing the function.
+
+::
+
+  "DamageMonsterFromMonster", "Imp", "Arouse"
+
+
 Check :ref:`HitPlayerWith` for a combat only equivalent.
 
 **ChangePerkDuration**
@@ -180,3 +195,8 @@ Forces the player to cum, resets arousal to zero, then lowers spirit by set amou
 
 ``"PlayerOrgasmNoSpiritLoss"`` causes the player to orgasm, reseting current arousal, but they don't lose spirit.
 Used primarily to trigger relevant status effects and events where losing spirit is not desired from a design perspective, such as victory scenes.
+
+**EmptySpiritCounter**
+-----------------------------
+
+``"EmptySpiritCounter"`` for specific uses when looping orgasm text and displaying spirit lost in events so it doesnt stack itself in the display.

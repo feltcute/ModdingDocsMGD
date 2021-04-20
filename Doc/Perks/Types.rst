@@ -82,6 +82,20 @@ This can use :ref:`Text Markup`, and thus in extension, :ref:`Functions`.
 Declare the perk as a NonPersistentEffect, removing it whenever a Non-Persistent Status Effect (e.g. Charm) would be removed by the game.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
+.. _RemovableEffect:
+
+**RemovableEffect **
+""""""""""""""""""""""""
+
+::
+
+  "PerkType": ["RemovableEffect "],
+  "EffectPower": ["0"],
+
+Declare the perk as a RemovableEffect , that allows the effect to be cleared on use of a pancea(currently just this), or on combat end like NonPersistentEffect.
+Set a value of 0, as ``"EffectPower":`` is not needed.
+
+
 **Reward**
 -----------
 .. note::
