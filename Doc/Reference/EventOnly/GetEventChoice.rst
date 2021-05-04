@@ -7,13 +7,13 @@
 
   See :ref:`Choice` for Choice functions within event files.
 
-**GetEventAndIfChoiceIs**
+**GetEventAndIfChoice**
 --------------------------
 Check an events choices and check if the choice matches, if so, jump to scene.
 
 ::
 
-  "GetEventAndIfChoiceIs", "EventNameHere", "3", "The choice", "SceneToJumpToHere"
+  "GetEventAndIfChoice", "EventNameHere", "3", "The choice", "SceneToJumpToHere"
 
 **GetEventAndSetChoice**
 -------------------------
