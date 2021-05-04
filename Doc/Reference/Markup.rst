@@ -166,7 +166,7 @@ Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 ``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`
 
 ``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
-To be used with :ref:`onPlayerOrgasm` and :ref:`onOrgasm` lineTriggers utilizing events respectively.
+To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively.
 
 .. _Damage Text Markup:
 

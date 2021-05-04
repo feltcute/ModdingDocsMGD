@@ -274,13 +274,13 @@ These take place after an action or condition is performed or met by either the 
 
 See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
 
-**onEdge**
+**OnEdge**
 """""""""""
 
 ::
 
   {
-  "lineTrigger": "onEdge",
+  "lineTrigger": "OnEdge",
   "move": [""],
   "theText":[
     "Displays when the monster edges.",
@@ -314,15 +314,15 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
     ]
   },
 
-.. _onOrgasm:
+.. _OnOrgasm:
 
-**onOrgasm**
+**OnOrgasm**
 """""""""""""
 
 ::
 
   {
-  "lineTrigger": "onOrgasm",
+  "lineTrigger": "OnOrgasm",
   "move": ["Thrust"],
   "theText":[
     "Displays when the monster cums.",
