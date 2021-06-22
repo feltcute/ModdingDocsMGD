@@ -9,7 +9,7 @@
 
 **SetChoice**
 --------------
-Will set specified choice number to the following string value. Think of them as progress or variable fields you can manually set for an event.
+Will set specified choice number to the following string value. Think of them as numerically organized flag markers you can set for an event, not as variables.
 
 ::
 
@@ -17,7 +17,7 @@ Will set specified choice number to the following string value. Think of them as
 
 **IfChoice**
 -------------
-Will check for a choice. If it is a match, it then goes to the specified scene.
+Will check for a choice. If the choice number's possible string value is a match to the stored value, it then goes to the specified scene.
 If it is not a match, it will ignore the scene jump and continue the scene.
 
 ::

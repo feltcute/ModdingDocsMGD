@@ -2,10 +2,10 @@
 
 **The JSON Format**
 ====================
-**Do note that this page is optional towards the process of getting familiar with modding.**
-However, knowing the format you're editing in is vastly helpful in comprehension and understanding of what you're doing.
-Before we begin, it is a good idea to know what JSON means. JSON stands for JavaScript Object Notation,
-so if you already know JavaScript you will already know the syntax. If not, don't fret.
+
+**While this page is optional towards the process of getting familiar with modding,**
+knowing the format you're editing in is vastly helpful in comprehension and understanding of what you're doing.
+Later pages in the documentation for example will presume you know the difference between a json key, and a json value.
 
 This page will cover an exercise of the JSON file format, and get you generally familiar with your editor, and terminology of JSON.
 Make a new file with the file type ".json" at the end in your editor of choice.

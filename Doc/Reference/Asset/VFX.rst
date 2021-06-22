@@ -192,13 +192,13 @@ To effect a single character or body part on a character or CG you will need to 
 
 
 **PlayMotionEffectLoop**
----------------------
+-------------------------
 
 Works the same as PlayMotionEffect, but will maintain the effect even as the scene moves to the next line, until EndMotionEffect is called.
 
 
 **PlayMotionEffectCustom**
----------------------
+---------------------------
 ::
 
   "PlayMotionEffectCustom", "EffectHere", "Characters", "speed, 1.0", "distance, 5"

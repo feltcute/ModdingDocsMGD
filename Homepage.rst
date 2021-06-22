@@ -1,11 +1,9 @@
-.. _Introduction:
-
 .. _Homepage:
 
 **Introduction**
 =================
 
-**Welcome to the Monster Girl Dreams Modding Documentation for v23.5f**.
+**Welcome to the Monster Girl Dreams Modding Documentation for v23.8**.
 Here you can find information, reference, and starter guides for all JSON modding related practices.
 It features general starter information, all existing functions, and code block examples for everything you can do within the games custom scripting system.
 It assumes you already have at least a fair bit of experience with the game,
