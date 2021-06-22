@@ -37,14 +37,14 @@ Using ``"GiveSkill"`` gives player a skill if they don’t have it already.
 
 ::
 
-  "GiveSkill", "Caress"
+  "GiveSkill", "Arousara"
 
 ``"RemoveSkillFromPlayer"`` does the opposite, taking away a skill if they have it. ``"RemoveSkillFromPlayerQuietly"`` can be used to do it without notifying the player.
 
 
 ::
 
-  "RemoveSkillFromPlayer", "Caress"
+  "RemoveSkillFromPlayer", "Arousara"
 
 An example use case would be to remove skills at the end of combat you gave to the player at the start of combat. Say, a gimmick skill specific to the fight.
 

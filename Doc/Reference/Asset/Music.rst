@@ -7,9 +7,9 @@
 Using ``"StopBGM"`` stops any music that's currently playing with a 1 second fade out.
 
 **StopBGMHard**
-------------
+----------------
 
-Using ``"StopBGMHard"`` stops any music that's currently playing immediately. This also allows you to start up a song again properly if it's the same song, as it wont play if still fading out. 
+Using ``"StopBGMHard"`` stops any music that's currently playing immediately. This also allows you to start up a song again properly if it's the same song, as it won't play if still fading out.
 
 **ChangeBGM**
 --------------

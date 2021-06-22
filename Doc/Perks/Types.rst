@@ -84,8 +84,8 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 .. _RemovableEffect:
 
-**RemovableEffect **
-""""""""""""""""""""""""
+**RemovableEffect**
+""""""""""""""""""""
 
 ::
 

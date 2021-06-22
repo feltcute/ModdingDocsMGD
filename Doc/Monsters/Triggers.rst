@@ -172,7 +172,8 @@ These take place after an action or condition is performed or met by either the 
   },
 
 **UsesMovePre & HitWithPre**
-  """""""""""""""""""""""""
+"""""""""""""""""""""""""""""
+
 These happen prior to UsesMove and HitWith respectively, allowing you to enforce expression changes or VFX or other functions in a neat bundle, while ignoring low health line calls.
 
 ::
@@ -288,7 +289,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 ::
 
   {
-  "lineTrigger": "onPlayerEdge",
+  "lineTrigger": "OnPlayerEdge",
   "move": ["Thrust"],
   "theText":[
     "Displays when the player edges.",
@@ -355,8 +356,6 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
     "It can also take stances, or be left blank to generally trigger."
     ]
   },
-
-The camelCase is known, and will be addressed at some point in the future during a breaking patch.
 
 .. _PostOrgasm:
 

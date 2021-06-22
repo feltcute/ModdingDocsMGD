@@ -7,6 +7,7 @@ The information in-game, or on the `wiki <https://monstergirldreams.fandom.com/w
 
 **Stats**
 ----------
+
 Core stats are internally refereed to as:
 
 * ``"Power"``
@@ -32,6 +33,7 @@ Alternatively, to get their current amount:
 
 **Sensitivity Reference**
 --------------------------
+
 Above 100 is more sensitive, below 100 is less sensitive.
 
 * ``"Sex"`` (Counts as the player's Cock sensitivity and the Monster's Pussy sensitivity respectively)
@@ -43,3 +45,26 @@ Above 100 is more sensitive, below 100 is less sensitive.
 * ``"Pain"``
 * ``"Holy"``
 * ``"Unholy"``
+
+**Equations**
+--------------
+
+You can use the following equations when considering the balance of your stats. You are free to deviate if you feel something needs tuned in a particular way.
+
+**Eros Per Enemy Level**
+
+For calculating how much Eros the player should earn when defeating a enemy. ``x`` represents the given level.
+
+::
+
+  (x)^2+(x*10)+48
+
+**Exp Amount Per Player Level**
+
+For graphing how much Exp the player is required to collect before leveling up. ``x`` represents the given level.
+
+This can be used to decide how much Exp you want a monster to give. Threshold typically does 60-100% of the Exp for the level the enemy is at relative to the graph.
+
+::
+
+  (0.4*(x*x))+(2*x)+(15*sqrt(x)-8)
