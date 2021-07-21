@@ -38,7 +38,7 @@ giving the Monster a different name in dialogue, say, giving a generic monster i
 
   "ChoiceToDisplayPlayerFromOtherEvent", "EventName", "1"
 
-``{displayPlayerChoice}`` and ``{displayMonsterChoice}`` in :ref:`Event Text Markup` is the markup to utilize the functions.
+``{DisplayPlayerChoice}`` and ``{DisplayMonsterChoice}`` in :ref:`Event Text Markup` is the markup to utilize the functions.
 
 See :ref:`ChoiceToDisplay` for doing it within the same event.
 

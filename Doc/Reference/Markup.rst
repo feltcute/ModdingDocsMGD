@@ -168,7 +168,8 @@ Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 ``{ProgressDisplay}`` via :ref:`Progress` functions.
 
 ``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
-To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the "EmptySpiritCounter" function after the line this is used in to empty out how much spirit is counted.
+To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounter` function after the line this is used in to empty out how much spirit is counted.
+
 .. _Damage Text Markup:
 
 **Damage Text Markup**
