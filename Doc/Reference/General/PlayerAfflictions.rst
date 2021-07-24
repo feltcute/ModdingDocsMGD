@@ -205,4 +205,4 @@ Used primarily to trigger relevant status effects and events where losing spirit
 **EmptySpiritCounter**
 -----------------------------
 
-``"EmptySpiritCounter"`` for specific uses when looping orgasm text and displaying spirit lost in events so it doesnt stack itself in the display.
+``"EmptySpiritCounter"`` for specific uses when looping orgasm text/events in a row during an event (:ref:`Event Text Markup`) and displaying spirit lost in events so it doesnt stack itself in the display.

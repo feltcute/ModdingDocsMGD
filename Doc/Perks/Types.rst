@@ -84,8 +84,8 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 .. _RemovableEffect:
 
-**RemovableEffect **
-""""""""""""""""""""""""
+**RemovableEffect**
+""""""""""""""""""""
 
 ::
 
@@ -1033,7 +1033,7 @@ Give player points to reduce sensitivity. Only works if acquired at level up. Ta
   "PerkType": ["GainSpirit"],
   "EffectPower": ["1"],
 
-Give the the player spirit. Only works if acquired at level up. Take caution.
+Give the player spirit. Only works if acquired at level up. Take caution.
 
 .. _ResistFinalOrgasm:
 

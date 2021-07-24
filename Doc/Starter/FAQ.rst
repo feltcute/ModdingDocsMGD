@@ -33,7 +33,7 @@ See :ref:`Music And Art Summary` for errors related to media asset paths.
 You have to relaunch the game whenever you wish to fully see the changes you've made.
 While nothing bad will happen, you cannot apply changes to your JSON files while the game is running.
 If you changed a perk and your character currently possesses it in your save,
-you will want to go to the options menu and update your save to apply the changes you made to the the perk.
+you will want to go to the options menu and update your save to apply the changes you made to the perk.
 
 **I'm not jumping to the scene I set!**
 ----------------------------------------

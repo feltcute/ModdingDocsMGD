@@ -17,7 +17,7 @@
 
 ::
 
-  "ChangeEros", "-10"
+  "ChangeErosByPercent", "-10"
 
 **SetEros**
 ------------

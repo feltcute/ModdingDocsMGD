@@ -5,11 +5,9 @@
 needs_sphinx = '3.2.1'
 
 project = "Monster Girl Dreams"
-copyright = '2017-2020, Threshold.'
-# . is needed so the revision bit doesn't make it seem like the name is "Threshold Revision"
-# Not that anyone would probably think that, but, yeah.
+copyright = '2017-2021, Threshold'
 author = 'Threshold'
-release = 'v23.5c'
+release = 'v23.8'
 
 # -- General configuration ---------------------------------------------------
 
@@ -43,11 +41,29 @@ html_theme_options = {
 }
 
 html_context = {
-    #"display_github": True, # Integrate GitHub
-    #"github_user": "MyUserName", # Username
-    #"github_repo": "MyDoc", # Repo name
-    #"github_version": "master", # Version
-    #"conf_py_path": "/source/", # Path in the checkout to the docs root
+    # "display_github": True, # Integrate GitHub
+    # "github_user": "MyUserName", # Username
+    # "github_repo": "MyDoc", # Repo name
+    # "github_version": "master", # Version
+    # "conf_py_path": "/source/", # Path in the checkout to the docs root
+}
+
+notfound_context = {
+    "title": "404: Page Not Found",
+    "body": """
+        <h1>404: Page Not Found</h1>
+        <p>
+            This means the given URL was likely incorrect.
+        </p>
+        <p>
+            You can use the left sidebar, the top left logo, or the home button above
+to navigate somewhere safe.
+        </p>
+        <p>
+            Or you can stay here with the original and forgotten Black Knight and keep her company. That would make her happy.
+        </p>
+        <img src="img/starter/blackknight.jpg" alt="Black Knight, eternally delivering pizza." width="372" height="571">  
+    """,
 }
 
 html_logo = 'img/banner.png'
