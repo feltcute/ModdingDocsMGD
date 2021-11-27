@@ -88,7 +88,7 @@ The file path to the compatible file type can then be referred to within .json f
 the game is expecting the hard-coded base game filepath structure for assets, such as *game/images/* or *game/music/*.
 To combat this, mods provide the game with a file path structure similar to the code block below.
 
-::
+.. code-block:: javascript
 
   "../Mods/<modName>/folder/file.extensiontype"
 

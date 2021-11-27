@@ -13,22 +13,27 @@ Ejaculation - EjaculationLong
   Each of these functions count as an individual audio channel.
   If you call the same exact function again before the audio file has finished playing, it will prematurely stop it and play the newly provided audio file.
 
+----
+
 **PlaySoundEffect**
 --------------------
 Plays the selected audio file from the following string, or from one of the sound banks above.
 
-::
+.. code-block:: javascript
 
   "PlaySoundEffect", "sfx/Erotic/Hand/Handjob (only once).wav",
   "PlaySoundEffect", "LongKiss"
 
 ``"PlaySoundEffect2"`` exists, which allows you to play another audio file simultaneously regardless if the base function has finished or not.
 
+----
+
 **PlaySoundBankOnce**
 ----------------------
-Using ``"PlaySoundBankOnce"`` plays through the selected sound bank one time. Used for Sofia's singular kiss barrage.
+Using ``"PlaySoundBankOnce"`` plays through the entire selected sound bank one time, rather than a single file via `PlaySoundEffect`_.
+Used for Sofia's singular kiss barrage.
 
-.. Research the difference between this and PlaySoundEffect before submission.
+----
 
 **PlayLoopingSoundEffect & StopSoundEffectLoop**
 -------------------------------------------------

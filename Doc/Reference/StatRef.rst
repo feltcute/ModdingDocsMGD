@@ -2,6 +2,7 @@
 
 **Stat Reference**
 ===================
+
 This page is purely for ease of reference for functions and keys, and is not meant to contain any information on how each stat or sensitivity works.
 The information in-game, or on the `wiki <https://monstergirldreams.fandom.com/wiki/Monster_Girl_Dreams_Wiki>`_ should prove sufficient for that purpose.
 

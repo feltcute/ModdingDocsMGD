@@ -1,4 +1,4 @@
-.. _DenyOrgasm:
+.. _DenyCombatOrgasm:
 
 **DenyTargetOrgasm and DenyAttackerOrgasm**
 ================================================
@@ -10,4 +10,4 @@ This does mean the target can still orgasm from recoil.
 ``"DenyAttackerOrgasm"`` specifically exists for letting the attacker avoid recoil damage triggering an orgasm.
 
 .. tip::
-    Also see :ref:`DenyPlayerOrgasm` and :ref:`DenyMonsterOrgasm`.
+    Also see :ref:`DenyPlayerOrgasmFunc` and :ref:`DenyMonsterOrgasmFunc`.

@@ -4,6 +4,7 @@
 
 **Status Effect Reference**
 ============================
+
 This page is purely for ease of reference for functions and keys, and is not meant to contain any information on how each status effect works.
 The information in-game, or on the `wiki <https://monstergirldreams.fandom.com/wiki/Monster_Girl_Dreams_Wiki>`_ should prove sufficient for that purpose.
 
@@ -12,11 +13,13 @@ to tick down. Status effects labeled 'non-persistent' means they will be immedia
 
 **Any, None**
 -------------
+
 ``"Any"`` and ``"None"`` can sometimes be called in certain cases to cover all types of status effects, or the lack of any status effect.
 The documentation for relevant functions and keys will state whether these values are an option.
 
 **Technical Status Effects**
 -----------------------------
+
 The following are inherently and technically, status effects, though aren't commonly remembered as such. They are specific to the player.
 
 * ``"Surrender"`` (Non-persistent)
@@ -24,6 +27,7 @@ The following are inherently and technically, status effects, though aren't comm
 
 **Soft Crowd Control**
 -----------------------
+
 * ``"Aphrodisiac"`` (Potency is variable. Persistent)
 * ``"Charm"`` (Non-persistent)
 * ``"Drowsy"`` (``"Sleep"`` with duration above 0, for internal use. Non-persistent)
@@ -31,6 +35,7 @@ The following are inherently and technically, status effects, though aren't comm
 
 **Hard Crowd Control**
 -----------------------
+
 * ``"Hypnotized"`` (Equivalent to potency 11 of ``"Trance"``. Persistent)
 * ``"Paralysis"`` (Potency ranges from 1-10. Persistent)
 * ``"Paralyzed"`` (Equivalent to potency 10 of ``"Paralysis"``. Persistent)
@@ -42,6 +47,7 @@ The following are inherently and technically, status effects, though aren't comm
 
 **Buffs & Debuffs**
 --------------------
+
 These all feature potency as well, directly being the final amount their modifier is given. They are all non-persistent.
 
 * ``"Crit"``
@@ -69,6 +75,7 @@ For modifiers based on a percent of the target's max stat. As an example, a valu
 
 **Status Effect Resistances**
 ------------------------------
+
 Covers resistances relating to the above status effects. Positive values improve resistance, negative values decrease. Baseline of 0.
 
 * ``"Aphrodisiac"``

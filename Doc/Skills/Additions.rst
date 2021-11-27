@@ -2,9 +2,11 @@
 
 **Skill Additions**
 ====================
+
 Making a Skill addition is non-destructive and thus will be compatible with any other mods making additions to the same Skill.
 
 Check **_SkillAdditionExample.json** for an example.
+.. If you have installed the MGD extension, you can type ``_a_Skill`` to create a Skill addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.
 
@@ -12,7 +14,7 @@ The overview will proceed to go over each key you would find in a regular Advent
   All other keys outside of the ones listed aren't used, and thus should not be included for tidiness,
   **excluding these five**:
 
-  ::
+  .. code-block:: javascript
 
     "removesStance": "Provide/replace string found in base skill",
     "restraintStruggle": "Provide/replace string found in base skill",
@@ -23,7 +25,7 @@ The overview will proceed to go over each key you would find in a regular Advent
 **name**
 ---------
 
-::
+.. code-block:: javascript
 
   "name": "Holy Headpat",
 
@@ -32,7 +34,7 @@ Required so you can tell the game which Skill you wish to make an addition to.
 **skillType**
 --------------
 
-::
+.. code-block:: javascript
 
   "Addition": "Yes",
 
@@ -41,7 +43,7 @@ Required so you can tell the game that you're wishing to make an addition. Can b
 **fetishTags**
 ---------------
 
-::
+.. code-block:: javascript
 
   "fetishTags": ["Pats"],
 
@@ -50,7 +52,7 @@ Optional, adds to the existing array. The strings provided in the original ``"fe
 **startsStance**
 -----------------
 
-::
+.. code-block:: javascript
 
   "startsStance": ["Cuddling"],
 
@@ -61,7 +63,7 @@ Does not require the original file to have the key marked as an array.
 **unusableIfStance**
 ---------------------
 
-::
+.. code-block:: javascript
 
   "unusableIfStance": ["Spoon-feeding"],
 
@@ -70,7 +72,7 @@ Optional, adds to the existing array. The strings provided in the original ``"un
 **requiresTargetStance**
 -------------------------
 
-::
+.. code-block:: javascript
 
   "requiresTargetStance": ["Handholding"],
 
@@ -79,7 +81,7 @@ Optional, adds to the existing array. The strings provided in the original ``"re
 **unusableIfTarget**
 ---------------------
 
-::
+.. code-block:: javascript
 
   "unusableIfTarget": ["Oral"],
 
@@ -88,7 +90,7 @@ Optional, adds to the existing array. The strings provided in the original ``"un
 **removeStance**
 -----------------
 
-::
+.. code-block:: javascript
 
   "removesStance": ["Sex"]
 

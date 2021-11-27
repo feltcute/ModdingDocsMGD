@@ -5,13 +5,13 @@
 **lineTriggers**
 =================
 
-See :ref:`combatDialogue` for general information on the keys used for lineTriggers.
+See :ref:`combatDialogueCreation` for general information on the keys used for lineTriggers.
 
 Remember that the "move": key can be given an array, for any lineTrigger seen here. **However, it is so responses can be made compact**.
 It does not at any point use the array as a multi-check requirement before it can trigger. That is, it is an *or* parameter, not an *and* parameter.
 All matching lineTriggers matching the same ``"move":`` value will ultimately go into the same pool for it to randomly pull from.
 
-For putting combat functions in strings, see :ref:`Dialogue Text Markup`
+For putting combat functions in strings, see :ref:`DialogueTextMarkup`
 
 **Meta-Combat**
 ----------------
@@ -21,7 +21,7 @@ For putting combat functions in strings, see :ref:`Dialogue Text Markup`
 **SetMusicTo**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "SetMusicTo",
@@ -37,12 +37,12 @@ Specify the song path in ``"theText":``. Paths start from */game/*. Additional s
 
 Other monsters at the start of the encounter will append to the playlist. Does not include monsters that are added to the encounter.
 
-:ref:`ChangeBGM-OverrideCombatMusic` will override this lineTrigger.
+:ref:`OverrideCombatMusicFunc` will override this lineTrigger.
 
 **MonsterArrived**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "MonsterArrived",
@@ -60,7 +60,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 **StartOfCombat**
 """"""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StartOfCombat",
@@ -79,7 +79,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 **EndOfRound**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "EndOfRound",
@@ -97,7 +97,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
 **StartOfRound**
 """""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StartOfRound",
@@ -118,7 +118,7 @@ These take place after an action or condition is performed or met by either the 
 **HitWith & HitWithA**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "HitWith",
@@ -131,7 +131,7 @@ These take place after an action or condition is performed or met by either the 
     ]
   },
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "HitWithA",
@@ -147,7 +147,7 @@ These take place after an action or condition is performed or met by either the 
 **UsesMove & UsesMoveA**
 """""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "UsesMove",
@@ -159,7 +159,7 @@ These take place after an action or condition is performed or met by either the 
     ]
   },**
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "UsesMoveA",
@@ -176,7 +176,7 @@ These take place after an action or condition is performed or met by either the 
 
 These happen prior to UsesMove and HitWith respectively, allowing you to enforce expression changes or VFX or other functions in a neat bundle, while ignoring low health line calls.
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "UsesMovePre",
@@ -187,7 +187,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
     ]
   },**
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "HitWithPre",
@@ -200,7 +200,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 **Escape**
 """""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "Escape",
@@ -217,7 +217,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 
 .. This might need a change to reset after orgasms? Verify if it isn't already the case.
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "LowHealth",
@@ -232,7 +232,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 **PlayerLowHealth**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "PlayerLowHealth",
@@ -247,7 +247,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 **PlayerRecoil & PlayerRecoilA**
 """""""""""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "PlayerRecoil",
@@ -258,7 +258,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
     ]
   },
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "PlayerRecoilA",
@@ -272,7 +272,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 **OnSurrender**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnSurrender",
@@ -286,7 +286,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
 **onPlayerEdge**
 """""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnPlayerEdge",
@@ -298,12 +298,12 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   ]
   },
 
-See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
+See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyPlayerOrgasmFunc`.
 
 **OnEdge**
 """""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnEdge",
@@ -315,14 +315,14 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyPlayerOrgasm`.
   ]
   },
 
-See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
+See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
 
 .. _OnPlayerOrgasm:
 
 **OnPlayerOrgasm**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnPlayerOrgasm",
@@ -345,7 +345,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 **OnOrgasm**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnOrgasm",
@@ -362,7 +362,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 **PostOrgasm**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "PostOrgasm",
@@ -379,7 +379,7 @@ See the functions :ref:`DenyOrgasm` and :ref:`DenyMonsterOrgasm`.
 **OnLoss**
 """""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OnLoss",
@@ -403,7 +403,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 **AutoCounter**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "AutoCounter",
@@ -418,7 +418,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 **AutoCounterSkillTag**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "AutoCounterSkillTag",
@@ -431,7 +431,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 **AutoCounterSkillFetish**
 """""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "AutoCounterSkillFetish",
@@ -444,7 +444,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 **OffenceCounter**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "OffenceCounter",
@@ -459,7 +459,7 @@ The trigger order of priority for Counters matches the listed order, from top to
 **AnyCounter**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "AnyCounter",
@@ -482,7 +482,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **StanceStruggle**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StanceStruggle",
@@ -497,7 +497,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **StanceStruggleFail**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StanceStruggleFail",
@@ -510,7 +510,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **StanceStruggleComment**
 """"""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StanceStruggleComment",
@@ -524,7 +524,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **StanceStruggleFree**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StanceStruggleFree",
@@ -536,7 +536,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **StanceStruggleFreeComment**
 """"""""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "StanceStruggleFreeComment",
@@ -550,7 +550,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **RestraintStruggle**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "RestraintStruggle",
@@ -564,7 +564,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **RestraintStruggleCharmed**
 """""""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "RestraintStruggleCharmed",
@@ -577,7 +577,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **RestraintEscaped**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "RestraintEscaped",
@@ -590,7 +590,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
 **RestraintEscapedFail**
 """""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   {
   "lineTrigger": "RestraintEscapedFail",

@@ -1,7 +1,5 @@
 .. _Focus:
 
-.. _Monster Focus:
-
 **Monster Focus**
 ==================
 
@@ -13,25 +11,35 @@ including any combat events they jump to from their skills or lineTriggers. The 
 Focuses on the specified monster by their number in the encounter.
 If the number is bigger than the encounter size, it will focus on the last monster in the encounter. Starts at 1.
 
-::
+.. code-block:: javascript
 
   "FocusOnMonster", "3"
+
+----
 
 **FocusOnRandomMonster**
 -------------------------
 Focuses on a random monster in the encounter.
 
+----
+
 **ShuffleMonsterEncounter**
 ----------------------------
 Shuffles the monster encounter and renumbers them. You must refocus the monster for other functions if you want to do anything else after calling it.
+
+----
 
 **RefocusOnInitialMonster**
 ---------------------------
 Refocuses on the first monster you entered the function with. Will not work if you used ``"ShuffleMonsterEncounter"``.
 
+----
+
 **FocusedSpeaks**
 ------------------
-The focused enemy :ref:`Speaks`.
+The focused enemy :ref:`SpeaksFunc`.
+
+----
 
 **FocusedSpeaksSkill**
 -----------------------

@@ -1,9 +1,3 @@
-.. _Text Markup:
-
-.. _Markup:
-
-.. _Text:
-
 **Text Markup**
 ================
 
@@ -18,7 +12,7 @@ actually fit till you test it in-game. This is one of the many reasons play-test
 
 Lastly, if you know RenPy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
 
-.. _Dialogue Text Markup:
+.. _DialogueTextMarkup:
 
 **Dialogue Text Markup**
 -------------------------
@@ -54,14 +48,12 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 
 ``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it is called is removed.
 
-``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :ref:`Monster Creation`.
+``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Monsters/Creation>`.
 It can also be used as the equivalent of a blank string for functions done via ``|f|``
-
-.. _Text Styling Markup:
 
 **Text Styling Markup**
 ------------------------
-This section a mix of `Renpy derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup. You can combine the markup as you please.
+This section is a mix of `Renpy derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup. You can combine the markup as you please.
 
 .. Excluding markup containing any periods, since it generates an error at the moment.
 
@@ -116,11 +108,9 @@ Given MGD by default has all text display instantly, this typically won't be too
 ``{fast}`` placed anywhere in the string causes the displayed text to instantly move towards the markup declaration.
 Given MGD by default has all text display instantly, this typically won't be too useful unless combined with the ``{cps}``.
 
-.. _Colored Text Markup:
-
 **Colored Text Markup**
 ------------------------
-This section a mix of `Renpy derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup.
+This section is a mix of `Renpy markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup.
 You can combine it with text styling markup as you please.
 
 ``{Pink}`` sets the color of the text to pink. Was specifically made for the hearts.
@@ -156,33 +146,29 @@ Close with ``{/color}``. Overrides ``{SetTextColor}``. Accepts #rgb, #rgba, #rrg
 ``{outlinecolor=hex}`` changes the text color outline to the given color.  Close with ``{/outlinecolor}``. Overrides all of the above markup where relevant.
 Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 
-.. _Event Text Markup:
+.. _EventTextMarkup:
 
 **Event Text Markup**
 ----------------------
 
-``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`.
+``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
 
-``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`.
+``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
 
 ``{ProgressDisplay}`` via :ref:`Progress` functions.
 
 ``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
-To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounter` function after the line this is used in to empty out how much spirit is counted.
-
-.. _Damage Text Markup:
+To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounterFunc` function after the line this is used in to empty out how much spirit is counted.
 
 **Damage Text Markup**
 -----------------------
 
 ``{DamageToPlayer}``, ``{DamageToEnemy}``, and ``{FinalDamage}`` provide damage values for relevant functions.
 
-.. _Skill Text Markup:
-
 **Skill Text Markup**
 ----------------------
 
-Intended for use in lines for skills jsons.
+Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
 
 ``{AttackerName}`` or ``{TargetName}`` gets respective name of the attacker or target.
 

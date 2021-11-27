@@ -5,7 +5,7 @@ Lets you swap out individual lines for others based on specific circumstances, o
 
 If a line is blank, the line will be skipped. In case people want to add new lines.
 
-Note you can still use :ref:`Text Markup` in the possible lines if you want to change the expression, or just generally put functions within them.
+Note you can still use :doc:`Text Markup </Doc/Reference/Markup>` in the possible lines if you want to change the expression, or just generally put functions within them.
 
 Given the function is for smaller scale changes, larger scale scene changes would be better off with an entirely different scene based on a scene jump.
 
@@ -18,11 +18,11 @@ In order to utilize the function, you must use an option alongside it. The below
 """""""""""
 
 Random has no checks and will pick one of the lines at random to display. You cannot provide it with sub-functions, you would need to use something other than
-``"SwapLineIf"`` or use :ref:`Text Markup` to achieve something to that effect.
+``"SwapLineIf"`` or use :doc:`Text Markup </Doc/Reference/Markup>` to achieve something to that effect.
 
 You can repeat a string to increase the chances that it is the chosen line.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Random",
     "Line 1",
@@ -33,12 +33,14 @@ You can repeat a string to increase the chances that it is the chosen line.
     "Line 5",
   "EndLoop"
 
+----
+
 **Stat**
 """"""""""
 Using ``Stat`` checks the player for the specified stat and numerical condition for said stat in each given line. See :ref:`Stats`, though note the below functions
 for more convenient stat checks.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Stat",
     "Technique", "70", "Line 1",
@@ -46,12 +48,14 @@ for more convenient stat checks.
     "Technique", "19", "Line 3",
   "EndLoop"
 
+----
+
 **Arousal & MaxArousal**
 """""""""""""""""""""""""
 Using ``"Arousal"`` checks the current condition of the players arousal, each line featuring a certain numerical amount as its condition.
 
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Arousal",
     "200", "Line 1",
@@ -61,7 +65,7 @@ Using ``"Arousal"`` checks the current condition of the players arousal, each li
 
 ``"MaxArousal"`` checks the player for their maximum arousal, each line featuring a certain numerical amount as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "MaxArousal",
     "360" "Line 1",
@@ -69,11 +73,13 @@ Using ``"Arousal"`` checks the current condition of the players arousal, each li
     "91" "Line 3",
   "EndLoop"
 
+----
+
 **Energy & MaxEnergy**
 """""""""""""""""""""""
 Using ``"Energy"`` checks the current condition of the players energy, each line featuring a certain numerical amount as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Energy",
     "150", "Line 1",
@@ -83,7 +89,7 @@ Using ``"Energy"`` checks the current condition of the players energy, each line
 
 ``"MaxEnergy"`` checks the player for their maximum amount of energy they have, each line featuring a certain numerical amount as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "MaxArousal",
     "240" "Line 1",
@@ -91,11 +97,13 @@ Using ``"Energy"`` checks the current condition of the players energy, each line
     "5" "Line 3",
   "EndLoop"
 
+----
+
 **Virility**
 """""""""""""
 Checks the player for their current virility, each line featuring a certain numerical amount of virility as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Virility",
     "40", "Line 1",
@@ -103,24 +111,28 @@ Checks the player for their current virility, each line featuring a certain nume
     "0", "Line 3",
   "EndLoop"
 
+----
+
 **HasFetish**
 """"""""""""""
 Checks to see if the player qualifies for a given fetish (which requires a minimum of 25 levels in the fetish).
 
 It is binary, in that it checks for the given fetish for the fetish line, and then a blank string for the line if the player doesn't qualify for the fetish.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "HasFetish",
     "Breasts", "Line with Breast Fetish",
     "", "Line without Breast Fetish",
   "EndLoop"
 
+----
+
 **HasFetishLevelEqualOrGreater**
 """""""""""""""""""""""""""""""""
 Checks the players fetish level against the given fetish, each line featuring a certain numerical amount of the fetish as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "HasFetishLevelEqualOrGreater", "Breasts",
     "100", "Line 1",
@@ -130,11 +142,13 @@ Checks the players fetish level against the given fetish, each line featuring a 
     "0", "Line 0",
   "EndLoop"
 
+----
+
 **Perk**
 """""""""
 Checks to see if the player possesses a given perk, each line featuring a given perk as its condition.
 
-::
+.. code-block:: javascript
 
     "SwapLineIf", "Perk",
       "Kotone's Hypno Slave", "Line 1",
@@ -142,12 +156,13 @@ Checks to see if the player possesses a given perk, each line featuring a given 
       "", "Line 3",
     "EndLoop"
 
+----
 
 **EncounterSize**
 """"""""""""""""""
 Checks the current size of a combat encounter, each line featuring a certain numerical amount of enemies as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "EncounterSize",
     "3", "Line 1",
@@ -155,46 +170,54 @@ Checks the current size of a combat encounter, each line featuring a certain num
     "1", "Line 3",
   "EndLoop"
 
+----
+
 **Item**
 """""""""
 Checks the player to see if they have an item.
 
 It is binary, in that you check for the given item for the item line, and then a blank string for the line if the player doesn't have the item.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Item",
     "AnaphHerb", "Line with Anaph Herb",
     "", "Line without Anaph Herb",
   "EndLoop"
 
+----
+
 **Eros**
 """""""""
 Checks the players current maximum amount of eros, each line featuring a certain numerical amount of eros as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Eros",
     "1000", "Line 1",
     "0", "Line 2",
   "EndLoop"
 
+----
+
 **IfTimeIs**
 """""""""""""
 Checks to see what time it currently is. The order of the potential lines in this case doesn't matter, as only one can potentially be true.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "IfTimeIs",
     "Day", "Line during Day",
     "Night", "Line during Night",
   "EndLoop"
 
+----
+
 **Progress & OtherEventsProgress**
 """""""""""""""""""""""""""""""""""
 Using ``"Progress"`` checks the current progress of the event, each line featuring a certain numerical amount of progress as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Progress",
     "50", "Line 1",
@@ -203,7 +226,7 @@ Using ``"Progress"`` checks the current progress of the event, each line featuri
 
 ``"OtherEventsProgress"`` lets you check the progress of the given event, each line featuring a certain numerical amount of progress as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "OtherEventsProgress", "EventName",
     "60", "Line 1",
@@ -211,6 +234,7 @@ Using ``"Progress"`` checks the current progress of the event, each line featuri
     "0", "Line 3",
   "EndLoop"
 
+----
 
 **Choice & OtherEventsChoice**
 """""""""""""""""""""""""""""""
@@ -220,7 +244,7 @@ The order of priority in this case depends entirely on the context of the reason
 However, do remember to account for if the choice number's string value is blank, if relevant to your use case.
 
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "Choice",
     "1", "ThisChoice", "Line 1",
@@ -231,7 +255,7 @@ However, do remember to account for if the choice number's string value is blank
 
 Using ``"OtherEventsChoice"`` checks the specified event's chosen choice number's string value, each line representing a potential choice and value as its condition.
 
-::
+.. code-block:: javascript
 
   "SwapLineIf", "OtherEventsChoice", "EventName",
     "1", "ThisChoice", "Line 1",

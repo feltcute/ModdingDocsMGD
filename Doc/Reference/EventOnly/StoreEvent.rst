@@ -3,7 +3,7 @@
 
 .. note::
 
-  Not to be confused with in-game shops. See :ref:`Shop` for those.
+  Not to be confused with in-game shops. See :doc:`Shop </Doc/Reference/General/Shop>` for those.
 
 **StoreCurrentEventSpotSkippingLines**
 ---------------------------------------
@@ -12,7 +12,7 @@ The following string is provided with a numerical value to skip the number of li
 then add on any number of lines to jump forward when called by ``"GoBackToStoredEvent"``.
 Will stay stored until called again or it’s used.
 
-::
+.. code-block:: javascript
 
   "StoreCurrentEventSpotSkippingLines", "3",
   "SkippedLine1",
@@ -21,6 +21,8 @@ Will stay stored until called again or it’s used.
   "You stand in a room."
 
 Useful for skipping functions.
+
+----
 
 **GoBackToStoredEvent**
 ------------------------

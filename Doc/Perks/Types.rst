@@ -1,5 +1,3 @@
-.. _Perk Types:
-
 **Perk Types**
 ===============
 
@@ -9,11 +7,9 @@
 -------------------
 These types modify the behavior of the perk itself, rather than the wielder of the perk.
 
-.. _StatusIcon:
-
 **StatusIcon**
 """""""""""""""
-::
+.. code-block:: javascript
 
   "PerkType": ["StatusIcon"],
   "EffectPower": ["../Mods/ModName/Folder/Icon.png"],
@@ -21,22 +17,20 @@ These types modify the behavior of the perk itself, rather than the wielder of t
 Declares a status icon for the perk whenever the player or monster possesses it.
 The provided file path to your image will be displayed as an icon in the status bar.
 
-.. _TurnDuration:
-
 **TurnDuration**
 """""""""""""""""
-::
+.. code-block:: javascript
 
   "PerkType": ["TurnDuration"],
   "EffectPower": ["5"],
 
 Removes the perk from the wielder once the set duration has depleted to 0. Ticks down for every step or combat turn.
 
-.. _TimeDuration:
+.. _TimeDurationType:
 
 **TimeDuration**
 """""""""""""""""
-::
+.. code-block:: javascript
 
   "PerkType": ["TimeDuration"],
   "EffectPower": ["18"],
@@ -44,37 +38,33 @@ Removes the perk from the wielder once the set duration has depleted to 0. Ticks
 Removes the perk from the wielder once the set duration has depleted to 0. Ticks down for every time jump (e.g. Morning -> Noon),
 note sleeping till morning will take a variable number of ticks depending on the current time. ``"6"`` would be a full day.
 
-.. _RemovedOnOrgasm:
-
 **RemovedOnOrgasm**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RemovedOnOrgasm"],
   "EffectPower": ["0"],
 
 Perk is removed when the wielder orgasms. Set a value of 0, as ``"EffectPower":`` is not needed.
 
-.. _EndMessage:
-
 **EndMessage**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["EndMessage"],
   "EffectPower": ["PerkName's effects have faded away!"],
 
-Displays the given text via its correlating ``"EffectPower":`` string when the perk ends via :ref:`TurnDuration` or :ref:`TimeDuration`.
-This can use :ref:`Text Markup`, and thus in extension, :ref:`Functions`.
+Displays the given text via its correlating ``"EffectPower":`` string when the perk ends via `TurnDuration`_ or `TimeDuration`_.
+This can use :doc:`Text Markup </Doc/Reference/Markup>`, and thus in extension, :doc:`Functions </Doc/Reference/Functions>`.
 
-.. _NonPersistentEffect:
+.. _NonPersistentEffectType:
 
 **NonPersistentEffect**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["NonPersistentEffect"],
   "EffectPower": ["0"],
@@ -82,12 +72,10 @@ This can use :ref:`Text Markup`, and thus in extension, :ref:`Functions`.
 Declare the perk as a NonPersistentEffect, removing it whenever a Non-Persistent Status Effect (e.g. Charm) would be removed by the game.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
-.. _RemovableEffect:
-
 **RemovableEffect**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RemovableEffect "],
   "EffectPower": ["0"],
@@ -102,13 +90,10 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
     These are primarily written from the perspective of it being a perk type for the player, however,
     it will be disclaimed if the type is available for monsters as well.
 
-
-.. _EroBoost:
-
 **EroBoost**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ErosBoost"],
   "EffectPower": ["10"],
@@ -116,12 +101,10 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 Alters eros found by a percent.
 If wielded by a monster, alters their own eros dropped. Positive values increase eros, negative values decrease.
 
-.. _ItemDropChance:
-
 **ItemDropChance**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ItemDropChance"],
   "EffectPower": ["-10"],
@@ -129,12 +112,10 @@ If wielded by a monster, alters their own eros dropped. Positive values increase
 Alters item drop chance from monsters by a percent.
 If wielded by a monster, alters their own item drop chance. Positive values increase the chance, negative values decrease.
 
-.. _TreasureFindChance:
-
 **TreasureFindChance**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["TreasureFindChance"],
   "EffectPower": ["15"],
@@ -142,25 +123,21 @@ If wielded by a monster, alters their own item drop chance. Positive values incr
 Alters percent chance of finding treasure during exploration, and by extension, higher chance of rare treasure.
 Positive values increase the chance, negative values decrease.
 
-.. _BetterPrices:
-
 **BetterPrices**
 """""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["BetterPrices"],
-  "EffectPower": [""-5"],
+  "EffectPower": ["-5"],
 
 Alter all shop prices by a percent, for both selling and buying.
 Positive values lower purchase cost and increases sale price, negative values increase cost and lowers sale price.
 
-.. _BuyPrices:
-
 **BuyPrices**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["BuyPrices"],
   "EffectPower": ["50"],
@@ -168,24 +145,20 @@ Positive values lower purchase cost and increases sale price, negative values in
 
 Alter all shop prices by a percent, for both selling and buying. Positive values lower cost, negative values increase cost.
 
-.. _SellPrices:
-
 **SellPrices**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SellPrices"],
   "EffectPower": ["-50"],
 
 Alter all shop prices by a percent, for both selling and buying. Positive values increase sale price, negative values lower sell price.
 
-.. _ExpBoost:
-
 **ExpBoost**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ExpBoost"],
   "EffectPower": ["120"],
@@ -193,12 +166,10 @@ Alter all shop prices by a percent, for both selling and buying. Positive values
 Alter all exp gains by a percent. Effect is halved when applied to LossExp effects, see below.
 If wielded by a monster, alters their own exp drop amount. Positive values increase exp, negative values decrease.
 
-.. _LossExp:
-
 **LossExp**
 """"""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["LossExp"],
   "EffectPower": ["-20"],
@@ -207,280 +178,234 @@ Alter exp gains from monster exp on loss by a percent. Positive values increase 
 
 **Damage**
 -----------
+
 .. note::
     Features the same behavior when used for either the player or monsters.
-
-
-.. _DamageBoost:
 
 **DamageBoost**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["DamageBoost"],
   "EffectPower": ["50"],
 
 Alters all types of damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _MagicBoost:
-
 **MagicBoost**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["MagicBoost"],
   "EffectPower": ["-30"],
 
 Alters magic damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _NonPenMagicBoost:
-
 **NonPenMagicBoost**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["NonPenMagicBoost"],
   "EffectPower": ["19"],
 
 Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _BreastBoost:
-
 **BreastBoost**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["BreastBoost"],
   "EffectPower": ["40"],
 
 Alters breast/nipple damage by a percent. Positive values increase damage, negative values decrease.
 
-.. _SeductionBoost:
-
 **SeductionBoost**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SeductionBoost"],
   "EffectPower": ["-30"],
 
 Alters seduction damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _KissBoost:
-
 **KissBoost**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["KissBoost"],
   "EffectPower": ["69"],
 
 Alters kiss damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _SexBoost:
-
 **SexBoost**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SexBoost"],
   "EffectPower": ["5"],
 
 Alters sex damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _NonPenSexBoost:
-
 **NonPenSexBoost**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["NonPenSexBoost"],
   "EffectPower": ["20"],
 
 Alters non-penetrative sex (e.g. dildo, fingering, stroking, etc.) damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _AssBoost:
-
 **AssBoost**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["AssBoost"],
   "EffectPower": ["-10"],
 
 Alters ass damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _NonPenAssBoost:
-
 **NonPenAssBoost**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["NonPenAssBoost"],
   "EffectPower": ["20"],
 
 Alters non-penetrative ass (e.g. dildo, fingering, etc.) damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _PainBoost:
-
 **PainBoost**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["PainBoost"],
   "EffectPower": ["50"],
 
 Alters pain damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _PenetrationBoost:
-
 **PenetrationBoost**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["PenetrationBoost"],
   "EffectPower": ["15"],
 
 Alters penetration damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _OralBoost:
-
 **OralBoost**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["OralBoost"],
   "EffectPower": ["-35"],
 
 Alters oral damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _ForeplayBoost:
-
 **ForeplayBoost**
 """"""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ForeplayBoost"],
   "EffectPower": ["8"],
 
 Alters foreplay damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _IndulgentBoost:
-
 **IndulgentBoost**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["IndulgentBoost"],
   "EffectPower": ["-1"],
 
 Alters indulgent damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _SexToyBoost:
-
 **SexToyBoost**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SexToyBoost"],
   "EffectPower": ["34"],
 
 Alters sex toy damage dealt by a percent. Positive values increase damage, negative values decrease.
 
-.. _BaselineAllureFlatBuff:
-
 **BaselineAllureFlatBuff**
 """""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["BaselineAllureFlatBuff"],
   "EffectPower": ["15"],
 
 Alters Allure’s natural flat damage buff scaling to everything by a flat amount. Positive values increase damage, negative values decrease.
 
-.. _BaselineAllureFlatPercentBoost:
-
 **BaselineAllureFlatPercentBoost**
 """""""""""""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["BaselineAllureFlatPercentBoost"],
   "EffectPower": ["2"],
 
 Alters Allure’s natural flat damage buff scaling to everything by a percent. Positive values increase damage, negative values decrease.
 
-.. _ForePlayFlatDamage:
-
 **ForeplayFlatDamage**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ForeplayFlatDamage"],
   "EffectPower": ["5"],
 
 Alters foreplay damage dealt by a flat amount. Positive values increase damage, negative values decrease.
 
-.. _CritChanceBoost:
-
 **CritChanceBoost**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["CritChanceBoost"],
   "EffectPower": ["20"],
 
 Alters chance for the wielder's skills to crit by a flat amount. Positive values increase chance, negative values decrease.
 
-.. _CritDamageBoost:
-
 **CritDamageBoost**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["CritDamageBoost"],
   "EffectPower": ["-100"],
 
 Alters critical damage dealt by a percent amount on top of the original calculation. Positive values increase damage, negative values decrease.
 
-.. _RecoilBoost:
-
 **RecoilBoost**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RecoilBoost"],
   "EffectPower": ["10"],
 
 Alters overall recoil damage dealt to opponents. Positive values increase damage, negative values decrease.
 
-.. _AllureRecoilBoost:
-
 **AllureRecoilBoost**
 """"""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["AllureRecoilBoost"],
   "EffectPower": ["33"],
@@ -489,178 +414,153 @@ Alters the percent of allure based recoil damage dealt to opponents. Positive va
 
 **Defense**
 ------------
+
 .. note::
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
-
-.. _DamageReduction:
 
 **DamageReduction**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["DamageReduction"],
   "EffectPower": ["-10"],
 
 Alters all damage taken by a percent, take caution. Positive values increase mitigation, negative values decrease.
 
-.. _ForeplayEnergyRegen:
-
 **ForeplayEnergyRegen**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ForeplayEnergyRegen"],
   "EffectPower": ["40"],
 
 Alters energy regeneration through foreplay skills by a percent of the wielders max. Positive values recover energy, negative values remove energy.
 
-.. _ForeplayArousalRegen:
-
 **ForeplayArousalRegen**
 """""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ForeplayArousalRegen"],
   "EffectPower": ["20"],
 
 Alters arousal regeneration through foreplay skills by a percent of the wielders max. Positive values recover arousal, negative values remove arousal.
 
-.. _RegenMaxArousal:
-
 **RegenMaxArousal**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RegenMaxArousal"],
   "EffectPower": ["5"],
 
 Restores a percent of the max arousal of the wielder. Take caution. Positive values recover arousal, negative values remove arousal.
 
-.. _RegenMaxEnergy:
-
 **RegenMaxEnergy**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RegenMaxEnergy"],
   "EffectPower": ["2"],
 
 Restores a percent of the max arousal of the wielder. Take caution. Positive values recover energy, negative values remove energy.
 
-.. _VirilityBoost:
-
 **VirilityBoost**
 """"""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["VirilityBoost"],
   "EffectPower": ["40"],
 
 Alters the players Virility by a percent. Positive values increase virility, negative values reduce. **Player only**.
 
-.. _RecoilDamageTaken:
-
 **RecoilDamageTaken**
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RecoilDamageTaken"],
   "EffectPower": ["-66"],
 
 Alters recoil damage taken by a percent. Positive values increase recoil damage taken, negative values reduce.
 
-.. _CritDamageBoostSelf:
-
 **CritDamageBoostSelf**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["CritDamageBoostSelf"],
   "EffectPower": ["-20"],
 
 Alters critical damage the wielder receives prior to the final calculation. Positive values increase damage received, negative values reduce.
 
-.. _Edging:
-
 **Edging**
 """""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["Edging"],
   "EffectPower": ["50"],
 
 Experimental perk type that gives percent chance to resist orgasm, stacks with other sources. Positive values increase the base percent chance, negative values reduce.
 
-.. _MultiplySpiritLoss:
-
 **MultiplySpirit Loss**
+"""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["MultiplySpirit Loss"],
   "EffectPower": ["2"],
 
 Multiply the spirit lost by the given number. Caution going above 2, for a base amount of 3 spirit, it is practically an instant loss.
 
-:ref:`RemovedOnOrgasm` plays well with the perk type.
+`RemovedOnOrgasm`_ plays well with the perk type.
 
 .. It still uses spaces, assuming it will be addressed later?
 
 **Status Effects**
 -------------------
+
 .. note::
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
-
-.. _StatusEffectDuration:
 
 **StatusEffectDuration**
 """""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StatusEffectDuration"],
   "EffectPower": ["1"],
 
 Alters the duration of the users status effects, take caution. Positive values increase duration, negative values reduce.
 
-.. _StatusChanceBoost:
-
 **StatusChanceBoost**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StatusChanceBoost"],
   "EffectPower": ["-10"],
 
 Alter status effect application chances from skills. Positive values increase chance, negative values reduce.
 
-.. _StartDeeperInTrance:
-
 **StartDeeperInTrance**
 """""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StartDeeperInTrance"],
   "EffectPower": ["5"],
 
 Player starts this many steps deeper in trance when hit with a trance related move. Anything below 1-10 will trigger instant trance.
 
-.. _CantBreakFreeOfTranceWithoutItems:
-
 **CantBreakFreeOfTranceWithoutItems**
 """"""""""""""""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["CantBreakFreeOfTranceWithoutItems"],
   "EffectPower": ["0"],
@@ -668,24 +568,20 @@ Player starts this many steps deeper in trance when hit with a trance related mo
 Can no longer automatically start to break free of trance after 3 consecutive turns without getting stunned.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
-.. _TranceStunChance:
-
 **TranceStunChance**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["TranceStunChance"],
   "EffectPower": ["10"],
 
 Alters the chance for the player to be stunned each turn while fully tranced by a percent. Positive values increase chance, negative values reduce.
 
-.. _ForeplayDefDown:
-
 **ForeplayDefDown**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ForeplayDefDown"],
   "EffectPower": ["-40"],
@@ -694,24 +590,20 @@ Alters the chance for the player to be stunned each turn while fully tranced by 
 Applies a status effect that reduces the defense to the enemy targeted with a foreplay skill for 3 turns.
 Positive values reduce defense, negative values increase.
 
-.. _StunDelay:
-
 **StunDelay**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StunDelay"],
   "EffectPower": ["1"],
 
 Alters the delay between stun status effects. Positive values increase the delay, negative values reduce.
 
-.. _SleepAmp:
-
 **SleepAmp**
 """""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SleepAmp"],
   "EffectPower": ["-50"],
@@ -719,48 +611,40 @@ Alters the delay between stun status effects. Positive values increase the delay
 
 Alters the flat amount of energy lost per turn upon being afflicted by Sleep. Positive values increase drain energy, negative values reduce drained energy.
 
-.. _ParalysisAmp:
-
 **ParalysisAmp**
 """""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ParalysisAmp"],
   "EffectPower": ["-10"],
 
 Alters the chance to be stunned by paralysis. Positive values increase chance, negative values reduce.
 
-.. _AphrodisiacAmp:
-
 **AphrodisiacAmp**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["AphrodisiacAmp"],
   "EffectPower": ["10"],
 
 Alters the damage taken from aphrodisiacs by a percent. Positive values increase damage, negative values reduce.
 
-.. _AphrodisiacTurnCure:
-
 **AphrodisiacTurnCure**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["AphrodisiacTurnCure"],
   "EffectPower": ["5"],
 
 Removes set amount from aphrodisiac potency every turn.  Positive values reduce set potency, negative values increase set potency.
 
-.. _DisableRun:
-
 **DisableRun**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["DisableRun"],
   "EffectPower": ["0"],
@@ -769,88 +653,74 @@ Can disable the players ability to run from all fights. Set a value of 0, as ``"
 
 **Stances & Evasion**
 ----------------------
+
 .. note::
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
-
-.. _GetOutOfStance:
 
 **GetOutOfStance**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["GetOutOfStance"],
   "EffectPower": ["20"],
 
 Alters chance to get out of stance by a percent. Positive values increase chance, negative values reduce.
 
-
-.. _OutOfStanceEvade:
-
 **OutOfStanceEvade**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["OutOfStanceEvade"],
   "EffectPower": ["-25"],
 
 Alters evade chance when out of stances by a percent. Positive values increase chance, negative values reduce.
 
-.. _RemoveRestraints:
-
 **RemoveRestraints**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RemoveRestraints"],
   "EffectPower": ["15"],
 
 Alters restraint escape chance by a percent. Positive values increase chance, negative values reduce.
 
-.. _RestraintBoost:
-
 **RestraintBoost**
 """""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RestraintBoost"],
   "EffectPower": ["30"],
 
 Increases the effectiveness of your own restraints. Positive values improve effectiveness, negative values reduce.
 
-.. _StanceBoost:
-
 **StanceBoost**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StanceBoost"],
   "EffectPower": ["-20"],
 
 Increases the effectiveness of your own stances. Positive values improve effectiveness, negative values reduce.
 
-.. _RunChance:
-
 **RunChance**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RunChance"],
   "EffectPower": ["25"],
 
 Alters run chance by a percent. Positive values increase chance, negative values reduce.
 
-.. _Unbounded:
-
 **Unbounded**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["Unbounded"],
   "EffectPower": ["0"],
@@ -858,12 +728,10 @@ Alters run chance by a percent. Positive values increase chance, negative values
 If your action is interrupted by a restraint, you will struggle instead of doing nothing by default.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
-.. _Unshackled:
-
 **Unshackled**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["Unshackled"],
   "EffectPower": ["0"],
@@ -871,12 +739,10 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 If you break a restraint with struggle, you get to act immediately.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
-.. _OrgasmEnergyDrain:
-
 **OrgasmEnergyDrain**
 """"""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["OrgasmEnergyDrain"],
   "EffectPower": ["25"],
@@ -884,72 +750,60 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 Drains flat amount of energy upon the target orgasming. Has no stance restrictions.
 Positive values drain energy.
 
-.. _StanceStuck:
-
 **StanceStuck**
 """"""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["StanceStuck"],
   "EffectPower": ["-20"],
 
 Alters chance of stance escape by a percent. Positive values reduce chance, negative values increase.
 
-.. _InitiativeBonus:
-
 **InitiativeBonus**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["InitiativeBonus"],
   "EffectPower": ["25"],
 
 Flatly alters perk type owners initiative, influencing turn order. Positive values increase initiative, negative values reduce.
 
-.. _MinStatCheckDie:
-
 **MinStatCheckDie**
 """"""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["MinStatCheckDie"],
   "EffectPower": ["2"],
 
 Flatly alters the minimum dice your d20 can roll in a stat check, take caution. Positive values increases base number, negative values reduce.
 
-.. _RestSpiritRestored:
-
 **RestSpiritRestored**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RestSpiritRestored"],
   "EffectPower": ["1"],
 
 Recovers flat amount of spirit when resting at rest points, take caution. Positive values increase, negative values reduce.
 
-.. _RestEnergyRestored:
-
 **RestEnergyRestored**
 """""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RestEnergyRestored"],
   "EffectPower": ["20"],
 
 Recovers percent amount of max energy when resting at rest points, take caution. Positive values increase, negative values reduce.
 
-.. _RestArousalRestored:
-
 **RestArousalRestored**
 """"""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["RestArousalRestored"],
   "EffectPower": ["-20"],
@@ -987,7 +841,7 @@ Alters the given stat of the wielder by the given amount. Positive values increa
 * ``"HolySensitivity"``
 * ``"UnholySensitivity"``
 
-::
+.. code-block:: javascript
 
   "PerkType": ["GainArousal"],
   "EffectPower": ["50"],
@@ -1003,7 +857,7 @@ Alters fetish level by # of times added.
 * ``"IncreaseFetish"``
 * ``"DecreaseFetish"``
 
-::
+.. code-block:: javascript
 
     "PerkType": ["IncreaseFetish", "DecreaseFetish"],
     "EffectPower": ["Ass",              "Sex"],
@@ -1011,36 +865,30 @@ Alters fetish level by # of times added.
 **Player Specific**
 --------------------
 
-.. _GiveSensitivityPoints:
-
 **GiveSensitivityPoints**
 """""""""""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["GiveSensitivityPoints"],
   "EffectPower": ["2"],
 
 Give player points to reduce sensitivity. Only works if acquired at level up. Take caution.
 
-.. _GainSpirit:
-
 **GainSpirit**
 """""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["GainSpirit"],
   "EffectPower": ["1"],
 
 Give the player spirit. Only works if acquired at level up. Take caution.
 
-.. _ResistFinalOrgasm:
-
 **ResistFinalOrgasm**
 """"""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["ResistFinalOrgasm"],
   "EffectPower": ["4"],
@@ -1050,15 +898,14 @@ Refer to *Json/Perks/LevelUp/Will/HeroicCumback.json* for how it works.
 
 **Monster Specific**
 ---------------------
+
 .. note::
   The following three perk types are multiplied in effect by the player's Virility * 0.01 + 1.
-
-.. _SemenEnergyDrain:
 
 **SemenEnergyDrain**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SemenEnergyDrain"],
   "EffectPower": ["20"],
@@ -1071,7 +918,7 @@ Positive values increase base flat drain, negative values reduce.
 **SemenHeal**
 """"""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SemenHeal"],
   "EffectPower": ["-10"],
@@ -1079,13 +926,10 @@ Positive values increase base flat drain, negative values reduce.
 Monster recovers given amount of arousal on player orgasm if in sex, anal, blowjob, tailfuck, or titfuck stance.
 Positive values increase base flat drain, negative values reduce.
 
-
-.. _SemenAttackBoost:
-
 **SemenAttackBoost**
 """""""""""""""""""""
 
-::
+.. code-block:: javascript
 
   "PerkType": ["SemenAttackBoost"],
   "EffectPower": ["25"],
@@ -1097,6 +941,7 @@ Positive values increase, negative values reduce.
 
 **Adverse Perk Types**
 """""""""""""""""""""""
+
 The following perk types tell the monster to try to get out of the related stance even if they have a skill for it, unless they're charmed.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
@@ -1104,7 +949,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 * ``"AnalAdverse"``
 * ``"SexAdverse"``
 
-::
+.. code-block:: javascript
 
   "PerkType": ["KissingAdverse", "AnalAdverse"],
   "EffectPower": ["0"                 "0"],
@@ -1113,6 +958,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 **No Part Perk Types**
 """""""""""""""""""""""
+
 The following perk types make it impossible for the player to initiate or attack the given stances, excluding grope attacks on chests.
 It is highly recommend you use combat events instead of them, but they do still work.
 Set a value of 0, as ``"EffectPower":`` is not needed.
@@ -1122,7 +968,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 * ``"NoMouth"``
 * ``"NoPussy"``
 
-::
+.. code-block:: javascript
 
   "PerkType": ["NoAnus", "NoMouth"],
   "EffectPower": ["0",      "0"],
@@ -1131,6 +977,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 **Monster Damage Boost Perk Types**
 """""""""""""""""""""""""""""""""""""
+
 Damage boosts by a percent for the related fetish. Positive values increase, negative values reduce.
 
 * ``"MonstrousBoost"``
@@ -1138,7 +985,7 @@ Damage boosts by a percent for the related fetish. Positive values increase, neg
 * ``"BreastUseBoost"``
 * ``"AssUseBoost"``
 
-::
+.. code-block:: javascript
 
   "PerkType": ["MonstrousBoost"],
   "EffectPower": ["66"],

@@ -1,9 +1,5 @@
-.. _Time:
-
 **Time**
 =========
-
-.. _PlayerStep:
 
 **PlayerStep**
 ---------------
@@ -12,16 +8,20 @@
 
 This triggers persistent status effects, covering ``"Trance"``, ``"Hypnotized"``, ``"Paralysis"``,  and ``"Aphrodisiac"``, letting their duration and/or potency tick down.
 
+----
+
 **AdvanceTime**
 ----------------
 
 Moves forward time. Note there are 6 chunks in a single day.
 
-::
+.. code-block:: javascript
 
   "AdvanceTime", "1"
 
 ``"DelayNotifications"`` can optionally be used thereafter, delaying perk decay notifications until the next time jump, so you don't interrupt a scene.
+
+----
 
 **RestPlayer**
 ---------------
@@ -30,7 +30,9 @@ Moves forward time. Note there are 6 chunks in a single day.
 
 ``"DelayNotifications"`` can optionally be used thereafter, delaying perk decay notifications until the next time jump, so you don't interrupt a scene.
 
-.. _SleepPlayer:
+----
+
+..  _SleepPlayerFunc:
 
 **SleepPlayer**
 ----------------
@@ -39,15 +41,19 @@ Moves forward time. Note there are 6 chunks in a single day.
 
 ``"DelayNotifications"`` can optionally be used thereafter, delaying perk decay notifications until the next time jump, so you don't interrupt a scene.
 
+----
+
 **IfDelayingNotifications**
 ----------------------------
 
 Lets you check if ``"DelayNotifications"`` was called letting you jump to a different scene if true. **Only works in events.**
 This is so ``"TimePassed"`` events can comply with the above functions, but still let them have the opportunity to silently operate.
 
-::
+.. code-block:: javascript
 
   "IfDelayingNotifications", "SilentScenes"
+
+----
 
 **TimeBecomesNight & TimeBecomesDay**
 --------------------------------------
@@ -58,10 +64,14 @@ The former will clear false days and start false nights, the latter, vice versa.
 False nights last until you return to town, use ``"TimeBecomesNormal"`` below, or the next day starts.
 False days during the night ends in the next time advancement or when returning to town.
 
+----
+
 **TimeBecomesNormal**
 ----------------------
 
 ``"TimeBecomesNormal"`` returns a false night or day back to its normal variant. Does nothing if there is no false night or day.
+
+----
 
 **IfTimeIs**
 -------------
@@ -70,20 +80,24 @@ Can check for the following: Day, Night, DayFaked, DayTrue, NightFaked, NightTru
 
 **Only works in events.**
 
-::
+.. code-block:: javascript
 
   "IfTimeIs", "Night", "SceneNameHere"
+
+----
 
 **HealingSickness**
 --------------------
 
 ``"HealingSickness"`` starts a global trigger for tracking if the player healed with a refresh point. Lasts a whole day, or 6 chunks.
 
+----
+
 **IfHealingSickness**
 ----------------------
 
 Jumps to the given scene if healing sickness is active. Used to actually avoid the refresh scenes for rest points. **Only works in events.**
 
-::
+.. code-block:: javascript
 
   "IfHealingSickness", "SceneNameHere"

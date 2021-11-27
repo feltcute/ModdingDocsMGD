@@ -1,5 +1,3 @@
-.. _Change Monster:
-
 **Change Monster**
 ===================
 
@@ -25,55 +23,66 @@ They can take negative values, and it does reset upon leaving the event and/or e
 * ``"ChangeMonsterLuck"``
 * ``"ChangeMonsterInt"``
 
-::
+.. code-block:: javascript
 
   "ChangeMonsterMaxSpirit", "2"
+
+----
 
 **ChangeMonsterSensitivity**
 -----------------------------
 Changes the given sensitivity by specified amount for the focused monster.
 They can take negative values, and it does reset upon leaving the event and/or encounter. These do not produce dialogue.
 
-::
+.. code-block:: javascript
 
   "ChangeMonsterSensitivity", "Pain", "20"
+
+----
 
 **ChangeMonsterStatusEffectResistances**
 -----------------------------------------
 Changes the given status effect resistance by specified amount for the focused monster.
 They can take negative values, and it does reset upon leaving the event and/or encounter. These do not produce dialogue. See :ref:`Resistances`
 
-::
+.. code-block:: javascript
 
   "ChangeMonsterStatusEffectResistances", "Sleep", "20"
+
+----
 
 **ChangeMonsterFetish**
 ------------------------
 Changes the given fetish by the specified level amount for the focused monster.
 They can take negative values, and it does reset upon leaving the event and/or encounter. These do not produce dialogue.
 
-::
+.. code-block:: javascript
 
   "ChangeMonsterFetish", "Cock", "4"
+
+----
 
 **GivePerkToMonster & RemovePerkFromMonster**
 ----------------------------------------------
 Gives or removes the perk respectively from the focused monster. Can give duplicates.
 It does reset upon leaving the event and/or encounter. These do not produce dialogue.
 
-::
+.. code-block:: javascript
 
   "GivePerkToMonster", "PerkName"
+
+----
 
 **GiveSkillToMonster & RemoveSkillFromMonster**
 ------------------------------------------------
 Gives or removes the skill respectively from the focused monster. Can give duplicates to increase chances.
 It does reset upon leaving the event and/or encounter. These do not produce dialogue.
 
-::
+.. code-block:: javascript
 
   "GiveSkillToMonster", "SkillName"
 
+----
 
 **ClearMonsterPerks & ClearMonsterSkillList**
 ----------------------------------------------
