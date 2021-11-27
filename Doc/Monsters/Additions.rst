@@ -1,46 +1,48 @@
-.. _Monster Additions:
-
 **Monster Additions**
 ======================
-Making an addition to a Monster
+
+Monster additions cover the scope of expanding their skills, perks, item drops, loss and victory scenes, combatDialogue, and overwriting the pictures key.
+
+If you want to change the stats of a monster, you can currently on do so via :ref:`StartOfCombat`,
+and using the related functions found :doc:`here </Doc/Reference/General/ChangeMonster>`.
 
 Check **_MonsterAdditionExample.json** in */Json/Monsters/* for an example.
+.. If you have installed the MGD extension, you can type ``_a_Monsters`` to create a Monster addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Monster .json, how their role changes, and if they're required in a addition.
 
-If you want to change the stats of a monster, you can currently on do so via :ref:`StartOfCombat`, and using the related functions found here.
+.. note::
 
-.. Remember to link the related functions.
+    All other keys outside of the ones listed aren't used, and thus should be excluded for tidiness.
 
-.. note:: All other keys outside of the ones listed aren't used, and thus should not be included for tidiness.
+**IDname & Addition**
+----------------------
 
-**IDname**
------------
-::
+.. code-block:: javascript
 
   "IDname": "Elf",
 
 Required so you can tell the game which Monster you wish to make an addition to.
 
-**gender**
------------
-::
+.. code-block:: javascript
 
   "Addition": "Yes",
 
-Required so you can tell the game that you're wishing to make an addition. Can be added into almost any part of the file.
+Required so the game knows you are making an addition.
 
 **skillList**
 --------------
-::
 
-  "skillList": ["Blowjob", "Thirsty Blowjob", "Super Suck"],
+.. code-block:: javascript
+
+  "skillList": ["Blowjob", "Thirsty Blowjob", "Super Succ"],
 
 Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
 
 **perks**
 ----------
-::
+
+.. code-block:: javascript
 
     "perks": ["Pacing"],
 
@@ -48,7 +50,8 @@ Appends to the existing array. Leave a blank string in the array if you don't in
 
 **itemDropList**
 -----------------
-::
+
+.. code-block:: javascript
 
   "ItemDropList": [
     {
@@ -66,7 +69,8 @@ Appends to the existing array of objects. Don't give the key an object if you do
 
 **lossScenes & victoryScenes**
 -------------------------------
-::
+
+.. code-block:: javascript
 
   "lossScenes": [
     {
@@ -102,7 +106,8 @@ You currently cannot replace existing scenes by copying their conditions and sce
 
 **combatDialogue**
 -------------------
-::
+
+.. code-block:: javascript
 
   "combatDialogue": [
     {
@@ -128,7 +133,8 @@ so any skills or stances listed across multiple objects for the same type of lin
 
 **pictures**
 -------------
-::
+
+.. code-block:: javascript
 
   "pictures": [
 
@@ -136,6 +142,7 @@ so any skills or stances listed across multiple objects for the same type of lin
 
 You can and should exclude the pictures key entirely if you don't intend to use it.
 Otherwise, it is recommended to copy and paste the character's pictures key and work from there.
-A more in-depth explanation on how to more minimally make image related additions will be given in the future as soon as some unexpected issues are resolved.
+A more in-depth explanation on how to do minimal image related additions will be given in the future as soon as some unexpected issues are resolved,
+in the meanwhile, building on top of a copy/paste will work.
 
 .. Making additions to blank pictures key data and general picture data additions to existing sets seems to have some issues, need to review before completing this section. I suck.

@@ -7,7 +7,7 @@ Rolls a `d20 <https://en.wikipedia.org/wiki/D20_System>`_ with the specified pla
 If it fails, it will go to the scene specified after ``"Fail"``. Note you can also check for ``"Temptation"``, as a specialized stat check
 based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
-::
+.. code-block:: javascript
 
   "StatCheck", "Power", "15",
   "Pass Scene", "Fail", "Failed Scene"
@@ -64,7 +64,7 @@ A sub-function that can be used before the check to alter the stat check's diffi
 entries were found to be true or false.
 The last given value in each instance of the sub-function is the stat check modifier, and can be a negative number to subtract instead.
 
-::
+.. code-block:: javascript
 
   "StatCheck",
   "ChangeStatCheckDifficulty", "IfEncounterSizeGreaterOrEqualTo", "2", "5",
@@ -77,7 +77,7 @@ The following sub-sub-functions can be checked for:
 **IfPlayerHasStatusEffect**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfPlayerHasStatusEffect", "Charm", "10"
 
@@ -85,28 +85,28 @@ The following sub-sub-functions can be checked for:
 **IfHasPerk**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfHasPerk", "Swift", "-10"
 
 **IfHasFetish**
 ~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfHasFetish", "Ass", "8"
 
 **IfFetishLevelEqualOrGreater**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfHasFetishEqualOrGreater", "Ass", "65", "9"
 
 **IfVirilityEqualsOrGreater**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfVirilityEqualOrGreater", "65", "9"
 
@@ -114,7 +114,7 @@ The following sub-sub-functions can be checked for:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfEncounterSizeGreaterOrEqualTo", "5", "10",
   "ChangeStatCheckDifficulty", "IfEncounterSizeLessOrEqualTo", "3", "-5"
@@ -122,7 +122,7 @@ The following sub-sub-functions can be checked for:
 **IfProgressEqualsOrGreater & GetAnEventsProgressThenIfEqualsOrGreater**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfProgressEqualsOrGreater", "15", "-8",
   "ChangeStatCheckDifficulty", "GetAnEventsProgressThenIfEqualsOrGreater", "40", "-20"
@@ -130,7 +130,7 @@ The following sub-sub-functions can be checked for:
 **IfChoice & GetEventAndIfChoice**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfChoice", "1", "A Choice", "-100",
   "ChangeStatCheckDifficulty", "GetEventAndIfChoice", "2", "A Differnt Choice", "100"
@@ -140,10 +140,12 @@ The following sub-sub-functions can be checked for:
 Functions the exact same as ``StatCheck`` but the player instead fails if the roll is higher than the opposed checked amount, and passes if it is lower.
 Also informs the player that the goal of the check is to roll under for clarity. **Players cannot surpass failure, nor use ChangeStatCheckDifficulty.**
 
-::
+.. code-block:: javascript
 
   "StatCheckRollUnder", "Technique", "15",
   "Pass Scene", "Fail", "Failed Scene"
+
+----
 
 **ChangeNextStatCheckDifficulty**
 ----------------------------------
@@ -152,9 +154,11 @@ Alters the next stat check across any scene or event.
 Can stack, and also lower the difficulty. Does not persist after a stat check is called. Displays no dialogue for the change.
 Use in tandem with check functions such as :ref:`Player Checks` or :ref:`Monster Checks` to indirectly provide it with conditions depending on the resulting scene.
 
-::
+.. code-block:: javascript
 
   "ChangeNextStatCheckDifficulty", "5"
+
+----
 
 **ResetStatCheckDifficultyModifer**
 ------------------------------------

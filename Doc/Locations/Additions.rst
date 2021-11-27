@@ -5,6 +5,7 @@
 Making a Location addition is non-destructive and thus will be compatible with any other mods making additions to the same Location.
 
 Check **_ForestAdditionExample.json** in *Json/Locations/* for an example.
+.. If you have installed the MGD extension, you can type ``_a_Location`` to create a Location addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Location .json, how their role changes, and if they're required in a addition.
 
@@ -12,13 +13,13 @@ The overview will proceed to go over each key you would find in a regular Locati
 
 **name & exploreTitle**
 ------------------------
-::
+.. code-block:: javascript
 
   "name": "Mystic Forest",
 
 Required so the game knows which location you wish to make an addition to.
 
-::
+.. code-block:: javascript
 
   "Addition": "Yes",
 
@@ -27,11 +28,11 @@ Required so the game knows you wish to make an addition. Can be added into almos
 
 **Monsters & MonsterGroups**
 -----------------------------
-::
+.. code-block:: javascript
 
   "Monsters": ["Minotaur", "Nicci"],
 
-::
+.. code-block:: javascript
 
   "MonsterGroups": [
     {
@@ -49,7 +50,7 @@ These keys are required, but the arrays can be left empty if you do not wish to 
 
 **Events**
 -----------
-::
+.. code-block:: javascript
 
     "Events": ["NewEvent"],
 
@@ -59,7 +60,8 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
 
 **Quests**
 -----------
-::
+
+.. code-block:: javascript
 
     "Quests": ["NewQuest"],
 
@@ -69,7 +71,8 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
 
 **Adventures**
 ---------------
-::
+
+.. code-block:: javascript
 
     "Adventures": ["NewAdventure"],
 
@@ -79,7 +82,8 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
 
 **Treasure**
 -------------
-::
+
+.. code-block:: javascript
 
   "Treasure": [
     {

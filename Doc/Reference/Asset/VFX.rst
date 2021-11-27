@@ -1,5 +1,6 @@
 **VFX**
 ========
+
 .. note::
 
   Each of these have what is called a channel, specific to the function itself.
@@ -10,7 +11,7 @@
 **PlayVisualEffect**
 ---------------------
 
-::
+.. code-block:: javascript
 
   "PlayVisualEffect", "BlindingFlash", "pink.png"
 
@@ -55,6 +56,8 @@ To be placed after ``"PlayVisualEffect"`` so it knows how you want to manipulate
 * ``"OrgasmPulse"`` rapid pulse for orgasms. Eyes will definitely hurt with bright images, use with care.
 
 
+----
+
 **Channel-Independent VFX**
 ----------------------------
 Pre-made and independent visual effect functions, with their own channel and images.
@@ -67,16 +70,18 @@ Pre-made and independent visual effect functions, with their own channel and ima
 
 * ``"PlayBlackOut"`` plays the screen black out effect, keeping the screen dark till ``"EndBlackOut"`` is called.
 
+----
+
 **PlayHypoSpiral**
 -------------------
 
-::
+.. code-block:: javascript
 
   "PlayHypnoSpiral", "5", "0.2", "Image.png", "1"
 
 *Legend*:
 
-::
+.. code-block:: javascript
 
   "PlayHypnoSpiral", "Speed, 1-100, default 5", "Opacity, 0.1-1", "Image.png", "In front of characters, 1/Behind, 0"
 
@@ -84,17 +89,18 @@ Pre-made and independent visual effect functions, with their own channel and ima
 
 It has multiple parameters it uses to determine its effect, in a specific order, as shown in the above.
 
+----
 
 **PlayPendulum**
 -------------------
 
-::
+.. code-block:: javascript
 
   "PlayPendulum", "5", "60", "Image.png", "1"
 
 *Legend*:
 
-::
+.. code-block:: javascript
 
   "PlayPendulum", "Speed, 0-Any, default 5", "Angle, 0-360, default 60", "Image.png",
 
@@ -105,13 +111,14 @@ The image used itself needs to be set up a specific way if you want it to displa
 
 It has multiple parameters it uses to determine its effect, in a specific order, as shown in the above.
 
+----
 
 **PlayImagePulseLoopingList**
 ------------------------------
 
-::
+.. code-block:: javascript
 
-  "PlayImagePulseLoopingList", "1", "1", "0.9",
+  "PlayImagePulseLoopingList", "1.0", "1", "0.9",
 
   "Image1.png",
 
@@ -121,19 +128,21 @@ It has multiple parameters it uses to determine its effect, in a specific order,
 
 *Legend*:
 
-::
+.. code-block:: javascript
 
-  "PlayImagePulseLoopingList", "PulseSpeed 0.2-2, default 1", "Zoom 0.2-2, default 1", "Opacity 0.1-1",
+  "PlayImagePulseLoopingList", "PulseSpeed seconds, decimal required", "Zoom 0.2-2, default 1", "Opacity 0.1-1",
 
 ``"PlayImagePulseLoopingList"`` pulses an image on the screen based on the multiple parameters.
 It will loop through any number of images provided after the parameters are set in the order shown above. Ends with ``"EndImagePulseLoopingList"``.
 
 ``"PlayImagePulseLoopingList"`` & ``"EndImagePulseLoopingList2"`` – channel 2
 
+----
+
 **PlayImagePulseLoopingRandom**
 --------------------------------
 
-::
+.. code-block:: javascript
 
   "PlayImagePulseLoopingRandom", "1", "1", "0.7",
 
@@ -145,17 +154,19 @@ It will loop through any number of images provided after the parameters are set 
 
 *Legend*:
 
-::
+.. code-block:: javascript
 
   "PlayImagePulseLoopingRandom", "PulseSpeed, 0.2-2, default 1", "Zoom, 0.2-2, default 1", "Opacity, 0.1-1",
 
 ``"PlayImagePulseLoopingRandom"`` is the same as ``"PlayImagePulseLoopingList"``,
 except it will select images in a random order. random plays randomly order. Ends with ``"EndImagePulseLoopingRandom"``.
 
+----
+
 **PlayCustomBarrage**
 ----------------------
 
-::
+.. code-block:: javascript
 
   "PlayCustomBarrage", "1", "0.1",
 
@@ -165,7 +176,7 @@ except it will select images in a random order. random plays randomly order. End
 
 *Legend*:
 
-::
+.. code-block:: javascript
 
   "PlayCustomBarrage", "PulseSpeed, 0.2-2, default 1", "Opacity, 0.1-1",
 
@@ -174,10 +185,12 @@ Display a barrage of images, values are for PulseSpeed and Opacity respectively.
 
 ``"PlayCustomBarrage2"`` & ``"EndCustomBarrage2"`` - channel 2
 
+----
+
 **PlayMotionEffect**
 ---------------------
 
-::
+.. code-block:: javascript
 
   "PlayMotionEffect", "Explosion"
 
@@ -185,39 +198,59 @@ Display a barrage of images, values are for PulseSpeed and Opacity respectively.
 ``"EndMotionEffect"`` can end the current motion effect if it's taking too long on the next line, or to end a PlayMotionEffectLoop as mentioned shortly below.
 
 Motion Effects on Characters: Bounce, BounceSlow, BounceFast, BounceOnce, Sway, SwaySlow, SwayFast, SwayOnce, Pump, PumpSlow, PumpFast, Ride, RideSlow, RideFast, and Vibrate. Realign can also be called to fix any transforms that can potentially jank out.
+
 Motion Effects for entire Screen: ScreenBounce, SlowScreenBounce, ScreenSway, Explosion, LongExplosion, Crash, and Quake.
 
-The screen effecting ones will move everything, including the text box and other UI elements. The other one only effects on screen characters.
-To effect a single character or body part on a character or CG you will need to go further down to use the more complex "PlayMotionEffectCustom". Motion effects for the screen have no custom varient.
+The screen motion effects will move everything, including the text box and other UI elements. The other one only applies to on-screen characters.
+To effect a single character or body part on a character or CG, see `PlayMotionEffectCustom`_. Motion effects for the entire screen have no custom varient.
 
+----
 
 **PlayMotionEffectLoop**
 -------------------------
 
 Works the same as PlayMotionEffect, but will maintain the effect even as the scene moves to the next line, until EndMotionEffect is called.
 
+----
 
 **PlayMotionEffectCustom**
 ---------------------------
-::
+Plays a custom motiion effect.
+
+.. code-block:: javascript
+
+  "PlayMotionEffectCustom", "Bounce", "Characters", "1.0", "15"
+  "PlayMotionEffectCustom", "Sway", "Character", "1", "2.0", "5"
+  "PlayMotionEffectCustom", "Ride", "Bodypart", "Aiko", "Expression", "0.5", "10"
+
+*Legend*:
+
+.. code-block:: javascript
 
   "PlayMotionEffectCustom", "EffectHere", "Characters", "speed, 1.0", "distance, 5"
   "PlayMotionEffectCustom", "EffectHere", "Character", "Target", "speed, 1.0", "distance, 5"
   "PlayMotionEffectCustom", "EffectHere", "Bodypart", "Target", "LayerTarget", "speed, 1.0", "distance, 5"
 
-The above are the multiple ways to target a cusmon effect.
-"Characters" hits everyone on screen.
-"Character" requires you to add a target by name or by display position like a image change eg: "Aiko"/"1".
-"Bodypart" requires you to add a target by name as above, then a layer you want to apply the transform to, eg: "Expression".
+``"EffectHere:"`` can take the following effect values: Bounce, Sway, Pump, Ride, Vibrate.
 
-Where it says "EffectHere" you can call one of these effects to use:
-  Bounce, Sway, Pump, Ride, Vibrate
+.. list-table::
+  :widths: 1 5
 
-Due to how it works, any non Global "Characters" custom effect, MUST be ended manually with another call like so:
-"PlayMotionEffectCustom", "", "Character", "Aiko", "0", "0"
-"PlayMotionEffectCustom", "", "Bodypart", "Aiko", "Expression", "0", "0"
+  * - ``"Characters"``
+    - Hits everyone on screen.
+  * - ``"Character"``
+    - Requires you to add a target by name or by display position like a image change, e.g.: ``"Aiko"`` or ``"1"``.
+  * - ``"Bodypart"``
+    - Specify the target, then the layer you want to apply the transform to, e.g.: ``"Expression"``.
 
-There can only be one custom effect on screen at a time atm.
+To end single-target custom effects such as ``"Character"`` and ``"Bodypart"``, you need to call a blank use of the function:
+
+.. code-block:: javascript
+
+  "PlayMotionEffectCustom", "", "Character", "Aiko", "0", "0"
+  "PlayMotionEffectCustom", "", "Bodypart", "Aiko", "Expression", "0", "0"
+
+----
 
 **EndAllVisualEffects**
 ------------------------

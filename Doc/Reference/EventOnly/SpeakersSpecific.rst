@@ -1,21 +1,19 @@
-.. _Speakers Specific:
-
 **Speakers Specific**
 =======================
 
 .. note::
 
-  This page contains functions in direct relation to the :ref:`Speakers` key. See the hyperlink for more information on the keys themselves.
+  This page contains functions in direct relation to the :ref:`SpeakersCreation` key. See the hyperlink for more information on the keys themselves.
 
-  Additionally, see :ref:`Dialogue` for functions independent of the :ref:`Speakers` key.
+  Additionally, see :doc:`Dialogue </Doc/Reference/General/Dialogue>` for functions independent of the :ref:`SpeakersCreation` key.
 
-.. _DisplayCharacters:
+.. _DisplayCharactersFunc:
 
 **DisplayCharacters**
 ----------------------
 Shows each specified``"Speakers":`` image/card from a :doc:`Event </Doc/Events/Creation>`.
 
-::
+.. code-block:: javascript
 
   "DisplayCharacters",
     "1",
@@ -24,7 +22,9 @@ Shows each specified``"Speakers":`` image/card from a :doc:`Event </Doc/Events/C
 
 Instead of a number you can also use the nameID of that monster file to specify who you want to display, but they still must be listed in the ``"Speakers":``.
 
-.. _Speaks:
+----
+
+.. _SpeaksFunc:
 
 **Speaks**
 -----------
@@ -33,7 +33,7 @@ Supplying a number in the function will make it move to the next character in ``
 
 Adding a numerical value directly at the end within the function will use the other speakers in the order their objects are included. Up to 12.
 
-::
+.. code-block:: javascript
 
   "Speaks2",
     "Are those imps?",
@@ -43,7 +43,7 @@ Adding a numerical value directly at the end within the function will use the ot
     "Hello it's me, an imp."
 
 
-``"Speaks"`` is also capable of being used in :ref:`lossScenes and victoryScenes`, which will refer to the :ref:`Monster Creation`'s ``"name"`` key within the json.
+``"Speaks"`` is also capable of being used in :ref:`lossScenes and victoryScenes`, which will refer to the :doc:`Monster Creation </Doc/Monsters/Creation>`'s ``"name"`` key within the json.
 
 .. code-block:: javascript
 
@@ -51,6 +51,8 @@ Adding a numerical value directly at the end within the function will use the ot
     "Wow I didn't know you could lift that many imps at once!",
   "Speaks2",
     "I didn't either someone help me."
+
+----
 
 **SetPostName**
 ----------------
@@ -66,6 +68,8 @@ After the attack is performed...
 
   "SetPostName", ""
 
+----
+
 **SetFlexibleSpeaker & FlexibleSpeaks**
 ----------------------------------------
 Using ``"SetFlexibleSpeaker"`` sets a speaker to be used from the ``"Speakers":`` key whenever ``"FlexibleSpeaks"`` is called.
@@ -73,7 +77,7 @@ Using ``"SetFlexibleSpeaker"`` sets a speaker to be used from the ``"Speakers":`
 ``"FlexibleSpeaks"`` otherwise works just like the ``"Speaks"`` function. Used for niche cases where you want to change the speaker, but not the entire scene.
 See Manticore, Onis, or Shizu.
 
-::
+.. code-block:: javascript
 
   "SetFlexibleSpeaker", "2",
   "FlexibleSpeaks",

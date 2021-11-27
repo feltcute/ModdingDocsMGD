@@ -1,8 +1,7 @@
-.. _Skill Creation:
-
 **Skill Creation**
 ===================
-Breaks down the keys and strings used by Skills.
+
+Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Skills.
 
 Go to *Json/Skill/*, and then see the .json files present for examples, and **_BlankSkill.json** for a template.
 
@@ -13,7 +12,8 @@ If it requires a non-blank (e.g. ``""``) value depends on the given ``"skillType
 
 **name**
 ---------
-::
+
+.. code-block:: javascript
 
   "name": "Name of Skill",
 
@@ -23,7 +23,8 @@ Sets the name of the skill, presented to the player in various locations through
 
 **costType & cost**
 --------------------
-::
+
+.. code-block:: javascript
 
   "costType": "ep",
 
@@ -36,7 +37,7 @@ There are three possible types:
 * ``"hp"`` inflicts arousal on the caster by the given flat amount plus an additional percent based on ``(max health - 100) * 0.15``.
 * ``"sp"`` deducts the given amount of spirit from the caster. This is a flat deduction, so it does run the risk of the player defeating themselves by mistake.
 
-::
+.. code-block:: javascript
 
   "cost": "10",
 
@@ -49,7 +50,8 @@ intended to be countered in a combat event.
 
 **requiredLevel & learningCost**
 ---------------------------------
-::
+
+.. code-block:: javascript
 
   "requiredLevel": "1",
 
@@ -58,7 +60,7 @@ Does not prevent the player from using the skill if they later don't meet its re
 
 The key does not apply to monsters, and thus can be safely removed for tidiness in such cases.
 
-::
+.. code-block:: javascript
 
   "learningCost": "100",
 
@@ -66,11 +68,10 @@ Ero cost of the skill from vendors in-game.
 
 The key does not apply to monsters, and thus can be safely removed for tidiness in such cases.
 
-.. _skillType:
-
 **skillType**
 --------------
-::
+
+.. code-block:: javascript
 
   "skillType": "attack",
 
@@ -100,24 +101,24 @@ The following table presents all possible values it can be given.
 
 **statType & requiredStat**
 ----------------------------
-::
+
+.. code-block:: javascript
 
   "statType": "Luck",
 
 The type of stat the skill scales off of, used by various keys. See :ref:`Stats`.
 
-::
+.. code-block:: javascript
 
   "requiredStat": "10",
 
 The required amount of the given ``"statType":`` in order to learn the skill from vendors in-game.
 It does not prevent the player from using the skill if they later don't meet its requirements while still possessing the skill.
 
-.. _skillTags:
-
 **skillTags**
 --------------
-::
+
+.. code-block:: javascript
 
   "skillTags": ["Ass", "Breasts"],
 
@@ -131,11 +132,10 @@ Additionally, prefixing a tag with ``display`` (e.g. ``"displayAss"``, ``"displa
 will display the skill in the corresponding section of the player's list of skills, without making it scale or be recognized internally as a part of the given sensitivity.
 **They're required for** ``"Holy"`` **and** ``"Unholy"`` **tagged skills that otherwise feature no other tags.**
 
-.. _fetishTags:
-
 **fetishTags**
 ---------------
-::
+
+.. code-block:: javascript
 
   "fetishTags": ["Oral", "Handholding"],
 
@@ -149,11 +149,12 @@ Some tips to take note of:
 * Monsters can have a ``"Cock"`` fetish for any player and monster skills related to the player's magnum rod.
 * Monsters initiating Sex and Anal stances should have the corresponding fetish used in their penetrating skill, while using ``"Penetration"`` for skills that take place in either stance.
 
-.. _targetType:
+.. _targetTypeCreation:
 
 **targetType**
 ---------------
-::
+
+.. code-block:: javascript
 
   "targetType": "single",
 
@@ -184,8 +185,9 @@ What participants in the encounter are intended to be struck by the caster's ski
 
 **Stance & Control Keys**
 --------------------------
+
 Take heed to think through the logic of your stance control keys to avoid any potential mishaps or errors that'd prevent them from working as expected.
-Ensure capitalization is correct. Also keep in mind that stances are nebulous, see :ref:`Stance Reference`.
+Ensure capitalization is correct. Also keep in mind that stances are nebulous, see :doc:`Stance Reference </Doc/Reference/StanceRef>`.
 
 You can optionally apply or remove a stance via the following keys.
 
@@ -239,7 +241,8 @@ Critically, the skill can be made unavailable to the player or monster AI depend
 
 **attack & healing Keys**
 --------------------------
-::
+
+.. code-block:: javascript
 
   "power": "10",
   "minrange": "90",
@@ -260,7 +263,7 @@ The following keys are required for ``"attack"`` or any healing based ``"skillTy
   * - ``"recoil": "35",``
     - Percentage of the damage dealt to the target recoiled back at the caster. Cannot be a negative value.
 
-::
+.. code-block:: javascript
 
   "scalesWithStatusEffect": "Aphrodisiac",
   "flatDamageSF-FlatScaling": "5",
@@ -290,13 +293,12 @@ The following keys are optional for ``"attack"`` or any healing based ``"skillTy
   * - ``"TotalDamageSF-PercentScaling": "5",``
     - Boost to **total** skill damage for each stack of ``"scalesWithStatusEffect":``. This means it bypasses defense reductions, and applies *after* other damage boosts. **Take extreme care.** If using this key, set the other SF damage scaling key values to ``"0"``, or remove entirely.
 
-Lastly, see ``"statusOutcome":`` in :ref:`Dialogue Keys` below for a note on combat event based skills.
-
-.. _statusEffect Keys:
+Lastly, see ``"statusOutcome":`` in `Dialogue Keys`_ below for a note on combat event based skills.
 
 **statusEffect Keys**
 -----------------------
-::
+
+.. code-block:: javascript
 
   "statusEffect": "Aphrodisiac",
   "statusChance": "20",
@@ -336,7 +338,8 @@ The following keys are optional for all possible ``"skillType":`` values.
 
 **descrip**
 ------------
-::
+
+.. code-block:: javascript
 
   "descrip": "Cuddles the target till they don't feel like battlefucking anymore!",
 
@@ -345,12 +348,11 @@ The skill's tooltip description. Duration is automatically provided in the toolt
 ``"PlayWhilePlayerSleeping"`` can be provided as a value for Monster skills to trigger the skills ``"statusOutcome":`` while the player is asleep.
 Useful for combat events. Refer to Sofia's InciteDreams.json skill for reference.
 
-.. _Dialogue Keys:
-
 **Dialogue Keys**
 ------------------
+
 The following keys are conditional triggers based on the outcome of the skill, similar to :ref:`lineTriggers`.
-This can use :ref:`Text Markup`, and thus in extension, :ref:`Functions` for starting combat events, using vfx/sfx, and so forth.
+This can use :doc:`Text Markup </Doc/Reference/Markup>`, and thus in extension, :doc:`Functions </Doc/Reference/Functions>` for starting combat events, using vfx/sfx, and so forth.
 
 The following are required for ``"attack"`` or any healing based ``"skillType":`` skills.
 

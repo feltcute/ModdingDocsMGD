@@ -1,5 +1,3 @@
-.. _Stance Reference:
-
 **Stance Reference**
 =====================
 
@@ -8,12 +6,14 @@
 
 **Any, None**
 --------------
+
 ``"Any"``, or ``"None"`` can sometimes be checked for in certain cases to either cover any stance, or the lack of any stance.
 The documentation for relevant functions and keys will state whether these values are an option.
 
 
 **Player & Monster Stances**
 -----------------------------
+
 The following three stances can be initiated by both players and most monsters:
 
 * ``"Sex"``
@@ -26,6 +26,7 @@ Penetration is an internal stance type that counts both Sex and Anal, for use in
 
 **Monster Stances**
 --------------------
+
 The following stances can only be started by monster girls, and are meant to count towards particular fetishes:
 
 * ``"Blowjob"``
@@ -42,6 +43,7 @@ The following stances can only be started by monster girls, and are meant to cou
 
 **Specialty Stances**
 ---------------------
+
 The following stances can only be started by monster girls, and are specialized with no particular fetishes.
 
 * ``"Cuddle"``
@@ -52,6 +54,7 @@ The following stances can only be started by monster girls, and are specialized 
 
 **Making Stances**
 -------------------
+
 Stances are completely nebulous. Anything can be a stance, and thus can be declared freely, there doesn't need to be any particular point of origin, nor followed rules.
 Thus, it can be safely checked for or declared at any point in a function or key, even if it doesn't actually exist anywhere else yet.
 Just remember they're case sensitive.

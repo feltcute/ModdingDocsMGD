@@ -1,33 +1,35 @@
-.. _Adventure Creation:
-
 **Adventure Creation**
 =======================
-Breaks down the keys and strings used by Adventures.
 
-Go to *Json/Adventures/*, and then see the .json files present for examples, and **_BlankAdventure.json** for a template.
+Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Adventures.
 
-.. If you have installed snippets, you can type .*blank* to instantly create an adventure snippet.
+Go to *Json/Adventures/*, and then see the *.json* files present for examples, and **_BlankAdventure.json** for a template.
 
-Assume all keys are required, unless stated otherwise.
+.. If you have installed the MGD extension, you can type ``_c_Adventure`` to create an Adventure snippet.
+
+**Assume all keys are required, unless stated otherwise.**
 
 **name**
 ---------
+
 .. code-block:: javascript
 
-  "name": "The Name of an Adventure",
+  "name": "Name of an Adventure",
 
-Sets the name of the adventure for the choice menu of a location on the map.
+Sets the name of the adventure for the menu choice of a location on the map.
 
 **Description**
 ----------------
+
 .. code-block:: javascript
 
   "Description": "Description of the Adventure.",
 
-Give a brief description of the adventure.
+Give a brief description of the adventure. Currently unused in-game, but is expected.
 
 **requires & requiresEvent**
 -----------------------------
+
 .. code-block:: javascript
 
   "requires": ["Name of a required item", "Another item that may be required"],
@@ -47,7 +49,9 @@ While the key must still be included, the array can be left empty if you do not 
     }
   ],
 
-A more complex and optional key that checks for progress or a choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+
+Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
 
 You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
@@ -57,6 +61,7 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
 **Deck**
 ---------
+
 .. code-block:: javascript
 
   "Deck": [
@@ -76,6 +81,8 @@ Below are examples of strings that can be put into the array:
 .. list-table::
   :widths: 1 5
 
+  * - ``"Event",``
+    - Jumps to an event given in the following string.
   * - ``"Monster",``
     - Introduces a monster encounter. Provide a string of the IDname of each included monster, close the list with ``"EndLoop"``.
   * - ``"RandomEvent",``
@@ -129,7 +136,7 @@ Requires use of the ``"MonsterGroups":``, found below.
     }
   ],
 
-Decides the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Group":`` key will represent a different possible formation.
+Sets the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Group":`` key will represent a different possible formation.
 You can intermix different monsters via the arrays, even if the monster isn't present in ``"RandomMonsters":``.
 Repeat an object with a certain formation multiple times if you wish to make it more likely.
 Works the same as a :doc:`Location's </Doc/Locations/Creation>` ``"MonsterGroups":``.
@@ -154,7 +161,7 @@ While the key is required, you do not have to provide an object if you do not wi
     }
   ],
 
-Decide the items from chests for each type of treasure rarity.
+Sets the possible items that can be earned from chests for each type of treasure rarity.
 The listed objects and their keys must be included, and each array must have at least one item.
 
 .. code-block:: javascript
@@ -173,5 +180,5 @@ The listed objects and their keys must be included, and each array must have at 
     }
   ]
 
-Decides the amount of eros given from chests for each type of treasure rarity.
+Sets the amount of eros given from chests for each type of treasure rarity in the adventure from treasure in the `Deck`_.
 The listed objects and their keys must be included, and each key must provide a value in their string.

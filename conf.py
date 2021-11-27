@@ -7,7 +7,7 @@ needs_sphinx = '3.2.1'
 project = "Monster Girl Dreams"
 copyright = '2017-2021, Threshold'
 author = 'Threshold'
-release = 'v23.8'
+release = 'v23.9'
 
 # -- General configuration ---------------------------------------------------
 
@@ -48,6 +48,7 @@ html_context = {
     # "conf_py_path": "/source/", # Path in the checkout to the docs root
 }
 
+notfound_urls_prefix = ''
 notfound_context = {
     "title": "404: Page Not Found",
     "body": """
@@ -62,7 +63,7 @@ to navigate somewhere safe.
         <p>
             Or you can stay here with the original and forgotten Black Knight and keep her company. That would make her happy.
         </p>
-        <img src="img/starter/blackknight.jpg" alt="Black Knight, eternally delivering pizza." width="372" height="571">  
+        <img src="img/starter/blackknight.jpg" alt="Black Knight, eternally delivering pizza." width="372" height="571">
     """,
 }
 
