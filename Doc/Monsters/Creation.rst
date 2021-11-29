@@ -1,28 +1,25 @@
-.. _Monster Creation:
-
 .. _NPC Creation:
 
 **Monster Creation**
 =====================
 
-Breaks down the keys and strings used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
+Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
 
 Go to */Json/Monsters/*, and then see the .json files present for examples, and **_BlankMonster.json** for a template.
+.. If you have installed the MGD extension, you can type ``_c_Monsters`` to create a Monster snippet.
 
-.. If you have installed snippets, you can type .*blank* to instantly create an monster snippet.
-
-Assume all keys are required, unless stated otherwise.
+**Assume all keys are required, unless stated otherwise.**
 
 **name & IDname**
 ------------------
 
-::
+.. code-block:: javascript
 
   "name": "monster name",
 
 Sets the name of the monster that will be displayed to the player in-game.
 
-::
+.. code-block:: javascript
 
   "IDname": "monster IDname",
 
@@ -31,7 +28,7 @@ The internal name of the monster for use in json files. You will be working with
 **species**
 ------------
 
-::
+.. code-block:: javascript
 
   "species": "Monster species",
 
@@ -42,26 +39,26 @@ When making a monster, you can refer to existing monster .jsons to see what thei
 **gender**
 -----------
 
-::
+.. code-block:: javascript
 
   "gender": "female",
 
-The gender of the monster. It primarily exists at the moment to distinguish normal monster jsons, and :ref:`Monster Additions`.
+The gender of the monster. It primarily exists at the moment to distinguish normal monster jsons, and :doc:`Monster Additions </Doc/Monsters/Additions>`.
 
 **description & encyclopedia**
 -------------------------------
 
-::
+.. code-block:: javascript
 
   "description": "Monster description goes here.\n\nNote how the markup was called twice, and that space wasn't used.",
 
 The description of a monster. This is given to the player in a card if the monster has no art, or if they disabled it in the options menu.
 
-See :ref:`Dialogue Text Markup` for more information on the markup example in the above.
+See :ref:`DialogueTextMarkup` for more information on the markup example in the above.
 
 The string can technically be left blank if you intend to use art from the get-go, but it is still recommended.
 
-::
+.. code-block:: javascript
 
   "encyclopedia": "Lore information",
 
@@ -72,7 +69,7 @@ The string can be left blank if you don't intend for the Monster to be available
 **tags**
 ---------
 
-::
+.. code-block:: javascript
 
   "tags": "none",
 
@@ -81,7 +78,7 @@ Like ``"species":``, it currently has no functionality, but is best included in 
 **generic**
 ------------
 
-::
+.. code-block:: javascript
 
   "generic": "True",
 
@@ -111,8 +108,12 @@ The key must be included, but the array can be left empty. You can leave either 
     }
   ],
 
-A more complex and optional field that checks for progress or a choice in a event. It can be used in addition to or in place of ``"requires":``.
-You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else the game will crash. If you don't wish to use one of them, use the default values above.
+A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+
+Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+
+You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
+``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
 
 If in use, you cannot exclude unused keys in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
@@ -120,7 +121,7 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 **skillList**
 --------------
 
-::
+.. code-block:: javascript
 
   "skillList": ["Caress", "Kiss", "Kiss"],
 
@@ -134,7 +135,7 @@ Provide a blank string if you don't wish to use the key.
 **perks**
 ----------
 
-::
+.. code-block:: javascript
 
   "perks": ["Semen Eater", "Semen Eater", "Monster Pacing"],
 
@@ -148,7 +149,7 @@ Provide a blank string if you don't wish to use the key.
 **stats**
 ----------
 
-::
+.. code-block:: javascript
 
   "stats": {
     "lvl": "1",
@@ -172,7 +173,7 @@ The stats of the monster in combat. While otherwise straightforward, there are t
 **Fetishes**
 -------------
 
-::
+.. code-block:: javascript
 
   "Fetishes": ["Cock|/|50", "Anal|/|25"],
 
@@ -186,7 +187,7 @@ Provide a blank string if you don't wish to use the key.
 **BodySensitivity**
 --------------------
 
-::
+.. code-block:: javascript
 
   "BodySensitivity": {
     "Sex": "100",
@@ -205,7 +206,7 @@ The sensitivities of the monster. Going above 100 makes them more sensitive, goi
 **resistancesStatusEffects**
 -----------------------------
 
-::
+.. code-block:: javascript
 
   "resistancesStatusEffects": {
       "Stun": "0",
@@ -223,13 +224,13 @@ The status effect resistances of the monster. A positive value increases their r
 **moneyDropped & itemDropList**
 -------------------------------
 
-::
+.. code-block:: javascript
 
   "moneyDropped": "25",
 
 The amount of eros the monster provides.
 
-::
+.. code-block:: javascript
 
   "ItemDropList": [
     {
@@ -251,7 +252,7 @@ Make a new object for every additional item the monster can drop. Repeating item
 **lossScenes & victoryScenes**
 -------------------------------
 
-::
+.. code-block:: javascript
 
   "lossScenes": [
     {
@@ -294,14 +295,14 @@ In order of priority, top to bottom...
 * ``"stance":`` the stance that the monster is currently in. It currently can only cover one stance.
 
 
-``"picture":`` is unused but technically functional. This changes the background picture upon starting the scene, but is largely succeeded by :ref:`ChangeBG`.
+``"picture":`` is unused but technically functional. This changes the background picture upon starting the scene, but is largely succeeded by :ref:`ChangeBGFunc`.
 
 Ensure you have one universal use scene with no requirements, else players can potentially cause the game to crash
 from going to a scene that doesn't exist.
 
 If you want to have menus or just generally more advanced scene logic, you can point the loss scene to immediately jump to an event.
 
-::
+.. code-block:: javascript
 
   "victoryScenes": [
     {
@@ -319,12 +320,12 @@ If you want to have menus or just generally more advanced scene logic, you can p
 
 Functions exactly the same as ``"lossScenes":``, but for when the player wins.
 
-.. _combatDialogue:
+.. _combatDialogueCreation:
 
 **combatDialogue**
 -------------------
 
-::
+.. code-block:: javascript
 
   "combatDialogue": [
     {
@@ -363,7 +364,7 @@ trigger in combatDialogue and translates the values from ``"theText:"`` into the
 **pictures**
 -------------
 
-::
+.. code-block:: javascript
 
   "pictures": [
     {
@@ -450,7 +451,7 @@ In the meanwhile, check Aiko’s file for an example of Image Sets, containing m
 
 Alternatively, you can give a blank array if you intend to use a text based card description.
 
-::
+.. code-block:: javascript
 
   "pictures": [
 

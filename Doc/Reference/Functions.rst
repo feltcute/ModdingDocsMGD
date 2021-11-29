@@ -1,5 +1,3 @@
-.. _Functions:
-
 **Functions**
 ==============
 
@@ -11,6 +9,7 @@ You can also utilize your text editor's ability to search across multiple files 
 
 **General**
 ------------
+
 Functions that can be used anywhere functions are stated to work.
 
 .. toctree::
@@ -21,6 +20,7 @@ Functions that can be used anywhere functions are stated to work.
 
 **Event Only**
 ---------------
+
 Functions that only work in :doc:`Event </Doc/Events/Creation>` based .json files.
 
 .. toctree::
@@ -31,6 +31,7 @@ Functions that only work in :doc:`Event </Doc/Events/Creation>` based .json file
 
 **Asset**
 -----------
+
 Functions that utilize any provided assets given to the game, ranging from visual to audio. They can be used anywhere functions are stated to work.
 
 .. toctree::
@@ -41,6 +42,7 @@ Functions that utilize any provided assets given to the game, ranging from visua
 
 **Combat Only**
 --------------------
+
 Functions that only work while in a combat encounter.
 
 .. toctree::

@@ -16,7 +16,7 @@ You will be creating a basic :doc:`Event </Doc/Events/Creation>`.
 
 Start by making a set of curly brackets with an empty line between them, like the below. You may notice that your editor automatically makes a set of curly brackets.
 
-::
+.. code-block:: javascript
 
   {
 
@@ -33,7 +33,7 @@ However, keeping them on separate lines improves readability for anyone reading 
 
 Objects can't contain data directly. That's the job of **keys**. Put this text in the empty line between the brackets:
 
-::
+.. code-block:: javascript
 
     "name": "",
 
@@ -54,13 +54,13 @@ If you haven't already, provide the ``"name":`` key's string with some text char
 
 Start a new line after the name key while keeping it inside the object, and copy/paste the following...
 
-::
+.. code-block:: javascript
 
     "CardType": "Event",
     "CardLimit": "1",
     "Description": "A description",
 
-You can become familiar with what these keys do in :ref:`Event Creation` later.
+You can become familiar with what these keys do in :doc:`Event Creation </Doc/Events/Creation>` later.
 
 Sometimes, keys are designed to expect specific string values, such as ``"CardType":``
 expecting a certain type of event card type, in this case, a plain ``"Event"`` card type.
@@ -70,7 +70,7 @@ can be provided with anything inside the string that the user wishes.
 **Arrays**
 -----------
 
-::
+.. code-block:: javascript
 
     "requires": ["Anaph Herb", "Vandal Note"],
 
@@ -85,7 +85,7 @@ Arrays cannot contain keys, only objects can. However, arrays can contain object
 **Nested Objects**
 -------------------
 
-::
+.. code-block:: javascript
 
     "Speakers": [
     {

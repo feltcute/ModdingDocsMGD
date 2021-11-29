@@ -1,11 +1,9 @@
-.. _Dialogue:
-
 **Dialogue**
 =============
 
 .. tip::
 
-  For :ref:`Speakers` specific functions, see the page :ref:`Speakers Specific`.
+  For :ref:`SpeakersCreation` specific functions, see the page :doc:`Speakers Specific </Doc/Reference/EventOnly/SpeakersSpecific>`.
 
 **PlayerSpeaks**
 -----------------
@@ -17,6 +15,8 @@ Puts the player name in the text box header for the next string.
   "PlayerSpeaks",
     "I don't get to talk very often."
 
+----
+
 **PlayerSpeaksSkill - Combat Only**
 ------------------------------------
 
@@ -27,22 +27,26 @@ Generally for use in combat events where the skill name is called still, and quo
   "PlayerSpeaksSkill",
     "I don't get to talk very often."
 
-.. _Speak:
+----
+
+.. _SpeakFunc:
 
 **Speak**
 ----------
 
-Displays the given text in the text box header for the following string of text. Doesn't need to be in ``"Speaker":``, see :ref:`Speaks` for that.
+Displays the given text in the text box header for the following string of text. Doesn't need to be in ``"Speaker":``, see :ref:`SpeaksFunc` for that.
 
 .. code-block:: javascript
 
   "Speak", "Elena and Elly",
     "Paperwork sucks!"
 
+----
+
 **SaveNextLine, UseSavedLineInMenu, & DisplaySavedLine**
 ----------------------------------------------------------
 
-Using ``"SaveNextLine"`` saves the next line that’s going to be displayed. Will then automatically be displayed during the next :ref:`Menu`.
+Using ``"SaveNextLine"`` saves the next line that’s going to be displayed. Will then automatically be displayed during the next :ref:`MenuFunc`.
 This normally does happen already, but can be useful for more complex cases. See the logic for the Will-Power Temple's random encounters as an example.
 
 ``"DisplaySavedLine"`` will display the current saved line manually.

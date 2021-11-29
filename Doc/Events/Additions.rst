@@ -3,40 +3,40 @@
 **Event Additions**
 ====================
 
-Making an addition to an Event can be as little or as much involved as desired. It is recommended to keep it as minimal as possible to avoid
-compatibility issues with other mods making additions to the same events. It covers the scope of replacing specific scenes, adding new scenes,
-and appending to the list of ``"Speakers"``.
+Event additions cover replacing specific scenes, adding new scenes, and appending to the list of ``"Speakers"``.
 
 This does mean your addition would be incompatible with other mods that make an addition to the same scenes in an Event.
-This is excluding scenes solely using :ref:`MenuAddition` for the brothel and the likes.
+This is excluding scenes solely using :ref:`MenuAddition`, for example, when adding to the night life menu in the brothel.
 
 Check **_EventAdditionExample.json** in *Json/Events/* for an example.
+.. If you have installed the MGD extension, you can type ``_a_Event`` to create an Event addition snippet.
 
-The overview will proceed to go over each key you would find in a regular Event .json, how their role changes, and if they're required in a addition.
+The overview will proceed to go over valid keys in event additions, how they're added to the base event json, and if their inclusion is required.
 
 .. note::
 
-  ``"CardLimit"``, ``"Description":``, ``"requires"``, and ``"requiresEvent":`` are not checked for, and thus are irrelevant to Event additions. It is advised to exclude them for tidiness.
+  ``"CardType":`` ``"CardLimit":``, ``"Description":``, ``"requires"``, and ``"requiresEvent":`` aren't used, and thus should be excluded for tidiness.
 
-**name & CardType**
+**name & Addition**
 --------------------
 
-::
+.. code-block:: javascript
 
   "name": "Lust Rune",
 
-Required so you can tell the game which Event you wish to make an Addition to.
+Required so you can tell the game which Event you wish to make an addition to.
 
-::
+.. code-block:: javascript
 
   "Addition": "Yes",
 
-Required so you can tell the game you wish to make an addition. Can be added into almost any part of the file.
+Required so the game knows you are making an addition.
+
 
 **Speakers**
 -------------
 
-::
+.. code-block:: javascript
 
   "Speakers": [
     {
@@ -51,13 +51,13 @@ While required, it can be left without any objects if you don't intend to use it
 This means if you want to say, add a ``"postName":`` to a character, you will be limited to appending the character again and using the appropriate
 ``"Speaks"`` function to use it. This isn't behavior specific to Additions either, this is intended base game behavior as seen for labeling multiple generics.
 
-Note multiple mods adding to the Speakers key *could* throw ``"Speaks"`` out of order. Thus, it may be best to rely on :ref:`Speak` instead to avoid
-compatibility issues between mods.
+Note multiple mods adding to the Speakers key *could* throw ``"Speaks"`` out of order depending on which mod is loaded first.
+Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to avoid compatibility issues between mods.
 
 **EventText**
 --------------
 
-::
+.. code-block:: javascript
 
   "EventText": [
     {
@@ -79,22 +79,24 @@ compatibility issues between mods.
 Required, though you technically don't have to provide it with any objects.
 
 Every new object will be appended, unless ``"NameOfScene":`` within the object matches an existing ``"NameOfScene":`` within the event, in which case
-it will override and replace the entirety of ``"theScene":`` with the one provided via the object.
+it will override and replace the entirety of ``"theScene":`` with the one provided via the new object.
+The exception to this behavior is when using ``"MenuAddition"``.
 
 .. _MenuAddition:
 
 **MenuAddition**
 """""""""""""""""
-``"MenuAddition"`` will append additional choices to a :ref:`Menu` through a duplicate scene in the Addition with the same ``"NameOfScene":`` value.
+
+The :doc:`function </Doc/Reference/Functions>`  ``"MenuAddition"`` will append additional choices to a :ref:`MenuFunc` through a duplicate scene in the addition with the same ``"NameOfScene":`` value.
 
 This is for avoiding compatibility issues with other mods making additions to menus, notably those adding additional choices to say, the night life menu
 for the Brothel. See the example below for details of the implementation.
-Be sure to add the new scenes for these options in the same file. Do not override the scene you're adding the menu to.
 
-If the menu you are adding to doesn't have a "FinalOption" for what is supposed to be the back-out choice you can safely add it to the choice in the scene under the presumption that other modders would do the same.
-"OverrideOption", can be used prior to a choice to override any existing duplicates of that option in the menu, this is generally also used in conjunction with FinalOption so you can properly clear out the existing exit in the menu.
+If the menu you are adding to doesn't have a ``"FinalOption"`` for what is supposed to be the back-out choice,
+you can safely add it to the choice in the ``"MenuAddition"`` scene under the presumption that other modders would do the same.
+``"OverrideOption"`` must be used prior to a menu choice so it properly clears any duplicates of the original choice in the menu.
 
-::
+.. code-block:: javascript
 
   "EventText": [
     {

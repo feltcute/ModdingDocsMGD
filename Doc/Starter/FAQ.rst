@@ -1,5 +1,3 @@
-.. _FAQ:
-
 **FAQ**
 ========
 
@@ -16,7 +14,7 @@ You missed a comma at the line number in the stated .json file. From there, you 
 
 The next likely error is that you have a trailing comma at the end of an array, string, or object, like so:
 
-::
+.. code-block:: javascript
 
   ["String A", "String B", "String B",]
 

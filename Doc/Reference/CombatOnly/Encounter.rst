@@ -1,5 +1,3 @@
-.. _Encounter:
-
 **Encounter**
 ==============
 
@@ -11,17 +9,19 @@
 ------------------------------------------------
 ``"HideMonsterEncounter"`` temporarily hides the encounter. It is still very much so in effect, just the visibility and selectibility of all currently displayed monsters
 monsters from the encounter are gone. It's meant for combat events, but nothing stops you from using it elsewhere, just do take caution.
-Using :ref:`DisplayCharacters` for its duration of use intended.
+Using :ref:`DisplayCharactersFunc` for its duration of use intended.
 
 It will continue to persist until ``"ShowMonsterEncounter"`` is called, showing the monsters in the encounter again.
-Be sure to remove all monsters from :ref:`DisplayCharacters` first before calling it to avoid visual oddities.
+Be sure to remove all monsters from :ref:`DisplayCharactersFunc` first before calling it to avoid visual oddities.
 
-::
+.. code-block:: javascript
 
   "HideMonsterEncounter",
   "DisplayCharacters", "1", "2", "4", "EndLoop"
   "... sometime later in another scene, or possibly another event...",
   "ShowMonsterEncounter",
+
+----
 
 **AddMonsterToEncounter**
 --------------------------
@@ -36,6 +36,6 @@ Is always added to the end of the encounter list.
 ``"ChangeForm"`` is used with AddMonsterToEncounter, switching out the currently focused monster with the given Monster.
 Maintains arousal, spirit, stances, and status effects. See :ref:`Focus` for information on focus functions.
 
-::
+.. code-block:: javascript
 
   "AddMonsterToEncounter", "ChangeForm", "Imp"

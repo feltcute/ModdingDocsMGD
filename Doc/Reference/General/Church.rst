@@ -1,7 +1,6 @@
-.. _Church:
-
 **Church**
 ===========
+
 Keep in mind that using Church functions will trigger fixed dialogue from the Goddess, listed below.
 
 * "Oh chosen hero... If you donate enough eros, I can remove the fetishes you have gained from your trials."
@@ -17,24 +16,31 @@ It is recommended to check */Json/Events/Town/Church/1VenereaeStatue.json* for a
 
 **DonateToGoddess**
 --------------------
+
 ``"DonateToGoddess"`` lets the player provide an inputted amount to donate to the goddess.
 
+----
 
 **SensitivityRestore**
 -----------------------
+
 ``"SensitivityRestore"`` lets the player use the sensitivity restore functionality.
 
+----
 
 **PurgeFetishes**
 ------------------
+
 ``"PurgeFetishes"`` lets the player use the fetish purging functionality.
 
+----
 
 **AddTributeToProgress**
 -------------------------
+
 ``"AddTributeToProgress"`` takes money spent in a church function and adds it to the current events progress. Thus, it cannot be used for anything but the church.
 
-::
+.. code-block:: javascript
 
   "AnyChurchFunctionHere",
   "AddTributeToProgress"

@@ -3,16 +3,17 @@
 **Fetishes & Addictions**
 ==========================
 
-See *Json/Fetishes/* for all related fetish **and** addiction .json files for reference. All keys are required.
+Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Fetishes and Addictions.
 
-.. _Fetishes:
+See *Json/Fetishes/* for all related fetish **and** addiction .json files for reference and the template *_BlankFetish.json*.
+.. If you have installed the MGD extension, you can type ``_c_Fetish`` to create a fetish snippet.
 
 **Fetishes**
 -------------
 
 Making a custom fetish comes down to making a .json like the following code block:
 
-::
+.. code-block:: javascript
 
   {
   "FetishList": [
@@ -52,8 +53,6 @@ if you do not wish to use it.
 The provided strings will be the dialogue the Goddess gives in the creation menu when starting a new game. ``"CreationOn":`` being if the player selects the fetish,
 ``"CreationOff":`` if the player unselects the fetish.
 
-.. _Addictions:
-
 **Addictions**
 ---------------
 
@@ -63,7 +62,7 @@ They can be put in the same JSON file together, or optionally separated for orga
 It is recommended to go to *Fetishes/addictionList.json* and see the comments Threshold provided for each base game addiction, and use your editor's search features
 to review how they are used throughout the base game via the strings provided to the ``"Name":`` keys.
 
-::
+.. code-block:: javascript
 
   {
   "FetishList": [

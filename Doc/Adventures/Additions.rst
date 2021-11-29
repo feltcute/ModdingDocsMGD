@@ -1,31 +1,31 @@
-.. _Adventure Additions:
-
 **Adventure Additions**
 ========================
-Making an addition to an Adventure will replace the base Adventure's ``"Deck":`` key with your own data.
-This does mean your addition would be incompatible with other mods that make an addition to the same Adventure.
+
+Adventure additions cover overwriting the base Adventure's ``"Deck":`` key with your own data,
+expanding the random monsters, monster groups, events, and loot from treasure.
+
+This does mean your addition would be incompatible with other mods that make changes to the ``"Deck":`` key for the same Adventure.
 
 Check **_AdventureAdditionExample.json** in *Json/Adventures/* for an example.
+
+.. If you have installed the MGD extension, you can type ``_a_Adventure`` to create an Adventure addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.
 
 .. note::
 
-  ``"Eros":``, ``"requiresEvent":``, and ``"Description":`` are not checked for, and thus are irrelevant to Adventure additions. It is advised to exclude them for tidiness.
+  ``"Eros":``, ``"requires":``, ``"requiresEvent":``, and ``"Description":`` aren't used, and thus should be excluded for tidiness.
 
-**name**
----------
+**name & Addition**
+--------------------
 
-::
+.. code-block:: javascript
 
   "name": "Forest Dungeon",
 
 Required so you can tell the game which Adventure you wish to make an addition to.
 
-**requires**
--------------
-
-::
+.. code-block:: javascript
 
   "Addition": "Yes",
 
@@ -34,7 +34,7 @@ Required so you can tell the game that you're wishing to make an addition. Can b
 **Deck**
 ---------
 
-::
+.. code-block:: javascript
 
   "Deck": [
     "Event", "Name of an event",
@@ -51,7 +51,7 @@ It is advised to copy and paste the array from the Adventure's original ``"Deck"
 **RandomEvents**
 -----------------
 
-::
+.. code-block:: javascript
 
   "RandomEvents": ["Lust Rune", "Ninja Rest Ambush"],
 
@@ -61,7 +61,7 @@ As such, you are only increasing the selection of events, not replacing, unlike 
 **RandomMonsters & MonsterGroups**
 -----------------------------------
 
-::
+.. code-block:: javascript
 
   "RandomMonsters": ["Elf"],
   "MonsterGroups": [
@@ -70,7 +70,7 @@ As such, you are only increasing the selection of events, not replacing, unlike 
     }
   ],
 
-Using these keys in an addition adds to the existing arrays, so the strings provided in the original keys will still be present, and will not be overridden.
+Using these keys in an addition adds to the existing arrays, so the strings and objects provided in the original keys will still be present, not overwritten.
 As such, you are only increasing the selection of monster groups, not replacing.
 
 These keys are required, but the arrays can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
@@ -78,7 +78,7 @@ These keys are required, but the arrays can be left empty if you do not wish to 
 **Treasure**
 -------------
 
-::
+.. code-block:: javascript
 
   "Treasure": [
     {

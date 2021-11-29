@@ -2,7 +2,8 @@
 
 **Location Creation**
 ======================
-Breaks down the keys and strings used by Locations.
+
+Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Locations.
 
 Go to *Json/Locations/*, and then see the .json files present for examples, and **_TestLocation.json** for a template.
 
@@ -12,7 +13,8 @@ Assume all keys are required, unless stated otherwise.
 
 **name**
 ---------
-::
+
+.. code-block:: javascript
 
   "name": "Location name",
 
@@ -21,15 +23,27 @@ Do try to provide a fairly non-generic value to prevent potential overlap issues
 
 **exploreTitle**
 -----------------
-::
+
+.. code-block:: javascript
 
   "exploreTitle": "A Fancy Place",
 
 The cosmetic name displayed on the map screen. This doesn't need to be unique, and therefore doesn't technically have to match the ``"name":`` key.
 
+**MusicList**
+--------------
+
+.. code-block:: javascript
+
+    "MusicList": [ "music/Forest/hitoriame.mp3", "Json/ModName/BGM/NineJackButFasterEvery4s.mp3"],
+
+An optional key for a default selection of music to loop through outside of events and encounters.
+
+
 **mapIcon**
 ------------
-::
+
+.. code-block:: javascript
 
   "mapIcon": "",
 
@@ -53,7 +67,7 @@ This is not recommended as it has the potential to inadvertently block access to
 **mapClouds**
 --------------
 
-::
+.. code-block:: javascript
 
   "mapClouds": "",
 
@@ -72,6 +86,7 @@ While the keys must till be included, providing an empty string for ``"mapClouds
 
 **requires & requiresEvent**
 -----------------------------
+
 .. code-block:: javascript
 
   "requires": ["Name of a required item", "Another item that may be required"],
@@ -94,7 +109,9 @@ While the key must still be included, the array can be left empty if you do not 
     }
   ],
 
-A more complex and optional key that checks for progress or a choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+
+Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
 
 You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
@@ -104,7 +121,8 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
 **FullyUnlockedBy & FullyUnlockedByEvent**
 -------------------------------------------
-::
+
+.. code-block:: javascript
 
   "FullyUnlockedBy": [""],
 
@@ -127,13 +145,14 @@ Functions the same as ``"requiresEvent":`` key, unlocking exploration via the Gr
 
 **Deck Size Keys**
 -------------------
-::
+
+.. code-block:: javascript
 
   "MinimumDeckSize": "5",
 
 Decides the minimum number of monsters and/or events the player must select before they can start an adventure via the Grimoire.
 
-::
+.. code-block:: javascript
 
   "MaximumMonsterDeck": "5",
   "MaximumEventDeck": "2",
@@ -142,7 +161,8 @@ The maximum number of monsters and events players can add for exploration via th
 
 **Monster & MonsterGroups Keys**
 ---------------------------------
-::
+
+.. code-block:: javascript
 
   "Monsters": ["Blue Slime", "Elf", "Lizard Girl"],
 
@@ -169,13 +189,14 @@ While the key is required, you do not have to provide any objects if you do not 
 
 **Events & Quests Keys**
 -------------------------
-::
+
+.. code-block:: javascript
 
   "Events": ["Lizard Sightings"],
 
 Set the choice of events that can be selected for exploration via the Grimoire, utilizing an event's ``"name"``: key. Ensure the ``"CardType":`` is set to ``"Event",``.
 
-::
+.. code-block:: javascript
 
   "Quests": [""],
 
@@ -183,6 +204,7 @@ Set the choice of monsters that can be selected for exploration via the Grimoire
 
 **Treasure & Eros Keys**
 -------------------------
+
 .. code-block:: javascript
 
   "Treasure": [
@@ -199,7 +221,7 @@ Set the choice of monsters that can be selected for exploration via the Grimoire
     }
   ],
 
-Decide the items from chests in exploration via the Grimoire for each type of treasure rarity.
+Sets the possible items that can be earned from chests for each type of treasure rarity.
 The listed objects and their keys must be included, and each array must have at least one item.
 
 .. code-block:: javascript
@@ -218,12 +240,13 @@ The listed objects and their keys must be included, and each array must have at 
     }
   ],
 
-Decides the amount of eros given from chests in exploration via the Grimoire for each type of treasure rarity.
+Sets the amount of eros given from chests in exploration via the Grimoire for each type of treasure rarity.
 The listed objects and their keys must be included, and each key must provide a value in their string.
 
 **picture**
 ------------
-::
+
+.. code-block:: javascript
 
     "picture": "forest.png"
 
