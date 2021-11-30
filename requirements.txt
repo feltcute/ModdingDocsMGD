@@ -1,6 +1,6 @@
 sphinx==4.3.0
 sphinx_rtd_theme==1.0.0
-sphinx-tabs==2.4.7
+sphinx-tabs==3.2.0
 
 # RTD dependencies https://readthedocs-sphinx-search.readthedocs.io
 readthedocs-sphinx-search==0.1.1
