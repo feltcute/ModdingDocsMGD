@@ -39,6 +39,12 @@ Used for Sofia's singular kiss barrage.
 -------------------------------------------------
 ``"PlayLoopingSoundEffect"`` plays an audio file on loop, or a sound bank on loop.
 
-``"StopSoundEffectLoop:`` Stops the looping sound, looping sounds are separate from one off sounds.
+.. code-block:: javascript
+
+  "PlayLoopingSoundEffect", "sfx/Erotic/Hand/Handjob (low speed).wav",
+  "PlayLoopingSoundEffect", "QuickKiss"
+
+
+``"StopSoundEffectLoop`` Stops the looping sound, looping sounds are separate from one off sounds.
 
 ``"PlayLoopingSoundEffect2"`` and ``"StopSoundEffectLoop2"`` exists for a secondary loop channel.

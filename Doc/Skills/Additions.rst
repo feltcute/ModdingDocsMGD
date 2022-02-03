@@ -6,6 +6,7 @@
 Making a Skill addition is non-destructive and thus will be compatible with any other mods making additions to the same Skill.
 
 Check **_SkillAdditionExample.json** for an example.
+
 .. If you have installed the MGD extension, you can type ``_a_Skill`` to create a Skill addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.

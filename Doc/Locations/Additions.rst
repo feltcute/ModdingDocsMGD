@@ -1,10 +1,9 @@
-.. _Location Additions:
-
 **Location Additions**
 =======================
 Making a Location addition is non-destructive and thus will be compatible with any other mods making additions to the same Location.
 
 Check **_ForestAdditionExample.json** in *Json/Locations/* for an example.
+
 .. If you have installed the MGD extension, you can type ``_a_Location`` to create a Location addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Location .json, how their role changes, and if they're required in a addition.

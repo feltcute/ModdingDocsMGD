@@ -39,6 +39,14 @@ The cosmetic name displayed on the map screen. This doesn't need to be unique, a
 
 An optional key for a default selection of music to loop through outside of events and encounters.
 
+**picture**
+------------
+
+.. code-block:: javascript
+
+    "picture": "forest.png"
+
+The background image to be used at the location when exploring and adventuring.
 
 **mapIcon**
 ------------
@@ -242,12 +250,3 @@ The listed objects and their keys must be included, and each array must have at 
 
 Sets the amount of eros given from chests in exploration via the Grimoire for each type of treasure rarity.
 The listed objects and their keys must be included, and each key must provide a value in their string.
-
-**picture**
-------------
-
-.. code-block:: javascript
-
-    "picture": "forest.png"
-
-The background image to be used at the location when exploring and adventuring.

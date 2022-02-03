@@ -6,7 +6,7 @@
 
 Errors should tell you JSON formatting errors or incorrect file paths for media assets. If this pops up in the error:
 
-::
+.. code-block:: python
 
   ValueError: Expecting , delimiter: line ## column ## ext
 
@@ -21,7 +21,7 @@ The next likely error is that you have a trailing comma at the end of an array, 
 
 This is more troublesome and will require manually locating.
 
-**Unless** you have a :ref:`Linter` installed, which can warn you of JSON formatting errors and their locations while editing in real-time.
+*Unless* you have a :ref:`Linter` installed, which can warn you of JSON formatting errors and their locations while editing in real-time.
 
 See :ref:`Music And Art Summary` for errors related to media asset paths.
 

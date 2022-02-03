@@ -16,7 +16,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
    .. tab:: Formula
 
-      ::
+      .. code-block:: python
 
         D20 + Stat*0.15 + LuckDie + Defend - 2
 
@@ -28,7 +28,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
       **Note**: The combined values of Willpower, Allure, and Intelligence in the below formula has a combined ceiling cap of 15.
 
-      ::
+      .. code-block:: python
 
         D20 + Willpower*0.1 + Allure*0.1 + Intelligence*0.1 + LuckDie + Defend - 2
 
@@ -41,7 +41,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
       Players can surpass failure at the cost of their energy based on the following formula. It will always cost a minimum of 10 energy.
       Note that ``statToCheck`` is the player stat times ``0.15``, or for Temptation checks, Willpower, Allure, and Intelligence times ``0.1``.
 
-      ::
+      .. code-block:: python
 
         (opposedCheck / 5)*20 - (statToCheck*0.75)*5 - 10
 

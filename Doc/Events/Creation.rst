@@ -7,6 +7,7 @@ Base game Event .jsons are located at *Json/Events/*.
 The bubble slime events showcase modern practices well, located at *Mountain/FizzySpring.json*, and *CombatEvents/BubbleSlimeCombatEvents.json*.
 
 A blank template can be found at *Events/_BlankEvent.json*.
+
 .. If you have installed the MGD extension, you can type ``_c_Event`` to create an Event snippet.
 
 **Assume all keys are required, unless stated otherwise.**
@@ -30,6 +31,11 @@ The name of the event, presented in the Grimoire and for internal referral.
   "CardType": "Event",
 
 Changes how the game calls and utilizes the event. The possible choices for the value depending on what you wish to accomplish are as follows...
+
+**CardLimit**
+"""""""""""""
+
+* ``"CardLimit": "0",`` sets the maximum limit of this event that can be added to an exploration. Can be left 0 if it's not selected from the exploration menu.
 
 .. _GrimoireCreation:
 
@@ -74,11 +80,6 @@ Changes how the game calls and utilizes the event. The possible choices for the 
 * ``"PlayerOrgasm"`` will trigger every time the player orgasms, including out of combat. See *Events/CombatEvents/OrgasmEvents.json* as an example.
 
 * ``"Dream"`` will be called when the player sleeps, via the :ref:`SleepPlayerFunc` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.
-
-**CardLimit**
-"""""""""""""
-
-* ``"CardLimit": "0",`` sets the maximum limit of this event that can be added to an exploration. Can be left 0 if it's not selected from the exploration menu.
 
 **Description**
 ----------------

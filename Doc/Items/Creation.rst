@@ -4,6 +4,7 @@
 Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Items.
 
 Go to *Json/Items/*, and then see the .json files present for examples, and **_BlankItem.json** for a template.
+
 .. If you have installed the MGD extension, you can type ``_c_Items`` to create a Item snippet.
 
 **Assume all keys are required, unless stated otherwise.**
@@ -55,6 +56,15 @@ Decides the behavior and use cases of the item, greatly influencing how the foll
 
 The cost of the item in shops. For reference, the sell cost will always be 50% of the provided value.
 
+**descrip**
+------------
+
+.. code-block:: javascript
+
+  "descrip": "",
+
+The description of the item that is displayed both in shops and the character inventory.
+
 **requires & requiresEvent**
 -----------------------------
 
@@ -86,15 +96,6 @@ You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it
 
 If in use, you cannot exclude unused keys in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
-
-**descrip**
-------------
-
-.. code-block:: javascript
-
-  "descrip": "",
-
-The description of the item that is displayed both in shops and the character inventory.
 
 **perks**
 ----------

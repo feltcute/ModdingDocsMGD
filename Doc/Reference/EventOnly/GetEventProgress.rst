@@ -21,7 +21,7 @@ Gets an event and sets its progress to the given value. Can be negative.
 
 .. code-block:: javascript
 
-  "GetEventAndSetProgress", "Mysterious Inn", "10"
+  "GetEventAndSetProgress", "Enter 'Amber's Adventuring Shop'", "10"
 
 ----
 
@@ -31,7 +31,7 @@ Gets an event and then checks if it is equal to the provided value. If true, it 
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEquals", "Mysterious Inn", "5", "SceneNameHere"
+  "GetAnEventsProgressThenIfEquals", "Imp Defeated", "5", "SceneNameHere"
 
 ----
 
@@ -41,7 +41,7 @@ Gets an event and then checks if it is equal or greater to the provided value. I
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEquals", "Mysterious Inn", "5", "SceneNameHere"
+  "GetAnEventsProgressThenIfEqualsOrGreater", "Camillas Knitting Training", "5", "SceneNameHere"
 
 ----
 
@@ -51,7 +51,7 @@ Gets an event and then checks if it is equal or greater to the provided value. I
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEquals", "Mysterious Inn", "5", "SceneNameHere"
+  "GetAnEventsProgressThenIfEqualsOrLess", "Pray To The Goddess Statue.", "5", "SceneNameHere"
 
 ----
 
@@ -68,7 +68,7 @@ If true, it will jump to the given scene.
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEqualsOrLessThanOtherEventsProgress", "'Bon Bon Bun'", "'Perpetua's Lemonade Stand'", "SceneNameHere"
+  "EventsProgressEqualsOtherEventsProgress", "'Bon Bon Bun'", "'Perpetuas Lemonade Stand'", "SceneNameHere"
 
 ----
 
@@ -79,7 +79,7 @@ equal or less than the event in the next string. If true, it will jump to the gi
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEqualsOrLessThanOtherEventsProgress", "'Bon Bon Bun'", "'Perpetua's Lemonade Stand'", "SceneNameHere"
+  "IfEventsProgressEqualsOrLessThanOtherEventsProgress", "Mikas Foul Tongue", "Amys Wholesome Tongues", "SceneNameHere"
 
 ----
 
@@ -90,4 +90,4 @@ equal or greater than the event in the next string. If true, it will jump to the
 
 .. code-block:: javascript
 
-  "GetAnEventsProgressThenIfEqualsOrLessThanOtherEventsProgress", "'Bon Bon Bun'", "'Perpetua's Lemonade Stand'", "SceneNameHere"
+  "EventsProgressEqualsOrGreaterThanOtherEventsProgress", "Slime Clueless Levels", "Harpy Clueless Levels", "SceneNameHere"

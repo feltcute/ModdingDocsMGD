@@ -4,7 +4,7 @@
 ===================
 
 This page is purely for ease of reference for functions and keys, and is not meant to contain any information on how each stat or sensitivity works.
-The information in-game, or on the `wiki <https://monstergirldreams.fandom.com/wiki/Monster_Girl_Dreams_Wiki>`_ should prove sufficient for that purpose.
+The information in-game, or on the `wiki <https://monstergirldreams.miraheze.org/wiki/Main_Page>`_ should prove sufficient for that purpose.
 
 **Stats**
 ----------
@@ -56,7 +56,7 @@ You can use the following equations when considering the balance of your stats. 
 
 For calculating how much Eros the player should earn when defeating a enemy. ``x`` represents the given level.
 
-::
+.. code-block:: python
 
   (x)^2+(x*10)+48
 
@@ -66,6 +66,6 @@ For graphing how much Exp the player is required to collect before leveling up. 
 
 This can be used to decide how much Exp you want a monster to give. Threshold typically does 60-100% of the Exp for the level the enemy is at relative to the graph.
 
-::
+.. code-block:: python
 
   (0.4*(x*x))+(2*x)+(15*sqrt(x)-8)

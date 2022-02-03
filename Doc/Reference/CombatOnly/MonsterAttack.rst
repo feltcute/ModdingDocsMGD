@@ -29,7 +29,7 @@ It can be used out of combat.
 **SetSkipMonsterAttack**
 -------------------------
 
-``"SetSkipMonsterAttack"`` Sets the focused monster to skip their attack call for the round.
+``"SetSkipMonsterAttack"`` sets the focused monster to skip their attack call for the round.
 
 ----
 

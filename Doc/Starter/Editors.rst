@@ -11,7 +11,7 @@ Don't stress your choice too much, as you can easily change it at any time.
 
 These all have portable versions if you want your editor and modding work on say, a USB, separate from your main system.
 
-Lastly, you can check the `game wiki <https://monstergirldreams.fandom.com/wiki/Category:Modder_Guides>`_
+Lastly, you can check the `game wiki <https://monstergirldreams.miraheze.org/wiki/Category:Modder_Guides>`_
 for text editor setup and guides made by other modders.
 
 `Atom <https://atom.io>`_
