@@ -1,7 +1,3 @@
-.. _Monster lineTriggers:
-
-.. _lineTriggers:
-
 **lineTriggers**
 =================
 
@@ -283,7 +279,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
     ]
   },
 
-**onPlayerEdge**
+**OnPlayerEdge**
 """""""""""""""""
 
 .. code-block:: javascript

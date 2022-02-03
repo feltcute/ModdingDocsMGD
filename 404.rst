@@ -1,0 +1,17 @@
+:orphan:
+
+===================
+404: Page Not Found
+===================
+
+This means the given URL was likely incorrect.
+
+You can use the left sidebar, the top left logo, or the home button above
+to navigate somewhere safe.
+
+Or you can stay here with the original and forgotten Black Knight and keep her company. That would make her happy.
+
+.. image:: img/blackknight.png
+   :align: center
+   :alt: Black Knight, eternally delivering pizza.
+   :width: 340

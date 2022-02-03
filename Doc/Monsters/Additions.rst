@@ -7,6 +7,7 @@ If you want to change the stats of a monster, you can currently on do so via :re
 and using the related functions found :doc:`here </Doc/Reference/General/ChangeMonster>`.
 
 Check **_MonsterAdditionExample.json** in */Json/Monsters/* for an example.
+
 .. If you have installed the MGD extension, you can type ``_a_Monsters`` to create a Monster addition snippet.
 
 The overview will proceed to go over each key you would find in a regular Monster .json, how their role changes, and if they're required in a addition.

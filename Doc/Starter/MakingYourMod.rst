@@ -4,7 +4,7 @@
 ====================
 
 .. note::
-    It is expected that you have already `installed a mod <https://monstergirldreams.fandom.com/wiki/Category:List_Of_Mods>`_
+    It is expected that you have already `installed a mod <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods>`_
     at least once, and thus are familiar with accessing the base game folder on your respective platform.
 
 It is important to know how content is created in Monster Girl Dreams first, to understand how you will be modding.
@@ -30,7 +30,8 @@ The game will expect your .json files to be organized in starting base folders o
 While maybe obvious, **do not place base folders inside one another**.
 
 .. image:: ../../img/starter/basefolders.png
-   :align: center
+  :alt: Visual example of the various folders.
+  :align: center
 
 To make a base folder, simply create a folder within your mod folder named as exactly one of the emboldened types in this comprehensive list:
 
@@ -100,7 +101,7 @@ Map related assets are two directories deep (*images/map/*), so you will need to
 ------------
 
 The in-game console can be very useful for debugging and testing your mod at a rapid pace, without having to manually build up a save towards what you want.
-`See the game wiki for further information. <https://monstergirldreams.fandom.com/wiki/Console>`_
+`See the game wiki for further information. <https://monstergirldreams.miraheze.org/wiki/Console>`_
 
 **Releasing Your Mod**
 -----------------------
@@ -120,5 +121,5 @@ When you feel your work is ready to be shared with the world, you can use the fo
 
 There are two places in particular you are encouraged to share the link to your mod for optimal exposure to the MGD community.
 
-* The Mod List page on the `wiki <https://monstergirldreams.fandom.com/wiki/Category:List_Of_Mods>`_. There is a tab in the How-To Guides section for how you should format your row in the table, to keep the presentation clean. Links to NSFW mods have been historically accepted, but still do keep in mind `Fandom Commmunity Guidelines <https://community.fandom.com/wiki/Fandom_Community_Guidelines>`_. The popularity of downloads here is only second to...
+* The Mod List on the `wiki <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods>`_. There is a tab in the How-To Guides section for how you should format your row in the table, to keep the presentation clean. The popularity of downloads here is only second to...
 * In #mod-posting on the `MGD Discord <https://discord.com/invite/monstergirldreams>`_. This makes up for a majority of mod downloads during your first week or two of launch, then most traffic will be coming from the wiki. If you want instantaneous exposure and feedback for your creation, this place will get you it. Keep in mind `Discord Community Guidelines <https://discord.com/guidelines>`_.

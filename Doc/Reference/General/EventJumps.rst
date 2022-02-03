@@ -83,7 +83,7 @@ Variant of ``"JumpToEventThenScene"`` for town.
 
 ----
 
-.. _CallEventAndSceneThenReturnFunc:
+.. _CallEventAndSceneThenReturn:
 
 **CallEventAndSceneThenReturn**
 --------------------------------

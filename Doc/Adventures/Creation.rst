@@ -59,6 +59,15 @@ You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it
 If in use, you cannot exclude unused keys in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
 
+**MusicList**
+--------------
+
+.. code-block:: javascript
+
+    "MusicList": [ "music/Mountain/Purple Planet Music - Chilled - Desert Winds (3_12).mp3"],
+
+An optional key for a default selection of music to loop through during adventures outside of events and encounters.
+
 **Deck**
 ---------
 
