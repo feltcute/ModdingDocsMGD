@@ -1,12 +1,9 @@
-.. _NPC Creation:
-
 **Monster Creation**
 =====================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
 
 Go to */Json/Monsters/*, and then see the .json files present for examples, and **_BlankMonster.json** for a template.
-.. If you have installed the MGD extension, you can type ``_c_Monsters`` to create a Monster snippet.
 
 **Assume all keys are required, unless stated otherwise.**
 

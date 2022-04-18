@@ -150,34 +150,20 @@ a {
     color: var(--link-color);
 }
 
-.sphinx-tabs .sphinx-menu a.item {
-    /* Original definition has `!important` */
-    color: var(--link-color) !important;
-    border: none;
-}
-
-.sphinx-tabs-panel {
-    border: 1px solid var(--tab-border-color);
-	border-radius: 0 0 0 0 !important;
-	background-color: var(--code-background-color) !important;
-}
-
 .sphinx-tabs-tab {
-	color: var(--link-color);
+    color: var(--link-color);
 }
 
 .sphinx-tabs-tab[aria-selected="true"] {
-	color: var(--link-color);
-	border: none;
-    border-top: 1px solid var(--tab-border-color);
-	border-left: 1px solid var(--tab-border-color);
-	border-right: 1px solid var(--tab-border-color);
-	border-radius: 0 0 0 0 !important;
-	background-color: var(--code-background-color) !important;
+    background-color: var(--code-background-color);
+    border: 1px solid var(--tab-border-color);
+    border-radius: 0 0 0 0 !important;
 }
 
-[role="tablist"] {
-	border-bottom: none;
+.sphinx-tabs-panel {
+    background-color: var(--code-background-color);
+    border: 1px solid var(--tab-border-color);
+    border-radius: 0 0 0 0 !important;
 }
 
 a:hover {
@@ -769,6 +755,14 @@ kbd, .kbd {
     margin-right: 8px;
 }
 
+/* Actual toctree colors - fcmcl */
+a:hover button.toctree-expand {
+	color: var(--navbar-level-3-color) !important;
+}
+a button.toctree-expand {
+	color: var(--navbar-level-3-color) !important;
+}
+
 .wy-side-nav-search, .wy-menu-vertical a, .wy-menu-vertical a:hover span.toctree-expand,
 .wy-menu-vertical li.toctree-l2 a:hover span.toctree-expand {
     color: var(--navbar-level-2-color);
@@ -796,6 +790,7 @@ kbd, .kbd {
     background-color: var(--navbar-current-background-color);
     color: var(--navbar-level-2-color);
     border-color: var(--navbar-current-background-color);
+    padding: .4em 2em;
 }
 
 .wy-menu-vertical li.current a:hover,

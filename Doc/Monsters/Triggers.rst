@@ -1,5 +1,3 @@
-.. _Monster lineTriggers:
-
 .. _lineTriggers:
 
 **lineTriggers**
@@ -7,7 +5,7 @@
 
 See :ref:`combatDialogueCreation` for general information on the keys used for lineTriggers.
 
-Remember that the "move": key can be given an array, for any lineTrigger seen here. **However, it is so responses can be made compact**.
+Remember that The \"move\": key can be given an array, for any lineTrigger seen here. **However, it is so responses can be made compact**.
 It does not at any point use the array as a multi-check requirement before it can trigger. That is, it is an *or* parameter, not an *and* parameter.
 All matching lineTriggers matching the same ``"move":`` value will ultimately go into the same pool for it to randomly pull from.
 
@@ -51,7 +49,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
     "This is triggered whenever the monster is added to an encounter.",
     "Triggers before StartOfCombat if monsters are added at the start of combat.",
     "Also must be called within the first 10 lineTriggers.",
-    "The "move": key should be left empty"
+    "The \"move\": key should be left empty"
     ]
   },
 
@@ -70,7 +68,7 @@ Other monsters at the start of the encounter will append to the playlist. Does n
     "Only for the first enemy listed in the encounter.",
     "It will also replace the generic line of enemies approaching.",
     "Also must be called within the first 10 lineTriggers.",
-    "The "move": key should be left empty."
+    "The \"move\": key should be left empty."
     ]
   },
 
@@ -225,7 +223,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "theText":[
     "Triggers upon reaching less than 30% of their max health.",
     "Only happens once, heals will not reset it.",
-    "The "move": key should be empty."
+    "The \"move\": key should be empty."
     ]
   },
 
@@ -240,7 +238,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "theText":[
     "Triggers upon the player reaching less than 35% of their max health.",
     "Only happens once, resetting on orgasms.",
-    "The "move": key should be empty."
+    "The \"move\": key should be empty."
     ]
   },
 
@@ -279,11 +277,11 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "move": [""],
   "theText":[
     "Triggers when the player surrenders.",
-    "The "move": key should be empty."
+    "The \"move\": key should be empty."
     ]
   },
 
-**onPlayerEdge**
+**OnPlayerEdge**
 """""""""""""""""
 
 .. code-block:: javascript
@@ -293,7 +291,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "move": ["Thrust"],
   "theText":[
     "Displays when the player edges.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
   ]
   },
@@ -310,7 +308,7 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyPlayerOrgasmFunc`.
   "move": [""],
   "theText":[
     "Displays when the monster edges.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
   ]
   },
@@ -329,14 +327,9 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
   "move": ["Deepthroat"],
   "theText":[
     "Displays when the player cums.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger.",
-    "This trigger is only meant to call a combat event for technical reasons.",
-    "This can be done via providing it with exclusively the following string...",
-    "|f|CallCombatEventAndScene|/|EventNameHere|/|SceneNameHere|n||c|",
-    "From there, you can have the scene you pointed it to use SwapLineIf to pick a random string.",
-    "Also note you have the general flexibility of events available to you to use as you please.",
-    "Lastly, OnPlayerOrgasm will not trigger OnPlayerOrgasm, only natural orgasms will do that."
+    "Lastly, the function PlayerOrgasm will not trigger OnPlayerOrgasm, only natural orgasms will do that."
     ]
   },
 
@@ -352,7 +345,7 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
   "move": ["Thrust"],
   "theText":[
     "Displays when the monster cums.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
     ]
   },
@@ -369,7 +362,7 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
   "move": [""],
   "theText":[
     "Displays after the monster orgasm line. This allows for some combat functions that may otherwise break up the orgasm line into janky parts.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
     ]
   },
@@ -386,7 +379,7 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
   "move": [""],
   "theText":[
     "Displays after the monster is defeated and taken out of the encounter. DOES NOT FUNCTION IN SINGLE MONSTER FIGHTS (game explodes otherwise). Intended for multi enemy fights, but this never triggers if it's the final monster in an encounter. This has many uses, but take care not to call a function that would specify the original monster specifically, or it will crash the game.",
-    "The "move": key can optionally be given a specific skill to check for.",
+    "The \"move\": key can optionally be given a specific skill to check for.",
     "It can also take stances, or be left blank to generally trigger."
     ]
   },
@@ -452,7 +445,7 @@ The trigger order of priority for Counters matches the listed order, from top to
   "theText":[
     "This will trigger before the player can use any form of offence. That is, anything that affects the monster.",
     "This won't trigger from the player using something on themselves, like healing or buffing.",
-    "The "move": key should be left empty."
+    "The \"move\": key should be left empty."
     ]
   },
 
@@ -467,7 +460,7 @@ The trigger order of priority for Counters matches the listed order, from top to
   "theText":[
     "Like OffenceCounter, but this will trigger prior to the player doing ANYTHING, including consumables, even if the monster is stunned.",
     "... ANYTHING, excludes Wait, Struggle, Run Away, Push Away, and Defend. Use AutoCounter to cover those.",
-    "The "move": key should be left empty."
+    "The \"move\": key should be left empty."
     ]
   },
 
@@ -557,7 +550,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
   "move": ["Soft Amber Embrace"],
   "theText":[
     "Triggers upon the player trying to escape a restraint, whether or not it succeeds or fails.",
-    "Specify the specific restraint in the "move": key."
+    "Specify the specific restraint in The \"move\": key."
     ]
   },
 

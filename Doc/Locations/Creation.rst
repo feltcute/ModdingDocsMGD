@@ -3,11 +3,9 @@
 **Location Creation**
 ======================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Locations.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Locations.
 
 Go to *Json/Locations/*, and then see the .json files present for examples, and **_TestLocation.json** for a template.
-
-.. If you have installed snippets, you can type .*blank* to instantly create a location snippet.
 
 Assume all keys are required, unless stated otherwise.
 
@@ -39,6 +37,14 @@ The cosmetic name displayed on the map screen. This doesn't need to be unique, a
 
 An optional key for a default selection of music to loop through outside of events and encounters.
 
+**picture**
+------------
+
+.. code-block:: javascript
+
+    "picture": "forest.png"
+
+The background image to be used at the location when exploring and adventuring.
 
 **mapIcon**
 ------------
@@ -242,12 +248,3 @@ The listed objects and their keys must be included, and each array must have at 
 
 Sets the amount of eros given from chests in exploration via the Grimoire for each type of treasure rarity.
 The listed objects and their keys must be included, and each key must provide a value in their string.
-
-**picture**
-------------
-
-.. code-block:: javascript
-
-    "picture": "forest.png"
-
-The background image to be used at the location when exploring and adventuring.

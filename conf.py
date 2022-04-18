@@ -2,7 +2,7 @@
 
 # -- Project information -----------------------------------------------------
 
-needs_sphinx = '3.2.1'
+needs_sphinx = '4.4.0'
 
 project = "Monster Girl Dreams"
 copyright = '2017-2021, Threshold'
@@ -49,23 +49,6 @@ html_context = {
 }
 
 notfound_urls_prefix = ''
-notfound_context = {
-    "title": "404: Page Not Found",
-    "body": """
-        <h1>404: Page Not Found</h1>
-        <p>
-            This means the given URL was likely incorrect.
-        </p>
-        <p>
-            You can use the left sidebar, the top left logo, or the home button above
-to navigate somewhere safe.
-        </p>
-        <p>
-            Or you can stay here with the original and forgotten Black Knight and keep her company. That would make her happy.
-        </p>
-        <img src="img/starter/blackknight.jpg" alt="Black Knight, eternally delivering pizza." width="372" height="571">
-    """,
-}
 
 html_logo = 'img/banner.png'
 

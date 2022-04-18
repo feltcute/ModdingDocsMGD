@@ -1,0 +1,63 @@
+.. _Editors:
+
+**Installing a Text Editor**
+=============================
+
+The following text editors are ensured to properly read and understand .json files, offer useful features,
+and generally ensure you have a much more streamlined experience while modding.
+Other well-made text editors exist beyond the three listed here, but these are among the best free editors out there.
+
+Don't get too worried on your choice, as you can easily change it at any time.
+
+These all have portable versions if you want your editor and modding work on a USB, separate from your main system.
+
+`Visual Studio Code <https://code.visualstudio.com/>`_
+--------------------------------------------------------
+
+`Portable version <https://code.visualstudio.com/docs/editor/portable>`_
+
+`Web version (Chrome-based browser recommended for local development) <https://vscode.dev/>`_
+
+* Supports all desktop platforms, and web.
+* Most well featured editor out of the box. JSON :ref:`Linter` pre-installed.
+* Built-in project folder navigation and management.
+* Extension support, with the largest and well maintained collection.
+* Best Git and GitHub integration.
+* **MGD extension is available for some automated error checking and easing development.** Use ``ctrl+shift+x`` or  ``⌘+shift+x``, search for ``MGD Language``.
+
+`Atom <https://atom.io>`_
+---------------------------
+
+`Portable version <https://github.com/atom/atom/releases>`_ (download the zip/archive for your platform from the latest stable release)
+
+* Supports all desktop platforms.
+* Moderately featured.
+* Built-in project folder navigation and management.
+* Package support, including a JSON :ref:`Linter`. Open settings using ``ctrl+,``, or  ``⌘+,``, go to Install, search ``linter``, ``linter-ui-default``, and ``linter-jsonlint``. Say yes to any dependencies.
+* Git and GitHub integration.
+
+`Notepad++ <https://notepad-plus-plus.org/resources/>`_
+--------------------------------------------------------
+
+For the portable version, go to the Downloads page, select the latest version, and grab the zip file.
+
+* Windows only.
+* Feature-lite.
+* Has built-in folder navigation under View -> Folder As Workspace. Cannot manage folders and files.
+* Supports packages and customization (use 32-bit version), though not as convenient or powerful, with weak defaults.
+* Fast boot times on starting application.
+* Handles large multi-thousand line files best.
+
+**NOTE**: When using Notepad++, please use spaces for tabs, and utf-8 encoding! This helps prevent indentation and whitespace errors between text editors.
+
+* Settings -> Preferences -> Language -> 'Replace by space' on the right.
+* Settings -> Preferences -> New document -> Encoding -> choose UTF-8 *without BOM*.
+
+.. _Linter:
+
+**Linter**
+-----------
+
+It's **HIGHLY** encouraged to use a built-in JSON linter in your editor of choice.
+It will help you avoid critical errors that cause the game to crash from improper JSON formatting in real-time.
+If you truly don't wish to use one within your text editor, then you can use this `handy website <https://jsonformatter.curiousconcept.com/>`_ to check for JSON formatting issues.

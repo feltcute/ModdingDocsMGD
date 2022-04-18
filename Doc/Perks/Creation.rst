@@ -1,13 +1,9 @@
-.. _Perks:
-
 **Perk Creation**
 ==================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Perks.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Perks.
 
 Go to *Json/Perks/*, and then see the *.json* files present for examples, and **_BlankPerk.json** for a template.
-
-.. If you have installed snippets, you can type .*blank* to instantly create a perk snippets.
 
 Assume all keys are required, unless stated otherwise.
 

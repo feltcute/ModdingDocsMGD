@@ -1,7 +1,7 @@
 **Encounter**
 ==============
 
-.. tip::
+.. seealso:: 
 
   See :ref:`Pre-Combat` for information on starting an encounter, and :ref:`End Combat` on methods of ending an encounter.
 
@@ -25,11 +25,16 @@ Be sure to remove all monsters from :ref:`DisplayCharactersFunc` first before ca
 
 **AddMonsterToEncounter**
 --------------------------
+
 ``"AddMonsterToEncounter"``
 Add the monster to the encounter.
 Will renumber all the monsters in the encounter.
-Can add infinitely, so make sure there’s a check to stop it from going above three.
+Can add infinitely, so make sure there's a check to stop it from going above three.
 Is always added to the end of the encounter list.
+
+.. code-block:: javascript
+
+  "AddMonsterToEncounter", "Blue Slime"
 
 **ChangeForm**
 """""""""""""""

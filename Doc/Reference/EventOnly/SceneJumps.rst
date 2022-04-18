@@ -6,9 +6,9 @@
 **Scene Jumps**
 ================
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Event Jumps` for making jumps to scenes in other events.
+  For making jumps to scenes in other events, see :ref:`Event Jumps`.
 
 **JumpToScene**
 ----------------
@@ -54,7 +54,7 @@ These can be called inside each other as well. Exiting one of these calls is the
 
   "CallSceneThenReturn", "SceneNameHere"
 
-See `CallEventAndSceneThenReturn`_ for jumping to specific scenes outside of the event.
+See :ref:`CallEventAndSceneThenReturn` for jumping to specific scenes outside of the event.
 
 | A note from Threshold:
 |

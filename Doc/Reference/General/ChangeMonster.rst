@@ -1,9 +1,9 @@
 **Change Monster**
 ===================
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Monster Combat Afflictions` for functions that only work while in combat.
+    For functions that only work while in combat, see :ref:`Monster Combat Afflictions`.
 
 **ChangeMonster Functions**
 ----------------------------

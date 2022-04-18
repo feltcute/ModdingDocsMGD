@@ -93,13 +93,14 @@ These can be used with `FinalOption`_ if desired.
 
 **HideOptionOnRequirementFail**
 """"""""""""""""""""""""""""""""
+
 Can be called before a choice with any requirement check to hide that options requirements/existence from the player.
 Note this only applies to `Displayed Requirement Sub-Functions`_
 
 .. code-block:: javascript
 
   "Menu",
-    "RequiresEnergy", "50", "HideOptionOnRequirementFail", "Climb the mountain!",
+    "HideOptionOnRequirementFail", "RequiresEnergy", "50", "Climb the mountain!",
     "Take the elevator.",
   "EndLoop"
 
@@ -140,7 +141,7 @@ Checks the player's stat in the following string with the provided value. Passes
 
   "Menu",
     "RequiresStat", "Allure", "5", "Seduce her first.",
-    "RequiresStat", "Willpower", "5", "HideOptionOnRequirementFail", "Don't get seduced.",
+    "HideOptionOnRequirementFail", "RequiresStat", "Willpower", "5", "Don't get seduced.",
     "Mutual seducing.",
   "EndLoop"
 

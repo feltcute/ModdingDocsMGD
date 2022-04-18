@@ -5,9 +5,11 @@
 **Town Jumps & GameOver**
 ==========================
 
-.. tip::
+The below functions are typically for use at the end of an event, or loss/victory scene.
 
-  See :ref:`End Combat` for ending a combat encounter. The below functions are typically for use at the end of an event, or loss/victory scene.
+.. seealso:: 
+
+    For ending a combat encounter, see :ref:`End Combat`.
 
 
 .. _CallLossLevelUpFunc:

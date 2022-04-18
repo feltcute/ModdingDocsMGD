@@ -1,9 +1,9 @@
 **Player Afflictions**
 =======================
 
-.. tip::
+.. seealso:: 
 
-  See :doc:`Player Combat Afflictions </Doc/Reference/CombatOnly/PlayerCombatAfflictions>` for afflictions that can only be applied in combat.
+    For afflictions that can only be applied in combat, see :doc:`Player Combat Afflictions </Doc/Reference/CombatOnly/PlayerCombatAfflictions>`.
 
 **SetArousalToXUnlessHigherThanX**
 -----------------------------------
@@ -133,7 +133,7 @@ If you want to display the damage number from the skill, use {DamageToPlayer} in
 
 Deal randomized damage to the focused monster via a skill and called monster, the monster chosen is used as a stat reference and doesn't need to be in the active combat encounter.
 The skill chosen will not apply status effects. Displaying dialogue has to be done manually, it will not take dialogue from the skill.
-If you want to display the damage number from the skill, use {DamageToMonster} in the following string after completing the function.
+If you want to display the damage number from the skill, use `{DamageToEnemy}` in the following string after completing the function.
 
 .. code-block:: javascript
 

@@ -1,11 +1,9 @@
 **Adventure Creation**
 =======================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Adventures.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Adventures.
 
 Go to *Json/Adventures/*, and then see the *.json* files present for examples, and **_BlankAdventure.json** for a template.
-
-.. If you have installed the MGD extension, you can type ``_c_Adventure`` to create an Adventure snippet.
 
 **Assume all keys are required, unless stated otherwise.**
 
@@ -58,6 +56,15 @@ You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it
 
 If in use, you cannot exclude unused keys in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
+
+**MusicList**
+--------------
+
+.. code-block:: javascript
+
+    "MusicList": [ "music/Mountain/Purple Planet Music - Chilled - Desert Winds (3_12).mp3"],
+
+An optional key for a default selection of music to loop through during adventures outside of events and encounters.
 
 **Deck**
 ---------

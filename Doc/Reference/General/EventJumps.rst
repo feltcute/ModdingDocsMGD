@@ -8,9 +8,9 @@
 
 .. Ask thresh about the differences between all the event jumps as they are used rather inconsistently.
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Scene Jumps` for making jumps to scenes within an event.
+  For making jumps to scenes within an event, see :ref:`Scene Jumps`.
 
 **JumpToEvent**
 ----------------
@@ -26,8 +26,6 @@ Goes to an event stated in the next string. Remember that it will pick the first
 """""""""""""""""""
 Goes to the event stated in the next string, used for events from the town.
 
-.. Deprecated?
-
 .. code-block:: javascript
 
   "JumpToNPCEvent", "EventNameHere"
@@ -37,8 +35,6 @@ Goes to the event stated in the next string, used for events from the town.
 **JumpToLossEvent**
 """"""""""""""""""""
 Goes to the event stated in the next string, used for event loss scenes.
-
-.. Deprecated?
 
 .. code-block:: javascript
 
@@ -73,8 +69,6 @@ Variant of ``"JumpToEventThenScene"``, but stays in in combat. Used for events w
 **JumpToNPCEventThenScene**
 """"""""""""""""""""""""""""
 
-.. Deprecated/Dated name?
-
 Variant of ``"JumpToEventThenScene"`` for town.
 
 .. code-block:: javascript
@@ -83,7 +77,7 @@ Variant of ``"JumpToEventThenScene"`` for town.
 
 ----
 
-.. _CallEventAndSceneThenReturnFunc:
+.. _CallEventAndSceneThenReturn:
 
 **CallEventAndSceneThenReturn**
 --------------------------------

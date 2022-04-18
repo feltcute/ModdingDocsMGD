@@ -3,7 +3,7 @@
 **End Combat or Monster**
 ==========================
 
-.. tip::
+.. seealso:: 
 
   For starting combat, see :ref:`Pre-Combat`. For sending the player back to town after a loss scene, see :ref:`Town Jumps`.
 

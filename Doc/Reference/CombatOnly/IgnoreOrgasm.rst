@@ -9,5 +9,6 @@ This does mean the target can still orgasm from recoil.
 
 ``"DenyAttackerOrgasm"`` specifically exists for letting the attacker avoid recoil damage triggering an orgasm.
 
-.. tip::
+.. seealso:: 
+
     Also see :ref:`DenyPlayerOrgasmFunc` and :ref:`DenyMonsterOrgasmFunc`.

@@ -1,11 +1,9 @@
 **Skill Creation**
 ===================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Skills.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Skills.
 
 Go to *Json/Skill/*, and then see the .json files present for examples, and **_BlankSkill.json** for a template.
-
-.. If you have installed snippets, you can type .*blank* to instantly create a skill snippet.
 
 Assume all keys are required, unless stated otherwise.
 If it requires a non-blank (e.g. ``""``) value depends on the given ``"skillType":`` value and any noted technicalities.
