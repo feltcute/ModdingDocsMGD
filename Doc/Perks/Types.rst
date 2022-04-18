@@ -1,7 +1,9 @@
 **Perk Types**
 ===============
 
-.. tip:: Use the navigation column on the left to navigate and review the page headers quickly.
+.. tip::
+  
+   Use the navigation column on the left to navigate and review the page headers quickly.
 
 **Perk Modifiers**
 -------------------
@@ -86,7 +88,9 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 **Reward**
 -----------
+
 .. note::
+
     These are primarily written from the perspective of it being a perk type for the player, however,
     it will be disclaimed if the type is available for monsters as well.
 
@@ -180,6 +184,7 @@ Alter exp gains from monster exp on loss by a percent. Positive values increase 
 -----------
 
 .. note::
+
     Features the same behavior when used for either the player or monsters.
 
 **DamageBoost**
@@ -416,6 +421,7 @@ Alters the percent of allure based recoil damage dealt to opponents. Positive va
 ------------
 
 .. note::
+
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
 
 **DamageReduction**
@@ -525,6 +531,7 @@ Multiply the spirit lost by the given number. Caution going above 2, for a base 
 -------------------
 
 .. note::
+
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
 
 **StatusEffectDuration**
@@ -655,6 +662,7 @@ Can disable the players ability to run from all fights. Set a value of 0, as ``"
 ----------------------
 
 .. note::
+
     Features the same behavior when used for either the player or monsters, unless stated otherwise.
 
 **GetOutOfStance**
@@ -900,6 +908,7 @@ Refer to *Json/Perks/LevelUp/Will/HeroicCumback.json* for how it works.
 ---------------------
 
 .. note::
+
   The following three perk types are multiplied in effect by the player's Virility * 0.01 + 1.
 
 **SemenEnergyDrain**

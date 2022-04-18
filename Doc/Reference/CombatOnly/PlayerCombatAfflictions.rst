@@ -1,9 +1,9 @@
 **Player Combat Afflictions**
 ==============================
 
-.. tip::
+.. seealso:: 
 
-  See :doc:`Player Afflictions </Doc/Reference/General/PlayerAfflictions>` for afflictions that can be applied out of combat.
+    For afflictions that can be applied out of combat, see :doc:`Player Afflictions </Doc/Reference/General/PlayerAfflictions>`.
 
 .. _DenyPlayerOrgasmFunc:
 

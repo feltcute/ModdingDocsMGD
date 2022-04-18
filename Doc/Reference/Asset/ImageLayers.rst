@@ -34,10 +34,10 @@ When using \|\f\|ChangeImageLayer|/| type function, to stop displaying the layer
 
   "ChangeImageLayer", "LayerType", "1", "ImageName"
 
-Make sure the LayerType field is the same as that layer’s name in the monster's json.
+Make sure the LayerType field is the same as that layer's name in the monster's json.
 
-Instead of a number, you can instead designate a Monster's nameID. It will change their layer regardless of what position they are in from
-:ref:`DisplayCharactersFunc`. Also useful for tracking who’s face you’re changing.
+Instead of a number, you can instead use a Monster's nameID. It will change their layer regardless of what position they are in from
+:ref:`DisplayCharactersFunc`. It's also useful for tracking whose face you're changing.
 
 .. _ActivateOverlayFunc:
 
@@ -80,8 +80,8 @@ Gives the ability to use Image Sets as alternate CGs without needing to be the e
 
 **AnimateImageLayer**
 ---------------------
-Can ovveride a specific layer of a character to do frame by frame animation on a loop, primarily for CG usage.
-It currently supports up to 3 seperate layers to be animated.
+Can override a specific layer of a character to do frame by frame animation on a loop, primarily for CG usage.
+Up to 3 separate layers can be animated.
 Check Aiko's titfuck scene in BedMimic.json for an example of this in use.
 
 .. code-block:: javascript
@@ -107,7 +107,7 @@ Disambiguation in order of strings used in the first row:
   * - ``"1.5"``
     - The amount of seconds passed before the animation moves to the next frame in the list.
 
-After this is a list of the images you want it to swap to which must be aquired manually and cant be called from the lists in the monster file.
+After this is a list of the images you want it to swap to which must be acquired manually and can't be called from the lists in the monster file.
 
 To end an animation, you need to call a blank use of the function:
 

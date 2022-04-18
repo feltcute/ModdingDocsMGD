@@ -69,7 +69,9 @@ For modifiers based on a percent of the target's max stat. As an example, a valu
 * ``"%Willpower"``
 * ``"%Luck"``
 
-.. note:: Currently, the game has no way to functionally differentiate buffs from debuffs for events and the likes. Threshold intends to address this in the future.
+.. note:: 
+    
+    Currently, the game has no way to functionally differentiate buffs from debuffs for events and the likes. Threshold intends to address this in the future.
 
 .. _Resistances:
 

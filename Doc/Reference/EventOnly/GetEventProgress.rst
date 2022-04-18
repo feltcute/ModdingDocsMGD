@@ -1,9 +1,9 @@
 **Get Event Progress**
 =======================
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Progress` for Progress functions within event files.
+  For Progress functions within event files, see :ref:`Progress`.
 
 **GetEventAndChangeProgress**
 ------------------------------
@@ -55,9 +55,10 @@ Gets an event and then checks if it is equal or greater to the provided value. I
 
 ----
 
-**Cross-Event Comparators**
-----------------------------
-Following three functions are for very specific compare even progress scene jumpers. They all work the same, but do change in how it's decided.
+**Event Comparing Functions**
+------------------------------
+
+The following three jump functions are for specificly comparing across between two events. They all work the same, but do change in how it's decided.
 
 ----
 

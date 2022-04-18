@@ -3,7 +3,7 @@
 **Pre-Combat**
 ===============
 
-.. tip::
+.. seealso:: 
 
   For ending a combat encounter, see :ref:`End Combat`. For functions to use while in combat, see :doc:`Encounter </Doc/Reference/CombatOnly/Encounter>`.
 

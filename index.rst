@@ -20,22 +20,24 @@ Potential game spoilers abound.
 **Navigating The Docs**
 ------------------------
 
-You will find all of the documentation content in the List of Contents below, and in the navigation column to the left.
-There are buttons at the bottom of each page if you wish to go through the documentation linearly.
+The documentation can be navigated using the List of Contents below, and in the navigation column to the left.
+You can use the buttons at the bottom of each page if you wish to go through the documentation linearly.
 Of particular relevance to people new to modding will be the Starter section. Click 'Text Editors', or press the 'Next' button at the bottom of this page to begin.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Starter
-    :name: sec-Starter
+    :caption: Getting Started
+    :name: sec-GettingStarted
 
-    Doc/Starter/Editors
+    Doc/GettingStarted/Editors
 
-    Doc/Starter/MakingYourMod
+    Doc/GettingStarted/MakingAMod
 
-    Doc/Starter/TheJsonFormat
+    Doc/GettingStarted/MusicAndArt
 
-    Doc/Starter/FAQ
+    Doc/GettingStarted/PublishingMods
+
+    Doc/GettingStarted/Tutorials
 
 .. toctree::
     :maxdepth: 1
@@ -51,6 +53,8 @@ Of particular relevance to people new to modding will be the Starter section. Cl
     Doc/Reference/StatusEffectRef
 
     Doc/Reference/StatRef
+
+    Doc/Reference/FAQ
 
 .. toctree::
     :maxdepth: 1

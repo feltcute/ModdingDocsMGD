@@ -3,9 +3,9 @@
 **Monster Combat Afflictions**
 ===============================
 
-.. tip::
+.. seealso:: 
 
-  See :doc:`Change Monster </Doc/Reference/General/ChangeMonster>` for functions that work out of combat.
+  For functions that work out of combat, see :doc:`Change Monster </Doc/Reference/General/ChangeMonster>`.
 
 **ChangeMonsterArousal & ChangeMonsterSpirit**
 -----------------------------------------------

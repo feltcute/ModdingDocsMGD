@@ -13,10 +13,13 @@
 
 **InputProgress**
 ------------------
-``"InputProgress"`` calls to take an inputted number from the player and stores it. The player must specifically provide numbers for input.
+
+``"InputProgress"`` calls to take an inputted number from the player and stores it. 
+The player must specifically provide numbers for input.
 
 **HasErosLessThanInput**
 -------------------------
+
 Checks if the player has less eros than the inputted number. If true, it jumps to the given scene. Used to avoiding putting the players
 eros below zero, and keeping it free from potential abuse.
 

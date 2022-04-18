@@ -133,7 +133,7 @@ The following sub-sub-functions can be checked for:
 .. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfChoice", "1", "A Choice", "-100",
-  "ChangeStatCheckDifficulty", "GetEventAndIfChoice", "2", "A Differnt Choice", "100"
+  "ChangeStatCheckDifficulty", "GetEventAndIfChoice", "An Event", "2", "A Differnt Choice", "100"
 
 **StatCheckRollUnder**
 -----------------------

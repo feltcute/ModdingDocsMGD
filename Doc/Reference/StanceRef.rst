@@ -1,7 +1,8 @@
 **Stance Reference**
 =====================
 
-.. tip::
+.. seealso:: 
+    
     See :ref:`Stances` for information on functions related to stances, and :ref:`Stance Restraints` for information on lineTriggers related to specific stances.
 
 **Any, None**

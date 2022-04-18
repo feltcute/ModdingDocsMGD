@@ -1,14 +1,12 @@
 **Event Creation**
 ===================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Events.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Events.
 
 Base game Event .jsons are located at *Json/Events/*.
 The bubble slime events showcase modern practices well, located at *Mountain/FizzySpring.json*, and *CombatEvents/BubbleSlimeCombatEvents.json*.
 
 A blank template can be found at *Events/_BlankEvent.json*.
-
-.. If you have installed the MGD extension, you can type ``_c_Event`` to create an Event snippet.
 
 **Assume all keys are required, unless stated otherwise.**
 

@@ -25,8 +25,8 @@ This is more troublesome and will require manually locating.
 
 See :ref:`Music And Art Summary` for errors related to media asset paths.
 
-**I’m loading my save and it won't show my changes?**
-------------------------------------------------------
+**Loading my save isn't showing my changes?**
+----------------------------------------------
 
 You have to relaunch the game whenever you wish to fully see the changes you've made.
 While nothing bad will happen, you cannot apply changes to your JSON files while the game is running.
@@ -36,9 +36,15 @@ you will want to go to the options menu and update your save to apply the change
 **I'm not jumping to the scene I set!**
 ----------------------------------------
 
-You can check your event’s scene jumping validity by turning on **LoadValidator**.
+You can check your event's scene jumping validity by turning on **LoadValidator**.
 If you want to turn it on, you'll need to go to line 9 of *game/gamecode/LoadDatabase.rpy* and change the value from ``False`` to ``True``.
 Then, on game start up, a .txt file will be printed out into the *game/* folder, titled ``validator_log.txt``.
+
+**Manually progressing my saves to test stuff is painful!**
+-------------------------------------------------------------
+
+The in-game console can be very useful for debugging and testing your mod at a rapid pace, without having to manually build up a save towards what you want.
+`See the game wiki for further information. <https://monstergirldreams.miraheze.org/wiki/Console>`_
 
 **None of these answered my question!**
 ----------------------------------------

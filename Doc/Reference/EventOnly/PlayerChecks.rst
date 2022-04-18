@@ -6,9 +6,9 @@
 **Player Checks**
 ==================
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Player Combat Checks` for checks exclusive to combat.
+    For checks exclusive to combat, see :ref:`Player Combat Checks`.
 
 **StatEqualsOrMore**
 -----------------------
@@ -74,7 +74,7 @@ Check if the player is out of spirit, if true, it jumps to the given scene, else
 
 **IfPlayerEnergyGone**
 -----------------------
-Same as above, but for the player’s energy.
+Same as above, but for the player's energy.
 
 .. code-block:: javascript
 

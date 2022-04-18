@@ -1,7 +1,7 @@
 **Speakers Specific**
 =======================
 
-.. note::
+.. seealso:: 
 
   This page contains functions in direct relation to the :ref:`SpeakersCreation` key. See the hyperlink for more information on the keys themselves.
 

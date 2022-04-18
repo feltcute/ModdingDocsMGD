@@ -1,7 +1,7 @@
 **Store Events**
 =================
 
-.. note::
+.. seealso:: 
 
   Not to be confused with in-game shops. See :doc:`Shop </Doc/Reference/General/Shop>` for those.
 

@@ -10,8 +10,6 @@ This is excluding scenes solely using :ref:`MenuAddition`, for example, when add
 
 Check **_EventAdditionExample.json** in *Json/Events/* for an example.
 
-.. If you have installed the MGD extension, you can type ``_a_Event`` to create an Event addition snippet.
-
 The overview will proceed to go over valid keys in event additions, how they're added to the base event json, and if their inclusion is required.
 
 .. note::

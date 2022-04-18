@@ -3,11 +3,9 @@
 **Location Creation**
 ======================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Locations.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Locations.
 
 Go to *Json/Locations/*, and then see the .json files present for examples, and **_TestLocation.json** for a template.
-
-.. If you have installed snippets, you can type .*blank* to instantly create a location snippet.
 
 Assume all keys are required, unless stated otherwise.
 

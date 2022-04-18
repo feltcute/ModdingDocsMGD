@@ -4,14 +4,14 @@
 **StopBGM**
 ------------
 
-Using ``"StopBGM"`` stops any music that's currently playing with a 1 second fade out.
+Using ``"StopBGM"`` stops any music that's playing with a 1-second fade out.
 
 ----
 
 **StopBGMHard**
 ----------------
 
-Using ``"StopBGMHard"`` stops any music that's currently playing immediately. This also allows you to start up a song again properly if it's the same song, as it won't play if still fading out.
+Using ``"StopBGMHard"`` stops any music that's playing immediately with no fade out. This also allows you to start up a song again properly if it's the same song, as it won't play if still fading out.
 
 
 ----
@@ -61,7 +61,7 @@ Using ``"ChangeBGM-NoFade"`` ensures the BGM doesn't fade in or out at the start
 **PlayThisSongAfterCombat**
 ----------------------------
 
-Using ``"PlayThisSongAfterCombat"`` will play the specified song after combat instead of reverting to the locations song.
+Using ``"PlayThisSongAfterCombat"`` will play the specified song after combat instead of reverting to the location song.
 
 
 ----
@@ -71,11 +71,11 @@ Using ``"PlayThisSongAfterCombat"`` will play the specified song after combat in
 **StoreCurrentBGM & PlayStoredBGM**
 ------------------------------------
 
-Using ``"StoreCurrentBGM"`` stores the currently playing BGM, while ``"PlayStoredBGM"`` changes the BGM to the song stored in the previous function.
+Using ``"StoreCurrentBGM"`` stores the actively playing BGM, while ``"PlayStoredBGM"`` changes the BGM to the song stored in the previous function.
 Used when making dreams to ensure it can non-destructively change the BGM for the duration of the dream event.
 
 .. code-block:: javascript
 
   "StoreCurrentBGM",
-  "...Some scenes later at the end of the dream/when the player wakes up..",
+  "... Some scenes later at the end of the dream/when the player wakes up...",
   "PlayStoredBGM"
