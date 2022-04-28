@@ -10,9 +10,9 @@
 
   **All of the functions below only work in :doc:`Event </Doc/Events/Creation>` based .json files.**
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Player Checks` for checks that can be used outside of combat.
+  For checks that can be used outside of combat, see :ref:`Player Checks`.
 
 ----
 

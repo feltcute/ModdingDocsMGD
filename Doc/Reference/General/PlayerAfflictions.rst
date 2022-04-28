@@ -1,9 +1,9 @@
 **Player Afflictions**
 =======================
 
-.. tip::
+.. seealso:: 
 
-  See :doc:`Player Combat Afflictions </Doc/Reference/CombatOnly/PlayerCombatAfflictions>` for afflictions that can only be applied in combat.
+    For afflictions that can only be applied in combat, see :doc:`Player Combat Afflictions </Doc/Reference/CombatOnly/PlayerCombatAfflictions>`.
 
 **SetArousalToXUnlessHigherThanX**
 -----------------------------------

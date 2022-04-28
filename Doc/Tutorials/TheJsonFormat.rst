@@ -1,4 +1,4 @@
-.. _JSON:
+.. _thejsonformat:
 
 **The JSON Format**
 ====================
@@ -10,6 +10,10 @@ Later pages in the documentation for example will presume you know the differenc
 This page will cover an exercise of the JSON file format, and get you generally familiar with your editor, and terminology of JSON.
 Make a new file with the file type ".json" at the end in your editor of choice.
 You will be creating a basic :doc:`Event </Doc/Events/Creation>`.
+
+.. seealso:: 
+
+    For editors that report improper JSON formatting in real-time, see :doc:`Atom or VS Code </Doc/GettingStarted/Editors>` feature list. Especially VS Code for its tailored MGD Extension that verifies you're building a structure correctly.
 
 **Object**
 -----------
@@ -135,7 +139,7 @@ Note the comma between the objects, and how the last object doesn't have one, so
 Here is the final top-level key the Event json expects. Note that the square bracket on the final line of the code block isn't followed by a comma,
 as this is final key, marking the end of the parent object, the end of the json file, and this overview of the JSON format.
 
-.. tip::
+.. seealso:: 
 
   If you want a better grasp at how JSON works in general outside of the context of MGD, see `here <https://www.w3schools.com/js/js_json_syntax.asp>`_.
 

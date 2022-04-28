@@ -1,9 +1,9 @@
 **Choice**
 ===========
 
-.. tip::
+.. seealso:: 
 
-  See :ref:`Get Event Choice` for Choice functions outside of the given file.
+  For Choice functions outside of the given file, see :ref:`Get Event Choice`.
 
 **SetChoice**
 --------------
@@ -18,7 +18,7 @@ Will set specified choice number to the following string value. Think of them as
 **IfChoice**
 -------------
 Will check for a choice. If the choice number's possible string value is a match to the stored value, it then goes to the specified scene.
-If it is not a match, it will ignore the scene jump and continue the scene.
+If it's not a match, it will ignore the scene jump and continue the scene.
 
 .. code-block:: javascript
 
@@ -33,7 +33,7 @@ By default, all ``"SetChoice"`` functions not yet triggered by the player exist 
 **ChoiceToDisplayPlayer and ChoiceToDisplayMonster**
 -----------------------------------------------------
 ``"ChoiceToDisplayPlayer"`` & ``ChoiceToDisplayMonster`` grabs the specified choice's string value for
-the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it is called again, so it will affect other events. Thus, it should be called at the start
+the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it's called again, so it will affect other events. Thus, it should be called at the start
 of an event.
 
 Both are exactly the same, each function simply titled with the intention as either being used for setting a nickname for the player or monster. Or even
@@ -52,7 +52,8 @@ giving the Monster a different name in dialogue, say, giving a generic monster i
 
 **SetChoiceToPlayerName**
 --------------------------
-Sets the selected choice to the player’s name. For the above functions intended use case.
+
+Sets the selected choice to the player's name. For the above functions intended use case.
 
 .. code-block:: javascript
 

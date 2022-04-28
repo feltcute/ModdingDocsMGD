@@ -23,7 +23,7 @@
 
 **VFX Types**
 """"""""""""""
-To be placed after ``"PlayVisualEffect"`` so it knows how you want to manipulate the image provided in the next string.
+After declaring ``"PlayVisualEffect"``, use any of the following types of image manipulation sub-functions to create your VFX:
 
 * ``StartHaze`` start tier 1 haze effect, a low opacity screen cover.
 
@@ -47,13 +47,13 @@ To be placed after ``"PlayVisualEffect"`` so it knows how you want to manipulate
 
 * ``"RepeatingPulse"`` repeats low opacity pulse.
 
-* ``"Kiss"`` Similar to a single screen pulse, but holds the image for a few moments.
+* ``"Kiss"`` like ScreenPulse, but holds the image onscreen for a brief moment.
 
 * ``"ScreenFlash"`` quick image flash. Note that using bright images might be unpleasant to the eye.
 
 * ``"BlindingFlash"`` flash that lasts longer and fades slower. Still probably unpleasant to the eye.
 
-* ``"OrgasmPulse"`` rapid pulse for orgasms. Eyes will definitely hurt with bright images, use with care.
+* ``"OrgasmPulse"`` rapid pulse for orgasms. This will hurt the eyes when using bright images, use with care.
 
 
 ----
@@ -72,7 +72,7 @@ Pre-made and independent visual effect functions, with their own channel and ima
 
 ----
 
-**PlayHypoSpiral**
+**PlayHypnoSpiral**
 -------------------
 
 .. code-block:: javascript
@@ -107,7 +107,7 @@ It has multiple parameters it uses to determine its effect, in a specific order,
 ``"PlayPendulum"`` rotates an image 'back and forth' on screen like a pendulum. End with ``"EndPendulum"``.
 
 The image used itself needs to be set up a specific way if you want it to display properly, check 'pendulumTest.png' in the game files for an example.
--To be specific the image needs to be double the sceen height, and the rotation point needs to be centered on the image, as that's there the rotation will occur on screen.
+-To be specific the image needs to be double the screen height, and the rotation point needs to be centered on the image, as that's there the rotation will occur on screen.
 
 It has multiple parameters it uses to determine its effect, in a specific order, as shown in the above.
 
@@ -201,8 +201,8 @@ Motion Effects on Characters: Bounce, BounceSlow, BounceFast, BounceOnce, Sway, 
 
 Motion Effects for entire Screen: ScreenBounce, SlowScreenBounce, ScreenSway, Explosion, LongExplosion, Crash, and Quake.
 
-The screen motion effects will move everything, including the text box and other UI elements. The other one only applies to on-screen characters.
-To effect a single character or body part on a character or CG, see `PlayMotionEffectCustom`_. Motion effects for the entire screen have no custom varient.
+The screen motion effects will move everything, including the text box and other UI elements. The other one only applies to onscreen characters.
+To effect a single character or body part on a character or CG, see `PlayMotionEffectCustom`_. Motion effects for the entire screen have no custom variant.
 
 ----
 
@@ -215,7 +215,7 @@ Works the same as PlayMotionEffect, but will maintain the effect even as the sce
 
 **PlayMotionEffectCustom**
 ---------------------------
-Plays a custom motiion effect.
+Plays a custom motion effect.
 
 .. code-block:: javascript
 
@@ -239,7 +239,7 @@ Plays a custom motiion effect.
   * - ``"Characters"``
     - Hits everyone on screen.
   * - ``"Character"``
-    - Requires you to add a target by name or by display position like a image change, e.g.: ``"Aiko"`` or ``"1"``.
+    - Requires you to add a target by name or by display position like an image change, e.g.: ``"Aiko"`` or ``"1"``.
   * - ``"Bodypart"``
     - Specify the target, then the layer you want to apply the transform to, e.g.: ``"Expression"``.
 
@@ -254,4 +254,4 @@ To end single-target custom effects such as ``"Character"`` and ``"Bodypart"``, 
 
 **EndAllVisualEffects**
 ------------------------
-``"EndAllVisualEffects"`` will stop all VFX currently playing, regardless of what it is. With the exclusion of "PlayMotionEffectCustom" based effects, as that needs to be manually ended.
+``"EndAllVisualEffects"`` will stop all active VFX. With an exclusion of ``"PlayMotionEffectCustom"`` VFX, they need to be manually stopped.

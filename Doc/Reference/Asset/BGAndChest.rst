@@ -1,5 +1,3 @@
-.. _BGandChest:
-
 **BG & Chest**
 ===============
 
@@ -30,7 +28,7 @@ Used when making dreams to ensure it can non-destructively change the BG for the
 .. code-block:: javascript
 
   "StoreCurrentBG",
-  "...Some scenes later at the end of the dream/when the player wakes up..",
+  "... Some scenes later at the end of the dream/when the player wakes up...",
   "UseHeldBG"
 
 ----

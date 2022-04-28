@@ -3,11 +3,9 @@
 **Fetishes & Addictions**
 ==========================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Fetishes and Addictions.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Fetishes and Addictions.
 
 See *Json/Fetishes/* for all related fetish **and** addiction .json files for reference and the template *_BlankFetish.json*.
-
-.. If you have installed the MGD extension, you can type ``_c_Fetish`` to create a fetish snippet.
 
 **Fetishes**
 -------------

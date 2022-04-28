@@ -1,7 +1,7 @@
 **Dialogue**
 =============
 
-.. tip::
+.. seealso:: 
 
   For :ref:`SpeakersCreation` specific functions, see the page :doc:`Speakers Specific </Doc/Reference/EventOnly/SpeakersSpecific>`.
 

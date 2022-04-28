@@ -4,11 +4,11 @@ Making a Location addition is non-destructive and thus will be compatible with a
 
 Check **_ForestAdditionExample.json** in *Json/Locations/* for an example.
 
-.. If you have installed the MGD extension, you can type ``_a_Location`` to create a Location addition snippet.
-
 The overview will proceed to go over each key you would find in a regular Location .json, how their role changes, and if they're required in a addition.
 
-.. note:: All other keys outside of the ones listed aren't used, and thus should not be included for tidiness.
+.. note:: 
+  
+  All other keys outside of the ones listed aren't used, and thus should not be included for tidiness.
 
 **name & exploreTitle**
 ------------------------

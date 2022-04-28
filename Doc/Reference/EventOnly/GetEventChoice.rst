@@ -3,9 +3,9 @@
 **Get Event Choice**
 =====================
 
-.. note::
+.. seealso:: 
 
-  See :doc:`Choice </Doc/Reference/EventOnly/Choice>` for Choice functions within event files.
+  For Choice functions within event files, see :doc:`Choice </Doc/Reference/EventOnly/Choice>`.
 
 **GetEventAndIfChoice**
 --------------------------
@@ -28,10 +28,10 @@ Gets an event, and sets the specified choice to the given string.
 **ChoiceToDisplayPlayerFromOtherEvent & ChoiceToDisplayMonsterFromOtherEvent**
 -------------------------------------------------------------------------------
 ``"ChoiceToDisplayPlayerFromOtherEvent"`` & ``"ChoiceToDisplayMonsterFromOtherEvent"`` grabs the specified choice from an external event's string value for
-the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it is called again, so it will affect other events. Thus, it should be called at the start
+the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it's called again, so it will affect other events. Thus, it should be called at the start
 of a scene or event.
 
-Both are exactly the same, each function simply titled with the intention as either being used for setting a nickname for the player or monster. Or even
+Both behave the same, each function titled with the intention as either being used for setting a nickname for the player or monster. Or even
 giving the Monster a different name in dialogue, say, giving a generic monster in an event an actual name. They could be used for other purposes.
 
 .. code-block:: javascript
@@ -48,7 +48,7 @@ See :ref:`ChoiceToDisplayFunc` for doing it within the same event.
 
 **SetChoiceToPlayerNameFromOtherEvent**
 ----------------------------------------
-Sets the selected choice to the player’s name in another event. For the above functions.
+Sets the selected choice to the player's name in another event. For the above functions.
 
 .. code-block:: javascript
 

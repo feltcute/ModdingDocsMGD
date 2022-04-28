@@ -1,11 +1,9 @@
 **Adventure Creation**
 =======================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Adventures.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Adventures.
 
 Go to *Json/Adventures/*, and then see the *.json* files present for examples, and **_BlankAdventure.json** for a template.
-
-.. If you have installed the MGD extension, you can type ``_c_Adventure`` to create an Adventure snippet.
 
 **Assume all keys are required, unless stated otherwise.**
 

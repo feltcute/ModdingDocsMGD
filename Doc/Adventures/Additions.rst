@@ -8,8 +8,6 @@ This does mean your addition would be incompatible with other mods that make cha
 
 Check **_AdventureAdditionExample.json** in *Json/Adventures/* for an example.
 
-.. If you have installed the MGD extension, you can type ``_a_Adventure`` to create an Adventure addition snippet.
-
 The overview will proceed to go over each key you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.
 
 .. note::

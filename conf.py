@@ -2,7 +2,7 @@
 
 # -- Project information -----------------------------------------------------
 
-needs_sphinx = '3.2.1'
+needs_sphinx = '4.4.0'
 
 project = "Monster Girl Dreams"
 copyright = '2017-2021, Threshold'

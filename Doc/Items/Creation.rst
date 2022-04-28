@@ -1,11 +1,11 @@
+.. _Items:
+
 **Item Creation**
 ==================
 
-Breaks down the :doc:`keys and strings </Doc/Starter/TheJsonFormat>` used by Items.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Items.
 
 Go to *Json/Items/*, and then see the .json files present for examples, and **_BlankItem.json** for a template.
-
-.. If you have installed the MGD extension, you can type ``_c_Items`` to create a Item snippet.
 
 **Assume all keys are required, unless stated otherwise.**
 

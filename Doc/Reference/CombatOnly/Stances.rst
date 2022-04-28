@@ -3,8 +3,9 @@
 **Stances**
 ============
 
-.. tip::
-    See :doc:`Stance Reference </Doc/Reference/StanceRef>` for information on the stances featured in the game.
+.. seealso:: 
+
+    For information on the stances featured in the game, see :doc:`Stance Reference </Doc/Reference/StanceRef>`.
 
 **ApplyStance**
 ----------------
@@ -33,7 +34,7 @@ Will shift focus to the given monster.
 
 .. code-block:: javascript
 
-  "ApplyStance", "MonsterName", "Kissing"
+  "ApplyStanceToOtherMonster", "MonsterName", "Kissing"
 
 ----
 
@@ -85,7 +86,7 @@ Will shift focus to the given monster.
 
 .. code-block:: javascript
 
-  "IfOtherMonsterHasStance", "Slime", "Slimed 100%", "SceneNameHere"
+  "IfOtherMonsterHasStance", "Ghost", "Blowjob", "SceneNameHere"
 
 ----
 
