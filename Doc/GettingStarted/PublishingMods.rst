@@ -7,12 +7,15 @@ Without effort put into its presentation, a mod that a lot of players otherwise 
 **Packaging Your Mod**
 -----------------------
 
-Ensure you've attributed proper credit into a text file at least if you've used any royalty free assets, 
-this is safe to include in your mod folder, as it will be ignored by the game.
+Make sure you've attributed proper credit into a text file if you've used any royalty free assets.
+This is safe to include in your mod folder, as any file not in any JSON folder type will be ignored by the game.
+
+.. seealso:: 
+    See :ref:`JSON Folders Overview` for a list and rundown of all the JSON folder types.
 
 When publishing updates for your mod, providing a changelog text file is also useful for people wanting to know what's been changed or added since they last played.
 
-You will then need to compress the mod before uploading it to a file host. 
+Then, the mod will need compressed before uploading it to a file host. 
 Make sure to distribute your mod as a normal ``.zip`` file. Not everyone will be able to extract a ``.rar`` or ``.7z`` file. 
 See the instructions on how to make a zip file for your given platform:
 
@@ -42,7 +45,7 @@ Other file hosts will often have information on their content policies at the bo
 **Where To Share**
 -------------------
 
-It's highly encouraged to upload to the following places for optimal exposure for mods to the MGD community. 
+It's highly encouraged to share the link in the following places for optimal exposure for mods to the MGD community. 
 
 Modders can also look for MGD forum threads on the internet to share their mod.
 

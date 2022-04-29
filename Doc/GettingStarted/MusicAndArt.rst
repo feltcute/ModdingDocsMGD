@@ -10,23 +10,23 @@
 **Mod Pathing**
 ----------------
 
-Whenever a key or function asks for an image asset path, they are expecting it to be in a base game directory by default.
+Whenever a key or function asks for an image asset path, the game is expecting it to be in a base game directory by default.
 This means *game/music/*, *game/sfx/*, or *game/images/*. 
 
-If your asset is stored within your mod folder, this means the game won't find it, as it will be looking for it like this:
+This is a problem if you want to use assets stored within your mod folder, since the game won't find it if it's looking for the asset file like this:
 
 .. code-block:: javascript
 
   "images/Mods/<modName>/folder/file.png"
 
-To fix this, any has to prepend their file path with ``../``. 
-This will tell the game to go back up by one director, landing it in */game*. Like so:
+To correct this behavior, one has to prepend the file path to their asset file with ``../``. 
+This will tell the game to go back up by one folder directory, landing it in */game*. It will look like so:
 
 .. code-block:: javascript
 
   "../Mods/<modName>/folder/file.extensiontype"
 
-Map related assets are the exception, as they're two directories deep: *images/map/*. 
+Map related assets are the exception, as they're two directories deep for the base game assets: *images/map/*. 
 You will need to use ``../`` twice in cases where you are making a new location on the map:
 
 .. code-block:: javascript
