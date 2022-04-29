@@ -1,9 +1,9 @@
 **Change Monster**
 ===================
 
-.. seealso:: 
+.. seealso::
 
-    For functions that only work while in combat, see :ref:`Monster Combat Afflictions`.
+    For functions that only work while in combat, see :ref:`Monster Combat Afflictions`. Note that these also only work in combat.
 
 **ChangeMonster Functions**
 ----------------------------
@@ -28,6 +28,19 @@ They can take negative values, and it does reset upon leaving the event and/or e
   "ChangeMonsterMaxSpirit", "2"
 
 ----
+
+**LevelUpMonster**
+----------------------------
+Levels up the focused monster semi randomly based on their existing stat leanings.
+This can take a number, 'MatchPlayer', 'GoUpByProgress' or 'GoUpByProgressFromOtherEvent'.
+
+
+.. code-block:: javascript
+
+  "LevelUpMonster", "5"
+
+----
+
 
 **ChangeMonsterSensitivity**
 -----------------------------

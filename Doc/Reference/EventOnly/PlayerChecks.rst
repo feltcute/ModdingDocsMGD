@@ -6,7 +6,7 @@
 **Player Checks**
 ==================
 
-.. seealso:: 
+.. seealso::
 
     For checks exclusive to combat, see :ref:`Player Combat Checks`.
 
@@ -193,3 +193,13 @@ If the player is in Exploration via the Grimoire, rather than an Adventure. If t
 .. code-block:: javascript
 
   "IfInExploration", "SceneNameHere"
+
+----
+
+**IfRanAway**
+--------------------
+If the player has just run away from combat, if true, jump to the given scene, else it continues.
+
+.. code-block:: javascript
+
+  "IfRanAway", "SceneNameHere"

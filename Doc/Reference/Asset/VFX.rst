@@ -37,6 +37,8 @@ After declaring ``"PlayVisualEffect"``, use any of the following types of image 
 
 * ``"SuddenHaze"`` full, rapid tier 3 fade in.
 
+* ``"MajorHazeToBlackOut"`` tier 3->BlackOut
+
 * ``"BlackOut"`` blacks out the screen with the image. Stays dark till the channel is ended or changed.
 
 * ``"ScreenPulse"`` pulses on the screen once at low opacity.

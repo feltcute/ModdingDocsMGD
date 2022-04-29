@@ -2,7 +2,7 @@
 ===============
 
 .. tip::
-  
+
    Use the navigation column on the left to navigate and review the page headers quickly.
 
 **Perk Modifiers**
@@ -72,6 +72,17 @@ This can use :doc:`Text Markup </Doc/Reference/Markup>`, and thus in extension, 
   "EffectPower": ["0"],
 
 Declare the perk as a NonPersistentEffect, removing it whenever a Non-Persistent Status Effect (e.g. Charm) would be removed by the game.
+Set a value of 0, as ``"EffectPower":`` is not needed.
+
+**RemovablePersistantEffect**
+""""""""""""""""""""""""
+
+.. code-block:: javascript
+
+  "PerkType": ["RemovablePersistantEffect"],
+  "EffectPower": ["0"],
+
+Declare the perk as a RemovablePersistantEffect, removing it whenever a RemovablePersistantEffect Status Effect (e.g. Aphrodisiac) would be removed by the game. Aka sleep or church wake up.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
 **RemovableEffect**
@@ -226,6 +237,16 @@ Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage
   "EffectPower": ["40"],
 
 Alters breast/nipple damage by a percent. Positive values increase damage, negative values decrease.
+
+**NonPenSeductionBoost**
+"""""""""""""""""""
+
+.. code-block:: javascript
+
+  "PerkType": ["NonPenSeductionBoost"],
+  "EffectPower": ["-30"],
+
+Alters non-penetrative seduction damage dealt by a percent. Positive values increase damage, negative values decrease.
 
 **SeductionBoost**
 """""""""""""""""""
@@ -724,6 +745,16 @@ Increases the effectiveness of your own stances. Positive values improve effecti
   "EffectPower": ["25"],
 
 Alters run chance by a percent. Positive values increase chance, negative values reduce.
+
+**OpponentRunChance**
+""""""""""""""
+
+.. code-block:: javascript
+
+  "PerkType": ["OpponentRunChance"],
+  "EffectPower": ["25"],
+
+Monsters with this perk type alters the players run chance by a percent. Positive values increase chance, negative values reduce.
 
 **Unbounded**
 """"""""""""""

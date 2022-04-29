@@ -3,11 +3,11 @@
 **Monster Combat Afflictions**
 ===============================
 
-.. seealso:: 
+.. seealso::
 
   For functions that work out of combat, see :doc:`Change Monster </Doc/Reference/General/ChangeMonster>`.
 
-**ChangeMonsterArousal & ChangeMonsterSpirit**
+**ChangeMonsterArousal, ChangeMonsterEnergy, & ChangeMonsterSpirit**
 -----------------------------------------------
 Change the related stat to the focused monster.
 They can take negative values, and it does reset upon leaving the event and/or encounter. These do not produce dialogue.
