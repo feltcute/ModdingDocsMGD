@@ -6,14 +6,14 @@
 In this brief step-by-step tutorial, you will make your first proof-of-concept mod.
 By the end of the tutorial, you will have a simple event you can interact with in the Shopping center of the Town.
 
-You will not be coding in python. Instead, you will be making mods in precisely the same way Threshold makes content for the game: creating folders containing plain text files in a format called JSON.
+You will not be coding in Python. Instead, you will be making mods in precisely the same way Threshold makes content for the game: creating folders containing plain text files in a format called JSON.
 
 Threshold designed it so content for the game can be written in plain English words, and minimal actual coding, making everything much easier to comprehend.
 
 **The Mods Folder**
 -------------------
 
-In order for the game to find and load your mod, it must be located in the game folder titled Mods.
+In order for the game to find and load your mod, it must be located in the game folder titled ``Mods``.
 See the instructions on where to locate the Mods folder inside your given text editor:
 
 .. tabs::
@@ -89,21 +89,21 @@ The game will look inside your mod and check for specific folders titled any of 
 
 Each of these folders contain a specific type of JSON file that the game will load into its respective databases on startup. 
 
-.. tip::
+.. seealso::
     
     Optionally see :ref:`JSON Folders Overview` for more information on each type.
 
-Since you will be adding an Event to the Forest Dungeon, right-click your mod and create a folder titled ``Events``. You do not need to add the other types of JSON folders listed above, since you are not using them.
+Since you will be adding an Event to the Shopping center, right-click your mod and create a folder titled ``Events``. You do not need to add the other types of JSON folders listed above, since you are not using them.
 
 **Making an Event JSON**
 -------------------------
 
 Right-click the Events folder, and make a file titled ``ShoppingEvent.json``. You could title it how you like, as long as it ends with ``.json``, else the file will not be loaded by the game.
 
+At this point, your mod folder structure should look something like the image below.
+
 .. image:: img/modfolder.png
     :align: center
-
-At this point, your mod folder structure should look something like the above image.
 
 Open your ``ShoppingEvent.json`` file. The game expects for the contents of the JSON to follow specific structural patterns. 
 Typing it by hand is impractical, which is why you can use the blank template provided by the base game files and copy/paste its contents into ``ShoppingEvent.json``.  (Or type ``Create Event`` and press enter via the VS Code MGD Language extension.)
@@ -317,7 +317,7 @@ Notice how theScene has the same structure from the EventText key, the square br
 
 Just like how arrays enable EventText to have multiple scene structures, arrays allow for theScene to contain multiple values.
 
-To do this, simply put a comma at the end of the current value, and provide another string in the form of two double qoutation marks, like so:
+To do this, put a comma at the end of the current value, and provide another string in the form of two double qoutation marks, like so:
 
 .. code-block:: javascript
 
@@ -325,7 +325,7 @@ To do this, simply put a comma at the end of the current value, and provide anot
         "You walk the shops.", ""
     ]
 
-For organization's sake, you can press enter in-between the two values to put them on seperate lines.
+For organization's sake, you can press enter in-between the two values to cause a linebreak and put them on seperate lines.
 
 .. code-block:: javascript
 
@@ -380,7 +380,7 @@ Will check following string values for what and how many monsters to include bas
 Provide a value of ``"Blue Slime"``. You end the function and start the fight with the keyword ``"StartCombat"``.
 
 Provided the player wins and isn't sent back to Church, the scene will continue playing. 
-Provide the string value ``"The slime has been defeated, the player is victorious and moves on with shopping."``
+Provide the string value ``"You continue shopping."``
 
 .. code-block:: javascript
 
@@ -449,7 +449,7 @@ Lastly, you can provide theScene with the following string values:
         "GiveItemQuietly", "1", "Ugli Herb"
     ]
 
-The marup ``{b}`` **and** ``{/b}`` boldens the text of anything between them. ``"GiveItemQuietly"`` provides the given value amount of the specified item.
+The markup ``{b}`` **and** ``{/b}`` boldens the text of anything between them. ``"GiveItemQuietly"`` provides the given value amount of the specified item.
 
 **Conclusion**
 ---------------
@@ -458,7 +458,7 @@ You have completed a mod, which adds an Event that you can now play in-game.
 
 .. note:: 
 
-    You may notice on successfully running away from the Blue Slime, that the entire Event ends early!
+    WHen testing your mod, you may notice successfully running away from the Blue Slime will cause the entire Event to end early!
     
-    Researching seemingly unexpected behavior like this is something you'll often have to do while modding.
+    Researching seemingly unexpected behavior like this is a standard practice you'll often have to do while modding.
     If you're curious, see if you can identify the reason why this happens on the :ref:`Pre-Combat` function reference page.
