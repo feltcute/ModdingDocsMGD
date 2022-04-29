@@ -93,6 +93,16 @@ Checks if the current monster’s arousal will make them cum.
 
 ----
 
+**IfMonsterEnergyGone**
+--------------------
+Checks if the current monster’s energy is 0.
+
+.. code-block:: javascript
+
+  "IfMonsterEnergyGone", "SceneNameHere"
+
+----
+
 **CallMonsterEncounterOrgasmCheck**
 ------------------------------------
 Checks if any monsters in a fight have orgasmed, and proceeds as if hit in combat.
