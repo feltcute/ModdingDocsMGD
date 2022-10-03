@@ -46,10 +46,13 @@ This can take a number, 'MatchPlayer', 'GoUpByProgress' or 'GoUpByProgressFromOt
 Recalculates the focused monsters exp drop based on the games progression curve of:
 (0.4*(lvl*lvl))+(2*lvl)+(15*sqrt(lvl)-8)
 
+AlterByPercent can also be added to the function to alter the result, as the baseline exp from recalculation is for boss fights.
+The below example is 70% of the recalculation.
 
 .. code-block:: javascript
 
   "RecalculateMonsterExpDrop"
+  "RecalculateMonsterExpDrop", "AlterByPercent", "70",
 
 ----
 
@@ -58,10 +61,13 @@ Recalculates the focused monsters exp drop based on the games progression curve 
 Recalculates the focused monsters eros drop based on the games progression curve of:
 (lvl)^2+(lvl*10)+48)
 
+AlterByPercent can also be added to the function to alter the result.
+The below example is 70% of the recalculation.
 
 .. code-block:: javascript
 
   "RecalculateMonsterErosDrop"
+  "RecalculateMonsterErosDrop", "AlterByPercent", "70",
 
 ----
 
