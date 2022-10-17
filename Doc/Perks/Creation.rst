@@ -58,7 +58,7 @@ Leave an empty string in the array if not desired.
 
   "StatReqAmount": ["6", "9"],
 
-The amount the player needs for each stat in ``"StatReq":``. It is set to match each string from ``"StatReq":``.
+The amount the player needs for each stat in ``"StatReq":``. It's set to match each string from ``"StatReq":``.
 
 As an example, the first string of ``"6"`` would go to ``"Allure"``, and the following string ``"9"`` would go to the following string ``"Power"``, and so forth.
 

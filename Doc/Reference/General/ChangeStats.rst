@@ -45,7 +45,7 @@ See :ref:`Sensitivity`.
 
 **PermanentChangeStatusEffectResistances**
 -------------------------------------------
-Permanently alters the players status effect resistance. It is recommended to use perks for less permanent afflictions.
+Permanently alters the players status effect resistance. It's recommended to use perks for less permanent afflictions.
 
 .. code-block:: javascript
 

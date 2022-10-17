@@ -12,7 +12,7 @@ Keep in mind that using Church functions will trigger fixed dialogue from the Go
 * "Oh chosen hero... If you donate enough eros, I can remove the fetishes you have gained from your trials."
 * "Oh, chosen hero... Your body is not in need of restoration, but you may still donate if you wish."
 
-It is recommended to check */Json/Events/Town/Church/1VenereaeStatue.json* for a full context example of how it works in practice.
+It's recommended to check */Json/Events/Town/Church/1VenereaeStatue.json* for a full context example of how it works in practice.
 
 **DonateToGoddess**
 --------------------
@@ -45,4 +45,4 @@ It is recommended to check */Json/Events/Town/Church/1VenereaeStatue.json* for a
   "AnyChurchFunctionHere",
   "AddTributeToProgress"
 
-See :ref:`Input` you're looking for similar, general functionality. Though it is currently limited to debt or payment systems related to eros.
+See :ref:`Input` you're looking for similar, general functionality. Though it's currently limited to debt or payment systems related to eros.

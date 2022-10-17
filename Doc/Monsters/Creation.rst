@@ -29,7 +29,7 @@ The internal name of the monster for use in json files. You will be working with
 
   "species": "Monster species",
 
-This currently has no functionality, but is best included for forward-compatibility if it is ever introduced to the game.
+This currently has no functionality, but is best included for forward-compatibility if it's ever introduced to the game.
 
 When making a monster, you can refer to existing monster .jsons to see what their species is as reference towards what you decide on for yours.
 
@@ -53,7 +53,7 @@ The description of a monster. This is given to the player in a card if the monst
 
 See :ref:`DialogueTextMarkup` for more information on the markup example in the above.
 
-The string can technically be left blank if you intend to use art from the get-go, but it is still recommended.
+The string can technically be left blank if you intend to use art from the get-go, but it's still recommended.
 
 .. code-block:: javascript
 
@@ -107,7 +107,7 @@ The key must be included, but the array can be left empty. You can leave either 
 
 A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
 
 You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
@@ -344,16 +344,16 @@ Functions exactly the same as ``"lossScenes":``, but for when the player wins.
     }
   ],
 
-``"combatDialogue":`` contains triggers in the form of objects that are checked for during combat to bring a result if it is matched.
+``"combatDialogue":`` contains triggers in the form of objects that are checked for during combat to bring a result if it's matched.
 It extends well beyond just dialogue responses and reactions during combat.
 
 ``"lineTrigger":`` decides what the trigger is checking for. **For a list of all possible triggers and how they work**, see :ref:`lineTriggers`.
 
 ``"move":`` a conditional parameter, most commonly used to represent a skill that was used.
-**Can be an array to compact responses into one object, as it is an** *or* **parameter, not an** *and***.**
+**Can be an array to compact responses into one object, as it's an** *or* **parameter, not an** *and***.**
 Compacting where possible is recommended as it does help reduce game load times.
 
-``"theText":`` contains a list of all possible results of the trigger. It is random, but you can repeat strings to make some more common over others.
+``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat strings to make some more common over others.
 
 Note all matching ``"lineTrigger":`` and ``"move":`` values will ultimately go into the same pool the game randomly pulls from, as the game takes every
 trigger in combatDialogue and translates the values from ``"theText:"`` into the same pool.
@@ -408,7 +408,7 @@ There is a lot of keys to unpack for each object layer, so here is a brief overv
   * - ``"AlwaysOn":``
     - Whether the layer can never be turned off and instead always get the first image.
   * - ``"IsScene":``
-    - Whether it is a scene, also ensuring it is centered on the screen, ignoring x and y align
+    - Whether it's a scene, also ensuring it's centered on the screen, ignoring x and y align
   * - ``"TheBody":``
     - If the layer is the characters base. The x and y align of this layer dictates the x and y of every other layer.
   * - ``"Overlay":``

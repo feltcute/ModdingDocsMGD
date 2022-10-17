@@ -73,7 +73,7 @@ The key does not apply to monsters, and thus can be safely removed for tidiness 
 
   "skillType": "attack",
 
-The type of skill it is, deciding its overall functionality. This influences the behavior of later keys.
+The type of skill it's, deciding its overall functionality. This influences the behavior of later keys.
 The following table presents all possible values it can be given.
 
 
@@ -93,7 +93,7 @@ The following table presents all possible values it can be given.
   * - ``"Afflict"``
     - Like the ``statusEffect`` type, but specifically for consumables, ensuring the player can use the item as expected when outside of combat.
 
-.. StatusHeal is a thing but assumed to not be intended for use given how it is laid out internally.
+.. StatusHeal is a thing but assumed to not be intended for use given how it's laid out internally.
 
 .. _statType:
 

@@ -7,7 +7,7 @@
 
 **HideMonsterEncounter & ShowMonsterEncounter**
 ------------------------------------------------
-``"HideMonsterEncounter"`` temporarily hides the encounter. It is still very much so in effect, just the visibility and selectibility of all currently displayed monsters
+``"HideMonsterEncounter"`` temporarily hides the encounter. It's still very much so in effect, just the visibility and selectibility of all currently displayed monsters
 monsters from the encounter are gone. It's meant for combat events, but nothing stops you from using it elsewhere, just do take caution.
 Using :ref:`DisplayCharactersFunc` for its duration of use intended.
 

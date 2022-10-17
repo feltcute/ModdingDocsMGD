@@ -27,7 +27,7 @@ Gets an event and sets its progress to the given value. Can be negative.
 
 **GetAnEventsProgressThenIfEquals**
 ------------------------------------
-Gets an event and then checks if it is equal to the provided value. If true, it jumps to the given scene.
+Gets an event and then checks if it's equal to the provided value. If true, it jumps to the given scene.
 
 .. code-block:: javascript
 
@@ -37,7 +37,7 @@ Gets an event and then checks if it is equal to the provided value. If true, it 
 
 **GetAnEventsProgressThenIfEqualsOrGreater**
 ---------------------------------------------
-Gets an event and then checks if it is equal or greater to the provided value. If true, it jumps to the given scene.
+Gets an event and then checks if it's equal or greater to the provided value. If true, it jumps to the given scene.
 
 .. code-block:: javascript
 
@@ -47,7 +47,7 @@ Gets an event and then checks if it is equal or greater to the provided value. I
 
 **GetAnEventsProgressThenIfEqualsOrLess**
 ------------------------------------------
-Gets an event and then checks if it is equal or greater to the provided value. If true, it jumps to the given scene.
+Gets an event and then checks if it's equal or greater to the provided value. If true, it jumps to the given scene.
 
 .. code-block:: javascript
 

@@ -22,7 +22,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
       Using Defend gives a bonus depending on how many times the player used it in a row:
       ``+5`` the first time, ``+3`` the second time, and ``+1`` the third and subsequent times.
-      It is recovered for every turn gone without using Defend. ``LuckDie`` is a die roll with a floor minimum of ``+1`` to a ceiling of their Luck times ``0.1``.
+      It's recovered for every turn gone without using Defend. ``LuckDie`` is a die roll with a floor minimum of ``+1`` to a ceiling of their Luck times ``0.1``.
 
    .. tab:: Temptation Formula
 
@@ -34,7 +34,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
       Using Defend gives a bonus depending on how many times the player used it in a row:
       ``+5`` the first time, ``+3`` the second time, and ``+1`` the third and subsequent times.
-      It is recovered for every turn gone without using Defend. ``LuckDie`` is a die roll with a floor minimum of ``+1`` to a ceiling of their Luck times ``0.1``.
+      It's recovered for every turn gone without using Defend. ``LuckDie`` is a die roll with a floor minimum of ``+1`` to a ceiling of their Luck times ``0.1``.
 
    .. tab:: Surpass Failure Formula
 
@@ -149,7 +149,7 @@ The following sub-sub-functions can be checked for:
 
 **StatCheckRollUnder**
 -----------------------
-Functions the exact same as ``StatCheck`` but the player instead fails if the roll is higher than the opposed checked amount, and passes if it is lower.
+Functions the exact same as ``StatCheck`` but the player instead fails if the roll is higher than the opposed checked amount, and passes if it's lower.
 Also informs the player that the goal of the check is to roll under for clarity. **Players cannot surpass failure, nor use ChangeStatCheckDifficulty.**
 
 .. code-block:: javascript

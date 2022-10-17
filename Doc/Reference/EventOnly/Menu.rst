@@ -6,7 +6,7 @@
 **Menu**
 ---------
 Gives the player an option menu of choices. Each choice is a scene in the same event file. Make sure the scene names exactly match the choice.
-Will always end current scene and jump to a new one, thus it is recommended to only have them at the end of a scene.
+Will always end current scene and jump to a new one, thus it's recommended to only have them at the end of a scene.
 
 .. code-block:: javascript
 
@@ -61,7 +61,7 @@ Keep in mind `FinalOption`_ disregards this.
 Forces a menu option to always be the last available option in the list.
 **If there are multiple pages, it will be at the bottom of every page, and does not count towards** `MaxMenuSlots`_.
 
-It is recommended to avoid using `Requirement Sub-Functions`_ alongside this function’s target, as this is intended for giving the player back-out options.
+It's recommended to avoid using `Requirement Sub-Functions`_ alongside this function’s target, as this is intended for giving the player back-out options.
 If you do use the functionality for your ``"FinalOption"`` choice, please ensure ``"FinalOption"`` is the last sub-function that's provided prior
 to the choice.
 
@@ -135,7 +135,7 @@ Threshold usually prefers to disable it via `HideOptionOnRequirementFail`_ where
 
 **RequiresStat**
 """""""""""""""""
-Checks the player's stat in the following string with the provided value. Passes if it is equal or greater than. See :ref:`Stats`.
+Checks the player's stat in the following string with the provided value. Passes if it's equal or greater than. See :ref:`Stats`.
 
 .. code-block:: javascript
 

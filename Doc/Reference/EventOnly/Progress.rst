@@ -49,7 +49,7 @@ Primarily designed for the blue balls system, but it can have other uses.
 
 **ProgressEquals**
 -------------------
-Checks if the progress of the event is equal to the following number. If true, it jumps to the given scene. If false, it is ignored.
+Checks if the progress of the event is equal to the following number. If true, it jumps to the given scene. If false, it's ignored.
 Can be negative.
 
 .. code-block:: javascript

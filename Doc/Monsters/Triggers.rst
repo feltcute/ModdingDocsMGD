@@ -5,8 +5,8 @@
 
 See :ref:`combatDialogueCreation` for general information on the keys used for lineTriggers.
 
-Remember that The \"move\": key can be given an array, for any lineTrigger seen here. **However, it is so responses can be made compact**.
-It does not at any point use the array as a multi-check requirement before it can trigger. That is, it is an *or* parameter, not an *and* parameter.
+Remember that The \"move\": key can be given an array, for any lineTrigger seen here. **However, it's so responses can be made compact**.
+It does not at any point use the array as a multi-check requirement before it can trigger. That is, it's an *or* parameter, not an *and* parameter.
 All matching lineTriggers matching the same ``"move":`` value will ultimately go into the same pool for it to randomly pull from.
 
 For putting combat functions in strings, see :ref:`DialogueTextMarkup`
@@ -152,7 +152,7 @@ These take place after an action or condition is performed or met by either the 
   "move": ["Tighten"],
   "theText":[
     "Triggers when the specified skill is used by the monster.",
-    "It is displayed before the move.",
+    "It's displayed before the move.",
     "Biased towards Sex skills, but will use UsesMoveA pool as a fallback."
     ]
   },**
@@ -164,7 +164,7 @@ These take place after an action or condition is performed or met by either the 
   "move": ["Tighten"],
   "theText":[
     "Triggers when the specified skill is used by the monster.",
-    "It is displayed before the move.",
+    "It's displayed before the move.",
     "Biased towards Anal skills, but will use UsesMove pool as a fallback."
     ]
   },
@@ -482,7 +482,7 @@ As the title suggests, contains lineTriggers specifically around stances and res
   "move": ["Making Out"],
   "theText":[
     "Triggers upon the player trying to escape a stance prior to whether or not it succeeds or fails.",
-    "It is recommended to make a one for each possible stance the monster can be in.",
+    "It's recommended to make a one for each possible stance the monster can be in.",
     "Remember that the player can only initiate Sex, Making Out, or Anal on their own."
     ]
   },

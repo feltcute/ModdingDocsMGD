@@ -55,6 +55,8 @@ Goes to an event, then a scene via the two following strings. Useful when you wa
 
 ----
 
+.. _CallCombatEventAndScene:
+
 **CallCombatEventAndScene**
 """"""""""""""""""""""""""""
 
