@@ -1,5 +1,9 @@
+.. _Invenotry Functions:
+
 **Inventory**
 ==============
+
+.. _AllowInventory**:
 
 **AllowInventory**
 -------------------

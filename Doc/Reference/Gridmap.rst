@@ -208,6 +208,15 @@ It's optional and can thus be excluded if you want to disable fog of war and let
 
   If you just want to limit player vision through walls, you can set the sight to the maximum possible length of a column or row on the map.
 
+**DenyGridInventory**
+""""""""""""""""""""""
+
+Declaring ``"DenyGridInventory"`` disables the player inventory while traversing the Gridmap. Ignores state set by the :ref:`Invenotry Functions` functions.
+
+.. tip::
+  
+  Events by default disable the inventory, and have to be manually enabled with :ref:`AllowInventory` every time a scene from the gridmap is entered.
+
 .. _Gridmap NPC:
 
 **NPC**
