@@ -140,7 +140,7 @@ so any skills or stances listed across multiple objects for the same type of lin
   ]
 
 You can and should exclude the pictures key entirely if you don't intend to use it.
-Otherwise, it is recommended to copy and paste the character's pictures key and work from there.
+Otherwise, it's recommended to copy and paste the character's pictures key and work from there.
 A more in-depth explanation on how to do minimal image related additions will be given in the future as soon as some unexpected issues are resolved,
 in the meanwhile, building on top of a copy/paste will work.
 

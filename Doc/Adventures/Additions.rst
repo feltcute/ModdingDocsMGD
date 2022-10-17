@@ -44,7 +44,7 @@ Required so you can tell the game that you're wishing to make an addition. Can b
 
 Required, ``"Deck":`` **cannot** be excluded, nor left empty, even if your goal isn't to modify the deck.
 
-It is advised to copy and paste the array from the Adventure's original ``"Deck":`` key as the basis of your addition, and go from there.
+It's advised to copy and paste the array from the Adventure's original ``"Deck":`` key as the basis of your addition, and go from there.
 
 **RandomEvents**
 -----------------

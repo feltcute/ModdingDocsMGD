@@ -1,13 +1,13 @@
 **Text Markup**
 ================
 
-.. Note, anytime Markup is used in code blocks, it is best to use ".. code-block:: javascript" to ensure the syntax highlighting doesn't mess up.
+.. Note, anytime Markup is used in code blocks, it's best to use ".. code-block:: javascript" to ensure the syntax highlighting doesn't mess up.
 
 This page will primarily cover text `markup <https://en.wikipedia.org/wiki/Markup_language>`_ features, but there is some general information to know when writing.
-It is important to keep in mind a rough 430-450 character limit when writing to avoid text trailing off the screen.
+It's important to keep in mind a rough 430-450 character limit when writing to avoid text trailing off the screen.
 Thankfully, most text editors gives you a character count when highlighting a selection of text, usually at the bottom of its GUI.
 
-However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying length, it is generally impossible to tell if it will
+However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying length, it's generally impossible to tell if it will
 actually fit till you test it in-game. This is one of the many reasons play-testing your work is recommended.
 
 Lastly, if you know RenPy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
@@ -46,7 +46,7 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 
   "|f|PlaySoundEffect|/|sfx/Magic/Hypnosis effect 3.wav|n||f|ChangeImageLayer|/|Expression|/|1|/|Base|n|Oh, hello {ThePlayerName}."
 
-``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it is called is removed.
+``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it's called is removed.
 
 ``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Monsters/Creation>`.
 It can also be used as the equivalent of a blank string for functions done via ``|f|``
@@ -93,7 +93,7 @@ given integer number in seconds, though it can continue early through user input
 
     "Waiting for user input,{w} continues after 5 seconds have passed{w=5}, or if user input is given prior.",
 
-``{p}`` functions the same as ``{w}``, but inserts line breaks for every time it is called.
+``{p}`` functions the same as ``{w}``, but inserts line breaks for every time it's called.
 
 ``{cps=int}`` overrides the games default text speed when displaying text, standing for *characters per second*.
 Useful given the game by default has all text display instantly.
@@ -137,7 +137,7 @@ another string uses ``{SetTextColor}`` four times, ``{UseSetColor4}`` will remai
 .. code-block:: javascript
 
   "{SetTextColor}#fe0000{Done}This is red{ColorEnd}, {SetTextColor}#fdfe02{Done}this is yellow{ColorEnd}, {SetTextColor}#c21196{Done}and this is purple{ColorEnd}.",
-  "As a result, {UseSetColor3}this is purple{ColorEnd}, and {UseSetColor}this is red{ColorEnd}, but {SetTextColor}#0bff01{Done}now it is green{ColorEnd}.",
+  "As a result, {UseSetColor3}this is purple{ColorEnd}, and {UseSetColor}this is red{ColorEnd}, but {SetTextColor}#0bff01{Done}now it's green{ColorEnd}.",
   "{UseSetColor}See?{ColorEnd} But {UseSetColor2}this is still yellow.{ColorEnd}"
 
 ``{color=hex}`` is a more simple alternative to ``{SetTextColor}``, simply changing the containing text to the given color.

@@ -115,7 +115,7 @@ The key must be included, but the array can be left empty. You can leave either 
 
 A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
 
 You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
@@ -195,7 +195,7 @@ All keys in the objects require at least an empty string.
 ``"NameOfScene":``, which takes a string you provide it to uniquely identify the scene. They can contain whatever you please.
 
 ``"theScene":`` which takes an array of strings that make up the scene. These objects are plainly called scenes.
-Your strings will be displayed to the user as narrative text, unless it is identified as a function.
+Your strings will be displayed to the user as narrative text, unless it's identified as a function.
 
 The first scene added will always display first for your average event jump from any of the ``"CardType":`` values.
 However, specific scenes in a event can be jumped to, either by a game feature or by a function.

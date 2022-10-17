@@ -62,7 +62,7 @@ First, optinally declare ``"IgnoreWalls"`` if the NPC is meant to see through Wa
 
 Then, optionally declare ``"Range"`` to declare a limited Tile range to their vision. By default, they see as far as possible.
 
-Lastly, declare the scene name it is meant to jump to if true. If false, silently continues the scene.
+Lastly, declare the scene name it's meant to jump to if true. If false, silently continues the scene.
 
 .. code-block:: javascript
 

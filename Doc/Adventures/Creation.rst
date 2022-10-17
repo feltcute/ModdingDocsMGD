@@ -49,7 +49,7 @@ While the key must still be included, the array can be left empty if you do not 
 
 A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it is an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
 
 You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
@@ -81,7 +81,7 @@ An optional key for a default selection of music to loop through during adventur
   ],
 
 Specify the order of encounters and events the player will face upon starting the adventure, linearly from left to right.
-It can technically be left empty, but it is the entire purpose of an Adventure json, doing so will send players straight back to town upon selection of the adventure.
+It can technically be left empty, but it's the entire purpose of an Adventure json, doing so will send players straight back to town upon selection of the adventure.
 
 Below are examples of strings that can be put into the array:
 

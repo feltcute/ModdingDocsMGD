@@ -43,11 +43,14 @@ This can take a number, 'MatchPlayer', 'GoUpByProgress' or 'GoUpByProgressFromOt
 
 **RecalculateMonsterExpDrop**
 ------------------------------
-Recalculates the focused monsters exp drop based on the games progression curve of:
-(0.4*(lvl*lvl))+(2*lvl)+(15*sqrt(lvl)-8)
+Recalculates the focused monsters exp drop based on the games progression curve of the following formula.
 
-AlterByPercent can also be added to the function to alter the result, as the baseline exp from recalculation is for boss fights.
-The below example is 70% of the recalculation.
+.. code-block:: python
+
+  (0.4*(lvl*lvl))+(2*lvl)+(15*sqrt(lvl)-8)
+
+You can use its sub-function ``"AlterByPercent"`` to alter the result.
+The below example is 70% of the recalculation used for boss fights.
 
 .. code-block:: javascript
 
@@ -58,11 +61,14 @@ The below example is 70% of the recalculation.
 
 **RecalculateMonsterErosDrop**
 -------------------------------
-Recalculates the focused monsters eros drop based on the games progression curve of:
-(lvl)^2+(lvl*10)+48)
+Recalculates the focused monsters eros drop based on the games progression curve of the following formula.
 
-AlterByPercent can also be added to the function to alter the result.
-The below example is 70% of the recalculation.
+.. code-block:: python
+
+  (lvl)^2+(lvl*10)+48)
+
+You can use its sub-function ``"AlterByPercent"`` to alter the result.
+The below example is 70% of the recalculation used for boss fights.
 
 .. code-block:: javascript
 

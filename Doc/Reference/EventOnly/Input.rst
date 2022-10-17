@@ -42,7 +42,7 @@ Previously for checking for zero, however ``"IfInputEqualsOrLessThan"`` below is
 ----------------------------
 Checks to see if the inputted number is equal to or less than the specified value.
 Used for catching undesirable inputs such as 0, or negative numbers that have the potential to abuse the input system. If you wish to use negative numbers,
-it is best to interpret the input from the player as such using the below functions, rather than to require them to input a negative number, which can be unintuitive.
+it's best to interpret the input from the player as such using the below functions, rather than to require them to input a negative number, which can be unintuitive.
 
 .. code-block:: javascript
 

@@ -542,7 +542,7 @@ Experimental perk type that gives percent chance to resist orgasm, stacks with o
   "PerkType": ["MultiplySpirit Loss"],
   "EffectPower": ["2"],
 
-Multiply the spirit lost by the given number. Caution going above 2, for a base amount of 3 spirit, it is practically an instant loss.
+Multiply the spirit lost by the given number. Caution going above 2, for a base amount of 3 spirit, it's practically an instant loss.
 
 `RemovedOnOrgasm`_ plays well with the perk type.
 
@@ -1002,7 +1002,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 """""""""""""""""""""""
 
 The following perk types make it impossible for the player to initiate or attack the given stances, excluding grope attacks on chests.
-It is highly recommend you use combat events instead of them, but they do still work.
+It's highly recommend you use combat events instead of them, but they do still work.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
 * ``"NoAnus"``

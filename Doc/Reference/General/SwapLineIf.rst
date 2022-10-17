@@ -20,7 +20,7 @@ In order to utilize the function, you must use an option alongside it. The below
 Random has no checks and will pick one of the lines at random to display. You cannot provide it with sub-functions, you would need to use something other than
 ``"SwapLineIf"`` or use :doc:`Text Markup </Doc/Reference/Markup>` to achieve something to that effect.
 
-You can repeat a string to increase the chances that it is the chosen line.
+You can repeat a string to increase the chances that it's the chosen line.
 
 .. code-block:: javascript
 
@@ -117,7 +117,7 @@ Checks the player for their current virility, each line featuring a certain nume
 """"""""""""""
 Checks to see if the player qualifies for a given fetish (which requires a minimum of 25 levels in the fetish).
 
-It is binary, in that it checks for the given fetish for the fetish line, and then a blank string for the line if the player doesn't qualify for the fetish.
+It's binary, in that it checks for the given fetish for the fetish line, and then a blank string for the line if the player doesn't qualify for the fetish.
 
 .. code-block:: javascript
 
@@ -176,7 +176,7 @@ Checks the current size of a combat encounter, each line featuring a certain num
 """""""""
 Checks the player to see if they have an item.
 
-It is binary, in that you check for the given item for the item line, and then a blank string for the line if the player doesn't have the item.
+It's binary, in that you check for the given item for the item line, and then a blank string for the line if the player doesn't have the item.
 
 .. code-block:: javascript
 

@@ -4,7 +4,7 @@
 .. note::
 
   Each of these have what is called a channel, specific to the function itself.
-  Each channel represents a layer on the screen, and will be overridden if it is called again, even if you intend to use it multiple times at once.
+  Each channel represents a layer on the screen, and will be overridden if it's called again, even if you intend to use it multiple times at once.
   You can avoid replacing a visual effect by mistake through the mentioned channels for each function, or by smartly mixing
   together the individual functions.
 

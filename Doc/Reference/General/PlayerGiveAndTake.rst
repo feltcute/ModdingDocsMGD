@@ -37,8 +37,10 @@ you give a negative or positive value respectively. You are free to remove as mu
 **GiveTreasure**
 -------------------------------
 
-Give Treasure requires the player to be in active explore or on an adventure to function properly.
-Give treasure takes either "Common", "Uncommon", or "Rare", and rewards the player drops from the respective treasure table rewards for that location/adventure.
+``"GiveTreasure"`` takes either ``"Common"``, ``"Uncommon"``, or ``"Rare"``, and rewards the player drops from the respective treasure table rewards for the respective location or adventure the event takes place within.
+
+**Requires the player** to be in an active location exploration or on an adventure to function properly.
+
 
 .. code-block:: javascript
 
@@ -76,7 +78,8 @@ An example use case would be to remove skills at the end of combat you gave to t
 **GiveSkillThatWasTemporarilyRemoved & RemoveSkillFromPlayerTemporarily**
 --------------------------------------------------------------------------
 
-``"GiveSkillThatWasTemporarilyRemoved"`` & ``"RemoveSkillFromPlayerTemporarily"`` a quiet variant of give skill specifically for temporarily removing skills then giving them back, ensuring they go back into the same spot in skill order to not disorganize player skills. Check Pin for an example. If you want to give the player a temp skill for a fight, like, tail cuddle, you do not need to use this set of functions.
+``"GiveSkillThatWasTemporarilyRemoved"`` & ``"RemoveSkillFromPlayerTemporarily"`` a quiet variant of give skill specifically for temporarily removing skills then giving them back, ensuring they go back into the same spot in skill order to not disorganize player skills. 
+Check the skill ``"Pin"`` for an example. If you want to give the player a temp skill for a fight, like, tail cuddle, you do not need to use this set of functions.
 
 ----
 

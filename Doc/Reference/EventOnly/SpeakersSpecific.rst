@@ -56,7 +56,7 @@ Adding a numerical value directly at the end within the function will use the ot
 
 **SetPostName**
 ----------------
-Sets the end of a monsters name to a thing, can be used to make attack titles appear in events. Will affect all speakers, and persist for all ``"Speaks"`` calls until it is manually set blank.
+Sets the end of a monsters name to a thing, can be used to make attack titles appear in events. Will affect all speakers, and persist for all ``"Speaks"`` calls until it's manually set blank.
 
 .. code-block:: javascript
 

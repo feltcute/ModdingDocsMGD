@@ -104,7 +104,7 @@ Arrays cannot contain keys, only objects can. However, arrays can contain object
     }
     ],
 
-Here, the ``"Speakers":`` key is given an array, but instead of giving the array a series of strings, it is given a series of objects.
+Here, the ``"Speakers":`` key is given an array, but instead of giving the array a series of strings, it's given a series of objects.
 As said earlier, you can have objects within objects, which is done by providing a key with an array containing objects.
 
 As a reminder, objects, unlike arrays, can't contain values directly, but can contain keys with values. Which could also have arrays, then more objects, and so forth.
