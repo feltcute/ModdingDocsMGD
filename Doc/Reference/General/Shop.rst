@@ -8,6 +8,8 @@
 Opens a skill purchasing menu based on the provided skills, up till ``"EndLoop"``.
 Good whitespace formatting is highly recommended for sanity, see how skill shops in the base game are done.
 
+PurchasesToProgress can be added to anywhere an item could be to make any purchases add to the current events progress. Selling has no effect.
+
 .. code-block:: javascript
 
   "SkillShoppingMenu",
@@ -21,6 +23,8 @@ Good whitespace formatting is highly recommended for sanity, see how skill shops
 
 Opens a shop menu based on the provided items, up till ``"EndLoop"``.
 Good whitespace formatting is highly recommended for sanity, see how shops in the base game are done.
+
+PurchasesToProgress can be added to anywhere an item could be to make any purchases add to the current events progress. Selling has no effect.
 
 .. code-block:: javascript
 
