@@ -132,7 +132,7 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
   "FullyUnlockedBy": [""],
 
-Functions the same as the ``"requires":`` key, unlocking exploration via the Grimoire.
+Functions the same as the ``"requires":`` key, unlocking exploration and adventures via the Grimoire.
 
 .. Leaving it blank means exploration is unlocked by default?
 
@@ -147,7 +147,31 @@ Functions the same as the ``"requires":`` key, unlocking exploration via the Gri
     }
   ],
 
-Functions the same as ``"requiresEvent":`` key, unlocking exploration via the Grimoire alongside or as an alternative to ``"FullyUnlockedBy":``.
+Functions the same as ``"requiresEvent":`` key, unlocking exploration and other adventures via the Grimoire alongside or as an alternative to ``"FullyUnlockedBy":``.
+
+**ExplorationUnlockedBy & ExplorationUnlockedByEvent**
+-------------------------------------------
+
+.. code-block:: javascript
+
+  "ExplorationUnlockedBy": [""],
+
+Functions the same as the ``"requires":`` key, unlocking exploration via the Grimoire. This is a secondary lock that can be used to toggle off exploration while leaving other adventures available in a location. However if the FullyUnlockedBy type requirements are not met, the exploration option will not appear regardless, this is just an extra layer.
+
+.. Leaving it blank means exploration is unlocked by default?
+
+.. code-block:: javascript
+
+  "ExplorationUnlockedByEvent": [
+    {
+    "NameOfEvent": "",
+    "Progress": "-99",
+    "ChoiceNumber": "-1",
+    "Choice": ""
+    }
+  ],
+
+Functions the same as ``"requiresEvent":`` and ``"FullyUnlockedByEvent":`` key, unlocking exploration via the Grimoire alongside or as an alternative to ``"FullyUnlockedBy":``.
 
 **Deck Size Keys**
 -------------------
