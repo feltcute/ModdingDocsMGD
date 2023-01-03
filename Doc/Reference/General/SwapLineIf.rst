@@ -50,6 +50,21 @@ for more convenient stat checks.
 
 ----
 
+**Level**
+"""""""""""""""""""""""""
+Using ``"Level"`` checks the current player level, each line featuring a certain numerical amount as its condition.
+
+
+.. code-block:: javascript
+
+  "SwapLineIf", "Arousal",
+    "50", "Line 1",
+    "25", "Line 2",
+    "0", "Line 3",
+  "EndLoop"
+
+----
+
 **Arousal & MaxArousal**
 """""""""""""""""""""""""
 Using ``"Arousal"`` checks the current condition of the players arousal, each line featuring a certain numerical amount as its condition.
