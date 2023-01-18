@@ -132,6 +132,16 @@ Checks if the player has the following skill. If true, it jumps to the given sce
 
 ----
 
+**IfHasSkills**
+---------------
+Takes a list of skills the play can have, and if all is true it jumps to the given scene, else it continues.
+
+.. code-block:: javascript
+
+  "IfHasSkills", "Dildo", "Bondage Net", "EndLoop", "SceneNameHere",
+
+----
+
 **IfHasItem & IfDoesntHaveItem**
 ---------------------------------
 Checks if the player does or doesn't respectively have an item in their inventory or equipped.
@@ -143,6 +153,16 @@ Checks if the player does or doesn't respectively have an item in their inventor
 .. code-block:: javascript
 
   "IfDoesntHaveItem", "Vandal's Note", "SceneNameHere"
+
+----
+
+**IfHasItem & IfDoesntHaveItem**
+---------------------------------
+Takes a list of items that the player has equipped or in their inventor, and if all is true it jumps to the given scene, else it continues.
+
+.. code-block:: javascript
+
+  "IfHasItems", "Anaph Herb", "Ardor Potion", "EndLoop", "SceneNameHere",
 
 ----
 
