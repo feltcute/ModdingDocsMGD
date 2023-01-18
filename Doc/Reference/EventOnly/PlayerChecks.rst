@@ -156,7 +156,7 @@ Checks if the player does or doesn't respectively have an item in their inventor
 
 ----
 
-**IfHasItem & IfDoesntHaveItem**
+**IfHasItems**
 ---------------------------------
 Takes a list of items that the player has equipped or in their inventor, and if all is true it jumps to the given scene, else it continues.
 
