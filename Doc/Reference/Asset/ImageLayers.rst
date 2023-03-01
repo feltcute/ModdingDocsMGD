@@ -39,6 +39,12 @@ Make sure the LayerType field is the same as that layer's name in the monster's 
 Instead of a number, you can instead use a Monster's nameID. It will change their layer regardless of what position they are in from
 :ref:`DisplayCharactersFunc`. It's also useful for tracking whose face you're changing.
 
+however while in an active combat, for both the monsters file and combat events, the number/selection field should be ignored like this, which is applicable to ANY image layer related function for selection:
+
+.. code-block:: javascript
+
+  "ChangeImageLayer", "LayerType", "ImageName"
+
 .. _ActivateOverlayFunc:
 
 **ActiveOverlay & DeactivateOverlay**

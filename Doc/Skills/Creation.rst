@@ -210,6 +210,8 @@ Critically, the skill can be made unavailable to the player or monster AI depend
     - **Target** must be in all of the specified stances. You can also use ``"Any"`` or ``"None"``.
   * - ``"unusableIfTarget": ["Cuddle"],``
     - **Target** cannot be in any of the specified stances. You can also use ``"Any"`` or ``"None"``.
+  * - ``"unusableIfTargetHasTheseSets": [[ "Blowjob", "Blowjob", "Blowjob", "Blowjob", "Blowjob"]],``
+    - **Target** cannot any of these sets of active stances, meaning all of the listed stances at once, so in the example if the target is in the blowjob stance 5 times, like with imps, the skill cant be used.
   * - ``"requiresStatusEffect": "Charm",``
     - Requires **target** to have this status effect. You can also use ``"None"``/``""``.
   * - ``"requiresStatusPotency": "1",``
