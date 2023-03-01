@@ -150,7 +150,7 @@ Functions the same as the ``"requires":`` key, unlocking exploration and adventu
 Functions the same as ``"requiresEvent":`` key, unlocking exploration and other adventures via the Grimoire alongside or as an alternative to ``"FullyUnlockedBy":``.
 
 **ExplorationUnlockedBy & ExplorationUnlockedByEvent**
--------------------------------------------
+-------------------------------------------------------
 
 .. code-block:: javascript
 
