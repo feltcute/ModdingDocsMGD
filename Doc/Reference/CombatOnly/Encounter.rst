@@ -1,7 +1,7 @@
 **Encounter**
 ==============
 
-.. seealso:: 
+.. seealso::
 
   See :ref:`Pre-Combat` for information on starting an encounter, and :ref:`End Combat` on methods of ending an encounter.
 
@@ -35,6 +35,20 @@ Is always added to the end of the encounter list.
 .. code-block:: javascript
 
   "AddMonsterToEncounter", "Blue Slime"
+
+----
+
+**AllowRunning**
+--------------------------
+
+``"AllowRunning"``
+Allows the player to run from the current combat encounter if it started off disabled.
+
+.. code-block:: javascript
+
+  "AllowRunning",
+
+----
 
 **ChangeForm**
 """""""""""""""

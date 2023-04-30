@@ -9,12 +9,12 @@ You can find examples from the base game in *Json/Events/Labyrinth/* and check e
 
 .. warning::
 
-  Gridmaps is a new and developing feature 
+  Gridmaps is a new and developing feature
   which could be prone to issues that could be in need of further revisions and clarifications in the future.
 
   Functionality may be considered limited till future updates.
 
-.. seealso:: 
+.. seealso::
 
     For Gridmap functions meant to be defined outside the Gridmap in an event, see :ref:`Gridmap Functions`
 
@@ -26,7 +26,7 @@ A Gridmap doesn't require a specific CardType from an event, it only needs a sce
 Everything that defines a Gridmap starts with the function ``"GoToMap"``, and ends upon calling ``"StartMap"``,
 where the player is then placed in the defined Gridmap.
 
-What you place between these two functions permantently defines how the scenes Gridmap will work, 
+What you place between these two functions permantently defines how the scenes Gridmap will work,
 you cannot alter it thereafter without making an entire new Gridmap.
 
 Assume all functions are required, unless stated otherwise.
@@ -68,9 +68,24 @@ This page will break down the following example:
     "Event", "Auto", "ShadowsTile", "ShadowsTile",
     "Obstacle",
   "EndLoop",
+  "NPC",
+    "Name", "CharmShooterRight",
+    "Img", "Invisible",
+    "Timer", "4", "CharmShooter", "SpawnHeartRight",
+    "Obstacle",
+  "EndLoop",
+  "NPC",
+    "Name", "CharmShooterDownOverlay",
+    "Img", "GridMap/CharmShooterDown.png",
+    "Timer", "3", "CharmShooter", "PrimeCharmDown",
+    "TimerMax", "4",
+    "Obstacle",
+  "EndLoop",
+
 
 
   "SpawnNPC", "Key", "5", "10",
+  "SpawnNPC", "CharmShooterDownOverlay",  "Timer", "6", "TimerMax", "7", "8", "0",
 
   "Row", "1","1","1","1","1","1","1","1","1","1","1","1","1","1","1",   "EndLoop",
   "Row", "1","0","0","0","T","0","0","0","1","0","0","0","1","E","1",   "EndLoop",
@@ -99,7 +114,7 @@ This page will break down the following example:
 
 **StartMap**
 """"""""""""""
-``"StartMap"`` finalizes the setup and sends the player into the defined Gridmap. 
+``"StartMap"`` finalizes the setup and sends the player into the defined Gridmap.
 
 It must be called after everything else, nor should any of the other functions in this breakdown be used after it.
 
@@ -133,17 +148,17 @@ The disambiguation will use the following tile example:
 
 The tile ID used to tell the game which tile to place, in this case ``"T"`` to denote a poisoned tile.
 
-It's encouraged to make this a single character, 
-as the similar width will make the later placement of these tiles easier to visually follow. 
+It's encouraged to make this a single character,
+as the similar width will make the later placement of these tiles easier to visually follow.
 
-.. tip:: 
-  
+.. tip::
+
   Also see setting a monospace font in your respective text editors settings to make all characters the same width.
 
 **Second String Value**:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The image path used for your tile. 
+The image path used for your tile.
 
 The pixel width and length used by MGD is 50x50 tiles. Any other size, such as 64x64 tilesets, will not work as expected.
 
@@ -199,7 +214,7 @@ Note how in the above example Gridmap, the player spawns on the Floor tile of ID
 
 **Sight**
 """"""""""
-Declaring ``"Sight"`` enables the fog of war, only letting player see as far as the following string value. 
+Declaring ``"Sight"`` enables the fog of war, only letting player see as far as the following string value.
 Each numerical value increases the players sight radius in a 50px interval. Vision is blocked by Wall tiles.
 
 It's optional and can thus be excluded if you want to disable fog of war and let the player see the entire Gridmap, including through walls.
@@ -214,7 +229,7 @@ It's optional and can thus be excluded if you want to disable fog of war and let
 Declaring ``"DenyGridInventory"`` disables the player inventory while traversing the Gridmap. Ignores state set by the :ref:`Invenotry Functions` functions.
 
 .. tip::
-  
+
   Events by default disable the inventory, and have to be manually enabled with :ref:`AllowInventory` every time a scene from the gridmap is entered.
 
 .. _Gridmap NPC:
@@ -248,7 +263,7 @@ Declaring ``"DenyGridInventory"`` disables the player inventory while traversing
     "Obstacle",
   "EndLoop",
 
-Each use of the ``"NPC"`` function will define a NPC. 
+Each use of the ``"NPC"`` function will define a NPC.
 Not only for monsters, can also be an object, like a key, or to define a RecallPoint.
 
 The following table breaks down all following sub-functions you can provide it before closing the loop:
@@ -268,19 +283,27 @@ The following table breaks down all following sub-functions you can provide it b
     -  Calls the given event then given scene every Gridmap turn, aka every step. See base game examples and :ref:`Gridmap Functions`.
   * - ``"Obstacle"``
     - Skips the NPC in movement calls, and sets it to be displayed under all other NPCs.
+  * - ``"Timer"``
+    - Sets an internal timer for the npc to count down then call an event and reset at 0.
+  * - ``"TimerMax"``
+    - Changes the max timer count that the timer is reset to. Must be called after "Timer".
+
 
 **SpawnNPC**
 """""""""""""
 .. code-block:: javascript
 
   "SpawnNPC", "Key", "5", "10",
+  "SpawnNPC", "CharmShooterDownOverlay",  "Timer", "6", "TimerMax", "7", "8", "0",
 
-``"SpawnNPC"`` spawns the given NPC at the coordinates provided in the following two string values. 
+``"SpawnNPC"`` spawns the given NPC at the coordinates provided in the following two string values.
 
 The NPC must be defined in the Gridmap when it's created to avoid issues.
 
 The first given string value represents the X position, increasing in numerical value from left to right.
 The second string value represents the Y position, increasing in numerical value from top to bottom.
+
+Timer and Timer max can also be called before the coordinates to alter the timer of the NPC if it already has a timer given to it.
 
 **Rows**
 """""""""
@@ -302,14 +325,14 @@ The second string value represents the Y position, increasing in numerical value
   "Row", "1","1","1","1","1","1","1","1","1","1","1","1","1","1","1",   "EndLoop",
 
 
-Each ``"Row"`` function loops through the defined the Gridmap layout, and is repeated till done. 
+Each ``"Row"`` function loops through the defined the Gridmap layout, and is repeated till done.
 Values will use the defined :ref:`Tileset` tiles.
 
-Each Row must have the same legth, or errors may occur. In other words, make sure no row is too longer or shorter than another. 
+Each Row must have the same legth, or errors may occur. In other words, make sure no row is too longer or shorter than another.
 
 It's recommended to take screenshots of your map as you make it for references and positioning of NPCs/tiles.
 
-.. tip:: 
+.. tip::
   You can select each row by click and dragging your mouse across it to get a selected character count in the bottom right as a way to test this.
-  
+
   Also see using a monospace font in your text editors settings to make all text characters the same width.

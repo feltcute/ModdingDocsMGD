@@ -3,7 +3,7 @@
 **Gridmap Functions**
 ======================
 
-.. seealso:: 
+.. seealso::
 
     For defining a GridMap in an event, see :ref:`Gridmap`
 
@@ -42,7 +42,7 @@ If true, jumps to the given event scene, else, silently continues the scene.
 
 **SetPlayerGridPosition**
 -----------------------------------------------
-Move the player to another location on the map using the coordinates provided in the following two string values. 
+Move the player to another location on the map using the coordinates provided in the following two string values.
 
 The first given string value represents the X position, increasing in numerical value from left to right.
 The second string value represents the Y position, increasing in numerical value from top to bottom.
@@ -55,7 +55,7 @@ The second string value represents the Y position, increasing in numerical value
 
 **IfGridNPCSeesPlayer**
 -----------------------------------------------
-``"IfGridNPCSeesPlayer"`` checks if the focused NPC sees the player in a direct line of sight 
+``"IfGridNPCSeesPlayer"`` checks if the focused NPC sees the player in a direct line of sight
 within the given sub-function paramaters.
 
 First, optinally declare ``"IgnoreWalls"`` if the NPC is meant to see through Wall tiles.
@@ -100,7 +100,7 @@ Can be set to a string value of ``"0"`` to toggle vision back to global range.
 
 **ChangeGridNPCMovement**
 -----------------------------------------------
-``"ChangeGridNPCMovement"`` changes the FocusedEvent NPCs movement type given 
+``"ChangeGridNPCMovement"`` changes the FocusedEvent NPCs movement type given
 in the following string values.
 
   * - ``"", ""``
@@ -112,9 +112,11 @@ in the following string values.
   * - ``"Whimsical"``
     - For the given Target, picks any valid tile within the following given tile range of the target. If called again while active, it finds a new tile.
   * - ``"Wander"``
-    - Wanders randomly in any direction, can hit against Wall tiles.
+    - Wanders randomly in any direction, can sometimes hit against Wall tiles.
+  * - ``"Projectile'Direction'"``
+    - These go in a straight line and if they hit a wall they destroy themselves.
 
-Targets can be any of the following string values: 
+Targets can be any of the following string values:
 * ``"Player"`` for targeting the players position.
 * ``"NPCName"`` meaning for targeting a NPCs position. Value is meant to be their Gridmap NPC Name.
 * ``"Coord"", "", ""`` for targeting a specific X and Y coordinate on the grid.
@@ -126,7 +128,11 @@ Targets can be any of the following string values:
   "ChangeGridNPCMovement", "Chase", "Coord", "6", "9"
   "ChangeGridNPCMovement", "Ambush", "Player"
   "ChangeGridNPCMovement", "Whimsical", "Ceris", "5"
-  "ChangeGridNPCMovement", "Wander"
+  "ChangeGridNPCMovement", "Wander",
+  "ChangeGridNPCMovement", "ProjectileUp",
+  "ChangeGridNPCMovement", "ProjectileDown",
+  "ChangeGridNPCMovement", "ProjectileLeft",
+  "ChangeGridNPCMovement", "ProjectileRight"
 
 .. _IfGridNPCThere:
 
@@ -143,19 +149,21 @@ If true, jump to the given scene, else, silently continues the scene.
 
 **SpawnGridNPC**
 -----------------------------------------------
-``SpawnGridNPC`` spawns a Gridmap :ref:`Gridmap NPC` from on the map, 
+``SpawnGridNPC`` spawns a Gridmap :ref:`Gridmap NPC` from on the map,
 either at the current event location via ``"Here"``, or at specific X and Y coordinates.
+You can also alter the timer of an NPC if it has one.
 
 .. code-block:: javascript
 
   "SpawnGridNPC", "LazyNPC", "Here"
   "SpawnGridNPC", "PickyNPC", "3", "4"
+  "SpawnGridNPC", "PickyNPC", "Timer", "6", "TimerMax", "7", "3", "4"
 
 .. _RemoveGridNPC:
 
 **RemoveGridNPC**
 -----------------------------------------------
-``RemoveGridNPC`` removes a Gridmap :ref:`Gridmap NPC` from the map, 
+``RemoveGridNPC`` removes a Gridmap :ref:`Gridmap NPC` from the map,
 taking either the following string value of ``"Current"`` or ``"Specific"``.
 
 ``"Current"`` uses the NPCs TurnEvent triggered event to select the NPC.

@@ -54,7 +54,7 @@ Can be negative.
 
 .. code-block:: javascript
 
-  "ProgressEquals", "10", "SceneNameHere"
+  "IfProgressEquals", "10", "SceneNameHere"
 
 ----
 
@@ -65,7 +65,7 @@ Can be negative.
 
 .. code-block:: javascript
 
-  "ProgressEqualsOrGreater", "10", "SceneNameHere"
+  "IfProgressEqualsOrGreater", "10", "SceneNameHere"
 
 ----
 
@@ -76,4 +76,4 @@ Can be negative.
 
 .. code-block:: javascript
 
-  "ProgressEqualsOrLess", "10", "SceneNameHere"
+  "IfProgressEqualsOrLess", "10", "SceneNameHere"
