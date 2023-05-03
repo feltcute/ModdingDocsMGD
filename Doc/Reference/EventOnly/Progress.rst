@@ -10,7 +10,7 @@ Progress is typically used to track relationship progress with characters, but i
 
 **By default, progress for all events start at 0.**
 
-.. seealso:: 
+.. seealso::
 
   You can display progress via the ``{ProgressDisplay}`` :doc:`Text Markup </Doc/Reference/Markup>` . Also see :doc:`Get Event Progress </Doc/Reference/EventOnly/GetEventProgress>` for progress functions outside of the given file.
 
@@ -47,7 +47,7 @@ Primarily designed for the blue balls system, but it can have other uses.
 
 ----
 
-**ProgressEquals**
+**IfProgressEquals**
 -------------------
 Checks if the progress of the event is equal to the following number. If true, it jumps to the given scene. If false, it's ignored.
 Can be negative.
@@ -58,7 +58,7 @@ Can be negative.
 
 ----
 
-**ProgressEqualsOrGreater**
+**IfProgressEqualsOrGreater**
 ----------------------------
 Works the same as the previous function, but is still true even if the event's value is greater than the checked value.
 Can be negative.
@@ -69,7 +69,7 @@ Can be negative.
 
 ----
 
-**ProgressEqualsOrLess**
+**IfProgressEqualsOrLess**
 -------------------------
 Same as the previous function, but instead is still true if the event's value is less than the checked value.
 Can be negative.
