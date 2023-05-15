@@ -174,6 +174,8 @@ Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
 
 ``{AttackerYouOrMonsterName}`` or ``{TargetYouOrMonsterName}`` will check if it's the player or monster. If it's the former, it will say "you", the latter, the monster name.
 
+``{FocusedMonsterName}``Gets the currently focused monsters name, primarily for use with the random monster focus function when needing to use their name in a line.
+
 **Pronouns**
 
 * ``{AttackerHeOrShe}`` or ``{TargetHeOrShe}``

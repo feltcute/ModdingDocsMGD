@@ -534,12 +534,12 @@ Alters critical damage the wielder receives prior to the final calculation. Posi
 
 Experimental perk type that gives percent chance to resist orgasm, stacks with other sources. Positive values increase the base percent chance, negative values reduce.
 
-**MultiplySpirit Loss**
+**MultiplySpiritLoss**
 """""""""""""""""""""""""
 
 .. code-block:: javascript
 
-  "PerkType": ["MultiplySpirit Loss"],
+  "PerkType": ["MultiplySpiritLoss"],
   "EffectPower": ["2"],
 
 Multiply the spirit lost by the given number. Caution going above 2, for a base amount of 3 spirit, it's practically an instant loss.

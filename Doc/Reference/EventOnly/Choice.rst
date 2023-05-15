@@ -1,7 +1,7 @@
 **Choice**
 ===========
 
-.. seealso:: 
+.. seealso::
 
   For Choice functions outside of the given file, see :ref:`Get Event Choice`.
 
@@ -59,10 +59,10 @@ Sets the selected choice to the player's name. For the above functions intended 
 
   "SetChoiceToPlayerName", "1"
 
-``"SetChoiceTo PlayerName"`` also exists if you want a space at the start of the displayed choice.
+``"SetChoiceToPlayerName"`` also exists if you want a space at the start of the displayed choice.
 
 .. code-block:: javascript
 
-  "SetChoiceTo PlayerName", "1"
+  "SetChoiceToPlayerName", "1"
 
 See :ref:`SetChoiceToPlayerNameFromOtherEvent` for setting a choice to an external event.
