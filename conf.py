@@ -5,9 +5,9 @@
 needs_sphinx = '4.4.0'
 
 project = "Monster Girl Dreams"
-copyright = '2017-2021, Threshold'
+copyright = '2017-2023, Threshold'
 author = 'Threshold'
-release = 'v25.1'
+release = 'v25.2'
 
 # -- General configuration ---------------------------------------------------
 

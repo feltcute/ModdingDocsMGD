@@ -51,6 +51,9 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 ``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Monsters/Creation>`.
 It can also be used as the equivalent of a blank string for functions done via ``|f|``
 
+
+.. _TextStylingMarkup:
+
 **Text Styling Markup**
 ------------------------
 This section is a mix of `Renpy derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup. You can combine the markup as you please.

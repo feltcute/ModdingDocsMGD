@@ -79,7 +79,7 @@ Alongside uploading your mod, it's recommended to provide a description and feat
 **MGD Wiki**
 """""""""""""
 
-The Mod List on the `wiki <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods>`_ will make up for a majority of downloads for a mod in the long run. 
+The Mod List on the `wiki <<https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_>`_ will make up for a majority of downloads for a mod in the long run. 
 Its list is automatically generated from new wiki pages contributed by mod authors, aggregating from information they provide on their respective pages.
 
 See the "Making & Adding Mods" tab in the How-To Guides section on the page to begin making a mod page. It does not require an account, and comes with a template and example for modders to follow.
