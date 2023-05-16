@@ -6,7 +6,9 @@
 In this brief step-by-step tutorial, you will make your first proof-of-concept mod.
 By the end of the tutorial, you will have a simple event you can interact with in the Shopping center of the Town.
 
-You will not be coding in Python. Instead, you will be making mods in precisely the same way Threshold makes content for the game: creating folders containing plain text files in a format called JSON.
+You will not be coding in Python. 
+Instead, you will be making mods in precisely the same way Threshold makes content for the game: 
+creating folders containing plain text files in a format called JSON.
 
 Threshold designed it so content for the game can be written in plain English words, and minimal actual coding, making everything much easier to comprehend.
 
@@ -24,13 +26,13 @@ See the instructions on where to locate the Mods folder inside your given text e
 
             1. Go to File -> Add Folder To Workspace...
             2. Navigate to the base Monster Girl Dreams folder where you launch the game executable
-            3. Open the ``game`` folder, click on ``Mods``, click Select Folder.
+            3. Click on ``Mods``, click Select Folder.
 
         **On macOS:**
 
             1. Go to File -> Add Folder To Workspace...
-            2. Go to Applications, right-click the MonGirlDreams application, select "Show Package Contents". 
-            3. Navigate to ``Contents/Resources/autorun/game/``, click the ``Mods`` folder, click Open.
+            2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
+            3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
     
         .. image:: img/vscode.png
             :align: center
@@ -41,13 +43,13 @@ See the instructions on where to locate the Mods folder inside your given text e
 
             1. Go to File -> Add Project Folder
             2. Navigate to the base Monster Girl Dreams folder where you launch the game executable,
-            3. Open the ``game`` folder, click on ``Mods``, click Select Folder.
+            3. Click on ``Mods``, click Select Folder.
 
         **On macOS:**
 
             1. Go to File -> Add Project Folder
-            2. Go to Applications, right-click the MonGirlDreams application, select "Show Package Contents". 
-            3. Navigate to ``Contents/Resources/autorun/game/``, click the ``Mods`` folder, click Open.
+            2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
+            3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
 
         .. image:: img/atom.png
             :align: center
@@ -56,15 +58,15 @@ See the instructions on where to locate the Mods folder inside your given text e
         
         1. Don't open Notepad++, open File Explorer.
         2. Open the base folder of Monster Girl Dreams, where you launch the game executable. 
-        3. Navigate to ``game\Mods\``.
+        3. Navigate to ``\Mods\``.
         
         .. image:: img/windowspath.png
             :align: center
 
 
 You may have noticed the mod already present in the Mods folder, titled ``_ExampleMod``. This is an example mod by Threshold. 
-It's currently disabled because of the _underscore in front of the folders name, preventing the game from loading the mod. 
-To activate the mod, right click, rename, and remove the _underscore, leaving it as ``ExampleMod``. 
+It's currently disabled because of the _underscore in front of the folder's name, preventing the game from loading the mod. 
+To activate the mod, right-click, rename, and remove the _underscore, leaving it as ``ExampleMod``. 
 
 .. tip::
 
@@ -105,7 +107,7 @@ At this point, your mod folder structure should look something like the image be
 .. image:: img/modfolder.png
     :align: center
 
-Open your ``ShoppingEvent.json`` file. The game expects for the contents of the JSON to follow specific structural patterns. 
+Open your ``ShoppingEvent.json`` file. The game expects the contents of the JSON to follow specific structural patterns. 
 Typing it by hand is impractical, which is why you can use the blank template provided by the base game files and copy/paste its contents into ``ShoppingEvent.json``.  (Or type ``Create Event`` and press enter via the VS Code MGD Language extension.)
 
 To find it in your respective editor:
@@ -116,7 +118,7 @@ To find it in your respective editor:
 
             1. Go to File -> Add Folder To Workspace...
             2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
-            3. In your workspace view, navigate within the Json folder to ``Events/_BlankEvent.json``, open file.
+            3. In your workspace view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
             4. Select all file contents, ``ctrl+c`` to copy.
             5. Go to your ``ShoppingEvent.json`` tab, ``ctrl+v`` to paste.
     
@@ -127,7 +129,7 @@ To find it in your respective editor:
 
             1. Go to File -> Add Project Folder
             2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
-            3. In your project view, navigate within the Json folder to ``Events/_BlankEvent.json``, open file.
+            3. In your project view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
             4. Select all file contents, ``ctrl+c`` to copy.
             5. Go to your ``ShoppingEvent.json`` tab, ``ctrl+v`` to paste.
 
@@ -163,10 +165,10 @@ Every JSON file structures has two sides, the **key** (``"name":``), and the **v
 
 You will only have to modify the **value** side of these structures while modding. The **keys** side never needs their text modified.
 
-Values will always be inside of strings, which is a pair of double qoutation marks ``""``.
+Values will always be inside of strings, which is a pair of double quotation marks ``""``.
 
 You can start by changing the name of the Event. 
-This should be something unique, because this can be mixed up with Events from the base game. 
+This should be something unique because this can be mixed up with Events from the base game. 
 
 **Providing Values**
 ---------------------
@@ -237,7 +239,7 @@ The result thus far should look like this:
 **EventText**
 --------------
 
-A majority of time making Events is spent inside the ``"EventText":`` key. This is where most of the games dialogue and narration takes place.
+A majority of time making Events is spent inside the ``"EventText":`` key. This is where most of the game's dialogue and narration takes place.
 
 .. code-block:: javascript
 
@@ -313,11 +315,11 @@ Provide a value of ``"You walk around the shops."``
 Of course, to make a new scene for every line of dialogue would be impractical.
 Thankfully, you won't need to.
 
-Notice how theScene has the same structure from the EventText key, the square brackets ``[]``. This is called an **array**.
+Notice how theScene has the same structure as the EventText key, the square brackets ``[]``. This is called an **array**.
 
 Just like how arrays enable EventText to have multiple scene structures, arrays allow for theScene to contain multiple values.
 
-To do this, put a comma at the end of the current value, and provide another string in the form of two double qoutation marks, like so:
+To do this, put a comma at the end of the current value, and provide another string in the form of two double quotation marks, like so:
 
 .. code-block:: javascript
 
@@ -325,7 +327,7 @@ To do this, put a comma at the end of the current value, and provide another str
         "You walk around the shops.", ""
     ]
 
-For organization's sake, you can press enter in-between the two values to cause a linebreak and put them on seperate lines.
+For organization's sake, you can press enter in between the two values to cause a linebreak and put them on separate lines.
 
 .. code-block:: javascript
 
@@ -342,7 +344,7 @@ This process can be repeated any number of times till the scene is considered do
 Currently, the Event lacks logic that tells the game to do special actions, such as display characters, have the Player talk, or start a combat encounter. 
 
 This is done inside scenes by providing 'magic words' inside the strings that the game will recognize as a request to do something. These are called **functions**. 
-Threshold designed these to sound like plain english words for ease of understanding.
+Threshold designed these to sound like plain English words for ease of understanding.
 
 We'll first display the Blue Slime from the Speakers key. This can be done using the ``"DisplayCharacters"`` keyword.
 This requires additional string values thereafter to say which characters Speakers key you wish to display, by the order they are listed.
@@ -376,7 +378,7 @@ This is known as :doc:`Markup </Doc/Reference/Markup>`, which changes {ThePlayer
             ]
 
 The last part of this scene will start a fight with the function ``"CombatEncounter"``.
-Will check following string values for what and how many monsters to include based what they're called.
+Will check the following string values for what and how many monsters to include based on what they're called.
 Provide a value of ``"Blue Slime"``. You end the function and start the fight with the keyword ``"StartCombat"``.
 
 Provided the player wins and isn't sent back to Church, the scene will continue playing. 
@@ -411,7 +413,7 @@ It has to be manually done with functions.
 Finish the EvenStart scene with the string value of the function ``"JumpToScene"``. Finish the scene with the string value of the scene you wish to jump to.
 In this case, it will be ``"Find Ugli Herb"``
 
-You can now move onto the next scene. Change its NameOfScene value to the same value you gave the JumpToScene function in the previous scene, ``"Find Ugli Herb"``.
+You can now move on to the next scene. Change its NameOfScene value to the same value you gave the JumpToScene function in the previous scene, ``"Find Ugli Herb"``.
 
 .. code-block:: javascript
 
@@ -458,7 +460,7 @@ You have completed a mod, which adds an Event that you can now play in-game.
 
 .. note:: 
 
-    WHen testing your mod, you may notice successfully running away from the Blue Slime will cause the entire Event to end early!
+    When testing your mod, you may notice that successfully running away from the Blue Slime will cause the entire Event to end early!
     
     Researching seemingly unexpected behavior like this is a standard practice you'll often have to do while modding.
     If you're curious, see if you can identify the reason why this happens on the :ref:`Pre-Combat` function reference page.

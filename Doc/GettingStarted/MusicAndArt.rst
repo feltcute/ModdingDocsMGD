@@ -13,7 +13,7 @@
 Whenever a key or function asks for an image asset path, the game is expecting it to be in a base game directory by default.
 This means *game/music/*, *game/sfx/*, or *game/images/*. 
 
-This is a problem if you want to use assets stored within your mod folder, since the game won't find it if it's looking for the asset file like this:
+This is a problem if you want to use assets stored within your mod folder since the game won't find it if it's looking for the asset file like this:
 
 .. code-block:: javascript
 
@@ -39,7 +39,7 @@ You will need to use ``../`` twice in cases where you are making a new location 
 MGD supports the following image file types:
 
 * PNG (recommended, and also specifically required for Location image backgrounds)
-* WEBP (comparitively smaller at the same levels of quality as PNG)
+* WEBP (comparatively smaller at the same levels of quality as PNG)
 * JPG/JPEG (not recommended due to transparency being unsupported by JPG files)
 
 **Audio**

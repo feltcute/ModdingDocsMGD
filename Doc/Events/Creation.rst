@@ -17,7 +17,7 @@ A blank template can be found at *Events/_BlankEvent.json*.
 
   "name": "Name of Event",
 
-The name of the event, presented in the Grimoire and for internal referral.
+The name of the event is presented in the Grimoire and for internal referral.
 
 .. _CardTypeCreation:
 
