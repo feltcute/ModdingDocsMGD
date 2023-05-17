@@ -1,23 +1,27 @@
 **Publishing Mods**
 ====================
 
-After making a mod, the time-consuming part is over. But how and where you package your mod is an important step that shouldn't be neglected.
-Without effort put into its presentation, a mod that a lot of players otherwise would've liked could go undiscovered.
+After making a mod, the time-consuming part is over. 
+With just a bit more perseverance, this page will help ensure a wider reach for the release of your mod,
+to help avoid your mod going undiscovered.
 
 **Packaging Your Mod**
 -----------------------
 
-Make sure you've attributed proper credit into a text file if you've used any royalty free assets.
-This is safe to include in your mod folder, as any file not in any JSON folder type will be ignored by the game.
+Make sure you've followed the instructions in the :doc:`Meta Creation </Doc/GettingStarted/MetaCreation.rst>` guide, **especially the credit section** if you've used any externally made assets.
 
-.. seealso:: 
-    See :ref:`JSON Folders Overview` for a list and rundown of all the JSON folder types.
+If there are any sensitive files you don't want to be packaged with your mod, now is the time to move them somewhere safe outside of your mod folder.
 
-When publishing updates for your mod, providing a changelog text file is also useful for people wanting to know what's been changed or added since they last played.
+When publishing updates for your mod, providing a changelog via a plain text or markdown file is 
+also useful for people wanting to know what's been changed or added since they last played.
 
-Then, the mod will need compressed before uploading it to a file host. 
-Make sure to distribute your mod as a normal ``.zip`` file. Not everyone will be able to extract a ``.rar`` or ``.7z`` file. 
-See the instructions on how to make a zip file for your given platform:
+The mod will need to be compressed before uploading it to a file host on the web.
+
+Your mod **must** be packaged as a ``.zip`` file, for the following reasons.
+* The Mods screen in-game will only extract ``.zip`` files.
+* Not everyone will be able or know how to extract something like a ``.rar`` or ``.7z`` file on their platform.
+
+See the instructions on how to make a ``.zip`` file for your given platform:
 
 .. tabs::
 
@@ -27,20 +31,24 @@ See the instructions on how to make a zip file for your given platform:
 
     .. tab:: macOS
 
-        Hover the folder of your mod, control-click, right click, or tap it using two fingers, then choose Compress from the shortcut menu.
+        Hover the folder of your mod, control-click, right-click, or tap it using two fingers, then choose Compress from the shortcut menu.
         If that renamed it to Archive.zip, be sure to rename it back to the name of your mod.
+
+    .. tab:: Linux
+
+        This varies per distro. On **Gnome**, right-click the folder of your mod, and select "Compress...". On **KDE**, left-click the folder of your mod, hover "Compress", then select "Compress to...". For other distros, you should see minor variants of the previous instructions, by right-clicking your mod folder, the "Compress/Create Archive" action being either in a "Send/Compress" menu or simply within the base of the context menu.
 
 **File Hosting**
 -----------------
 
-Feel free to use others resources beyond the ones mentioned here, but keep in mind not all may be willing to host NSFW games. 
+Feel free to use other resources beyond the ones mentioned here, but keep in mind not all may be willing to host NSFW games. 
 Other file hosts will often have information on their content policies at the bottom of their web pages.
 
 
-* `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10 GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
-* `Anonfile <https://anonfile.com/>`_ has good download speed, file cap of 20 GB, and lifetime hosting. While it has yet to be used to host an MGD mod, there are plenty of other NSFW projects that have used this platform as their host, including MGD.
+* `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
+* `Anonfile <https://anonfile.com/>`_ has good download speed, a file cap of 20GB, and lifetime hosting. There have historically been plenty of other NSFW projects that have used this platform as their host, including MGD.
 * `Github <https://github.com/>`_ doubles as a place for people to host their mod, and version control their work. Modders can share their releases page, and no link for the mod will ever become dated. While historically permissive of NSFW git projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_.
-* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100 MB.
+* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB.
 
 **Where To Share**
 -------------------

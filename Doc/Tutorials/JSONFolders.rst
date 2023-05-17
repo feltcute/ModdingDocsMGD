@@ -3,7 +3,7 @@
 **JSON Folders Overview**
 ==========================
 
-A brief overview of each base JSON folder you'd find in a mod or the base games folder in */game/Json*.
+This page will give a brief overview of each base JSON folder you'd find in a mod or the base games folder in */game/Json*.
 
 * **Adventures** | Adventures are the menu choices you make on the game map, including the first-time runs you do before you fully unlock a location's menu choices. Examples would be "Shortcut To Nara" or "Visit Amy". These menu choices will proceed to point to an Event if the player meets any requirements.
 
@@ -28,6 +28,9 @@ No different from mods in the */Mods* folder, content for the game is under the 
 Inside each of these folders, you can see how Threshold chooses to organize his files. 
 While a good reference, you are not required to follow how Threshold chose to organize them, they can be organized any way you want once inside.
 
-If you have an incomplete .json file, or an entire folder of JSON files that aren't yet ready to be loaded by the game,
-put a _underscore at the beginning of its name to prevent the game from including it.
+If you have an incomplete .json file or an entire folder of JSON files that aren't yet ready to be loaded by the game,
+put an _underscore at the beginning of its name to prevent the game from including it. 
 You can see the base game utilizing this for blank templates and example JSON files.
+
+**This will not prevent users from finding it later**. If that's your intention, 
+you will want to move it out of your mod folder when releasing your mod.
