@@ -48,7 +48,7 @@ Primarily designed for the blue balls system, but it can have other uses.
 ----
 
 **IfProgressEquals**
--------------------
+---------------------
 Checks if the progress of the event is equal to the following number. If true, it jumps to the given scene. If false, it's ignored.
 Can be negative.
 
@@ -59,7 +59,7 @@ Can be negative.
 ----
 
 **IfProgressEqualsOrGreater**
-----------------------------
+------------------------------
 Works the same as the previous function, but is still true even if the event's value is greater than the checked value.
 Can be negative.
 
@@ -70,7 +70,7 @@ Can be negative.
 ----
 
 **IfProgressEqualsOrLess**
--------------------------
+---------------------------
 Same as the previous function, but instead is still true if the event's value is less than the checked value.
 Can be negative.
 
