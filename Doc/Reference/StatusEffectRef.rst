@@ -20,7 +20,7 @@ The documentation for relevant functions and keys will state whether these value
 **Technical Status Effects**
 -----------------------------
 
-The following are inherently and technically, status effects, though aren't commonly remembered as such. They are specific to the player.
+The following are inherently and technically status effects, though aren't commonly remembered as such. They are specific to the player.
 
 * ``"Surrender"`` (Non-persistent)
 * ``"Defend"`` (Potency ranges from 1-3. Non-persistent)
@@ -60,7 +60,7 @@ These all feature potency as well, directly being the final amount their modifie
 * ``"Willpower"``
 * ``"Luck"``
 
-For modifiers based on a percent of the target's max stat. As an example, a value of 100 given to a key is equal to 100% of their max stat.
+For modifiers based on a percent of the target's max stats. As an example, a value of 100 given to a key is equal to 100% of their max stat.
 
 * ``"%Power"``
 * ``"%Technique"``
@@ -71,14 +71,14 @@ For modifiers based on a percent of the target's max stat. As an example, a valu
 
 .. note:: 
     
-    Currently, the game has no way to functionally differentiate buffs from debuffs for events and the likes. Threshold intends to address this in the future.
+    Currently, the game has no way to functionally differentiate buffs from debuffs for events and the like. Threshold intends to address this in the future.
 
 .. _Resistances:
 
 **Status Effect Resistances**
 ------------------------------
 
-Covers resistances relating to the above status effects. Positive values improve resistance, negative values decrease. Baseline of 0.
+Covers resistances relating to the above status effects. Positive values improve resistance, and negative values decrease. Baseline of 0.
 
 * ``"Aphrodisiac"``
 * ``"Charm"``

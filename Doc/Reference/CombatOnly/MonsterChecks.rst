@@ -37,7 +37,7 @@ Checks if the focused monster level is greater than the specified amount.
 
 .. code-block:: javascript
 
-  "MonsterLevelGreaterThan", "39", "SceneNameHere"
+  "IfMonsterLevelGreaterThan", "39", "SceneNameHere"
 
 ----
 

@@ -85,21 +85,22 @@ and you only use numbers and optionally decimal values.
 
 .. code-block:: javascript
     
-    "version": 1.5.6,
+    "version": 1.69,
 
 How you decide to increase your version number is a personal choice, 
 for as long as it only uses numerical values.
 A good loose reference is `semantic versioning <https://semver.org/>`_, 
 following the *Major.Minor.Patch* model.
 
-- A Major (**1** .5.6) value is for a significant milestone of progress worthy of a major version bump.
+- A Major (**1** .69) value is for a significant milestone of progress worthy of a major version bump.
  - A work in progress that isn't considered complete can use a value of *0*. 
  - An update in a complete state that matches your initial vision, can give a value of *1*.
  - Further markers of significant milestones beyond your initial goal can be incremented.
  - If an update revamps it so far that it makes no use of the original progress trackers, though it should come with a notice outside of your version number.
-- A Minor (1. **5** .6) value is for notable milestones that alter or add to the mod's content.
-- A Patch (1.5. **6**) is for fixes relating to bugs and typos that neither add nor alter content to your mod.
+- A Minor (1. **6** 9) value is for notable milestones that alter or add to the mod's content.
+- A Patch (1.6 **9**) is for fixes relating to bugs and typos that neither add nor alter content to your mod.
  - It is also good for marking updates solely done for compatibility with newer game versions.
+ - Since JSON can't accept version number formatting, only floats, you have to include it as a second digit part of the Minor decimal value.
 
 **tags**
 ---------

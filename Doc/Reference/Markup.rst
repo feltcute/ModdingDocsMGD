@@ -4,11 +4,11 @@
 .. Note, anytime Markup is used in code blocks, it's best to use ".. code-block:: javascript" to ensure the syntax highlighting doesn't mess up.
 
 This page will primarily cover text `markup <https://en.wikipedia.org/wiki/Markup_language>`_ features, but there is some general information to know when writing.
-It's important to keep in mind a rough 430-450 character limit when writing to avoid text trailing off the screen.
-Thankfully, most text editors gives you a character count when highlighting a selection of text, usually at the bottom of its GUI.
+It's important to keep in mind a rough 400-430 character limit when writing to avoid text trailing off the screen.
+Thankfully, most text editors give you a character count when highlighting a selection of text, usually at the bottom of its GUI.
 
-However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying length, it's generally impossible to tell if it will
-actually fit till you test it in-game. This is one of the many reasons play-testing your work is recommended.
+However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying lengths, it's generally impossible to tell if it will
+fit till you test it in-game. This is one of the many reasons play-testing your work is recommended.
 
 Lastly, if you know RenPy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
 
@@ -25,9 +25,11 @@ Lastly, if you know RenPy for featuring a certain markup feature and can't find 
 
 ``{THEPLAYERNAME}`` gets the player name and displays it in ALL CAPS
 
-``{TPN}`` gets the initials of the player name.
+``{TPN}`` gets the initials of the player's name.
 
 ``{PlayerMoney}`` displays the amount of money the player has.
+
+``{PlayerLevel}`` displays the player's current level.
 
 
 ``|n|`` splits the string, causing everything after the ``|n|``, to display on the next screen of text.
@@ -98,8 +100,8 @@ given integer number in seconds, though it can continue early through user input
 
 ``{p}`` functions the same as ``{w}``, but inserts line breaks for every time it's called.
 
-``{cps=int}`` overrides the games default text speed when displaying text, standing for *characters per second*.
-Useful given the game by default has all text display instantly.
+``{cps=int}`` overrides the game's default text speed when displaying text, standing for *characters per second*.
+Useful given the game by default has all text displayed instantly.
 
 .. code-block:: javascript
 
@@ -161,7 +163,7 @@ Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 ``{ProgressDisplay}`` via :ref:`Progress` functions.
 
 ``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
-To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounterFunc` function after the line this is used in to empty out how much spirit is counted.
+To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounterFunc` function in the next line to reset how much spirit is counted.
 
 **Damage Text Markup**
 -----------------------
@@ -175,7 +177,7 @@ Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
 
 ``{AttackerName}`` or ``{TargetName}`` gets respective name of the attacker or target.
 
-``{AttackerYouOrMonsterName}`` or ``{TargetYouOrMonsterName}`` will check if it's the player or monster. If it's the former, it will say "you", the latter, the monster name.
+``{AttackerYouOrMonsterName}`` or ``{TargetYouOrMonsterName}`` will check if it's the player or monster. If it's the former, it will say "you". If it's the latter, the monster's name.
 
 ``{FocusedMonsterName}``Gets the currently focused monsters name, primarily for use with the random monster focus function when needing to use their name in a line.
 
