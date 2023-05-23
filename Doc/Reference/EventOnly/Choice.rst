@@ -7,7 +7,7 @@
 
 **SetChoice**
 --------------
-Will set specified choice number to the following string value. Think of them as numerically organized flag markers you can set for an event, not as variables.
+Will set the specified choice number to the following string value. Think of them as numerically organized flag markers you can set for an event, not as variables.
 
 .. code-block:: javascript
 
@@ -18,7 +18,7 @@ Will set specified choice number to the following string value. Think of them as
 **IfChoice**
 -------------
 Will check for a choice. If the choice number's possible string value is a match to the stored value, it then goes to the specified scene.
-If it's not a match, it will ignore the scene jump and continue the scene.
+If it's not a match, it will ignore the scene jump, and continue the scene.
 
 .. code-block:: javascript
 
@@ -36,7 +36,7 @@ By default, all ``"SetChoice"`` functions not yet triggered by the player exist 
 the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it's called again, so it will affect other events. Thus, it should be called at the start
 of an event.
 
-Both are exactly the same, each function simply titled with the intention as either being used for setting a nickname for the player or monster. Or even
+Both are exactly the same, each function simply titled with the intention of either being used for setting a nickname for the player or monster. Or even
 giving the Monster a different name in dialogue, say, giving a generic monster in an event an actual name. They could be used for other purposes.
 
 
@@ -53,13 +53,7 @@ giving the Monster a different name in dialogue, say, giving a generic monster i
 **SetChoiceToPlayerName**
 --------------------------
 
-Sets the selected choice to the player's name. For the above functions intended use case.
-
-.. code-block:: javascript
-
-  "SetChoiceToPlayerName", "1"
-
-``"SetChoiceToPlayerName"`` also exists if you want a space at the start of the displayed choice.
+Sets the selected choice to the player's name. For the above function's intended use case.
 
 .. code-block:: javascript
 

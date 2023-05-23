@@ -57,10 +57,10 @@ Using ``"Level"`` checks the current player level, each line featuring a certain
 
 .. code-block:: javascript
 
-  "SwapLineIf", "Arousal",
-    "50", "Line 1",
-    "25", "Line 2",
-    "0", "Line 3",
+  "SwapLineIf", "Level",
+    "0", "Line 1",
+    "7", "Line 2",
+    "100", "Line 3",
   "EndLoop"
 
 ----

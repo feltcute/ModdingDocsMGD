@@ -8,12 +8,20 @@
 Opens a skill purchasing menu based on the provided skills, up till ``"EndLoop"``.
 Good whitespace formatting is highly recommended for sanity, see how skill shops in the base game are done.
 
-PurchasesToProgress can be added to anywhere an item could be to make any purchases add to the current events progress. Selling has no effect.
 
 .. code-block:: javascript
 
   "SkillShoppingMenu",
-  "Dildo", "Whip", "Bondage Net", "Lewd Bottle", "Favor's Misfortune",
+      "Dildo", "Whip", "Bondage Net", "Lewd Bottle",
+  "EndLoop",
+
+``"PurchasesToProgress"`` can be added to make any purchases to increase the progress of the current event.
+Selling has no effect.
+
+.. code-block:: javascript
+
+  "SkillShoppingMenu", "PurchasesToProgress",
+      "Golden Elixir", "Lucky Jelly", "Luxury Lotion",
   "EndLoop",
 
 ----
