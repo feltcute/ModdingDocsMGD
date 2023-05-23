@@ -75,13 +75,13 @@ Only for Fetishes.
 ``"LevelText":`` will conditionally display one of the given values based on whether it meets the given fetish level.
 
 .. code-block:: javascript
-      "LevelText": [
-        ["0", "You still can't get over the loss of Atom."],
-        ["34", "You think VS Code might be a worthy supplement with the One Dark theme..."],
-        ["69", "You can't help but salivate at the quality git implementation."],
-        ["100", "You're completely obsessed with VS Code. You have a hard time not fantasizing about its built-in terminal."]
-      ]
-      }
+
+  "LevelText": [
+    ["0", "You still can't get over the loss of Atom."],
+    ["34", "You think VS Code might be a worthy supplement with the One Dark theme..."],
+    ["69", "You can't help but salivate at the quality git implementation."],
+    ["100", "You're completely obsessed with VS Code. You have a hard time not fantasizing about its built-in terminal."]
+    ]
 
 Only for Fetishes.
 
