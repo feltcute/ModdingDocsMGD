@@ -20,7 +20,6 @@ The mod will need to be compressed before uploading it to a file host on the web
 Your mod **must** be packaged as a ``.zip`` file, for the following reasons.
 * The Mods screen in-game will only extract ``.zip`` files.
 * Not everyone will be able or know how to extract something like a ``.rar`` or ``.7z`` file on their platform.
-
 See the instructions on how to make a ``.zip`` file for your given platform:
 
 .. tabs::
@@ -44,11 +43,17 @@ See the instructions on how to make a ``.zip`` file for your given platform:
 Feel free to use other resources beyond the ones mentioned here, but keep in mind not all may be willing to host NSFW games. 
 Other file hosts will often have information on their content policies at the bottom of their web pages.
 
+The following links are convenient for hosting individual versions of your mod but mean they are prone to becoming dated.
 
 * `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
 * `Anonfile <https://anonfile.com/>`_ has good download speed, a file cap of 20GB, and lifetime hosting. There have historically been plenty of other NSFW projects that have used this platform as their host, including MGD.
-* `Github <https://github.com/>`_ doubles as a place for people to host their mod, and version control their work. Modders can share their releases page, and no link for the mod will ever become dated. While historically permissive of NSFW git projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_.
 * The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB.
+
+Alternatively, these websites can provide links that list the latest version of your mod regardless of where a user found it.
+While these are intended for utilizing git for version control, you can ignore this feature and create a blank repository and upload zips straight to your 'releases' page instead.
+* `Github <https://github.com/>`_ is the largest platform. While historically permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_.
+* `Gitlab <https://gitlab.com/explore/projects>`_ is known to be a more lenient platform than Github, but has generally the same `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
+* `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
 
 **Where To Share**
 -------------------
@@ -63,7 +68,7 @@ Modders can also look for MGD forum threads on the internet to share their mod.
 """"""""""""""""
 
 The MGD Discord can double as hosting *and* as a place to share mods. 
-It's historically proven to make for a majority of mod downloads during first week or two of a mods launch.
+It's historically proven to make for a majority of mod downloads during the first week or two of a mods launch.
 The related modding channels on the server can also make for great help, discussion, and feedback for modders. 
 If you want instantaneous exposure and player feedback for your creation, there is nowhere better to share your mod. 
 
@@ -77,9 +82,9 @@ Alongside uploading your mod, it's recommended to provide a description and feat
 .. warning::
 
     Keep in mind the `Discord Community Guidelines <https://discord.com/guidelines>`_ 
-    has limits to what content is allowed, which the MGD Discord server is no exception to.
+    has limits to what content is allowed, and the MGD Discord server is no exception.
 
-    In particular, any content depicting minors in pornographic, sexually suggestive, or violent manner is not allowed, and will be removed. 
+    In particular, any content depicting minors in a pornographic, sexually suggestive, or violent manner is not allowed and will be removed. 
     This includes lolicon, shotacon, and cub characters.
 
     If you're uncertain if your mod is crossing the line, you're free to Direct Message the Moderators on the server.
@@ -88,14 +93,15 @@ Alongside uploading your mod, it's recommended to provide a description and feat
 """""""""""""
 
 The Mod List on the `wiki <<https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_>`_ will make up for a majority of downloads for a mod in the long run. 
-Its list is automatically generated from new wiki pages contributed by mod authors, aggregating from information they provide on their respective pages.
+Its list is automatically generated from new wiki pages contributed by mod authors, aggregating from the information they provide on their respective pages.
 
-See the "Making & Adding Mods" tab in the How-To Guides section on the page to begin making a mod page. It does not require an account, and comes with a template and example for modders to follow.
+See the "Making & Adding Mods" tab in the How-To Guides section on the page to begin making a mod page. 
+It does not require an account and comes with a template and reference for modders to follow upon pressing the "Make Mod Page" button.
 
 .. warning::
 
     Keep in mind the `Miraheze content policies <https://meta.miraheze.org/wiki/Content_Policy>`_
     when uploading your mod.
 
-    Like the MGD Discord, any content depicting minors in pornographic, sexually suggestive, or violent manner is not allowed, and will be removed. 
+    Like the MGD Discord, any content depicting minors in a pornographic, sexually suggestive, or violent manner is not allowed and will be removed. 
     This includes lolicon, shotacon, and cub characters.
