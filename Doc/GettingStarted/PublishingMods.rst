@@ -51,6 +51,7 @@ The following links are convenient for hosting individual versions of your mod b
 
 Alternatively, these websites can provide links that list the latest version of your mod regardless of where a user found it.
 While these are intended for utilizing git for version control, you can ignore this feature and create a blank repository and upload zips straight to your 'releases' page instead.
+
 * `Github <https://github.com/>`_ is the largest platform. While historically permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_.
 * `Gitlab <https://gitlab.com/explore/projects>`_ is known to be a more lenient platform than Github, but has generally the same `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
 * `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
@@ -92,7 +93,7 @@ Alongside uploading your mod, it's recommended to provide a description and feat
 **MGD Wiki**
 """""""""""""
 
-The Mod List on the `wiki <<https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_>`_ will make up for a majority of downloads for a mod in the long run. 
+The Mod List on the `wiki <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_ will make up for a majority of downloads for a mod in the long run. 
 Its list is automatically generated from new wiki pages contributed by mod authors, aggregating from the information they provide on their respective pages.
 
 See the "Making & Adding Mods" tab in the How-To Guides section on the page to begin making a mod page. 
