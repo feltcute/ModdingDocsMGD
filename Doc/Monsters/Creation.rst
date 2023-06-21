@@ -414,9 +414,9 @@ There is a lot of keys to unpack for each object layer, so here is a brief overv
   * - ``"Overlay":``
     - Put the name of another layer here to overlay this one on it. Any images with matching name fields will sync up. Check Shizu and Elly for an example.
   * - ``"setXalign":``
-    - Changes the alignment of the layer on the x axis.
+    - Changes the alignment of the layer on the x axis. Generally done in incriments of 0.01 or 0.1 depending.
   * - ``"setYalign":``
-    - Changes the alignment of the layer on the y axis.
+    - Changes the alignment of the layer on the y axis. Generally done in incriments of 0.01 or 0.1 depending.
   * - ``"Player": "Yes"``
     - Informs the game to recolor the target based on the player appearance set. You generally wont need to have this feild in the file at all, as it only needs to be there for the turning on of this feature.
   * - ``"Player": "Silhouette"``
