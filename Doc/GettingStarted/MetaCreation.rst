@@ -38,30 +38,40 @@ The name of the mod that is presented to the user on the Mod screen.
 ----------------
 
 The description goes into a scrollable text box and is presented by default to the user.
+Can make use of :ref:`TextStylingMarkup`.
+
+| Given it is a single string, you can use ```\n`` to give your description
+| line
+| breaks
+| when displayed.
 
 The opening should be a single-sentence summary, ideally the same as the one on your mod wiki page.
 
 The rest should focus on generally useful information about your mod,
 such as how the user can begin its content in-game.
 
-You can use :ref:`TextStylingMarkup`.
-
 **testedFor**
 --------------
 
+.. warning:: This key has evolved from its previous use of floats, and will require the new method below in an upcoming breaking release.
+
 The last version of the game the mod has been tested against.
 
-**Unlike most keys for modding, this only takes a float or integer.**
-This means you do not enclose it in "quotation marks",
-and you only use numbers and optionally decimal values.
+MGD internally uses `semantic versioning <https://semver.org/>`_ to keep track of breaking game versions,
+following the *Major.Minor.Patch* model.
+
+**Unlike most keys for modding, this only takes an integer.**
+This means you do not enclose it in "quotation marks", you only use numbers.
 
 .. code-block:: javascript
 
-    "testedFor": 25.2,
+    "testedFor": {"major": 25, "minor": 3, "patch": 1},
 
-This should be a numerical value provided by the last game version tested for.
-If the last game version was a patch version with a letter (e.g. 25.2**b**),
-always exclude the letter and just use the numerical value as-is.
+Consider the game release `Alpha-v25.3a` to the above.
+
+- `"major":` is the major game version (e.g. 25), signifying major game updates that can break older mods, or have features your mod depends on that older releases don't have.
+- `"minor":` is the minor game version (e.g. 3), signifying small game updates that can break older mods, or have features your mod depends on that older releases don't have.
+- `"patch":` is the patch game version (e.g. 1), where the numerical value starting from 1 is equivalent to the alphabetical patch version (3 is c, **0 is none**, etc.). They don't break mods tested against older patches, but may break newer mods dependant on bug fixes from the newer version.
 
 .. tip::
 
@@ -75,7 +85,7 @@ always exclude the letter and just use the numerical value as-is.
 .. To-do: A dedicated guide on updating outdated mods.
 
 **version**
---------------
+-------------- 
 
 The version of your mod is meant to be increased between your mod updates.
 
@@ -89,18 +99,32 @@ and you only use numbers and optionally decimal values.
 
 How you decide to increase your version number is a personal choice,
 for as long as it only uses numerical values.
-A good loose reference is `semantic versioning <https://semver.org/>`_,
+
+.. tip:: Will be overridden when using :ref:`semVersion`. While semVersion is recommended, which you use is up to personal preference.
+
+.. _semVersion:
+
+**semVersion**
+----------------
+
+Like MGD, mods are to use `semantic versioning <https://semver.org/>`_.
 following the *Major.Minor.Patch* model.
 
-- A Major (**1** .69) value is for a significant milestone of progress worthy of a major version bump.
+**Unlike most keys for modding, this only takes an integer.**
+This means you do not enclose it in "quotation marks", you only use numbers.
+
+.. code-block:: javascript
+
+    "semVersion": {"major": 1, "minor": 3, "patch": 4},
+
+- A Major (**1** .6.9) value is for a significant milestone of progress worthy of a major version bump.
  - A work in progress that isn't considered complete can use a value of *0*.
  - An update in a complete state that matches your initial vision, can give a value of *1*.
  - Further markers of significant milestones beyond your initial goal can be incremented.
  - If an update revamps it so far that it makes no use of the original progress trackers, though it should come with a notice outside of your version number.
-- A Minor (1. **6** 9) value is for notable milestones that alter or add to the mod's content.
-- A Patch (1.6 **9**) is for fixes relating to bugs and typos that neither add nor alter content to your mod.
+- A Minor (1. **6** .9) value is for notable milestones that alter or add to the mod's content.
+- A Patch (1.6. **9**) is for fixes relating to bugs and typos that neither add nor alter content to your mod.
  - It is also good for marking updates solely done for compatibility with newer game versions.
- - Since JSON can't accept version number formatting, only floats, you have to include it as a second digit part of the Minor decimal value.
 
 **tags**
 ---------
@@ -141,21 +165,25 @@ If the mod focuses on being an expansion for base game content, an ``"Expansion"
 **credits**
 ------------
 
-Provide credit to others that help made your mod possible in a scrollable text box.
-
-| Given it is a single string, you can use :ref:`TextStylingMarkup` to give
-| line
-| breaks
-| through the use of ``\n``.
+Provide credit to others that help made your mod possible in a scrollable text box. 
+Can make use of :ref:`TextStylingMarkup`.
 
 .. code-block:: javascript
 
-    "credits": "{b}Art{/b}\nPerpetua portrait by {a=https://www.jfcsxf.com/comm_info.html}Jiffic{/a}",
+    "credits": [
+        "{b}Art{/b}", 
+        "Perpetua portrait by {a=https://www.jfcsxf.com/comm_info.html}Jiffic{/a}", 
+        "{b}Music{/b}", 
+        "'Chilled - Desert Winds' by {a=https://www.purple-planet.com/}Purple Planet{/a}"
+    ],
 
 Listing credit to any online assets you used is recommended, you can hyperlink your source using
 ``{a=https://link}Text here{/a}``.
 
 Especially should be used to promote any artists and musicians you commissioned.
+
+It can optionally be a string instead of an array, where you can use ``\n`` to provide linebreaks instead.
+This will also give your text a left alignment rather than a center alignment.
 
 See the Example Mod for further reference on how you should format your credit.
 
