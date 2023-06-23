@@ -2,29 +2,7 @@
 =========
 
 
-**SkillShoppingMenu**
-----------------------
-
-Opens a skill purchasing menu based on the provided skills, up till ``"EndLoop"``.
-Good whitespace formatting is highly recommended for sanity, see how skill shops in the base game are done.
-
-
-.. code-block:: javascript
-
-  "SkillShoppingMenu",
-      "Dildo", "Whip", "Bondage Net", "Lewd Bottle",
-  "EndLoop",
-
-``"PurchasesToProgress"`` can be added to make any purchases to increase the progress of the current event.
-Selling has no effect.
-
-.. code-block:: javascript
-
-  "SkillShoppingMenu", "PurchasesToProgress",
-      "Golden Elixir", "Lucky Jelly", "Luxury Lotion",
-  "EndLoop",
-
-----
+.. _ShoppingMenu:
 
 **ShoppingMenu**
 -----------------
@@ -47,3 +25,33 @@ If you wish to only give players the ability to sell times, all you have to do i
 
   "ShoppingMenu",
   "EndLoop"
+
+See :ref:`SceneAdditions` for appending to base game shops in a mod-friendly manner.
+
+----
+
+.. _SkillShoppingMenu:
+
+**SkillShoppingMenu**
+----------------------
+
+Opens a skill purchasing menu based on the provided skills, up till ``"EndLoop"``.
+Good whitespace formatting is highly recommended for sanity, see how skill shops in the base game are done.
+
+
+.. code-block:: javascript
+
+  "SkillShoppingMenu",
+      "Dildo", "Whip", "Bondage Net", "Lewd Bottle",
+  "EndLoop",
+
+``"PurchasesToProgress"`` can be added to make any purchases to increase the progress of the current event.
+Selling has no effect.
+
+.. code-block:: javascript
+
+  "SkillShoppingMenu", "PurchasesToProgress",
+      "Golden Elixir", "Lucky Jelly", "Luxury Lotion",
+  "EndLoop",
+
+See :ref:`SceneAdditions` for appending to base game skill shops in a mod-friendly manner.
