@@ -83,8 +83,8 @@ The exception to this behavior is when using ``"MenuAddition"``.
 
 .. _SceneAdditions:
 
-**SceneAdditions**
-"""""""""""""""""""
+**Scene Additions**
+"""""""""""""""""""""
 
 There are standout instances where you wish to append to options in an existing scene, without causing incompatibility issues with other mods.
 The game supports special :doc:`functions </Doc/Reference/Functions>` for this purpose:
