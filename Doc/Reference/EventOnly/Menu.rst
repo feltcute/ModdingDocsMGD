@@ -19,6 +19,8 @@ Will always end current scene and jump to a new one, thus it's recommended to on
 
 By default, if there are more than 6 choices, page arrows will automatically be added.
 
+See :ref:`SceneAdditions` for appending to base game menus in a mod-friendly manner.
+
 **Meta Functions**
 -------------------
 

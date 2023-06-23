@@ -81,30 +81,67 @@ Every new object will be appended, unless ``"NameOfScene":`` within the object m
 it will override and replace the entirety of ``"theScene":`` with the one provided via the new object.
 The exception to this behavior is when using ``"MenuAddition"``.
 
-.. _MenuAddition:
+.. _SceneAdditions:
 
-**MenuAddition**
-"""""""""""""""""
+**SceneAdditions**
+"""""""""""""""""""
 
-The :doc:`function </Doc/Reference/Functions>`  ``"MenuAddition"`` will append additional choices to a :ref:`MenuFunc` through a duplicate scene in the addition with the same ``"NameOfScene":`` value.
+There are standout instances where you wish to append to options in an existing scene, without causing incompatibility issues with other mods.
+The game supports special :doc:`functions </Doc/Reference/Functions>` for this purpose:
 
-This is for avoiding compatibility issues with other mods making additions to menus, notably those adding additional choices to say, the night life menu
-for the Brothel. See the example below for details of the implementation, and the _MenuAdditionExample.json file in the game folders for a further example to experiment with if needed.
+- ``"MenuAddition"`` for appending to scenes (e.g. night life menu via Brothel) with :ref:`MenuFunc`. Meta functions are included.
+- ``"ShopAddition"`` for appending to scenes (e.g. Amber's item shop) with a :ref:`ShoppingMenu`.
+- ``"SkillShopAdddition"`` for appending to scenes (e.g. Elena's skill shop) with a :ref:`SkillShoppingMenu`
 
-If the menu you are adding to from the base doesn't have a ``"FinalOption"`` in use already, it's intended to be applied to back out or leave options so it's always at the bottom of the menu,
-``"OverrideOption"`` must be used prior to a menu choice such as ``"FinalOption"`` so it properly clears any duplicates of the original choice in the menu while ensuring no compatibility issues should arise with other mods.
+
+You can make use of them through a duplicate scene in the event addition with the same ``"NameOfScene":`` value.
+
+For ``MenuAddition"``, if the menu you are appending to doesn't have a ``"FinalOption"`` in use already, you will have to add it yourself.
+it's intended to be applied to 'back out' or 'leave' options, ensuring they are always at the bottom of the game menu.
+When addressing this, duplicate the 'leave' choice of the base game, and prepend it with the strings ``"OverrideOption", "FinalOption"``.
+This ensures it ignores duplicates from other mods also trying to address the issue.
+
+See the examples below for details of the implementation, and the **_SceneAdditionExample.json** file in the  *Json/Events/* for more advanced examples.
 
 .. code-block:: javascript
 
   "EventText": [
     {
-    "NameOfScene": "The Scene Name",
+    "NameOfScene": "The Menu's Scene Name",
     "theScene": [
       "MenuAddition",
         "New menu choice",
         "RequiresEnergy", "50",
         "The other new menu choice",
         "OverrideOption", "FinalOption", "Leave",
+      "EndLoop"
+      ]
+    }
+  ]
+
+.. code-block:: javascript
+
+  "EventText": [
+    {
+    "NameOfScene": "The Shop's Scene Name",
+    "theScene": [
+      "ShopAddition",
+        "Imp Juice",
+        "A new mod item",
+      "EndLoop"
+      ]
+    }
+  ]
+
+.. code-block:: javascript
+
+  "EventText": [
+    {
+    "NameOfScene": "The Skill Shop's Scene Name",
+    "theScene": [
+      "SkillShopAddition",
+        "A new mod skill",
+        "Another new mod skill",
       "EndLoop"
       ]
     }
