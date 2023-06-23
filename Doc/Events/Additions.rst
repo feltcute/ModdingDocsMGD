@@ -95,7 +95,7 @@ The game supports special :doc:`functions </Doc/Reference/Functions>` for this p
 
 You can make use of them through a duplicate scene in the event addition with the same ``"NameOfScene":`` value.
 Then, start with one of the three above variants depending on the function you're adding to, only one per scene.
-**The first and last string of the scene must be the variant, and ``"EndLoop"`` respectively**
+**The first and last string of the scene must be the variant, and ``"EndLoop"`` respectively.**
 
 For ``MenuAddition"``, if the menu you are appending to doesn't have a ``"FinalOption"`` in use already, you will have to add it yourself.
 it's intended to be applied to 'back out' or 'leave' options, ensuring they are always at the bottom of the game menu.
