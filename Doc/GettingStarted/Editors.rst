@@ -38,7 +38,7 @@ For the portable version, go to the above link, and select "Portable" for your g
 
 .. note::
 
-    Previously known as Atom. The original distribution was shutdown, and was continued on by the community as Pulsar.
+    Previously known as Atom. Github, the original creators of Atom, ceased development on the editor, and was continued on by the community as Pulsar. Pulsar currently has access to the same packages and provides continued security, bug fixes, compatibility, and feature updates for the editor.
 
 `Notepad++ <https://notepad-plus-plus.org/resources/>`_
 --------------------------------------------------------
