@@ -13,7 +13,7 @@ You will be creating a basic :doc:`Event </Doc/Events/Creation>`.
 
 .. seealso:: 
 
-    For editors that report improper JSON formatting in real-time, see :doc:`Atom or VS Code </Doc/GettingStarted/Editors>` feature list. Especially VS Code for its tailored MGD Extension that verifies you're building a structure correctly.
+    For editors that report improper JSON formatting in real-time, see :doc:`Pulsar or VS Code </Doc/GettingStarted/Editors>` feature list. Especially VS Code for its tailored MGD Extension that verifies you're building a structure correctly.
 
 **Object**
 -----------

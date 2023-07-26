@@ -86,7 +86,7 @@ The following sub-sub-functions can be checked for:
 
 .. code-block:: javascript
 
-  "ChangeStatCheckDifficulty", "IfPlayerHasStatusEffect", "Aphrodisiac", "50", "5"
+  "ChangeStatCheckDifficulty", "IfPlayerHasStatusEffectWithPotencyEqualOrGreater", "Aphrodisiac", "50", "5"
 
 **IfHasPerk**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,7 +107,7 @@ The following sub-sub-functions can be checked for:
 
 .. code-block:: javascript
 
-  "ChangeStatCheckDifficulty", "IfHasFetishEqualOrGreater", "Ass", "65", "9"
+  "ChangeStatCheckDifficulty", "IfFetishLevelEqualOrGreater", "Ass", "65", "9"
 
 **IfVirilityEqualsOrGreater**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,7 +137,7 @@ The following sub-sub-functions can be checked for:
 .. code-block:: javascript
 
   "ChangeStatCheckDifficulty", "IfProgressEqualsOrGreater", "15", "-8",
-  "ChangeStatCheckDifficulty", "GetAnEventsProgressThenIfEqualsOrGreater", "40", "-20"
+  "ChangeStatCheckDifficulty", "GetAnEventsProgressThenIfEqualsOrGreater", "An Event", "40", "-20"
 
 **IfChoice & GetEventAndIfChoice**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

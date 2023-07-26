@@ -25,16 +25,20 @@ These all have portable versions if you want your editor and modding to work on 
 * Best Git and GitHub integration.
 * **MGD extension is available for some automated error checking and easing development.** Use ``ctrl+shift+x`` or  ``⌘+shift+x``, search for ``MGD Language``.
 
-`Atom <https://atom.io>`_
+`Pulsar <https://pulsar-edit.dev/download.html#regular-releases>`_
 ---------------------------
 
-`Portable version <https://github.com/atom/atom/releases>`_ (download the zip/archive for your platform from the latest stable release)
+For the portable version, go to the above link, and select "Portable" for your given platform (currently only Windows as of writing).
 
 * Supports all desktop platforms.
 * Moderately featured.
 * Built-in project folder navigation and management.
 * Package support, including a JSON :ref:`Linter`. Open settings using ``ctrl+,``, or  ``⌘+,``, go to Install, search ``linter``, ``linter-ui-default``, and ``linter-jsonlint``. Say yes to any dependencies.
 * Git and GitHub integration.
+
+.. note::
+
+    Previously known as Atom. Github, the original creators of Atom, ceased development on the editor, and was continued on by the community as Pulsar. Pulsar currently has access to the same packages and provides continued security, bug fixes, compatibility, and feature updates for the editor.
 
 `Notepad++ <https://notepad-plus-plus.org/resources/>`_
 --------------------------------------------------------

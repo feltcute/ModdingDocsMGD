@@ -69,7 +69,7 @@ Ignores the currently focused monster.
 
 .. code-block:: javascript
 
-  "IfOtherMonsterHasStatusEffect", "Aphrodisiac", "50", "SceneNameHere"
+  "IfMonsterHasStatusEffectWithPotencyEqualOrGreater", "Aphrodisiac", "50", "SceneNameHere"
 
 ----
 

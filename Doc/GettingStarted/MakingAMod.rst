@@ -10,7 +10,7 @@ You will not be coding in Python.
 Instead, you will be making mods in precisely the same way Threshold makes content for the game: 
 creating folders containing plain text files in a format called JSON.
 
-Threshold designed it so content for the game can be written in plain English words, and minimal actual coding, making everything much easier to comprehend.
+Threshold designed it so that content for the game can be written in plain English words, and minimal actual coding, making everything much easier to comprehend.
 
 **The Mods Folder**
 -------------------
@@ -37,7 +37,7 @@ See the instructions on where to locate the Mods folder inside your given text e
         .. image:: img/vscode.png
             :align: center
 
-    .. tab:: Atom
+    .. tab:: Pulsar
 
         **On Windows/Linux:**
 
@@ -67,10 +67,11 @@ See the instructions on where to locate the Mods folder inside your given text e
 You may have noticed the mod already present in the Mods folder, titled ``_ExampleMod``. This is an example mod by Threshold. 
 It's currently disabled because of the _underscore in front of the folder's name, preventing the game from loading the mod. 
 To activate the mod, right-click, rename, and remove the _underscore, leaving it as ``ExampleMod``. 
+This is the equivalent and underlying functionality for disabling and enabling a mod via the in-game Mods menu.
 
 .. tip::
 
-    If you wanted to check in-game, you can find it at the Mountain, under Events in the Grimoire titled **Perpetua Returns!**
+    If you wanted to check ExampleMod in-game, you can find it at the Mountain, under Events in the Grimoire titled **Perpetua Returns!**
 
 **Making Your Own**
 --------------------
@@ -89,13 +90,13 @@ The game will look inside your mod and check for specific folders titled any of 
 * **Perks**
 * **Skills**
 
-Each of these folders contain a specific type of JSON file that the game will load into its respective databases on startup. 
+Each of these folders contains a specific type of JSON file that the game will load into its respective databases on startup. 
 
 .. seealso::
     
     Optionally see :ref:`JSON Folders Overview` for more information on each type.
 
-Since you will be adding an Event to the Shopping center, right-click your mod and create a folder titled ``Events``. You do not need to add the other types of JSON folders listed above, since you are not using them.
+Since you will be adding an Event to the Shopping center, right-click the folder of your mod and create a folder titled ``Events``. You do not need to add the other types of JSON folders listed above, since you are not using them.
 
 **Making an Event JSON**
 -------------------------
@@ -107,7 +108,9 @@ At this point, your mod folder structure should look something like the image be
 .. image:: img/modfolder.png
     :align: center
 
-Open your ``ShoppingEvent.json`` file. The game expects the contents of the JSON to follow specific structural patterns. 
+Double-click your file to open it. It should currently be empty.
+
+The game expects the contents of a JSON file to follow specific structural patterns. 
 Typing it by hand is impractical, which is why you can use the blank template provided by the base game files and copy/paste its contents into ``ShoppingEvent.json``.  (Or type ``Create Event`` and press enter via the VS Code MGD Language extension.)
 
 To find it in your respective editor:
@@ -125,7 +128,7 @@ To find it in your respective editor:
         .. image:: img/vscodeprojectview.png
             :align: center
 
-    .. tab:: Atom
+    .. tab:: Pulsar
 
             1. Go to File -> Add Project Folder
             2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
@@ -165,15 +168,17 @@ Every JSON file structures has two sides, the **key** (``"name":``), and the **v
 
 You will only have to modify the **value** side of these structures while modding. The **keys** side never needs their text modified.
 
-Values will always be inside of strings, which is a pair of double quotation marks ``""``.
-
-You can start by changing the name of the Event. 
-This should be something unique because this can be mixed up with Events from the base game. 
+Values will always be inside of **strings**. Strings are a pair of double quotation marks ``""``.
 
 **Providing Values**
 ---------------------
 
-Provide a value of ``"Slimey Customer Encounter!"``, the name of this event will be displayed to the Player when they go Shopping in Town.
+This tutorial will proceed to give example values to fill your event with, 
+which will be an event in the shopping district of the Town in-game.
+
+Starting with the name key at the top of your file, provide it with a value of ``"Slimey Customer Encounter!"``.
+This is what will be displayed to the Player when they go 'Shopping' in the Town.
+The value for a name key in a new event should always be something unique in order to avoid being mixed up with Events from the base game. 
 
 .. code-block:: javascript
 
@@ -254,8 +259,14 @@ A majority of time making Events is spent inside the ``"EventText":`` key. This 
 
 Like the Speakers key, it contains a structure that holds other keys. 
 Notice the two curly brackets ``{}`` that surround the two keys it contains.
-Copy and paste the contents of the curely brackets to make two scenes,
+The structure between these curly brackets can be duplicated in order to make more scenes, 
 for as long as it stays within the square brackets ``[]`` of EventText.
+
+1. Place your curser to the right of the closing curly bracket ``}``.
+2. Create a new line with the enter key.
+3. Copy and paste the contents of the above curly brackets on the new line, giving two scenes. (Or type ``Scene`` and press enter via the VS Code MGD Language extension.)
+
+It should look like this:
 
 .. code-block:: javascript
 
@@ -278,7 +289,7 @@ If you're using a :ref:`Linter`, you should be noticing a red dot, indicating an
 This is because this breaks how a JSON file is supposed to be structured. 
 If you were to try to launch the game, this would cause it to crash, as it wouldn't be able to understand the file.
 
-To fix this, place a comma ``,`` at the end of the first pair of square brackets. 
+To fix this, place a comma ``,`` at the end of the first pair of curly brackets. 
 This will tell the game that it's safe to move to the next scene when it reads the file. 
 
 It should look like this:
@@ -303,7 +314,7 @@ It should look like this:
 **NameOfScene & theScene**
 ---------------------------
 
-It's time to start writing in the scenes for the Event.
+It's time to truly start writing the scenes for the Event.
 
 ``"NameOfScene":`` is the title of the scene that the game will use to identify where it needs to go in the Event.
 The first scene listed towards the top of the file will play first by default when Players enter an Event. You can title it ``"EventStart"`` for this reason.

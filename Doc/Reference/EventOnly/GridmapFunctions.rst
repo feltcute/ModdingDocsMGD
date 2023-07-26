@@ -25,8 +25,6 @@ Stuns the players map movement for X number of turns. Useful for traps.
 
   "StunGridPlayer", "1"
 
-  .. _StunGridPlayer:
-
 .. _IfGridPlayerStunned:
 
 **IfGridPlayerStunned**
