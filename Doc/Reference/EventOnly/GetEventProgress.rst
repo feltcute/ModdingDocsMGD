@@ -62,7 +62,7 @@ The following three jump functions are for specificly comparing across between t
 
 ----
 
-**EventsProgressEqualsOtherEventsProgress**,
+**EventsProgressEqualsOtherEventsProgress**
 """""""""""""""""""""""""""""""""""""""""""""
 Will check the first event specified to see if its progress is equal to the event in the next string.
 If true, it will jump to the given scene.
