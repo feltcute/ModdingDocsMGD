@@ -201,3 +201,41 @@ The first scene added will always display first for your average event jump from
 However, specific scenes in a event can be jumped to, either by a game feature or by a function.
 
 See :doc:`Functions </Doc/Reference/Functions>` for the vast range of functions that can be used in scenes.
+
+**Optional Scenes**
+""""""""""""""""""""
+
+When debugging scenes (see :ref:`notJumping` in FAQ), you may find yourself with scenes you don't intend to ever be linked to by a function. 
+In this case, you can declare it as an optional scene to the game by prepending its ``"NameOfScene":`` value with any of the following:
+
+- an ``_``underscore. Intended for any scenario where you want the debugger to ignore the scene, such as internal notes, cut content, or in-progress work not meant to be accessed by the player yet.
+- ``event`` or uppercased ``Event``. Loosely intended for your starting and ending scenes, such as ``"EventStart"`` (your very first scene) and ``"EventBroke"`` (your very last scene).
+- ``debug`` or uppercased ``Debug``. Loosely intended for scenes made for debugging purposes while making the event. Sometimes used in place of ``"EventBroke"`` as last scene.
+
+.. code-block:: javascript
+
+    {
+    "NameOfScene": "_EllyProgression",
+    "theScene": [
+      "Get through forest dungeon.: 5",
+      "Clear temple: 5",
+      "True Power Sigil Event: 5",
+      "PLANS:",
+        "+34 progress on a picnic outing with Venefica and Perpetua.",
+        "+69 progress on silent mutual studying sessions together."
+      ]
+    },
+    {
+    "NameOfScene": "EventBroke",
+    "theScene": [
+      "Something went wrong when scene jumping! Event Progress: {ProgressDisplay}."
+      ]
+    }
+
+.. tip::
+
+  Using ``"EventStart"``and ``"EventBroke"`` as advised is a recommended practice.
+  
+  The games in certain scenarios will jump to the first event in your scene, meaning you may not have any links to your first scene at all. Using ``"EventStart"`` consistently for this makes it never a guess to remember, and causes it to be flagged as optional.
+
+  If you accidentally jump to a scene that doesn't exist due to accidents like spelling errors, the game will always jump to the last scene in the event. Having ``"EventBroke"`` as your last scene with an error message will better inform you when testing your mod, and causes it to be flagged as optional.

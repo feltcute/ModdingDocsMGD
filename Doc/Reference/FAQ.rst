@@ -33,12 +33,18 @@ While nothing bad will happen, you cannot apply changes to your JSON files while
 If you changed a perk and your character currently possesses it in your save,
 you will want to go to the options menu and update your save to apply the changes you made to the perk.
 
+.. _notJumping:
+
 **I'm not jumping to the scene I set!**
 ----------------------------------------
 
-You can check your event's scene jumping validity by turning on **LoadValidator**.
-If you want to turn it on, you'll need to go to line 9 of *game/gamecode/LoadDatabase.rpy* and change the value from ``False`` to ``True``.
-Then, on game start up, a .txt file will be printed out into the *game/* folder, titled ``validator_log.txt``.
+You can check your event's scene jumping validity by enabling **Scene Debug**.
+If you want to turn it on, you can go to the in-game options menu and toggle ``"Enable Scene Debug on Startup"``, 
+or press the debug button on the game reload prompt via the in-game mod menu.
+
+Then, on game startup or reload, the game will rewrite the files in the *game/debug* folder, where you can either view individual error types per file, or all error types in one file via *scene_validator.json*.
+
+This will have a notable impact on game startup time. You can turn it off when you're done using it or rely just on manually reloading via the mod menu reload prompt each time you want to use it.
 
 **Manually progressing my saves to test stuff is painful!**
 -------------------------------------------------------------
@@ -51,4 +57,4 @@ The in-game console can be very useful for debugging and testing your mod at a r
 
 If you need help, please get on the `MGD Discord <https://discord.com/invite/monstergirldreams>`_.
 There are tons of knowledgeable, depraved, and friendly people there willing to help you, no matter how big or small your problem is.
-Head to the #modding-help channel towards the bottom of the channel list.
+Head to the #modding-help forum channel towards the bottom of the channel list.
