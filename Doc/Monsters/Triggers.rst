@@ -191,7 +191,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "lineTrigger": "HitWithPre",
   "move": ["Tighten"],
   "theText":[
-    "|f|ChangeEnergyQuietly|/|15|n|" 
+    "|f|ChangeEnergyQuietly|/|15|n|"
     ]
   },
 
@@ -209,6 +209,21 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
     "If "move": is given a blank string, it will apply to any instance of an escape skill."
     ]
   },
+
+**EscapedRestraint**
+"""""""""""
+
+.. code-block:: javascript
+
+  {
+  "lineTrigger": "EscapedRestraint",
+  "move": [""],
+  "theText":[
+    "Triggers when the monster successfully escapes a restraint.",
+    "It's uses are pretty neiche."
+    ]
+  },
+
 
 **LowHealth**
 """"""""""""""

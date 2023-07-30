@@ -201,7 +201,7 @@ Display a barrage of images, values are for PulseSpeed and Opacity respectively.
 
 Motion Effects on Characters: Bounce, BounceSlow, BounceFast, BounceOnce, Sway, SwaySlow, SwayFast, SwayOnce, Pump, PumpSlow, PumpFast, Ride, RideSlow, RideFast, and Vibrate. Realign can also be called to fix any transforms that can potentially jank out.
 
-Motion Effects for entire Screen: ScreenBounce, SlowScreenBounce, ScreenSway, Explosion, LongExplosion, Crash, and Quake.
+Motion Effects for entire Screen: ScreenBounce, SlowScreenBounce, ScreenSway, Explosion, LongExplosion, Crash, CrashSmol, and Quake.
 
 The screen motion effects will move everything, including the text box and other UI elements. The other one only applies to onscreen characters.
 To effect a single character or body part on a character or CG, see `PlayMotionEffectCustom`_. Motion effects for the entire screen have no custom variant.
