@@ -1,15 +1,26 @@
 **Stat Checks**
 ================
 
-**StatCheck**
---------------
-Rolls a `d20 <https://en.wikipedia.org/wiki/D20_System>`_ with the specified player stat, against the given number. If the roll is higher than the given opposed check number, it jumps the given scene.
+**StatCheck & StatCheckRollUnder**
+-----------------------------------
+
+``"StatCheck"`` Rolls a `d20 <https://en.wikipedia.org/wiki/D20_System>`_ with the specified player stat, against the given number. If the roll is higher than the given opposed check number, it jumps to the given scene.
 If it fails, it will go to the scene specified after ``"Fail"``. Note you can also check for ``"Temptation"``, as a specialized stat check
 based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
 
 .. code-block:: javascript
 
   "StatCheck", "Power", "15",
+  "Pass Scene", "Fail", "Failed Scene"
+
+``"StatCheckRollUnder"`` functions the same as ``StatCheck``, 
+but instead jumps to the given scene on ``"Fail"`` upon the player rolling higher than the opposed check amount, and passes if it's lower.
+It will inform the player in bold that it is a roll under variant. 
+There is no surpassing 'failure' for this variant, and the Surrender status effect has no influence.
+
+.. code-block:: javascript
+
+  "StatCheckRollUnder", "Technique", "15",
   "Pass Scene", "Fail", "Failed Scene"
 
 .. tabs::
@@ -46,7 +57,7 @@ based on Willpower, Allure, and Intelligence. See :ref:`Stats`.
         (opposedCheck / 5)*20 - (statToCheck*0.75)*5 - 10
 
 For reference, here is how Threshold has benchmarked the mathematics of stat checks and their intended difficulty.
-Note lower level players will fare worse, and higher level players will gradually fare better. See what numbers the base game uses for the stat checks
+Note lower level players will fare worse, and higher-level players will gradually fare better. See what numbers the base game uses for the stat checks
 relative to the monster's level for reference.
 
 * Very easy = 5
@@ -60,9 +71,9 @@ relative to the monster's level for reference.
 
 **ChangeStatCheckDifficulty**
 """"""""""""""""""""""""""""""
-A sub-function that can be used before the check to alter the stat check's difficulty. Each entry of the sub-function is checked for, regardless if any previous
-entries were found to be true or false.
-The last given value in each instance of the sub-function is the stat check modifier, and can be a negative number to subtract instead.
+A sub-function that can be used before the check to alter the stat check's difficulty. Each entry of the sub-function is checked for, regardless of any previous
+entries found to be true or false.
+The last given value in each instance of the sub-function is the stat check modifier and can be a negative number to subtract instead.
 
 .. code-block:: javascript
 
@@ -147,16 +158,6 @@ The following sub-sub-functions can be checked for:
   "ChangeStatCheckDifficulty", "IfChoice", "1", "A Choice", "-100",
   "ChangeStatCheckDifficulty", "GetEventAndIfChoice", "An Event", "2", "A Differnt Choice", "100"
 
-**StatCheckRollUnder**
------------------------
-Functions the exact same as ``StatCheck`` but the player instead fails if the roll is higher than the opposed checked amount, and passes if it's lower.
-Also informs the player that the goal of the check is to roll under for clarity. **Players cannot surpass failure, nor use ChangeStatCheckDifficulty.**
-
-.. code-block:: javascript
-
-  "StatCheckRollUnder", "Technique", "15",
-  "Pass Scene", "Fail", "Failed Scene"
-
 ----
 
 **ChangeNextStatCheckDifficulty**
@@ -174,4 +175,4 @@ Use in tandem with check functions such as :ref:`Player Checks` or :ref:`Monster
 
 **ResetStatCheckDifficultyModifer**
 ------------------------------------
-``"ResetStatCheckDifficultyModifer"`` resets the modifier to 0. Useful when there’s still a way to avoid a stat check after calling a modifier.
+``"ResetStatCheckDifficultyModifer"`` resets the modifier to 0. Useful when there's still a way to avoid a stat check after calling a modifier.
