@@ -223,3 +223,29 @@ If the player has just run away from combat, if true, jump to the given scene, e
 .. code-block:: javascript
 
   "IfRanAway", "SceneNameHere"
+
+----
+
+**IfPlayerHasStatusEffect & IfPlayerDoesntHaveStatusEffect**
+-------------------------------------------------------------
+If the player does or doesn't respectively have *any* of the specified status effects, jumps to the given scene. 
+
+Providing ``"RequireAll"`` prior to listing any status effects will make it only match if the player does or doesn't respectively have *all* given status effects.
+
+Please keep in mind :ref:`Time` will eliminate non-persistent status effects. See :ref:`Status Effect`.
+
+.. code-block:: javascript
+
+  "IfPlayerHasStatusEffect", "RequireAll", "Restraint", "Charm", "SceneNameHere",
+  "IfPlayerHasStatusEffect", "Restraint", "Charm", "AnotherSceneNameHere"
+
+----
+
+**IfPlayerHasStatusEffectWithPotencyEqualOrGreater**
+-----------------------------------------------------
+Checks the player for a single status effect with the given amount of potency. 
+Note not all status effects use potency, see :ref:`Status Effect`.
+
+.. code-block:: javascript
+
+  "IfPlayerHasStatusEffectWithPotencyEqualOrGreater", "Trance", "11", "SceneNameHere"
