@@ -43,29 +43,39 @@ Checks if the focused monster level is greater than the specified amount.
 
 **IfMonsterHasStatusEffect & IfMonsterDoesntHaveStatusEffect**
 ---------------------------------------------------------------
-Checks if the focused monster does or doesn't have the specified status effect respectively. See :ref:`Status Effect`.
+If the focused monster does or doesn't respectively have *any* of the specified status effects, jump to the given scene.
+
+Providing ``"RequireAll"`` prior to listing any status effects will make it only match if the monster does or doesn't respectively have *all* given status effects.
+
+See :ref:`Status Effect`.
 
 .. code-block:: javascript
 
-  "IfMonsterHasStatusEffect", "Restraint", "SceneNameHere"
+  "IfMonsterHasStatusEffect", "RequireAll", "Restraint", "Charm", "SceneNameHere",
+  "IfMonsterHasStatusEffect", "Restraint", "Charm", "AnotherSceneNameHere"
 
 ----
 
 **IfOtherMonsterHasStatusEffect & IfOtherMonsterDoesntHaveStatusEffect**
 -------------------------------------------------------------------------
-Same as the above, but checks for another monster. Note that it will shift focus to that monster. Ignores the currently focused monster.
+Same as the above, but requires first specifying another monster in the encounter. Note that it will shift focus to that monster. Ignores the currently focused monster.
 
+Keep in mind ``"RequireAll"`` comes after specifying the monster.
 
 .. code-block:: javascript
 
-  "IfOtherMonsterHasStatusEffect", "Himika", "Restraint", "SceneNameHere"
+  "IfOtherMonsterHasStatusEffect", "Himika", "RequireAll", "Charm", "Restraint", "SceneNameHere"
+  "IfOtherMonsterHasStatusEffect", "Himika", "Restraint", "AnotherSceneNameHere"
 
 ----
 
 **IfMonsterHasStatusEffectWithPotencyEqualOrGreater**
 ------------------------------------------------------
-Checks if the focused monster has a status effect with the given amount of potency. Note not all status effects use potency. Will shift focus to that monster.
+Checks the focused monster for a single status effect with the given amount of potency. 
+Will shift focus to that monster.
 Ignores the currently focused monster.
+
+Note not all status effects use potency, see :ref:`Status Effect`.
 
 .. code-block:: javascript
 
