@@ -82,6 +82,22 @@ Gives the ability to use Image Sets as alternate CGs without needing to be the e
 
 .. Not confidant in how I've described the functions here, will go over it again when I make the expanded pages on the pictures key.
 
+**ImageSetRoleStart**
+""""""""""""""""""""""""""
+For combat only. Starts a selected cg set as seperate entity that tracks roles given in the monster file, automating many aspects for primarily multi character CGs, and also reads in all enemy's offered image layer changes to use in the CG, usually with translators to push the information along.
+
+.. code-block:: javascript
+
+  "ChangeImageLayer", "ImageSetRoleStart", "1", "Sex"
+
+**RoledCGEnd**
+""""""""""""""""""""""""""
+Turns off a role given CG. Must be called if the CG roles have no stated off state.
+
+.. code-block:: javascript
+
+  "RoledCGEnd"
+
 ----
 
 **AnimateImageLayer**

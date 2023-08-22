@@ -454,4 +454,122 @@ Alternatively, you can give a blank array if you intend to use a text based card
 
   ]
 
+
+**Sets**
+-------------
+
+.. code-block:: javascript
+
+  "pictures": [
+    {
+        "Name": "Base",
+        "Set": [
+          {
+            "Name":"Base",
+            "StartOn": "1",
+            "AlwaysOn": "1",
+            "IsScene": "0",
+            "TheBody": "1",
+            "Overlay": "No",
+            "setXalign": "0.0",
+            "setYalign": "0.0",
+            "Images":[
+              {
+              "Name":"Base",
+              "File": "Monsters/Imp/Imp_Body.png",
+              "setXalign": "0.0",
+              "setYalign": "0.0"
+              }
+              ]
+        }
+      ]
+    },
+    {
+        "Name": "Sex",
+        "Set": [
+          {
+            "Name":"Sex",
+            "StartOn": "1",
+            "AlwaysOn": "1",
+            "IsScene": "0",
+            "TheBody": "1",
+            "Overlay": "No",
+            "setXalign": "0.0",
+            "setYalign": "0.0",
+            "Images":[
+              {
+              "Name":"Base",
+              "File": "Monsters/Imp/SexCG/impCG_Background.png",
+              "setXalign": "0.0",
+              "setYalign": "0.0"
+              }
+              ]
+        }
+      ]
+    }
+  ]
+
+Additionally one can also set up the pictures of a monster in Sets, allowing them to be swapped between easily. Such as character variations like Aiko, or more commonly, CGs like Beris, the Blue slime, and more.
+It is highly reccomended to look these files over to help understand this system.
+These sets are swapped with a number of different functions and ways with event calls.
+
+**Roles**
+-------------
+
+.. code-block:: javascript
+
+  "pictures": [
+    {
+        "Name": "Sex",
+        "Set": [
+        {
+           "Role": "FaceRider",
+           "StanceRequired": "Face Sit",
+           "MonsterRequired": "Imp",
+           "CGTranslator": [
+               {
+                   "In": "Expression",
+                   "Out": "FaceImpExpressionRide"
+               }
+           ],
+           "ActivateLayers": [
+               "FaceImpExpressionRide",
+               "FaceImp"
+           ],
+           "ActiveRequirment": "Yes"
+       },
+          {
+            "Name":"Sex",
+            "StartOn": "1",
+            "AlwaysOn": "1",
+            "IsScene": "0",
+            "TheBody": "1",
+            "Overlay": "No",
+            "setXalign": "0.0",
+            "setYalign": "0.0",
+            "Images":[
+              {
+              "Name":"Base",
+              "File": "Monsters/Imp/SexCG/impCG_Background.png",
+              "setXalign": "0.0",
+              "setYalign": "0.0"
+              }
+              ]
+        }
+      ]
+    }
+  ]
+
+Okay Roles are specifically used for in combat multi character CGs, but could potentially be used elsewhere.
+Roles effectively dictate a mostly automated system for changing the displayed cg from multiple enemy inputs without the hassle of using a ton of combat events.
+
+"Role" is a naming slot for self use primarily. However a role can only be occupied by one monster at a time, and a monster can only have one role. They are given out in decided in descending order of the monsters per role. Roles that are not fuffilled are ignored.
+"StanceRequired" This is the required stance a monster has to have to count for the role to be considered active.
+"MonsterRequired" This is the monsterID of the monster that is required to consider the role active and fuffilled.
+"CGTranslator" A number of translators for the given role to read in image commands and change layer names to accomodate for the unified CG. "In" being what the monster is trying to use. "Out" being what it is changed to for the CG to take. This lets normal expression calls or other things become easily automated for multiple characters in the CG.
+"ActivateLayers" Turns any of the given layers on when the role is fuffilled, and sets them to their first setting. If the role is no longer fuffilled, these are also turned off.
+"ActiveRequirment" If Yes, at least one of the given roles with this set to yes, must be on for the CG to be on, otherwise the CG will turn off.
+
+You can have as many roles as you want for a scene, currently Imp.json is the only example of this system in use.
+
 .. The information is lacking in-depth examples and explanations, particularly for Image Sets. A dedicated page like lineTriggers will eventually be done.
