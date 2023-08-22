@@ -586,6 +586,8 @@ Further examples would be CGs found among Beris, Aiko, Minotaur, Blue Slime, and
 
 It is highly recommended to look these files over to help understand this system till a proper tutorial can be made in the future.
 
+.. _CGRoles:
+
 **Roles**
 """"""""""
 
@@ -688,5 +690,9 @@ They will turn off when the role is no longer allotted to any monster.
 
 ``"ActiveRequirment": "Yes"`` will require this role for the image set CG to be enabled, otherwise, the CG will automatically be turned off.
 Any number of roles can have this key set to ``"Yes"``.
+
+.. tip::
+
+  See :ref:`ImageSetRoleStart` and :ref:`RoledCGEnd` functions for turning it on and off respectively.
 
 .. The information is lacking in-depth examples and explanations, particularly for Image Sets. A dedicated page like lineTriggers will eventually be done.

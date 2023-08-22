@@ -65,7 +65,7 @@ however while in an active combat, for both the monsters file and combat events,
 
   "ChangeImageLayer", "ImageSet", "1", "Plush"
 
-``"ImageSet"`` will swap a set of images to the name of the set in the final string in the above. It will automatically carry over any current expressions and related.
+``"ImageSet"`` will swap a set of images to the name of the set in the final string as seen above. It will automatically carry over any current expressions and related.
 Note this is not held persistently and would need to be called every time the character is called.
 
 ``"ImageSetPersist"`` will swap to the stated image set and stay on it whenever that character is called again, even in combat. Used for Aiko's body type variants.
@@ -84,17 +84,30 @@ Gives the ability to use Image Sets as alternate CGs without needing to be the e
 
 .. Not confidant in how I've described the functions here, will go over it again when I make the expanded pages on the pictures key.
 
+.. _ImageSetRoleStart:
+
 **ImageSetRoleStart**
 """"""""""""""""""""""""""
-For combat only. Starts a selected cg set as seperate entity that tracks roles given in the monster file, automating many aspects for primarily multi character CGs, and also reads in all enemy's offered image layer changes to use in the CG, usually with translators to push the information along.
+For combat only. Starts the given image set CG in the final string.
+
+See :ref:`CGRoles` for more information on role CGs.
 
 .. code-block:: javascript
 
   "ChangeImageLayer", "ImageSetRoleStart", "1", "Sex"
 
+----
+
+.. _RoledCGEnd:
+
 **RoledCGEnd**
-""""""""""""""""""""""""""
-Turns off a role given CG. Must be called if the CG roles have no stated off state.
+---------------
+Turns off any active role-based CG started via :ref:`ImageSetRoleStart`.
+
+If the CG doesn't have any ``"ActiveRequirment"`` keys to turn it off, 
+this must be called before leaving the encounter. 
+
+See :ref:`CGRoles` for more information on role CGs.
 
 .. code-block:: javascript
 
@@ -129,7 +142,7 @@ Disambiguation in order of strings used in the first row:
   * - ``"CharacterTarget"``
     - The character in the scene you're targeting, like `ChangeImageLayer`_, you can pick speaker number or nameID. e.g.: ``"Aiko"`` & ``"1"``
   * - ``"1.5"``
-    - The amount of seconds passed before the animation moves to the next frame in the list.
+    - The number of seconds passed before the animation moves to the next frame in the list.
 
 After this is a list of the images you want it to swap to which must be acquired manually and can't be called from the lists in the monster file.
 
