@@ -23,6 +23,8 @@ In combat with ``"FocusOnMonster"``:
 
 ----
 
+.. _ChangeImageLayer:
+
 **ChangeImageLayer**
 ---------------------
 

@@ -353,7 +353,7 @@ It extends well beyond just dialogue responses and reactions during combat.
 **Can be an array to compact responses into one object, as it's an** *or* **parameter, not an** *and***.**
 Compacting where possible is recommended as it does help reduce game load times.
 
-``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat strings to make some more common over others.
+``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat strings to make some more common than others.
 
 Note all matching ``"lineTrigger":`` and ``"move":`` values will ultimately go into the same pool the game randomly pulls from, as the game takes every
 trigger in combatDialogue and translates the values from ``"theText:"`` into the same pool.
@@ -361,42 +361,109 @@ trigger in combatDialogue and translates the values from ``"theText:"`` into the
 **pictures**
 -------------
 
+You can give a blank array if you intend to use a text-based card based on the 
+given value to ``"description":`` for temporary or permanent use:
+
+.. code-block:: javascript
+
+  "pictures": [
+
+  ]
+
+Otherwise, this section will go over the following example:
+
 .. code-block:: javascript
 
   "pictures": [
     {
-    "Name":"Base",
+      "Name": "Base",
+      "StartOn": "1",
+      "AlwaysOn": "1",
+      "IsScene": "0",
+      "TheBody": "1",
+      "Overlay": "No",
+      "setXalign": "0.0",
+      "setYalign": "0.13",
+      "Images": [
+        {
+          "Name": "Base",
+          "File": "Monsters/Bubble Slime/body_BubbleSlime.png",
+          "setXalign": "0.0",
+          "setYalign": "0.0"
+        }]
+    },
+    {
+      "Name": "Face",
+      "StartOn": "1",
+      "AlwaysOn": "1",
+      "IsScene": "0",
+      "TheBody": "0",
+      "Overlay": "No",
+      "setXalign": "0.0",
+      "setYalign": "0.0",
+      "Images": [
+        {
+          "Name": "Base",
+          "File": "Monsters/Bubble Slime/face_BubbleSlime_Base.png",
+          "setXalign": "0.0",
+          "setYalign": "0.0"
+        },
+        {
+          "Name": "Blush",
+          "File": "Monsters/Bubble Slime/face_BubbleSlime_Blush.png",
+          "setXalign": "0.0",
+          "setYalign": "0.0"
+        }]
+    },
+    {
+    "Name": "Expression",
     "StartOn": "1",
     "AlwaysOn": "1",
     "IsScene": "0",
-    "TheBody": "1",
+    "TheBody": "0",
     "Overlay": "No",
     "setXalign": "0.0",
-    "setYalign": "0.16",
-    "Player": "Yes",
-    "Images":[
+    "setYalign": "0.0",
+    "Images": [
       {
-      "Name":"Base",
-      "File": "NPCs/Lillian/Lillian-neutral.png",
-      "setXalign": "0.0",
-      "setYalign": "0.0"
+          "Name": "Base",
+          "File": "Monsters/Bubble Slime/expression_BubbleSlime_Base.png",
+          "setXalign": "0.0",
+          "setYalign": "0.0"
       },
-
       {
-      "Name":"Happy",
-      "File": "NPCs/Lillian/Lillian-happy.png",
-      "setXalign": "0.0",
-      "setYalign": "0.0"
-      }
-    ]
-    }
-  ]
+          "Name": "Curious",
+          "File": "Monsters/Bubble Slime/expression_BubbleSlime_Curious.png",
+          "setXalign": "0.0",
+          "setYalign": "0.0"
+      }]}]
 
 The ``"pictures":`` key contains an array of objects, each representing a functional layer of images for the character.
-For example, one object for the body layer, and another for the expressions, would be a basic setup. Or Lillian in the above code-block, who has them combined, making
-for a more digestible overview.
 
-There is a lot of keys to unpack for each object layer, so here is a brief overview:
+The Bubble Slime above is chosen as an example of a standard setup, featuring a body (e.g. Clothed or Nude), face (e.g. Blush or no-blush), and expression (e.g. Happy, Pouting) setup.
+
+There are many keys to unpack so each object will be gone over in separate parts, 
+starting with the base object, representing a single image layer.
+Here is an overview:
+
+.. code-block:: javascript
+
+    {
+      "Name": "Base",
+      "StartOn": "1",
+      "AlwaysOn": "1",
+      "IsScene": "0",
+      "TheBody": "1",
+      "Overlay": "No",
+      "setXalign": "0.0",
+      "setYalign": "0.13",
+      "Images": [
+        {
+        }
+      ]
+    }
+
+The following keys are required:
 
 .. list-table::
   :widths: 1 5
@@ -410,20 +477,29 @@ There is a lot of keys to unpack for each object layer, so here is a brief overv
   * - ``"IsScene":``
     - Whether it's a scene, also ensuring it's centered on the screen, ignoring x and y align
   * - ``"TheBody":``
-    - If the layer is the characters base. The x and y align of this layer dictates the x and y of every other layer.
+    - If the layer is the character's base. The x and y alignment of this layer dictates the x and y of every other layer.
   * - ``"Overlay":``
     - Put the name of another layer here to overlay this one on it. Any images with matching name fields will sync up. Check Shizu and Elly for an example.
   * - ``"setXalign":``
-    - Changes the alignment of the layer on the x axis. Generally done in incriments of 0.01 or 0.1 depending.
+    - Changes the alignment of the layer on the x-axis. Generally done in increments of 0.01 or 0.1 depending.
   * - ``"setYalign":``
-    - Changes the alignment of the layer on the y axis. Generally done in incriments of 0.01 or 0.1 depending.
+    - Changes the alignment of the layer on the y-axis. Generally done in increments of 0.01 or 0.1 depending.
+
+The following predetermined key-value combinations are optional, there should only be one at a time in a single image layer object:
+
+.. list-table::
+  :widths: 1 5
+
   * - ``"Player": "Yes"``
-    - Informs the game to recolor the target based on the player appearance set. You generally wont need to have this feild in the file at all, as it only needs to be there for the turning on of this feature.
+    - If the image layer is for representing the player, use this key-value combination. This will recolor the layer based on the player's appearance settings. Excluding the key causes it to be considered off.
   * - ``"Player": "Silhouette"``
-    -  Additionally when using Player "Yes", you need to have another seperate image layer with "Player": "Silhouette" for the game to auto swap to if the player has set the appearance as a silhouette.
+    - When representing the player in an image layer, you need to make another variant of it for use with this key-value combination. If the player set their appearance to silhouette, this image layer will be automatically used by the game.
 
 
-The ``"Images":`` key features an array where all the images for the layer go, each image being contained in an object. The objects work as follows:
+The ``"Images":`` key in these layer objects feature an array where the image and all its variants are declared, 
+each image variant being contained in its object.
+They are handled using functions found in the :ref:`Image Layers` documentation.
+The object works as follows:
 
 .. list-table::
   :widths: 1 5
@@ -433,30 +509,27 @@ The ``"Images":`` key features an array where all the images for the layer go, e
   * - ``"File":``
     - The file path to the image.
   * - ``"setXalign":``
-    - Changes the alignment of the image on the x axis.
+    - Changes the alignment of the image on the x-axis.
   * - ``"setYalign":``
-    - Changes the alignment of the image on the y axis.
+    - Changes the alignment of the image on the y-axis.
 
-Layers are displayed in the order they are added into the ``"pictures":`` array,
-so make sure everything is in the desired order to display correctly.
-Note that the body layer doesn't need to be first, you can put layers behind it, such as with Amber for her cloak.
+.. note::
 
-A more in-depth explanation and tips on the topic out of the scope of this page will be given in the future, such as how to use **Image Sets**,
-which can let you set preset image layer setups for especially complex characters.
-They can ranging from minor to drastic changes in character presentation for immense ease of use when swapping between certain looks in various scenarios.
-In the meanwhile, check Aiko’s file for an example of Image Sets, containing multiple full sets of layers to swap between.
+  The image layers within ``"pictures":`` are displayed in the order they are added,
+  so make sure everything is in the intended arrangement to display correctly.
+  It isn't always layer representing the body first, you may need layers behind it, such as with Amber for her cloak.
 
-Alternatively, you can give a blank array if you intend to use a text based card description.
+**Image Sets**
+"""""""""""""""
 
-.. code-block:: javascript
+``"Set":`` is an optional array for making preset image layer setups intended for especially complex characters.
 
-  "pictures": [
+They can range from minor to drastic changes in character presentation for 
+immense ease of use when swapping between certain looks in various scenarios.
 
-  ]
+Examples would be Aiko and Vili with alternative body proportions, the former having an especially complex setup you can review with their clothing layers.
 
-
-**Sets**
--------------
+They are handled with specific functions via :ref:`Image Layers` documentation.
 
 .. code-block:: javascript
 
@@ -488,7 +561,7 @@ Alternatively, you can give a blank array if you intend to use a text based card
         "Name": "Sex",
         "Set": [
           {
-            "Name":"Sex",
+            "Name": "Sex",
             "StartOn": "1",
             "AlwaysOn": "1",
             "IsScene": "0",
@@ -498,7 +571,7 @@ Alternatively, you can give a blank array if you intend to use a text based card
             "setYalign": "0.0",
             "Images":[
               {
-              "Name":"Base",
+              "Name": "Base",
               "File": "Monsters/Imp/SexCG/impCG_Background.png",
               "setXalign": "0.0",
               "setYalign": "0.0"
@@ -509,67 +582,111 @@ Alternatively, you can give a blank array if you intend to use a text based card
     }
   ]
 
-Additionally one can also set up the pictures of a monster in Sets, allowing them to be swapped between easily. Such as character variations like Aiko, or more commonly, CGs like Beris, the Blue slime, and more.
-It is highly reccomended to look these files over to help understand this system.
-These sets are swapped with a number of different functions and ways with event calls.
+Further examples would be CGs found among Beris, Aiko, Minotaur, Blue Slime, and other base game monster .jsons.
+
+It is highly recommended to look these files over to help understand this system till a proper tutorial can be made in the future.
 
 **Roles**
--------------
+""""""""""
 
 .. code-block:: javascript
 
   "pictures": [
-    {
-        "Name": "Sex",
-        "Set": [
-        {
-           "Role": "FaceRider",
-           "StanceRequired": "Face Sit",
-           "MonsterRequired": "Imp",
-           "CGTranslator": [
-               {
-                   "In": "Expression",
-                   "Out": "FaceImpExpressionRide"
-               }
-           ],
-           "ActivateLayers": [
-               "FaceImpExpressionRide",
-               "FaceImp"
-           ],
-           "ActiveRequirment": "Yes"
-       },
+  {
+    "Name": "Sex",
+    "Set": [
+      {
+        "Role": "FaceRider",
+        "StanceRequired": "Face Sit",
+        "MonsterRequired": "Imp",
+        "CGTranslator": [
           {
-            "Name":"Sex",
-            "StartOn": "1",
-            "AlwaysOn": "1",
-            "IsScene": "0",
-            "TheBody": "1",
-            "Overlay": "No",
+            "In": "Expression",
+            "Out": "FaceImpExpressionRide"
+          }],
+          "ActivateLayers": [
+            "FaceImpExpressionRide",
+            "FaceImp"
+          ],
+          "ActiveRequirment": "Yes"
+      },
+      {
+        "Name": "Sex",
+        "StartOn": "1",
+        "AlwaysOn": "1",
+        "IsScene": "0",
+        "TheBody": "1",
+        "Overlay": "No",
+        "setXalign": "0.0",
+        "setYalign": "0.0",
+        "Images":[
+          {
+            "Name": "Base",
+            "File": "Monsters/Imp/SexCG/impCG_Background.png",
             "setXalign": "0.0",
-            "setYalign": "0.0",
-            "Images":[
-              {
-              "Name":"Base",
-              "File": "Monsters/Imp/SexCG/impCG_Background.png",
-              "setXalign": "0.0",
-              "setYalign": "0.0"
-              }
-              ]
-        }
-      ]
-    }
+            "setYalign": "0.0"
+          }
+    ]}]}
   ]
 
-Okay Roles are specifically used for in combat multi character CGs, but could potentially be used elsewhere.
-Roles effectively dictate a mostly automated system for changing the displayed cg from multiple enemy inputs without the hassle of using a ton of combat events.
+``"Role:"`` is an alternative object with different keys compared to the typical image layer object, for use only under ``"Set"``.
 
-"Role" is a naming slot for self use primarily. However a role can only be occupied by one monster at a time, and a monster can only have one role. They are given out in decided in descending order of the monsters per role. Roles that are not fuffilled are ignored.
-"StanceRequired" This is the required stance a monster has to have to count for the role to be considered active.
-"MonsterRequired" This is the monsterID of the monster that is required to consider the role active and fuffilled.
-"CGTranslator" A number of translators for the given role to read in image commands and change layer names to accomodate for the unified CG. "In" being what the monster is trying to use. "Out" being what it is changed to for the CG to take. This lets normal expression calls or other things become easily automated for multiple characters in the CG.
-"ActivateLayers" Turns any of the given layers on when the role is fuffilled, and sets them to their first setting. If the role is no longer fuffilled, these are also turned off.
-"ActiveRequirment" If Yes, at least one of the given roles with this set to yes, must be on for the CG to be on, otherwise the CG will turn off.
+When a monster uses a role, it takes the role's 'slot', 
+meaning only one instance of the monster can use a single role at a time.
 
-You can have as many roles as you want for a scene, currently Imp.json is the only example of this system in use.
+Each role object is checked in the order they are added to the image set. 
+Roles are checked relative to the encounter order.
+(e.g. Each listed role checks Imp 1 -> Imp 2 -> Imp 12).
+
+This means you can declare as many roles as you want, 
+but only up to 12 will ever be used at a time, 
+as that is the maximum number of monsters in an encounter.
+
+All keys are required, but all values can be blank ``""`` or empty ``[]`` unless stated otherwise:
+
+.. list-table::
+  :widths: 1 5
+
+  * - ``"Role":``
+    - The name of the role's 'slot'. This must not be blank.
+  * - ``"StanceRequired":``
+    - The required stance in order to allocate the role.
+  * - ``"MonsterRequired":``
+    - Looks for the given ``"nameID":`` of the monster that is required to consider the role active and fulfilled.
+
+``"CGTranslator":`` takes objects in its array for translating 
+any number of image layers (e.g. Expressions) to their equivalent image layer elsewhere 
+while the role is allotted to the instance of the monster. 
+
+This allows for different layers to automatically utilize the same :ref:`ChangeImageLayer` functions across the overall CG.
+
+.. list-table::
+  :widths: 1 5
+
+  * - ``"In":``
+    - The layer it is checking for as its equivalent.
+  * - ``"Out":``
+    - The layer that is changed instead.
+
+.. code-block:: javascript
+
+  "CGTranslator": [
+    {
+      "In": "Expression",
+      "Out": "FaceImpExpressionRide"
+    }],
+
+``"ActivateLayers":`` Turns on the given array of image layers, still adhering to the layer's settings.
+They will turn off when the role is no longer allotted to any monster.
+
+.. code-block:: javascript
+
+  "ActivateLayers": [
+    "FaceImpExpressionRide",
+    "FaceImp"
+  ],
+
+``"ActiveRequirment": "Yes"`` will require this role for the image set CG to be enabled, otherwise, the CG will automatically be turned off.
+Any number of roles can have this key set to ``"Yes"``.
 
 .. The information is lacking in-depth examples and explanations, particularly for Image Sets. A dedicated page like lineTriggers will eventually be done.

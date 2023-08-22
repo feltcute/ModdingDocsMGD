@@ -46,13 +46,12 @@ Other file hosts will often have information on their content policies at the bo
 The following links are convenient for hosting individual versions of your mod but mean they are prone to becoming dated.
 
 * `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
-* `Anonfile <https://anonfile.com/>`_ has good download speed, a file cap of 20GB, and lifetime hosting. There have historically been plenty of other NSFW projects that have used this platform as their host, including MGD.
-* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB.
+* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB. The download link it generates does not require users to open or login to Discord.
 
 Alternatively, these websites can provide links that list the latest version of your mod regardless of where a user found it.
 While these are intended for utilizing git for version control, you can ignore this feature and create a blank repository and upload zips straight to your 'releases' page instead.
 
-* `Github <https://github.com/>`_ is the largest platform. While historically permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_.
+* `Github <https://github.com/>`_ is the largest platform. While historically permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_. It also requires 2-factor authentication to use.
 * `Gitlab <https://gitlab.com/explore/projects>`_ is known to be a more lenient platform than Github, but has generally the same `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
 * `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
 
@@ -74,13 +73,14 @@ The related modding channels on the server can also make for great help, discuss
 If you want instantaneous exposure and player feedback for your creation, there is nowhere better to share your mod. 
 
 
-Join the `MGD Discord <https://discord.com/invite/monstergirldreams>`_, upload your mod to the ``#mod-posting`` channel, 
-and you can share the direct download link anywhere else you'd like to share your mod. 
-The download link does not require users to open or login to Discord.
+Join the `MGD Discord <https://discord.com/invite/monstergirldreams>`_, go the ``#mod-posting`` forum, 
+and follow the pinned reference and template post to publish your mod.
 
 Alongside uploading your mod, it's recommended to provide a description and feature list of your mod in the channel, so people know what they're in for. Check the pins in the channel for a template and tips.
 
 .. warning::
+
+    Remember to check the server rules and ``#mod-posting`` forum post guidelines prior to posting.
 
     Keep in mind the `Discord Community Guidelines <https://discord.com/guidelines>`_ 
     has limits to what content is allowed, and the MGD Discord server is no exception.
