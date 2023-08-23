@@ -361,7 +361,7 @@ trigger in combatDialogue and translates the values from ``"theText:"`` into the
 **pictures**
 -------------
 
-You can give a blank array if you intend to use a text-based card based on the 
+You can give a blank array if you intend to use a text-based card based on the
 given value to ``"description":`` for temporary or permanent use:
 
 .. code-block:: javascript
@@ -442,7 +442,7 @@ The ``"pictures":`` key contains an array of objects, each representing a functi
 
 The Bubble Slime above is chosen as an example of a standard setup, featuring a body (e.g. Clothed or Nude), face (e.g. Blush or no-blush), and expression (e.g. Happy, Pouting) setup.
 
-There are many keys to unpack so each object will be gone over in separate parts, 
+There are many keys to unpack so each object will be gone over in separate parts,
 starting with the base object, representing a single image layer.
 Here is an overview:
 
@@ -496,7 +496,7 @@ The following predetermined key-value combinations are optional, there should on
     - When representing the player in an image layer, you need to make another variant of it for use with this key-value combination. If the player set their appearance to silhouette, this image layer will be automatically used by the game.
 
 
-The ``"Images":`` key in these layer objects feature an array where the image and all its variants are declared, 
+The ``"Images":`` key in these layer objects feature an array where the image and all its variants are declared,
 each image variant being contained in its object.
 They are handled using functions found in the :ref:`Image Layers` documentation.
 The object works as follows:
@@ -524,7 +524,7 @@ The object works as follows:
 
 ``"Set":`` is an optional array for making preset image layer setups intended for especially complex characters.
 
-They can range from minor to drastic changes in character presentation for 
+They can range from minor to drastic changes in character presentation for
 immense ease of use when swapping between certain looks in various scenarios.
 
 Examples would be Aiko and Vili with alternative body proportions, the former having an especially complex setup you can review with their clothing layers.
@@ -606,7 +606,7 @@ It is highly recommended to look these files over to help understand this system
             "In": "Expression",
             "Out": "FaceImpExpressionRide"
           }],
-          "ActivateLayers": [
+          "TogglesLayers": [
             "FaceImpExpressionRide",
             "FaceImp"
           ],
@@ -633,15 +633,15 @@ It is highly recommended to look these files over to help understand this system
 
 ``"Role:"`` is an alternative object with different keys compared to the typical image layer object, for use only under ``"Set"``.
 
-When a monster uses a role, it takes the role's 'slot', 
+When a monster uses a role, it takes the role's 'slot',
 meaning only one instance of the monster can use a single role at a time.
 
-Each role object is checked in the order they are added to the image set. 
+Each role object is checked in the order they are added to the image set.
 Roles are checked relative to the encounter order.
 (e.g. Each listed role checks Imp 1 -> Imp 2 -> Imp 12).
 
-This means you can declare as many roles as you want, 
-but only up to 12 will ever be used at a time, 
+This means you can declare as many roles as you want,
+but only up to 12 will ever be used at a time,
 as that is the maximum number of monsters in an encounter.
 
 All keys are required, but all values can be blank ``""`` or empty ``[]`` unless stated otherwise:
@@ -656,9 +656,9 @@ All keys are required, but all values can be blank ``""`` or empty ``[]`` unless
   * - ``"MonsterRequired":``
     - Looks for the given ``"nameID":`` of the monster that is required to consider the role active and fulfilled.
 
-``"CGTranslator":`` takes objects in its array for translating 
-any number of image layers (e.g. Expressions) to their equivalent image layer elsewhere 
-while the role is allotted to the instance of the monster. 
+``"CGTranslator":`` takes objects in its array for translating
+any number of image layers (e.g. Expressions) to their equivalent image layer elsewhere
+while the role is allotted to the instance of the monster.
 
 This allows for different layers to automatically utilize the same :ref:`ChangeImageLayer` functions across the overall CG.
 
@@ -678,12 +678,12 @@ This allows for different layers to automatically utilize the same :ref:`ChangeI
       "Out": "FaceImpExpressionRide"
     }],
 
-``"ActivateLayers":`` Turns on the given array of image layers, still adhering to the layer's settings.
+``"TogglesLayers":`` Turns on the given array of image layers, still adhering to the layer's settings.
 They will turn off when the role is no longer allotted to any monster.
 
 .. code-block:: javascript
 
-  "ActivateLayers": [
+  "TogglesLayers": [
     "FaceImpExpressionRide",
     "FaceImp"
   ],
