@@ -71,7 +71,7 @@ Keep in mind ``"RequireAll"`` comes after specifying the monster.
 
 **IfMonsterHasStatusEffectWithPotencyEqualOrGreater**
 ------------------------------------------------------
-Checks the focused monster for a single status effect with the given amount of potency. 
+Checks the focused monster for a single status effect with the given amount of potency.
 Will shift focus to that monster.
 Ignores the currently focused monster.
 
@@ -120,7 +120,7 @@ Checks if any monsters in a fight have orgasmed, and proceeds as if hit in comba
 
 .. code-block:: javascript
 
-  "CallMonsterEncounterOrgasmCheck", "SceneNameHere"
+  "CallMonsterEncounterOrgasmCheck" 
 
 ----
 
