@@ -5,8 +5,12 @@
 
 .. _ChangeImageForFunc:
 
-**ChangeImageFor - DEPRECATED. Will be removed in future update. see** `ChangeImageLayer`_ **instead.**
-------------------------------------------------------------------------------------------------------------
+**ChangeImageFor - DEPRECATED.**
+--------------------------------
+
+.. warning:: 
+  Will be removed in a future update. See `ChangeImageLayer`_ for its replacement, and :ref:`breakingchange` for a general overview.
+
 Changes the image of a displayed character. The number represents which of the characters that are currently being displayed will have their image changed.
 In combat, it will change the focused monster instead of a specific one. Typically for characters that don't make use of layers.
 

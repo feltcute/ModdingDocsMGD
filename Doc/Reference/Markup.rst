@@ -1,7 +1,7 @@
 **Text Markup**
 ================
 
-.. Note, anytime Markup is used in code blocks, it's best to use ".. code-block:: javascript" to ensure the syntax highlighting doesn't mess up.
+.. Anytime Markup is used in code blocks, it's best to use ".. code-block:: javascript" to ensure the syntax highlighting isn't messed up.
 
 This page will primarily cover text `markup <https://en.wikipedia.org/wiki/Markup_language>`_ features, but there is some general information to know when writing.
 It's important to keep in mind a rough 400-430 character limit when writing to avoid text trailing off the screen.
@@ -10,7 +10,7 @@ Thankfully, most text editors give you a character count when highlighting a sel
 However, there is an emphasis on it being a rough character limit. Since each text character in the game can have varying lengths, it's generally impossible to tell if it will
 fit till you test it in-game. This is one of the many reasons play-testing your work is recommended.
 
-Lastly, if you know RenPy for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
+Lastly, if you know Ren'Py for featuring a certain markup feature and can't find it on this page, it likely means it doesn't work as expected.
 
 .. _DialogueTextMarkup:
 
@@ -58,7 +58,7 @@ It can also be used as the equivalent of a blank string for functions done via `
 
 **Text Styling Markup**
 ------------------------
-This section is a mix of `Renpy derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup. You can combine the markup as you please.
+This section is a mix of `Ren'Py derivative markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup. You can combine the markup as you please.
 
 .. Excluding markup containing any periods, since it generates an error at the moment.
 
@@ -113,8 +113,11 @@ Given MGD by default has all text display instantly, this typically won't be too
 ``{fast}`` placed anywhere in the string causes the displayed text to instantly move towards the markup declaration.
 Given MGD by default has all text display instantly, this typically won't be too useful unless combined with the ``{cps}``.
 
+.. _coloredtextmarkup:
+
 **Colored Text Markup**
 ------------------------
+
 This section is a mix of `Renpy markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup.
 You can combine it with text styling markup as you please.
 
@@ -179,7 +182,7 @@ Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
 
 ``{AttackerYouOrMonsterName}`` or ``{TargetYouOrMonsterName}`` will check if it's the player or monster. If it's the former, it will say "you". If it's the latter, the monster's name.
 
-``{FocusedMonsterName}``Gets the currently focused monsters name, primarily for use with the random monster focus function when needing to use their name in a line.
+``{FocusedMonsterName}`` gets the currently focused monster name, primarily for use with the random monster focus function when needing to use their name in a line.
 
 **Pronouns**
 

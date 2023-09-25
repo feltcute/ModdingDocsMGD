@@ -7,7 +7,7 @@ needs_sphinx = '4.4.0'
 project = "Monster Girl Dreams"
 copyright = '2017-2023, Threshold'
 author = 'Threshold'
-release = 'v25.3'
+release = 'v25.5'
 
 # -- General configuration ---------------------------------------------------
 
@@ -16,7 +16,9 @@ extensions = [
         'notfound.extension',
         'sphinx_search.extension',
         'sphinx.ext.imgmath',
-        'sphinx_tabs.tabs'
+        'sphinx_tabs.tabs',
+        'sphinx_copybutton',
+        'hoverxref.extension'
 ]
 
 # Add any paths that contain templates here, always relative to this directory.
@@ -49,6 +51,16 @@ html_context = {
 }
 
 notfound_urls_prefix = ''
+
+hoverxref_role_types = {
+    'hoverxref': 'tooltip',
+}
+hoverxref_roles = [
+    'hover',
+    'term',
+]
+
+hoverxref_sphinxtabs = True
 
 html_logo = 'img/banner.png'
 

@@ -84,6 +84,18 @@
     --kbd-shadow-color: #FFFFFF;
     --kbd-text-color: #FFFFFF;
 
+    --copybtn-background-color: #370322;
+    --copybtn-background-color-hover: #DF407D;
+    --copybtn-border-color: #404040;
+    --copybtn-border-color-hover: #404040;
+    --copybtn-icon-color: #ffffff;
+    --copybtn-icon-color-success: #42ffc2;
+    --copybtn-tooltip-background-color: #404040;
+    --copybtn-box-shadow: 0 0 transparent, 0 0 transparent;
+    --copybtn-border-color-success: #42ffc2;
+
+    --tooltip-background: #221D20;
+
     --btn-neutral-background-color: #6D0249;
     --btn-neutral-hover-background-color: #DF407D;
     --footer-color: #FFFFFF;
@@ -623,6 +635,64 @@ kbd, .kbd {
 
 .btn-neutral:visited {
     color: var(--body-color) !important;
+}
+
+/* Copy button */
+.highlight button.copybtn {
+    background-color: var(--copybtn-background-color);
+    border-color: var(--copybtn-border-color);
+    box-shadow: var(--copybtn-box-shadow);
+    width: 32px;
+    height: 32px;
+    right: 0;
+    top: 0;
+    margin: 12.25px;
+}
+.highlight button.copybtn:hover {
+    background-color: var(--copybtn-background-color-hover);
+    border-color: var(--copybtn-border-color-hover);
+}
+.highlight button.copybtn svg {
+    position: absolute;
+    left: 3.5px;
+    top: 3.5px;
+    color: var(--copybtn-icon-color);
+    pointer-events: none;
+}
+.highlight button.copybtn.success {
+    border-color: var(--copybtn-border-color-success);
+    box-shadow: 0 0 0 0.2em rgb(52 208 88 / 40%);
+}
+.highlight button.copybtn.success svg {
+    color: var(--copybtn-icon-color-success);
+}
+.o-tooltip--left:after {
+    background-color: var(--copybtn-tooltip-background-color);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 0.5em 0.75em;
+}
+
+/* hoverxref tooltip */
+
+.tooltipster-sidetip.tooltipster-custom .tooltipster-content {
+    color: var(--tooltip-background);
+}
+
+.tooltipster-sidetip.tooltipster-custom.tooltipster-bottom .tooltipster-arrow-border {
+	border-bottom-color: var(--tooltip-background);
+}
+
+.tooltipster-sidetip.tooltipster-custom.tooltipster-left .tooltipster-arrow-border {
+	border-left-color: var(--tooltip-background);
+}
+
+.tooltipster-sidetip.tooltipster-custom.tooltipster-right .tooltipster-arrow-border {
+	border-right-color: var(--tooltip-background);
+}
+
+.tooltipster-sidetip.tooltipster-custom.tooltipster-top .tooltipster-arrow-border {
+	border-top-color: var(--tooltip-background);
 }
 
 /* Navigation bar logo and search */
