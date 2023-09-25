@@ -11,8 +11,8 @@ This page outlines any breaking changes between breaking game releases to help w
 **V25.6**
 """""""""
 
-- Removes ``{UseSetColor}`` and ``{SetTextColor}`` :ref:`coloredtextmarkup`, both being succeeded by ``{StoredColor}``.
-- ``{ColorEnd}`` :ref:`coloredtextmarkup` to be removed due to the game moving to native Ren'Py text markup functionality. This means:
+- Removed ``{UseSetColor}`` and ``{SetTextColor}``, both being succeeded by ``{StoredColor}``, see :ref:`coloredtextmarkup` for more information on the new syntax.
+- ``{ColorEnd}`` :ref:`coloredtextmarkup` was removed due to the game moving to native Ren'Py text markup functionality. This means:
  
  - ``{Pink}`` must be closed with ``{/Pink}``.
  - ``{StoredColor}`` and its variants end with ``{/StoredColor]``.
