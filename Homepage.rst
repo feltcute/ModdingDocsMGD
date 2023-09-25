@@ -58,6 +58,8 @@ Of particular relevance to people new to modding will be the Starter section. Cl
 
     Doc/Reference/FAQ
 
+    Doc/Reference/Breaking
+
     Doc/Reference/Gridmap
 
 .. toctree::
