@@ -211,7 +211,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   },
 
 **EscapedRestraint**
-"""""""""""
+"""""""""""""""""""""
 
 .. code-block:: javascript
 

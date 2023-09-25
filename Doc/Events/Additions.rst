@@ -6,7 +6,7 @@
 Event additions cover replacing specific scenes, adding new scenes, and appending to the list of ``"Speakers"``.
 
 This does mean your addition would be incompatible with other mods that make an addition to the same scenes in an Event.
-This is excluding scenes solely using :ref:`MenuAddition`, for example, when adding to the night life menu in the brothel.
+This excludes scenes solely using :ref:`MenuAdditions <SceneAdditions>`, for example, when adding to the night life menu in the brothel.
 
 Check **_EventAdditionExample.json** in *Json/Events/* for an example.
 

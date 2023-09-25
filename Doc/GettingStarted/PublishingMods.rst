@@ -8,7 +8,7 @@ to help avoid your mod going undiscovered.
 **Packaging Your Mod**
 -----------------------
 
-Make sure you've followed the instructions in the :doc:`Meta Creation </Doc/GettingStarted/MetaCreation.rst>` guide, **especially the credit section** if you've used any externally made assets.
+Make sure you've followed the instructions in the :doc:`Meta Creation </Doc/GettingStarted/MetaCreation>` guide, **especially the credit section** if you've used any externally made assets.
 
 If there are any sensitive files you don't want to be packaged with your mod, now is the time to move them somewhere safe outside of your mod folder.
 

@@ -80,7 +80,7 @@ Consider the game release `Alpha-v25.3a` to the above.
     and check the *Modding* section of every update since your mod was last tested.
 
     You can use your text editors project-wide search and replace functionality (``ctrl`` / ``⌘`` + ``shift`` + ``f``)
-    to find outdated keywords listed as renamed or deprecated by the changelog.
+    to find outdated keywords listed as renamed or deprecated by :ref:`breakingchange`.
 
 .. To-do: A dedicated guide on updating outdated mods.
 

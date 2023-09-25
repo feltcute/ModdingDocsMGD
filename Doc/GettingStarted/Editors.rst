@@ -26,7 +26,7 @@ These all have portable versions if you want your editor and modding to work on 
 * **MGD extension is available for some automated error checking and easing development.** Use ``ctrl+shift+x`` or  ``⌘+shift+x``, search for ``MGD Language``.
 
 `Pulsar <https://pulsar-edit.dev/download.html#regular-releases>`_
----------------------------
+-------------------------------------------------------------------
 
 For the portable version, go to the above link, and select "Portable" for your given platform (currently only Windows as of writing).
 
