@@ -117,30 +117,39 @@ Given MGD by default has all text display instantly, this typically won't be too
 
 **Colored Text Markup**
 ------------------------
-This section is a mix of `Ren'Py markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup.
+
+This section is a mix of `Renpy markup <https://www.renpy.org/doc/html/text.html>`_ and custom MGD markup.
 You can combine it with text styling markup as you please.
 
-``{Pink}`` sets the color of the text to pink. Was specifically made for the hearts. Closes with ``{/Pink}``.
+``{Pink}`` sets the color of the text to pink. Was specifically made for the hearts.
+
+``{ColorEnd}`` ends the current color setting.
 
 .. code-block:: javascript
 
-  "Oh, I absolutely {Pink}LOVE THIS{/Pink}! {Pink}♥{/Pink}"
+  "Oh, I absolutely {Pink}LOVE THIS{ColorEnd}! {Pink}♥{ColorEnd}"
 
-``{color=hex}`` can be used for custom text color. Close with ``{/color}``. 
-``hex`` is where you provide a `hex color code <https://www.color-hex.com/>`_. Accepts #rgb, #rgba, #rrggbb, and #rrggbbaa format.
-
-``{StoredColor=hex}`` can be alternatively used, so that the given hex value is saved. Closes with ``{/StoredColor}``.
-
-.. code-block:: javascript
-
-  "{StoredColor=#fe0000}This is red{/StoredColor}, and this is {StoredColor=#c21196}purple.{/StoredColor}"
-
-You can store up to 7 colors at a time using numerical variants: ``{StoredColor}``-``{StoredColor7}``. You call them without specifying the hex again to use the stored color. Like so:
+``{SetTextColor}{Done}`` can be used for custom text color.
+Simply specify a `hex color code <https://www.color-hex.com/>`_ between ``{SetTextColor}`` and ``{Done}``.
+``{ColorEnd}`` closes ``{SetTextColor}`` as well.
 
 .. code-block:: javascript
 
-                        "{StoredColor=#fe0000}This is set to red{/StoredColor}, {StoredColor3=#fdfe02}this is set to yellow{/StoredColor3}, {StoredColor6=#c21196}and this is set to purple{/StoredColor6}.",
-                        "As a result, {StoredColor6}this is purple, and {StoredColor3}this is yellow{/StoredColor3} before returning to purple {/StoredColor6}, but {StoredColor}this is still red{/StoredColor} and {StoredColor=#0bff01}this is now green{/StoredColor}."
+  "{SetTextColor}#fe0000{Done}This is red,{ColorEnd} and this is {SetTextColor}#c21196{Done}purple.{ColorEnd}"
+
+``{UseSetColor}`` is stored universally up to seven times for every use of ``{SetTextColor}`` in a given string.
+
+As an example, if you use ``{SetTextColor}`` four times in a string, it will map the fourth use of ``{SetTextColor}`` to ``{UseSetColor4}``. Till
+another string uses ``{SetTextColor}`` four times, ``{UseSetColor4}`` will remain that color henceforth.
+
+.. code-block:: javascript
+
+  "{SetTextColor}#fe0000{Done}This is red{ColorEnd}, {SetTextColor}#fdfe02{Done}this is yellow{ColorEnd}, {SetTextColor}#c21196{Done}and this is purple{ColorEnd}.",
+  "As a result, {UseSetColor3}this is purple{ColorEnd}, and {UseSetColor}this is red{ColorEnd}, but {SetTextColor}#0bff01{Done}now it's green{ColorEnd}.",
+  "{UseSetColor}See?{ColorEnd} But {UseSetColor2}this is still yellow.{ColorEnd}"
+
+``{color=hex}`` is a more simple alternative to ``{SetTextColor}``, simply changing the containing text to the given color.
+Close with ``{/color}``. Overrides ``{SetTextColor}``. Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 
 ``{outlinecolor=hex}`` changes the text color outline to the given color.  Close with ``{/outlinecolor}``. Overrides all of the above markup where relevant.
 Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
