@@ -399,6 +399,21 @@ See the functions :ref:`DenyCombatOrgasm` and :ref:`DenyMonsterOrgasmFunc`.
     ]
   },
 
+.. _PlayerEscaped:
+
+**PlayerEscaped**
+"""""""""""
+
+.. code-block:: javascript
+
+  {
+  "lineTrigger": "PlayerEscaped",
+  "move": [""],
+  "theText":[
+    "Displays when the player has run away from an encounter! Pretty neiche, but can be useful for monsters that aren't in full events, like the Salarisi."
+    ]
+  },
+
 .. _Counters:
 
 **Counters**
