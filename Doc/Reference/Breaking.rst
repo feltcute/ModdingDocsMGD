@@ -35,14 +35,14 @@ There is a regex you can use in VS Code and Atom to find and replace all instanc
 
 - Add your mod to your workspace/project view:
 
-- Press ``ctrl`` / ``⌘`` + ``shift`` + ``h`` to open up workspace/project-wide search and replace.
+- Press ``ctrl`` / ``⌘`` + ``shift`` + ``f`` to open up workspace/project-wide search and replace.
 - Add the search and replace values:
 
 Search field:
 
 .. code-block::
 
-    \{(ThePlayerName|THEPLAYERNAME|TPN|DamageToPlayer|DamageToEnemy|FinalDamage|PlayerOrgasmLine|MonsterOrgasmLine|DisplayPlayerChoice|DisplayMonsterChoice|ProgressDisplay|AttackerName|AttackerName2|AttackerName3|AttackerName4|AttackerName5|TargetName|AttackerYouOrMonsterName|TargetYouOrMonsterName|FocusedMonsterName|AttackerHeOrShe|TargetHeOrShe|AttackerHisOrHer|TargetHisOrHer|AttackerHimOrHer|TargetHimOrHer|SexAdjective|SexWords|PlayerLevel|PlayerMoney|ColorEnd)\}`
+    \{(ThePlayerName|THEPLAYERNAME|TPN|DamageToPlayer|DamageToEnemy|FinalDamage|PlayerOrgasmLine|MonsterOrgasmLine|DisplayPlayerChoice|DisplayMonsterChoice|ProgressDisplay|AttackerName|AttackerName2|AttackerName3|AttackerName4|AttackerName5|TargetName|AttackerYouOrMonsterName|TargetYouOrMonsterName|FocusedMonsterName|AttackerHeOrShe|TargetHeOrShe|AttackerHisOrHer|TargetHisOrHer|AttackerHimOrHer|TargetHimOrHer|SexAdjective|SexWords|PlayerLevel|PlayerMoney|ColorEnd)\}
 
 Replace field:
 
