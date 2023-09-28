@@ -5,7 +5,7 @@
 --------------
 
 Heals the focused monster based on the given number and the same calculation as the semen eater perk type.
-``"{FinalDamage}"`` can be used in the following string to display how much arousal is recovered.
+``"[FinalDamage]"`` can be used in the following string to display how much arousal is recovered.
 
 .. code-block:: javascript
 
@@ -16,7 +16,7 @@ Heals the focused monster based on the given number and the same calculation as 
 **EnergyDrain**
 ----------------
 
-Drains energy from the player using the same calculation as the energy drain perk. ``"{FinalDamage}"`` can be used in the following string to display how much energy is lost.
+Drains energy from the player using the same calculation as the energy drain perk. ``"[FinalDamage]"`` can be used in the following string to display how much energy is lost.
 
 It can be used out of combat.
 

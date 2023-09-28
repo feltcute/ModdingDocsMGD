@@ -119,22 +119,22 @@ To find it in your respective editor:
 
     .. tab:: VS Code
 
-            1. Go to File -> Add Folder To Workspace...
+            1. Go to *File* -> *Add Folder To Workspace...*
             2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
             3. In your workspace view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
-            4. Select all file contents, ``ctrl+c`` to copy.
-            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl+v`` to paste.
+            4. Select all file contents, ``ctrl`` / ``⌘`` + ``c`` to copy.
+            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl`` / ``⌘`` + ``v`` to paste.
     
         .. image:: img/vscodeprojectview.png
             :align: center
 
     .. tab:: Pulsar
 
-            1. Go to File -> Add Project Folder
+            1. Go to *File* -> *Add Project Folder*
             2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
             3. In your project view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
-            4. Select all file contents, ``ctrl+c`` to copy.
-            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl+v`` to paste.
+            4. Select all file contents, ``ctrl`` / ``⌘`` + ``c`` to copy.
+            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl`` / ``⌘`` + ``v`` to paste.
 
         .. image:: img/atomprojectview.png
             :align: center
@@ -374,8 +374,8 @@ To tell the game it doesn't need to display any more characters, you end the Dis
 
 Next, use the function ``"Speaks"`` to have the Blue Slime talk, which will cause the next string value to be spoken by the Blue Slime.
 
-Provide a value of ``"Hello {ThePlayerName}, I am Blue Slime, let's fight."``. Notice the use of **{ThePlayerName}** inside of the string value. 
-This is known as :doc:`Markup </Doc/Reference/Markup>`, which changes {ThePlayerName} to the name set by the Player when experienced in-game.
+Provide a value of ``"Hello [ThePlayerName], I am Blue Slime, let's fight."``. Notice the use of **[ThePlayerName]** inside of the string value. 
+This is known as :doc:`Markup </Doc/Reference/Markup>`, which changes [ThePlayerName] to the name set by the Player when experienced in-game.
 
 .. code-block:: javascript
 
@@ -385,7 +385,7 @@ This is known as :doc:`Markup </Doc/Reference/Markup>`, which changes {ThePlayer
                     "1",
                 "EndLoop",
                 "Speaks",
-                    "Hello {ThePlayerName}, I am Blue Slime, let's fight.",
+                    "Hello [ThePlayerName], I am Blue Slime, let's fight.",
             ]
 
 The last part of this scene will start a fight with the function ``"CombatEncounter"``.
@@ -403,7 +403,7 @@ Provide the string value ``"You continue shopping."``
                     "1",
                 "EndLoop",
                 "Speaks",
-                    "Hello {ThePlayerName}, I am Blue Slime, let's fight.",
+                    "Hello [ThePlayerName], I am Blue Slime, let's fight.",
                 "CombatEncounter",
                     "Blue Slime",
                 "StartCombat",
@@ -437,7 +437,7 @@ You can now move on to the next scene. Change its NameOfScene value to the same 
                     "1",
                 "EndLoop",
                 "Speaks",
-                    "Hello {ThePlayerName}, I am Blue Slime, let's fight.",
+                    "Hello [ThePlayerName], I am Blue Slime, let's fight.",
                 "CombatEncounter",
                     "Blue Slime",
                 "StartCombat",

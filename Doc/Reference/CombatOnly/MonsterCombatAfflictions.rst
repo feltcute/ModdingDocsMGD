@@ -63,4 +63,4 @@ It will only damage to the target, and can crit. It will never miss. Uses the pl
 
   "HitMonsterWith", "Caress"
 
-If you want to display the damage number from the skill, use {DamageToEnemy} in the following string after calling the function.
+If you want to display the damage number from the skill, use [DamageToEnemy] in the following string after calling the function.
