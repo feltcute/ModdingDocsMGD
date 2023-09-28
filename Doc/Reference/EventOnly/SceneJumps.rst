@@ -6,7 +6,7 @@
 **Scene Jumps**
 ================
 
-.. seealso:: 
+.. seealso::
 
   For making jumps to scenes in other events, see :ref:`Event Jumps`.
 
@@ -42,6 +42,14 @@ to weight or filter choices based on conditions.
     "SceneName2",
     "SceneName3",
   "EndLoop"
+
+**IfEventExists**
+----------------
+Checks if the named event Exists, then does a scene jump if it does. This is entirely for modders wanting to check if another active mod exists in the game files.
+
+.. code-block:: javascript
+
+  "IfEventExists", "EventNameHere", "SceneInActiveEventNotTheEventYou'reChecking"
 
 .. _CallSceneThenReturn:
 
