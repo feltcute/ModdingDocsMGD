@@ -17,19 +17,19 @@ Lastly, if you know Ren'Py for featuring a certain markup feature and can't find
 **Dialogue Text Markup**
 -------------------------
 
-``{ThePlayerName}`` gets and displays the player name.
+``[ThePlayerName]`` gets and displays the player name.
 
 .. code-block:: javascript
 
-  "Oh hey {ThePlayerName}!"
+  "Oh hey [ThePlayerName]!"
 
-``{THEPLAYERNAME}`` gets the player name and displays it in ALL CAPS
+``[THEPLAYERNAME]`` gets the player name and displays it in ALL CAPS
 
-``{TPN}`` gets the initials of the player's name.
+``[TPN]`` gets the initials of the player's name.
 
-``{PlayerMoney}`` displays the amount of money the player has.
+``[PlayerMoney]`` displays the amount of money the player has.
 
-``{PlayerLevel}`` displays the player's current level.
+``[PlayerLevel]`` displays the player's current level.
 
 
 ``|n|`` splits the string, causing everything after the ``|n|``, to display on the next screen of text.
@@ -46,7 +46,7 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 
 .. code-block:: javascript
 
-  "|f|PlaySoundEffect|/|sfx/Magic/Hypnosis effect 3.wav|n||f|ChangeImageLayer|/|Expression|/|1|/|Base|n|Oh, hello {ThePlayerName}."
+  "|f|PlaySoundEffect|/|sfx/Magic/Hypnosis effect 3.wav|n||f|ChangeImageLayer|/|Expression|/|1|/|Base|n|Oh, hello [ThePlayerName]."
 
 ``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it's called is removed.
 
@@ -130,75 +130,73 @@ You can combine it with text styling markup as you please.
 ``{color=hex}`` can be used for custom text color. Close with ``{/color}``. 
 ``hex`` is where you provide a `hex color code <https://www.color-hex.com/>`_. Accepts #rgb, #rgba, #rrggbb, and #rrggbbaa format.
 
-``{StoredColor=hex}`` can be alternatively used, so that the given hex value is saved. Closes with ``{/StoredColor}``.
+``[StoredColor]`` can be alternatively used, utilizing values set from :ref:`SetStoredColor`. They are by default `#F6BADC`.
+Closes with ``[ColorEnd]``.
 
 .. code-block:: javascript
 
-  "{StoredColor=#fe0000}This is red{/StoredColor}, and this is {StoredColor=#c21196}purple.{/StoredColor}"
+  "SetStoredColor", "1", "#fe0000", "5", "#c21196"
+  "[StoredColor]This is red,[StoredColor5] and this is purple.[ColorEnd], this is back to red[ColorEnd], and this is back to normal."
 
-You can store up to 7 colors at a time using numerical variants: ``{StoredColor}``-``{StoredColor7}``. You call them without specifying the hex again to use the stored color. Like so:
-
-.. code-block:: javascript
-
-                        "{StoredColor=#fe0000}This is set to red{/StoredColor}, {StoredColor3=#fdfe02}this is set to yellow{/StoredColor3}, {StoredColor6=#c21196}and this is set to purple{/StoredColor6}.",
-                        "As a result, {StoredColor6}this is purple, and {StoredColor3}this is yellow{/StoredColor3} before returning to purple {/StoredColor6}, but {StoredColor}this is still red{/StoredColor} and {StoredColor=#0bff01}this is now green{/StoredColor}."
-
-``{outlinecolor=hex}`` changes the text color outline to the given color.  Close with ``{/outlinecolor}``. Overrides all of the above markup where relevant.
+You can store up to 7 colors at a time using numerical variants: ``[StoredColor]``-``[StoredColor7]``.
 Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
+
+.. You call them without specifying the hex again to use the stored color. Like so:
+.. ``{outlinecolor=hex}`` changes the text color outline to the given color.  Close with ``{/outlinecolor}``. Overrides all of the above markup where relevant.
 
 .. _EventTextMarkup:
 
 **Event Text Markup**
 ----------------------
 
-``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
+``[DisplayPlayerChoice]`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
 
-``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
+``[DisplayMonsterChoice]`` via the functions :ref:`ChoiceToDisplayFunc` and :ref:`ChoiceToDisplayFromOtherEventFunc`.
 
-``{ProgressDisplay}`` via :ref:`Progress` functions.
+``[ProgressDisplay]`` via :ref:`Progress` functions.
 
-``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
+``[PlayerOrgasmLine]`` or ``[MonsterOrgasmLine]`` displays the orgasm line for the player or monster respectively.
 To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively. If using it in a loop, use the :ref:`EmptySpiritCounterFunc` function in the next line to reset how much spirit is counted.
 
 **Damage Text Markup**
 -----------------------
 
-``{DamageToPlayer}``, ``{DamageToEnemy}``, and ``{FinalDamage}`` provide damage values for relevant functions.
+``[DamageToPlayer]``, ``[DamageToEnemy]``, and ``[FinalDamage]`` provide damage values for relevant functions.
 
 **Skill Text Markup**
 ----------------------
 
 Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
 
-``{AttackerName}`` or ``{TargetName}`` gets respective name of the attacker or target.
+``[AttackerName]`` or ``[TargetName]`` gets respective name of the attacker or target.
 
-``{AttackerYouOrMonsterName}`` or ``{TargetYouOrMonsterName}`` will check if it's the player or monster. If it's the former, it will say "you". If it's the latter, the monster's name.
+``[AttackerYouOrMonsterName]`` or ``[TargetYouOrMonsterName]`` will check if it's the player or monster. If it's the former, it will say "you". If it's the latter, the monster's name.
 
-``{FocusedMonsterName}`` gets the currently focused monster name, primarily for use with the random monster focus function when needing to use their name in a line.
+``[FocusedMonsterName]`` gets the currently focused monster name, primarily for use with the random monster focus function when needing to use their name in a line.
 
 **Pronouns**
 
-* ``{AttackerHeOrShe}`` or ``{TargetHeOrShe}``
+* ``[AttackerHeOrShe]`` or ``[TargetHeOrShe]``
 
-* ``{AttackerHisOrHer}`` or ``{TargetHisOrHer}``
+* ``[AttackerHisOrHer]`` or ``[TargetHisOrHer]``
 
-* ``{AttackerHimOrHer}`` or ``{TargetHimOrHer}``
+* ``[AttackerHimOrHer]`` or ``[TargetHimOrHer]``
 
-``{SexAdjective}`` gets an adjective from the below bank, Vaginal or Anal based depending on stance. Note the space after each word. The empty string
+``[SexAdjective]`` gets an adjective from the below bank, Vaginal or Anal based depending on stance. Note the space after each word. The empty string
 means it can roll a blank.
 
 * **Sex**: ["", "wet ", "tight ", "wet ", "tight ", "receptive ", "warm "]
 
 * **Anal**: ["", "tight ", "tight ", "curved ", "rounded ", "receptive "]
 
-``{SexWords}`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a string randomly from an array, depending on either sex or anal stance:
+``[SexWords]`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a string randomly from an array, depending on either sex or anal stance:
 
 * **Sex**: ["pussy", "pussy", "slit", "honeypot"]
 
 * **Anal**: ["ass", "ass", "rear", "behind", "derriere"]
 
-If you want to use both, remember ``{SexAdjective}`` words have a space at the end. Thus, you should leave no space between them, like so:
+If you want to use both, remember ``[SexAdjective]`` words have a space at the end. Thus, you should leave no space between them, like so:
 
 .. code-block:: javascript
 
-  "{AttackerName} thrusts his mighty steed into {TargetName}'s {SexAdjective}{SexWords}!"
+  "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWords]!"

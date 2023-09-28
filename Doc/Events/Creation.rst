@@ -228,7 +228,7 @@ In this case, you can declare it as an optional scene to the game by prepending 
     {
     "NameOfScene": "EventBroke",
     "theScene": [
-      "Something went wrong when scene jumping! Event Progress: {ProgressDisplay}."
+      "Something went wrong when scene jumping! Event Progress: [ProgressDisplay]."
       ]
     }
 

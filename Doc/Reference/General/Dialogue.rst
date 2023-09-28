@@ -43,6 +43,30 @@ Displays the given text in the text box header for the following string of text.
 
 ----
 
+.. _SetStoredColor:
+
+**SetStoredColor**
+-------------------
+
+A given numerical value from 1-7 will set the corresponding :ref:`coloredtextmarkup` ``[StoredColor]``
+to use the colored specific in the next string value of text.
+Can be repeated for every variant of ``[StoredColor]``.
+
+Can instead provide a value of ``"Reset"`` to reset all stored colors back to their defaults.
+
+.. code-block:: javascript
+
+  "SetStoredColor", "1", "#fe0000", "5", "#c21196"
+  "[StoredColor]This is red,[StoredColor5] and this is purple.[ColorEnd], this is back to red[ColorEnd], and this is back to normal."
+  "SetStoredColor", "Reset",
+  "[StoredColor] This is now the default pink.[ColorEnd]"
+
+See :ref:`coloredtextmarkup` for more information on ``[StoredColor]``.
+
+.. tip:: 
+
+  You can make use of :ref:`callscenethenreturn` or :ref:`callscenethenreturn` to cleanly set all the colors in a dedicated scene at any point.
+
 **SaveNextLine, UseSavedLineInMenu, & DisplaySavedLine**
 ----------------------------------------------------------
 
