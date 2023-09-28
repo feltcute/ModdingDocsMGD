@@ -6,9 +6,12 @@
 This page outlines any breaking changes between breaking game releases to help with updating mods.
 
 **V25.6**
-"""""""""
+----------
 
-- Due to forward compatibility and technical reasons, custom :doc:`Markup` from MGD (not Ren'Py) are now enclosed with ``[]`` square brackets instead of ``{}`` curly braces.
+Due to forward compatibility and technical reasons, custom :doc:`Markup` from MGD (not Ren'Py) are now enclosed with ``[]`` square brackets instead of ``{}`` curly braces.
+
+**Fix Instructions**
+""""""""""""""""""""""""
 
 There is a regex you can use in VS Code and Atom to find and replace all instances of ``{markup}`` with ``[markup]``:
 
@@ -54,6 +57,12 @@ There is a regex you can use in VS Code and Atom to find and replace all instanc
     .. tab:: Pulsar
 
         .. image:: /img/pulsarRegex.png
+
+
+- Press 'replace all' in your respective text editor. It will take a few minutes to complete.
+
+**Other v25.6 Breakages**
+""""""""""""""""""""""""""
 
 - Removed ``{UseSetColor}`` and ``{SetTextColor}``.
 
