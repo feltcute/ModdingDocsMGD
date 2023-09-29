@@ -143,6 +143,16 @@ If true, jump to the given scene, else, silently continues the scene.
 
   "IfGridNPCThere", "Key", "Nothing",
 
+.. _SetActiveGridNPC:
+
+**SetActiveGridNPC**
+-----------------------------------------------
+``"SetActiveGridNPC"`` checks if the named NPC is on the gridmap, then sets the currently focused NPC to them for the sake of functions, should only be used for uniquely named NPCS.
+
+.. code-block:: javascript
+
+  "SetActiveGridNPC", "Ushris", 
+
 .. _SpawnGridNPC:
 
 **SpawnGridNPC**
