@@ -65,6 +65,10 @@ Replace field:
 
 - Press 'replace all' in your respective text editor. It will take a few minutes to complete.
 
+- ``[SexWords]`` in particular is now ``[SexWord]`` due to a technical issue with old saves.
+- In your text editor, search: ``[SexWords]``
+- Replace: ``[SexWord]``
+
 **Other v25.6 Breakages**
 """"""""""""""""""""""""""
 
@@ -73,6 +77,7 @@ Replace field:
  - ``{UseSetColor}`` is replaced by ``[StoredColor]``, working largely the same. 
  - ``{SetTextColor}`` is replaced by :ref:`SetStoredColor`. You can make use of :ref:`callscenethenreturn` or :ref:`callscenethenreturn` to cleanly set all the colors at any point.
  - See :ref:`coloredtextmarkup` for more information on the new syntax.
+
 
 - ``{Pink}`` is the one exception to the square bracket change by technicality, but now must be closed with ``{/Pink}``.
 
