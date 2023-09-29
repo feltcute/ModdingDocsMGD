@@ -15,21 +15,12 @@ Due to forward compatibility and technical reasons, custom :doc:`Markup` from MG
 
 There is a regex you can use in VS Code and Atom to find and replace all instances of ``{markup}`` with ``[markup]``:
 
-.. code-block::
-
-    \{(ThePlayerName|THEPLAYERNAME|TPN|DamageToPlayer|DamageToEnemy|FinalDamage|PlayerOrgasmLine|MonsterOrgasmLine|DisplayPlayerChoice|DisplayMonsterChoice|ProgressDisplay|AttackerName|AttackerName2|AttackerName3|AttackerName4|AttackerName5|TargetName|AttackerYouOrMonsterName|TargetYouOrMonsterName|FocusedMonsterName|AttackerHeOrShe|TargetHeOrShe|AttackerHisOrHer|TargetHisOrHer|AttackerHimOrHer|TargetHimOrHer|SexAdjective|SexWords|PlayerLevel|PlayerMoney|ColorEnd)\}`
-
-- Add your mod to your workspace/project view:
-
 .. tabs::
 
     .. tab:: VS Code
 
             1. Go to *File* -> *Add Folder To Workspace...*
-            2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
-            3. In your workspace view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
-            4. Select all file contents, ``ctrl`` / ``⌘`` + ``c`` to copy.
-            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl`` / ``⌘`` + ``v`` to paste.
+            2. Go back to the ``game`` folder, click on ``Mods``, click on your mod folder, click Select Folder/Open.
     
         .. image:: /Doc/GettingStarted/img/vscodeprojectview.png
             :align: center
@@ -37,15 +28,28 @@ There is a regex you can use in VS Code and Atom to find and replace all instanc
     .. tab:: Pulsar
 
             1. Go to *File* -> *Add Project Folder*
-            2. Go back to the ``game`` folder, click on ``Json``, click Select Folder/Open.
-            3. In your project view, navigate within the Json folder to ``Events/_BlankEvent.json``, and open the file.
-            4. Select all file contents, ``ctrl`` / ``⌘`` + ``c`` to copy.
-            5. Go to your ``ShoppingEvent.json`` tab, ``ctrl`` / ``⌘`` + ``v`` to paste.
+            2. Go back to the ``game`` folder, click on ``Json``, click on your mod folder, click Select Folder/Open.
 
         .. image:: /Doc/GettingStarted/img/atomprojectview.png
             :align: center
 
-- Press ``ctrl`` / ``⌘`` + ``shift`` + ``h`` to open up workspace/project-wide search and replace.
+- Add your mod to your workspace/project view:
+
+- Press ``ctrl`` / ``⌘`` + ``shift`` + ``f`` to open up workspace/project-wide search and replace.
+- Add the search and replace values:
+
+Search field:
+
+.. code-block::
+
+    \{(ThePlayerName|THEPLAYERNAME|TPN|DamageToPlayer|DamageToEnemy|FinalDamage|PlayerOrgasmLine|MonsterOrgasmLine|DisplayPlayerChoice|DisplayMonsterChoice|ProgressDisplay|AttackerName|AttackerName2|AttackerName3|AttackerName4|AttackerName5|TargetName|AttackerYouOrMonsterName|TargetYouOrMonsterName|FocusedMonsterName|AttackerHeOrShe|TargetHeOrShe|AttackerHisOrHer|TargetHisOrHer|AttackerHimOrHer|TargetHimOrHer|SexAdjective|SexWords|PlayerLevel|PlayerMoney|ColorEnd)\}
+
+Replace field:
+
+.. code-block::
+
+    [$1]
+
 - Ensure the regex button is turned on in your text editor:
 
 .. tabs::
