@@ -189,7 +189,7 @@ means it can roll a blank.
 
 * **Anal**: ["", "tight ", "tight ", "curved ", "rounded ", "receptive "]
 
-``[SexWords]`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a string randomly from an array, depending on either sex or anal stance:
+``[SexWord]`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a string randomly from an array, depending on either sex or anal stance:
 
 * **Sex**: ["pussy", "pussy", "slit", "honeypot"]
 
@@ -199,4 +199,4 @@ If you want to use both, remember ``[SexAdjective]`` words have a space at the e
 
 .. code-block:: javascript
 
-  "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWords]!"
+  "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWord]!"
