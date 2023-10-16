@@ -20,10 +20,10 @@ This is also the location of your mod icon to be displayed in-game.
 Adding an icon is optional, as the game will use a placeholder if one is not included.
 
 Your icon must be titled `icon.png`, and use the png image format.
-The game will forcefully scale it to 150x150px, and thus should be designed squared. Targeting a higher resolution is recommended, as you can use the icon elsewhere, such as on your mod page for the `wiki <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_.
+The game will forcefully scale it to 150x150px and thus should be designed squared. Targeting a higher resolution is recommended, as you can use the icon elsewhere, such as on your mod page for the `wiki <https://monstergirldreams.miraheze.org/wiki/Category:List_Of_Mods#Making_&_Adding_Mods-0>`_.
 
 If you have a portrait of a character in your game,
-you can use an image editor with layers support to fit them within this character bubble template:
+you can use an image editor that supports image layers to fit them within this character bubble template:
 
 :download:`characterbubble.zip </img/characterbubble.zip>`
 
@@ -53,8 +53,6 @@ such as how the user can begin its content in-game.
 **testedFor**
 --------------
 
-.. warning:: This key has evolved from its previous use of floats, and will require the new method below in an upcoming breaking release.
-
 The last version of the game the mod has been tested against.
 
 MGD internally uses `semantic versioning <https://semver.org/>`_ to keep track of breaking game versions,
@@ -65,13 +63,13 @@ This means you do not enclose it in "quotation marks", you only use numbers.
 
 .. code-block:: javascript
 
-    "testedFor": {"major": 25, "minor": 3, "patch": 1},
+    "testedFor": {"major": 25, "minor": 6, "patch": 1},
 
-Consider the game release `Alpha-v25.3a` to the above.
+Consider the game release `Alpha-v25.6a` to the above.
 
 - `"major":` is the major game version (e.g. 25), signifying major game updates that can break older mods, or have features your mod depends on that older releases don't have.
-- `"minor":` is the minor game version (e.g. 3), signifying small game updates that can break older mods, or have features your mod depends on that older releases don't have.
-- `"patch":` is the patch game version (e.g. 1), where the numerical value starting from 1 is equivalent to the alphabetical patch version (3 is c, **0 is none**, etc.). They don't break mods tested against older patches, but may break newer mods dependant on bug fixes from the newer version.
+- `"minor":` is the minor game version (e.g. 6), signifying small game updates that can break older mods, or have features your mod depends on that older releases don't have.
+- `"patch":` is the patch game version (e.g. 1), where the numerical value starting from 1 is equivalent to the alphabetical patch version (3 is c, **0 is none**, etc.). They don't break mods tested against older patches but may break newer mods depending on bug fixes from the newer version.
 
 .. tip::
 
@@ -118,12 +116,15 @@ This means you do not enclose it in "quotation marks", you only use numbers.
     "semVersion": {"major": 1, "minor": 3, "patch": 4},
 
 - A Major (**1** .6.9) value is for a significant milestone of progress worthy of a major version bump.
+
  - A work in progress that isn't considered complete can use a value of *0*.
  - An update in a complete state that matches your initial vision, can give a value of *1*.
  - Further markers of significant milestones beyond your initial goal can be incremented.
  - If an update revamps it so far that it makes no use of the original progress trackers, though it should come with a notice outside of your version number.
+
 - A Minor (1. **6** .9) value is for notable milestones that alter or add to the mod's content.
 - A Patch (1.6. **9**) is for fixes relating to bugs and typos that neither add nor alter content to your mod.
+
  - It is also good for marking updates solely done for compatibility with newer game versions.
 
 **tags**
@@ -145,7 +146,7 @@ displayed in a horizontal row via an array of given values.
 You should keep each one under three words. Up to five tags would be a good amount, focusing on its most defining features.
 
 A ``+`` symbol alongside a numerical can be used to denote how much of a certain type of content it adds.
-The different types of jsons you see in this modding documentation are good examples, but can also be more loose concepts.
+The different types of JSONs you see in this modding documentation are good examples, but can also be more loose concepts.
 Such as:
 
 * ``"+2 Boss Fights",``
@@ -165,7 +166,7 @@ If the mod focuses on being an expansion for base game content, an ``"Expansion"
 **credits**
 ------------
 
-Provide credit to others that help made your mod possible in a scrollable text box. 
+Provide credit to others who helped make your mod possible in a scrollable text box. 
 Can make use of :ref:`TextStylingMarkup`.
 
 .. code-block:: javascript

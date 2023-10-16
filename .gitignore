@@ -2,3 +2,4 @@
 _build/
 .vscode/
 .mypy_cache/
+._lsp/

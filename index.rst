@@ -1,13 +1,10 @@
-:orphan:
-
 **Introduction**
 =================
 
 **Welcome to the Monster Girl Dreams Modding Documentation for v25.6**.
-Here you can find information, reference, and starter guides for all JSON modding related practices.
-It features general starter information, all existing functions, and code block examples for everything you can do within the games custom scripting system.
-It assumes you already have at least a fair bit of experience with the game,
-understand its stats via hovering over them in your character profile, and a familiar understanding of its mechanics.
+Here you can find a curated starter guide, optional tutorials, manuals, and various quick reference for all supported MGD modding practices.
+
+The documentation assumes you already have at least a fair bit of experience with the game and understand its various stats from hovering over them in the in-game character menu's 'Stats' tab.
 
 Potential game spoilers abound.
 
@@ -20,11 +17,27 @@ Potential game spoilers abound.
 **Navigating The Docs**
 ------------------------
 
-The documentation can be navigated using the List of Contents below, and in the navigation column to the left.
+All topics and pages in the documentation can be found using the sidebar to the left.
 You can use the buttons at the bottom of each page if you wish to go through the documentation linearly.
-Of particular relevance to people new to modding will be the Starter section. Click 'Text Editors', or press the 'Next' button at the bottom of this page to begin.
+
+Use the 'Search docs' text field towards the top of the sidebar to quickly find particular specific topics you're looking for. 
+Search currently does not support fuzzy word search, so make sure to spell what you're looking for correctly.
+
+Your browser supports searching for words on any page of documentation as well. You can press ``ctrl + f`` or ``⌘ + f`` to open it at any time.
+
+To begin, start with the first page of the documentation by clicking 'Installing a Text Editor' in the sidebar, or press the 'Next' button at the bottom of this page.
+
+**Getting Help**
+-----------------
+
+If you're having trouble with something, there are a couple of options.
+
+* Try the FAQ
+* Ask yourself once more what you need to know in its most specific fundamental steps (e.g. "I need to learn how to add an item I made as a drop to an existing monster, so I should check through the manual section for Monsters."). and try navigating the sidebar down to the most relevant topics.
+* If all else fails, you're encouraged to try getting help on the `MGD Discord <https://discord.com/invite/monstergirldreams>`_. There are tons of knowledgeable, depraved, and friendly people there willing to help you, no matter how big or small your problem is. Head to the ``#modding-help`` forum channel towards the bottom of the channel list.
 
 .. toctree::
+    :hidden:
     :maxdepth: 1
     :caption: Getting Started
     :name: sec-GettingStarted
@@ -39,16 +52,36 @@ Of particular relevance to people new to modding will be the Starter section. Cl
 
     Doc/GettingStarted/PublishingMods
 
-    Doc/GettingStarted/Tutorials
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    :caption: Tutorials
+    :name: sec-Tutorials
+
+    Doc/Tutorials/index
 
 .. toctree::
+    :hidden:
+    :maxdepth: 1
+    :caption: JSON Manual
+    :name: sec-Manual
+
+    Doc/Manual/Adventures/index
+    Doc/Manual/Events/index
+    Doc/Manual/Fetishes/Fetishes
+    Doc/Manual/Items/Items
+    Doc/Manual/Locations/index
+    Doc/Manual/Monsters/index
+    Doc/Manual/Perks/index
+    Doc/Manual/Skills/index
+
+.. toctree::
+    :hidden:
     :maxdepth: 1
     :caption: Reference
     :name: sec-Reference
 
     Doc/Reference/Markup
-
-    Doc/Reference/Functions
 
     Doc/Reference/StanceRef
 
@@ -63,71 +96,12 @@ Of particular relevance to people new to modding will be the Starter section. Cl
     Doc/Reference/Gridmap
 
 .. toctree::
+    :hidden:
     :maxdepth: 1
-    :caption: Adventures
-    :name: sec-Adventures
+    :caption: Function Reference
+    :name: sec-FunctionReference
 
-    Doc/Adventures/Creation
-
-    Doc/Adventures/Additions
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Events
-    :name: sec-Events
-
-    Doc/Events/Creation
-
-    Doc/Events/Additions
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Fetishes & Addictions
-    :name: sec-Fetishes & Addictions
-
-    Doc/Fetishes/Fetishes
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Items
-    :name: sec-Items
-
-    Doc/Items/Creation
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Locations
-    :name: sec-Locations
-
-    Doc/Locations/Creation
-
-    Doc/Locations/Additions
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Monsters
-    :name: sec-Monsters
-
-    Doc/Monsters/Creation
-
-    Doc/Monsters/Additions
-
-    Doc/Monsters/Triggers
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Perks
-    :name: sec-Perks
-
-    Doc/Perks/Creation
-
-    Doc/Perks/Types
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Skills
-    :name: sec-Skills
-
-    Doc/Skills/Creation
-
-    Doc/Skills/Additions
+    Doc/Functions/Asset/index
+    Doc/Functions/General/index
+    Doc/Functions/CombatOnly/index
+    Doc/Functions/EventOnly/index

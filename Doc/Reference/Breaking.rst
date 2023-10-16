@@ -66,8 +66,9 @@ Replace field:
 - Press 'replace all' in your respective text editor. It will take a few minutes to complete.
 
 - ``[SexWords]`` in particular is now ``[SexWord]`` due to a technical issue with old saves.
-- In your text editor, search: ``[SexWords]``
-- Replace: ``[SexWord]``
+- In your text editor, do the above regex first, and then make sure the regex button is disabled therafter.
+- Search your project for: ``[SexWords]``
+- Replace with: ``[SexWord]``
 
 **Other v25.6 Breakages**
 """"""""""""""""""""""""""

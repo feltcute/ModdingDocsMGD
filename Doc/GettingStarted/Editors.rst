@@ -12,7 +12,7 @@ Don't get too worried about your choice, as you can easily change it at any time
 These all have portable versions if you want your editor and modding to work on a USB, separate from your main system.
 
 `Visual Studio Code <https://code.visualstudio.com/>`_
---------------------------------------------------------
+-------------------------------------------------------
 
 `Portable version <https://code.visualstudio.com/docs/editor/portable>`_
 
@@ -38,7 +38,7 @@ For the portable version, go to the above link, and select "Portable" for your g
 
 .. note::
 
-    Previously known as Atom. Github, the original creators of Atom, ceased development on the editor, and was continued on by the community as Pulsar. Pulsar currently has access to the same packages and provides continued security, bug fixes, compatibility, and feature updates for the editor.
+    Previously known as Atom. Github, the original creators of Atom, ceased development on the editor and was continued by the community as Pulsar. Pulsar currently has access to the same packages and provides continued security, bug fixes, compatibility, and feature updates for the editor.
 
 `Notepad++ <https://notepad-plus-plus.org/resources/>`_
 --------------------------------------------------------
@@ -49,8 +49,8 @@ For the portable version, go to the Downloads page, select the latest version, a
 * Feature-lite.
 * Has built-in folder navigation under View -> Folder As Workspace. Cannot manage folders and files.
 * Supports packages and customization (use 32-bit version), though not as convenient or powerful, with weak defaults.
-* Fast boot times on starting application.
-* Handles large multi-thousand line files best.
+* Fast boot times.
+* Handles large multi-thousand-line files best.
 
 **NOTE**: When using Notepad++, please use spaces for tabs, and utf-8 encoding! This helps prevent indentation and whitespace errors between text editors.
 
@@ -63,5 +63,5 @@ For the portable version, go to the Downloads page, select the latest version, a
 -----------
 
 It's **HIGHLY** encouraged to use a built-in JSON linter in your editor of choice.
-It will help you avoid critical errors that cause the game to crash from improper JSON formatting in real time.
+It will help you avoid critical errors that cause the game to crash from improper JSON formatting in real-time.
 If you truly don't wish to use one within your text editor, then you can use this `handy website <https://jsonformatter.curiousconcept.com/>`_ to check for JSON formatting issues.
