@@ -50,7 +50,7 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 
 ``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it's called is removed.
 
-``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Monsters/Creation>`.
+``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Manual/Monsters/Monsters>`.
 It can also be used as the equivalent of a blank string for functions done via ``|f|``
 
 
@@ -166,7 +166,7 @@ To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing
 **Skill Text Markup**
 ----------------------
 
-Intended for use in lines for :doc:`Skill Creation </Doc/Skills/Creation>`
+Intended for use in lines for :doc:`Skill Creation </Doc/Manual/Skills/Skills>`
 
 ``[AttackerName]`` or ``[TargetName]`` gets respective name of the attacker or target.
 

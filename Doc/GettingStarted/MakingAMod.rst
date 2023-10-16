@@ -141,7 +141,7 @@ To find it in your respective editor:
 
     .. tab:: Notepad++
         
-        1. Open new File Explorer window.
+        1. Open File Explorer.
         2. Navigate to ``game\Json\Events\_BlankEvent.json`` open in Notepad++, 
         3. Select all file contents, ``ctrl+c`` to copy.
         4. Go to your ``ShoppingEvent.json`` tab, ``ctrl+v`` to paste.
@@ -210,7 +210,7 @@ Now, give ``"CardLimit":`` the value of ``"0"``, as this key is unused for CardT
 
 ``"Description":`` can be left empty, as it also isn't used by CardTypes of Shopping.
 
-``"requires":`` and ``"requiresEvent":`` are capable of limiting a Players access to an Event depending on if they do or do not meet the conditions given.
+``"requires":`` and ``"requiresEvent":`` are capable of limiting Player access to an Event depending on if they do or do not meet the conditions given.
 These can also be skipped and left alone this time.
 
 ``"Speakers":`` is unique, as its structure contains other keys. 
@@ -262,7 +262,7 @@ Notice the two curly brackets ``{}`` that surround the two keys it contains.
 The structure between these curly brackets can be duplicated in order to make more scenes, 
 for as long as it stays within the square brackets ``[]`` of EventText.
 
-1. Place your curser to the right of the closing curly bracket ``}``.
+1. Place your cursor to the right of the closing curly bracket ``}``.
 2. Create a new line with the enter key.
 3. Copy and paste the contents of the above curly brackets on the new line, giving two scenes. (Or type ``Scene`` and press enter via the VS Code MGD Language extension.)
 

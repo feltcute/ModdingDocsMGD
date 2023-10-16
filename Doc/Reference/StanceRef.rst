@@ -22,7 +22,7 @@ The following three stances can be initiated by both players and most monsters:
 * ``"Making Out"``
 * ``"Penetration"``
 
-Penetration is an internal stance type that counts both Sex and Anal, for use in :doc:`Skills </Doc/Skills/Creation>` when checking for usability.
+Penetration is an internal stance type that counts both Sex and Anal, for use in :doc:`Skills </Doc/Manual/Skills/Skills>` when checking for usability.
 **It cannot be used for starting stances in functions, nor as a parameter for Loss/Victory scenes.**
 
 **Monster Stances**

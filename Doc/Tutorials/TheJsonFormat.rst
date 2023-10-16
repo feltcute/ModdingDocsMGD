@@ -9,7 +9,7 @@ Later pages in the documentation for example will presume you know the differenc
 
 This page will cover an exercise of the JSON file format, and get you generally familiar with your editor, and terminology of JSON.
 Make a new file with the file type ".json" at the end in your editor of choice.
-You will be creating a basic :doc:`Event </Doc/Events/Creation>`.
+You will be creating a basic :doc:`Event </Doc/Manual/Events/Events>`.
 
 .. seealso:: 
 
@@ -64,7 +64,7 @@ Start a new line after the name key while keeping it inside the object, and copy
     "CardLimit": "1",
     "Description": "A description",
 
-You can become familiar with what these keys do in :doc:`Event Creation </Doc/Events/Creation>` later.
+You can become familiar with what these keys do in :doc:`Event Creation </Doc/Manual/Events/Events>` later.
 
 Sometimes, keys are designed to expect specific string values, such as ``"CardType":``
 expecting a certain type of event card type, in this case, a plain ``"Event"`` card type.

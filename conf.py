@@ -2,12 +2,12 @@
 
 # -- Project information -----------------------------------------------------
 
-needs_sphinx = '4.4.0'
+needs_sphinx = '7.2.6'
 
 project = "Monster Girl Dreams"
 copyright = '2017-2023, Threshold'
 author = 'Threshold'
-release = 'v25.5'
+release = 'v25.6'
 
 # -- General configuration ---------------------------------------------------
 
@@ -38,7 +38,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     # logo_only ensures this shows only the logo, with no title text.
     'logo_only': True,
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'navigation_depth': 4,
 }
 
@@ -73,6 +73,7 @@ html_css_files = [
 ]
 
 html_js_files = [
+    "js/custom.js" # Increment the number at the end when the file changes to bust the cache.
 ]
 
 htmlhelp_basename = 'MonsterGirlDreamsDoc'
