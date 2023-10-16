@@ -146,15 +146,20 @@
         --navbar-current-background-color:  #6D0249;
         --navbar-current-background-color-hover: #DF407D;
         --navbar-current-background-color-active: #DF407D;
-            --navbar-category-active-color: rgba(255 115 129 / 10%);    
-            --navbar-current-color: #f1f9ff;
+    
+        --navbar-category-active-color: #370322;
+        --navbar-category-hover-color: #DF407D;
+        --navbar-category-text-hover-color: #f1f9ff;
+        --navbar-category-text-active-color: #DF407D;
+    
+        --navbar-current-color: #f1f9ff;
         --navbar-level-1-color: #FFFFFF;
         --navbar-level-2-color: #FFFFFF;
         --navbar-level-3-color: #FFFFFF;
-            --navbar-expand-base-color: #81a3c2;
-            --navbar-expand-hover-color: #c3e3ff;
-            --navbar-expand-active-color: #f1f9ff;
-            --navbar-dimmed-color: #a3c4e1;
+        --navbar-expand-base-color: #aaaaaa;
+        --navbar-expand-hover-color: #FFFFFF;
+        --navbar-expand-active-color: #FFFFFF;
+        --navbar-dimmed-color: #868686;
         --navbar-heading-color: #DF407D;
         --navbar-scrollbar-color: #F6BADC;
         --navbar-scrollbar-hover-color: #F6BADC;
@@ -166,7 +171,7 @@
         --link-color-active: #E470B2;
         --link-color-visited: #E470B2;
     
-            --tab-border-color: #868686;
+        /* --tab-border-color: #868686;  Unused? - fcmcl*/
         --hr-color: #404040;
         --table-row-odd-background-color: #0C0C0C;
         --code-background-color: #221D20;
@@ -175,10 +180,10 @@
         --input-background-color: #111111;
         --input-focus-border-color: #6D0249;
     
-            --tabs-background-color: #e1e4e5;
-            --tabs-selected-color: #a2a9ae;
-            --code-tabs-background-color: #e3ecd1;
-            --code-tabs-selected-color: #8a9378;
+        --tabs-background-color: #221D20;
+        --tabs-selected-color: #DF407D;
+        --code-tabs-background-color: #221D20;
+        --code-tabs-selected-color: #DF407D;
     
         --search-input-background-color: var(--content-background-color);
         --search-match-color: var(--link-color);
@@ -188,10 +193,10 @@
         --search-credits-color: #aaaaaa;
         --search-credits-link-color: var(--navbar-scrollbar-color);
     
-            --search-odd-color: rgb(133 160 253 / 24%);
-            --search-even-color: rgb(202 209 239 / 30%);
-            --search-highlighted-color: rgb(255 205 0 / 25%);
-            --search-context-color: #6c6e72;
+        --search-odd-color: #0C0C0C;
+        --search-even-color: #221D20;
+        --search-highlighted-color: #ff7085;
+        --search-context-color: #aaaaaa;
     
         /* Base colors taken from the Godot script editor with the Adaptive theme */
         --highlight-background-color: #221D20;
@@ -199,7 +204,7 @@
         --highlight-comment-color: #aaaaaa;
         --highlight-keyword-color: #ff7085;
         --highlight-keyword2-color: #42ffc2;
-            --highlight-control-flow-keyword-color: #902060;
+        --highlight-control-flow-keyword-color: #902060;
         --highlight-number-color: #a1ffe0;
         --highlight-decorator-color: #abc8ff;
         --highlight-type-color: #8effda;
@@ -218,8 +223,8 @@
         --copybtn-box-shadow: 0 0 transparent, 0 0 transparent;
         --copybtn-border-color-success: #42ffc2;
     
-            --contribute-background-color: #d7dee8;
-            --contribute-text-color: #646e72;
+        --contribute-background-color: #ffffff;
+        --contribute-text-color: #aaaaaa;
     
         --admonition-note-background-color: #370322;
         --admonition-note-color: #FFFFFF;
