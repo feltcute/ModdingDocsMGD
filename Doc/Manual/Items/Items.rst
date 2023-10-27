@@ -29,25 +29,25 @@ Sets the name of the item that will be displayed to the player in-game, and for 
 
 Decides the behavior and use cases of the item, greatly influencing how the following keys will behave.
 
-.. list-table::
-  :widths: 1 5
-
-  * - ``"Key",``
-    - You can apply perks through them, but not skills.
-  * - ``"Accessory",``
-    - You can apply both perks and skills through them.
-  * - ``"Rune",``
-    - You can apply both perks and skills through them.
-  * - ``"Consumable",``
-    - Can be used in and out of combat.
-  * - ``"CombatConsumable",``
-    - Can only be used in combat.
-  * - ``"NotCombatConsumable",``
-    - Can only be used outside of combat.
-  * - ``"DissonantConsumable",``
-    - Uses the chosen skill's **outcome** key value in combat, and the Item's **useOutcome** key value out of combat.
-  * - ``"Loot",``
-    - Cannot be used by the player. If you're looking to make it interactive, make it a **NotCombatConsumable** type and utilize the **useOutcome** key.
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+---------------------------------------+--------------------------+
+| Values                     | Description                                                                                                                                        | Perks Key Behavior                    | Skills Key Behavior                   | Stats Key Behavior       |
++============================+====================================================================================================================================================+=======================================+=======================================+==========================+
+| ``"Accessory",``           | A type of equipment. Only applied while worn.                                                                                                      | Gives perk while worn.                | Gives skill while worn.               | Alters stats while worn. |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+---------------------------------------+--------------------------+
+| ``"Rune",``                | A type of equipment. Only applied while worn.                                                                                                      | Gives perk while worn.                | Gives skill while worn.               | Alters stats while worn. |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+---------------------------------------+--------------------------+
+| ``"Consumable",``          | Can be used in and out of combat encounters.                                                                                                       | None, see `useOutcome`_ instead.                                              | Alters stats when used.  |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+                                                                               +                          +
+| ``"CombatConsumable",``    | Can only be used in combat encounters.                                                                                                             |                                                                               |                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+                                                                               +                          +
+| ``"NotCombatConsumable",`` | Can only be used outside of combat encounters.                                                                                                     |                                                                               |                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+                                                                               +                          +
+| ``"DissonantConsumable",`` | Uses the chosen skill's **outcome** key value in combat, and the Item's **useOutcome** key value out of combat.                                    |                                                                               |                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+---------------------------------------+--------------------------+
+| ``"Key",``                 | Called a **Key Item** in-game.                                                                                                                     | None                                                                                                     |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+                                                                                                          +
+| ``"Loot",``                | Cannot be used by the player. If you're looking to make it interactive, make it a **NotCombatConsumable** type and utilize the **useOutcome** key. |                                                                                                          |
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+---------------------------------------+--------------------------+
 
 **cost**
 ---------
@@ -186,14 +186,18 @@ Only applicable to equipment and loot item types. Alters the given stat for the 
 
 Only applicable to consumable item types.
 
-* ``"statusEffect":`` cleanses the given status effect. Can use ``"all"`` to cleanse all status effects, or ``"None"`` if you don't intend to use it.
-* ``"statusChance":`` represents a percent chance for it to successfully cleanse on use. A value of ``"0"`` or ``"100"`` will ensure it always cleanses.
-* ``"statusPotency":`` for relevant status effects will clear the given amount of potency. A value of ``"0"`` cleanses it entirely.
+====================== =========================================================================== ========================================================================================== 
+Key                    Description                                                                 Special Values                                                                            
+====================== =========================================================================== ========================================================================================== 
+``"statusEffect":``    Cleanses the given status effect.                                           ``"all"`` will cleanse all status effects. Use ``"None"`` if you don't intend to use it.  
+``"statusChance":``    The percent chance for it to successfully cleanse on use.                   ``"0"`` or ``"100"`` will ensure it always cleanses.                                      
+``"statusPotency":``   Subtracts by the given amount from status effect's potency if applicable.   ``"0"`` cleanses it entirely.                                                             
+====================== =========================================================================== ========================================================================================== 
 
 See :ref:`Status Effects`.
 
-**useOutcome & useMiss**
--------------------------
+**useOutcome**
+---------------
 
 .. code-block:: javascript
 
@@ -202,6 +206,9 @@ See :ref:`Status Effects`.
 Provides a line of dialogue when using a consumable. Can use text markup and in-text functions.
 Typically overridden by the listed Skill's outcome line, unless the ``"itemType":`` is ``"DissonantConsumable"``, or if it has no skill at all.
 
+
+**useMiss**
+------------
 
 .. code-block:: javascript
 

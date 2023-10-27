@@ -28,56 +28,62 @@ The name of the event is presented in the Grimoire and for internal referral.
 
   "CardType": "Event",
 
-Changes how the game calls and utilizes the event. The possible choices for the value depending on what you wish to accomplish are as follows...
+Changes how the game calls and utilizes the event. See `CardType Values`_ below for all possible values.
 
 **CardLimit**
-"""""""""""""
+""""""""""""""
 
-* ``"CardLimit": "0",`` sets the maximum limit of this event that can be added to an exploration. Can be left 0 if it's not selected from the exploration menu.
+* ``"CardLimit": "0",`` sets the maximum limit of ``"Event"`` CardTypes that can be added to the Grimoire by the player. Set to ``"0"`` if not used by the CardType, or for no limit to the amount of events.
 
-.. _GrimoireCreation:
+**CardType Values**
+""""""""""""""""""""
 
-**Grimoire**
-"""""""""""""
+=================== =========================================================================================================== ================================================== 
+Grimoire CardType   Description                                                                                                 Example                                           
+=================== =========================================================================================================== ================================================== 
+``"Event"``         Will appear in the Grimoire in the "Events:" section. The only value with interacts with ``"CardLimit":``.  *Events/Labyrinth/ExploreLaby/WanderingVenefica*  
+``"Quest"``         Will appear in the Grimoire in the "Quests:" section.                                                       *Events/Quests/*                                  
+=================== =========================================================================================================== ================================================== 
 
-* ``"Event"`` in order for the event to be properly drawn from the Grimoire in the ``Events:`` section.
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Town CardType  | Description                                                                                                                                                                                                        | Example         |
++================+====================================================================================================================================================================================================================+=================+
+| ``"Shopping"`` |                                                                                                                                                                                                                    |                 |
++----------------+                                                                                                                                                                                                                    |                 |
+| ``"Church"``   | Will appear as an option for the respective location in the town. Putting ``"EnterArea"`` in the ``"Description":`` key will make it trigger when the player enters that location.                                 |  *Events/Town/* |
++----------------+                                                                                                                                                                                                                    |                 |
+| ``"Guild"``    |                                                                                                                                                                                                                    |                 |
++----------------+                                                                                                                                                                                                                    |                 |
+| ``"Inn"``      |                                                                                                                                                                                                                    |                 |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
-* ``"Quest"`` in order for the event to be properly drawn from the Grimoire in the ``Quests:`` section.
++----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+| Brothel CardType     | Description                                                                                                                                                                                                         | Example                |
++======================+=====================================================================================================================================================================================================================+========================+
+| ``"BarShift"``       |                                                                                                                                                                                                                     |                        |
++----------------------+                                                                                                                                                                                                                     |                        |
+| ``"WaiterShift"``    | Will be called for the shift choice the player or Belle makes. Putting another shift type in the ``"Description":`` key will make it count for that shift too. Repeating the same shift type increases its chances. | *Events/Town/Brothel/* |
++----------------------+                                                                                                                                                                                                                     |                        |
+| ``"GloryHoleShift"`` |                                                                                                                                                                                                                     |                        |
+|                      |                                                                                                                                                                                                                     |                        |
++----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+                        |
+| ``"DayShift"``       | Used for shifts during the day. Can also be combined with the previous three shift types via ``"Description":``, or repeated for higher chances.                                                                    |                        |
++----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
 
-**Town**
-"""""""""
-
-* ``"Shopping"``, ``"Church"``, ``"Guild"``, and ``"Inn"`` will make the event appear as an option for the respective location in the town. Putting ``"EnterArea"`` in the ``"Description":`` key will make it trigger when the player enters that location. See *Events/Town* for examples.
-
-**Brothel**
-""""""""""""
-
-* ``"BarShift"``, ``"WaiterShift"``, and ``"GloryHoleShift"`` will be called for the shift choice the player or Belle makes. Putting another shift type in the ``"Description":`` key will make it count for that shift too. Repeating the same shift type increases its chances.
-
-* ``"DayShift"`` can be used for shifts during the day. Can also be combined with the previous three shift types via ``"Description":``, or repeated for higher chances.
-
-**Action/Event Triggered**
-"""""""""""""""""""""""""""
-
-* ``""`` is recommended for combat and loss/victory events, as they are meant to only be called by :ref:`Event Jumps` and thus are best left blank.
-
-* ``"EndOfDay"`` will trigger upon the start of a new day. Useful for tracking addictions. See *Events/TimePassing/EndOfDay.json* as an example.
-
-* ``"TimePassed"`` will trigger when any amount of time has passed. Useful for tracking player status effects. See *Events/TimePassing/TimePassed.json* as an example.
-
-* ``"StepTaken"`` will trigger when players transition between events or encounters during adventures. Also useful for triggering player status effects. See *Events/TimePassing/StepTaken.json* as an example.
-
-* ``"EndOfTurn"`` will trigger specifically at the end of turn, primarily for player functions as they trigger every turn regardless of who's fighting. See *Events/CombatEvents/PlayerEndOfTurn.json* as an example.
-
-* ``"EndOfCombat"`` will trigger at the end of combat. For specific player skills such as Pin, see *Events/CombatEvents/Player/PlayerEndOfCombat.json* as an example.
-
-* ``"StartOfTurn"`` will trigger specifically at the start of turn, primarily for player functions as they trigger every turn regardless of who's fighting. See *Events/CombatEvents/PlayerStartOfTurn.json* as a blank example.
-
-* ``"StartOfCombat"`` will trigger at the start of every combat, generally for player combat event use. See *Events/CombatEvents/Player/PlayerStartOfCombat.json* as a blank example, or the EndOfCombat example for similar usage.
-
-* ``"PlayerOrgasm"`` will trigger every time the player orgasms, including out of combat. See *Events/CombatEvents/OrgasmEvents.json* as an example.
-
-* ``"Dream"`` will be called when the player sleeps, via the :ref:`SleepPlayerFunc` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.
+===================== ============================================================================================================================================================================================== ========================================================
+Triggered CardType    Description                                                                                                                                                                                    Example                                                
+===================== ============================================================================================================================================================================================== ========================================================
+``""``                Not automatically triggered by anything. Typically used for combat events and dedicated loss/victory events. Can be accessed through :ref:`Event Jumps`.                                       *Events/CombatEvents/Mountain/CamillaCombatEvents.json*
+``"EndOfDay"``        Triggers upon the start of a new day. Useful for tracking addictions.                                                                                                                          *Events/TimePassing/EndOfDay.json*                     
+``"TimePassed"``      Triggers when any amount of time has passed. Useful for tracking player status effects.                                                                                                        *Events/TimePassing/TimePassed.json*                   
+``"StepTaken"``       Triggers when players transition between events or encounters during adventures. Also useful for triggering player status effects.                                                             *Events/TimePassing/StepTaken.json*                    
+``"EndOfTurn"``       Triggers specifically at the end of turn, primarily for player functions as it triggers every turn regardless of who's fighting.                                                               *Events/CombatEvents/PlayerEndOfTurn.json*             
+``"EndOfCombat"``     Triggers at the end of combat. For specific player skills such as Pin, see as an example.                                                                                                      *Events/CombatEvents/Player/PlayerEndOfCombat.json*    
+``"StartOfTurn"``     Triggers specifically at the start of turn, primarily for player functions as they Triggers every turn regardless of who's fighting.                                                           *Events/CombatEvents/PlayerStartOfTurn.json*           
+``"StartOfCombat"``   Triggers at the start of every combat, generally for player combat event use.                                                                                                                  *Events/CombatEvents/Player/PlayerStartOfCombat.json*  
+``"PlayerOrgasm"``    Triggers every time the player orgasms, including out of combat.                                                                                                                               *Events/CombatEvents/OrgasmEvents.json*                
+``"Dream"``           Called when the player sleeps, via the :ref:`SleepPlayerFunc` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.                     *Events/TimePassing/Dreams/*                           
+===================== ============================================================================================================================================================================================== ========================================================
 
 **Description**
 ----------------
@@ -86,7 +92,7 @@ Changes how the game calls and utilizes the event. The possible choices for the 
 
   "Description": "A description of the event",
 
-When used for `Grimoire`_ card types, it will present the string you provide on the right hand side of in the Grimoire when players are reviewing events and quests for selection.
+When used for a Grimoire `CardType`_, it will present the string you provide on the right hand side of in the Grimoire when players are reviewing events and quests for selection.
 
 When used for town card types, providing it with the string ``"EnterArea"`` will make it trigger when the player enters that location.
 
@@ -200,7 +206,7 @@ Your strings will be displayed to the user as narrative text, unless it's identi
 The first scene added will always display first for your average event jump from any of the ``"CardType":`` values.
 However, specific scenes in a event can be jumped to, either by a game feature or by a function.
 
-See :doc:`Functions </Doc/Reference/Functions>` for the vast range of functions that can be used in scenes.
+See :doc:`functions </Doc/Functions/index>` for the vast range of functions that can be used in scenes.
 
 **Optional Scenes**
 """"""""""""""""""""

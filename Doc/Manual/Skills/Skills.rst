@@ -354,7 +354,7 @@ Useful for combat events. Refer to Sofia's InciteDreams.json skill for reference
 ------------------
 
 The following keys are conditional triggers based on the outcome of the skill, similar to :ref:`lineTriggers`.
-This can use :doc:`Text Markup </Doc/Reference/Markup>`, and thus in extension, :doc:`Functions </Doc/Reference/Functions>` for starting combat events, using vfx/sfx, and so forth.
+This can use :doc:`text markup </Doc/Reference/Markup>`, and thus in extension, :doc:`functions </Doc/Functions/index>` for starting combat events, using vfx/sfx, and so forth.
 
 The following are required for ``"attack"`` or any healing based ``"skillType":`` skills.
 

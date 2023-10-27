@@ -4,7 +4,7 @@
 **QuestComplete**
 ------------------
 
-``"QuestComplete"`` makes an event no longer selectable via the Grimoire. Despite its name, it covers the entire :ref:`GrimoireCreation` section of :ref:`CardTypeCreation`, so both Quests, *and* Events in the Grimoire.
+``"QuestComplete"`` makes an event no longer selectable via the Grimoire. Despite its name, it covers both Quests and Events via the :ref:`CardTypeCreation` key, so it is capable of removing both Quests *and* Events in the Grimoire from the player's view.
 
 .. tip:: 
     

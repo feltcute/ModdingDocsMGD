@@ -32,7 +32,7 @@ To begin, start with the first page of the documentation by clicking 'Installing
 
 If you're having trouble with something, there are a couple of options.
 
-* Try the FAQ
+* Try looking through the :doc:`/Doc/Reference/FAQ`.
 * Ask yourself once more what you need to know in its most specific fundamental steps (e.g. "I need to learn how to add an item I made as a drop to an existing monster, so I should check through the manual section for Monsters."). and try navigating the sidebar down to the most relevant topics.
 * If all else fails, you're encouraged to try getting help on the `MGD Discord <https://discord.com/invite/monstergirldreams>`_. There are tons of knowledgeable, depraved, and friendly people there willing to help you, no matter how big or small your problem is. Head to the ``#modding-help`` forum channel towards the bottom of the channel list.
 
@@ -101,7 +101,4 @@ If you're having trouble with something, there are a couple of options.
     :caption: Function Reference
     :name: sec-FunctionReference
 
-    Doc/Functions/Asset/index
-    Doc/Functions/General/index
-    Doc/Functions/CombatOnly/index
-    Doc/Functions/EventOnly/index
+    Doc/Functions/index

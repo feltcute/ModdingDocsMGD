@@ -59,7 +59,7 @@ Perk is removed when the wielder orgasms. Set a value of 0, as ``"EffectPower":`
   "EffectPower": ["PerkName's effects have faded away!"],
 
 Displays the given text via its correlating ``"EffectPower":`` string when the perk ends via `TurnDuration`_ or `TimeDuration`_.
-This can use :doc:`Text Markup </Doc/Reference/Markup>`, and thus in extension, :doc:`Functions </Doc/Reference/Functions>`.
+This can use :doc:`text markup </Doc/Reference/Markup>`, and thus in extension, :doc:`functions </Doc/Functions/index>`.
 
 .. _NonPersistentEffectType:
 
