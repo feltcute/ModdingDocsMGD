@@ -3,7 +3,7 @@
 **Inventory**
 ==============
 
-.. _AllowInventory**:
+.. _AllowInventory:
 
 **AllowInventory**
 -------------------

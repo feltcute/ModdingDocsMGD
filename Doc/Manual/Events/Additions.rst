@@ -87,7 +87,7 @@ The exception to this behavior is when using ``"MenuAddition"``.
 """""""""""""""""""""
 
 There are standout instances where you wish to append to options in an existing scene, without causing incompatibility issues with other mods.
-The game supports special :doc:`functions </Doc/Reference/Functions>` for this purpose:
+The game supports special :doc:`functions </Doc/Functions/index>` for this purpose:
 
 - ``"MenuAddition"`` for appending to scenes (e.g. night life menu via Brothel) with :ref:`MenuFunc`. Meta functions are included.
 - ``"ShopAddition"`` for appending to scenes (e.g. Amber's item shop) with a :ref:`ShoppingMenu`.

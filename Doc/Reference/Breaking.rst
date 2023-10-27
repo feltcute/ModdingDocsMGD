@@ -19,16 +19,16 @@ There is a regex you can use in VS Code and Atom to find and replace all instanc
 
     .. tab:: VS Code
 
-            1. Go to *File* -> *Add Folder To Workspace...*
-            2. Go back to the ``game`` folder, click on ``Mods``, click on your mod folder, click Select Folder/Open.
-    
+        1. Go to *File* -> *Add Folder To Workspace...*
+        2. Go back to the ``game`` folder, click on ``Mods``, click on your mod folder, click Select Folder/Open.
+
         .. image:: /Doc/GettingStarted/img/vscodeprojectview.png
             :align: center
 
     .. tab:: Pulsar
 
-            1. Go to *File* -> *Add Project Folder*
-            2. Go back to the ``game`` folder, click on ``Json``, click on your mod folder, click Select Folder/Open.
+        1. Go to *File* -> *Add Project Folder*
+        2. Go back to the ``game`` folder, click on ``Json``, click on your mod folder, click Select Folder/Open.
 
         .. image:: /Doc/GettingStarted/img/atomprojectview.png
             :align: center

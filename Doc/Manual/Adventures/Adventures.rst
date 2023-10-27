@@ -80,34 +80,25 @@ An optional key for a default selection of music to loop through during adventur
     "RandomEvent"
   ],
 
-Specify the order of encounters and events the player will face upon starting the adventure, linearly from left to right.
-It can technically be left empty, but it's the entire purpose of an Adventure json, doing so will send players straight back to town upon selection of the adventure.
+Specify the order of encounters and events the player will face upon starting the adventure, linearly as given from start to finish.
+It can technically be left empty, but doing so will just send players straight back to town upon selection of the adventure, giving the adventure no purpose.
 
-Below are examples of strings that can be put into the array:
+Below are all the values you can provide within the array to trigger various interactions.
 
-.. list-table::
-  :widths: 1 5
-
-  * - ``"Event",``
-    - Jumps to an event given in the following string.
-  * - ``"Monster",``
-    - Introduces a monster encounter. Provide a string of the IDname of each included monster, close the list with ``"EndLoop"``.
-  * - ``"RandomEvent",``
-    - Puts a random event from the **RandomEvents** key below.
-  * - ``"RandomMonsters",``
-    - Puts a single random monster encounter from the **MonsterGroups** key below.
-  * - ``"RandomTreasure",``
-    - Puts a random treasure of random rarity from the **Treasure** key below.
-  * - ``"CommonTreasure",``
-    - Puts a common treasure from the **Common** key via **Treasure** below.
-  * - ``"UncommonTreasure",``
-    - Puts a uncommon treasure from the **Uncommon** key via **Treasure** below.
-  * - ``"RareTreasure",``
-    - Puts a rare treasure from the **Rare** key via **Treasure** below.
-  * - ``"BreakSpot",``
-    - Places a break spot where the player can move on, return to town, or rest.
-  * - ``"Unrepeatable"``
-    - Upon reaching this string in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**.
+========================= ============================================================================================================================================================================================================================= 
+Value                     Description                                                                                                                                                                                                                  
+========================= ============================================================================================================================================================================================================================= 
+``"Event",``              Jumps to an event given in the following string.                                                                                                                                                                             
+``"Monster",``            Starts a monster encounter. Provide a string of the IDname of each included monster, close the list with ``"EndLoop"``.                                                                                                      
+``"RandomEvent",``        Random event from the **RandomEvents** key below.                                                                                                                                                                            
+``"RandomMonsters",``     Random encounter from the `RandomMonsters & MonsterGroups`_ keys below.                                                                                                                                                      
+``"RandomTreasure",``     Random treasure of random rarity from the `Treasure & Eros`_ keys below.                                                                                                                                                     
+``"CommonTreasure",``     Random common treasure from the `Treasure & Eros`_ ``"Common":`` keys below.                                                                                                                                                 
+``"UncommonTreasure",``   Random uncommon treasure from the `Treasure & Eros`_ ``"Uncommon":`` keys below.                                                                                                                                             
+``"RareTreasure",``       Random rare treasure treasure from the `Treasure & Eros`_ ``"Rare":`` keys below.                                                                                                                                            
+``"BreakSpot",``          Break spot. The player can choose to move on, rest, or return to town.                                                                                                                                                       
+``"Unrepeatable"``        Upon reaching this string in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**.  
+========================= ============================================================================================================================================================================================================================= 
 
 Remember to make sure the last string you provide doesn't have a trailing comma.
 

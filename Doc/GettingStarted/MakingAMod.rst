@@ -24,16 +24,16 @@ See the instructions on where to locate the Mods folder inside your given text e
 
         **On Windows/Linux:**
 
-            1. Go to File -> Add Folder To Workspace...
-            2. Navigate to the base Monster Girl Dreams folder where you launch the game executable
-            3. Click on ``Mods``, click Select Folder.
+        1. Go to File -> Add Folder To Workspace...
+        2. Navigate to the base Monster Girl Dreams folder where you launch the game executable
+        3. Click on ``Mods``, click Select Folder.
 
         **On macOS:**
 
-            1. Go to File -> Add Folder To Workspace...
-            2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
-            3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
-    
+        1. Go to File -> Add Folder To Workspace...
+        2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
+        3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
+
         .. image:: img/vscode.png
             :align: center
 
@@ -41,15 +41,15 @@ See the instructions on where to locate the Mods folder inside your given text e
 
         **On Windows/Linux:**
 
-            1. Go to File -> Add Project Folder
-            2. Navigate to the base Monster Girl Dreams folder where you launch the game executable,
-            3. Click on ``Mods``, click Select Folder.
+        1. Go to File -> Add Project Folder
+        2. Navigate to the base Monster Girl Dreams folder where you launch the game executable,
+        3. Click on ``Mods``, click Select Folder.
 
         **On macOS:**
 
-            1. Go to File -> Add Project Folder
-            2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
-            3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
+        1. Go to File -> Add Project Folder
+        2. Go to Applications, right-click the MonGirlDreams application, and select "Show Package Contents". 
+        3. Navigate to ``Contents/Resources/autorun/``, click the ``Mods`` folder, click Open.
 
         .. image:: img/atom.png
             :align: center
@@ -90,11 +90,7 @@ The game will look inside your mod and check for specific folders titled any of 
 * **Perks**
 * **Skills**
 
-Each of these folders contains a specific type of JSON file that the game will load into its respective databases on startup. 
-
-.. seealso::
-    
-    Optionally see :ref:`JSON Folders Overview` for more information on each type.
+Each of these folders contains a specific type of JSON file that the game will load into its respective databases on startup.
 
 Since you will be adding an Event to the Shopping center, right-click the folder of your mod and create a folder titled ``Events``. You do not need to add the other types of JSON folders listed above, since you are not using them.
 
@@ -412,7 +408,7 @@ Provide the string value ``"You continue shopping."``
 
 .. seealso:: 
 
-    For learning of other functions, see the :ref:`Functions` reference. 
+    For learning of other functions, see the :doc:`functions reference</Doc/Functions/index>`.
     To see them in use, be sure to check the examples on their pages, other mods, or the base games Events folder itself.
 
 **Jumping Scenes**
