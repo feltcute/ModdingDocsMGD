@@ -82,3 +82,20 @@ The scene jump function must be given directly after ``"CallNextSceneJumpThenRet
   "IfFetishLevelEqualOrGreater", "Legs", "25", "SceneName"
 
 **This is NOT to be used with event jumps.**
+
+**Bonus - FishingMiniGame**
+----------------
+Starts a basic fishing mini game, fail and pass each jump to a different event and there's a few setting you can alter.
+AppearTimerRange - the random time range before the fish appears. 100 = 1 second.
+FailTimerRange - The time before the player fails the minigame.
+ReelsNeeded - How many times the player needs to hit the fish before the mini game ends.
+
+.. code-block:: javascript
+
+  "FishingMiniGame",
+    "AppearTimerRange", "50", "150",
+    "FailTimerRange", "80", "80",
+    "ReelsNeeded", "4",
+    "FishingPassJump", "JumpToPassScene",
+    "FishingFailJump", "JumpToFailScene",
+  "EndLoop"
