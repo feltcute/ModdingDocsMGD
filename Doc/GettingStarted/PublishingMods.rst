@@ -43,17 +43,18 @@ See the instructions on how to make a ``.zip`` file for your given platform:
 Feel free to use other resources beyond the ones mentioned here, but keep in mind not all may be willing to host NSFW games. 
 Other file hosts will often have information on their content policies at the bottom of their web pages.
 
-The following links are convenient for hosting individual versions of your mod but mean they are prone to becoming dated.
+Most importantly, the below are guaranteed to provide download links that work with the in-game mod installer, and a release pages that list the latest versions of your mod.
+
+* `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
+* `Gitlab <https://gitlab.com/explore/projects>`_ is a larger platform than Gitgud with the same interface, but has the open risk of less permissive `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
+* `Github <https://github.com/>`_ is the largest platform. While historically fairly permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_. **It also requires 2-factor authentication to use.**
+
+You can follow this :doc:`step-by-step tutorial </Doc/Tutorials/FileHostingYourMod>` for any of these three platforms to begin.
+
+There are also these two hosts you can use to host your mod, **however, they don't support downloading via links using the in-game mod installer.**
 
 * `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
-* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB. The download link it generates does not require users to open or login to Discord.
-
-Alternatively, these websites can provide links that list the latest version of your mod regardless of where a user found it.
-While these are intended for utilizing git for version control, you can ignore this feature and create a blank repository and upload zips straight to your 'releases' page instead.
-
-* `Github <https://github.com/>`_ is the largest platform. While historically permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_. It also requires 2-factor authentication to use.
-* `Gitlab <https://gitlab.com/explore/projects>`_ is known to be a more lenient platform than Github, but has generally the same `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
-* `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
+* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB. The download link it generates does not require users to open or login to Discord. **Discord is on track to make these links temporary, making it impractical to host links to your mod outside of Discord.**
 
 **Where To Share**
 -------------------
@@ -67,8 +68,7 @@ Modders can also look for MGD forum threads on the internet to share their mod.
 **MGD Discord**
 """"""""""""""""
 
-The MGD Discord can double as hosting *and* as a place to share mods. 
-It's historically proven to make for a majority of mod downloads during the first week or two of a mods launch.
+The MGD Discord has historically made for a majority of mod downloads during the first week or two of a mods launch.
 The related modding channels on the server can also make for great help, discussion, and feedback for modders. 
 If you want instantaneous exposure and player feedback for your creation, there is nowhere better to share your mod. 
 
