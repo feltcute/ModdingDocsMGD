@@ -52,9 +52,9 @@
     --input-background-color: #111111;
     --input-focus-border-color: #6D0249;
 
-    --tabs-background-color: #221D20;
+    --tabs-background-color: #24141F;
     --tabs-selected-color: #DF407D;
-    --code-tabs-background-color: #221D20;
+    --code-tabs-background-color: #24141F;
     --code-tabs-selected-color: #DF407D;
 
     --search-input-background-color: var(--content-background-color);

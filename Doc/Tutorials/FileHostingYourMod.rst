@@ -22,7 +22,7 @@ Then use the respective tab for your chosen platform to create a new repository 
         .. image:: img/GitgudCreation.png
             :align: center
 
-        3. 
+        3. Press ``Create Project``
 
     .. tab:: Gitlab
 
@@ -33,6 +33,8 @@ Then use the respective tab for your chosen platform to create a new repository 
         .. image:: img/GitlabCreation.png
             :align: center
 
+        3. Press ``Create Project``
+
     .. tab:: Github
 
         1. `Create a project. <https://github.com/new>`_
@@ -41,6 +43,8 @@ Then use the respective tab for your chosen platform to create a new repository 
         
         .. image:: img/GithubCreation.png
             :align: center
+
+        3. Press ``Create Rrepository``
 
 After creating your repo, create a release:
 
