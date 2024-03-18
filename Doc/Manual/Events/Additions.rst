@@ -91,7 +91,7 @@ The game supports special :doc:`functions </Doc/Functions/index>` for this purpo
 
 - ``"MenuAddition"`` for appending to scenes (e.g. night life menu via Brothel) with :ref:`MenuFunc`. Meta functions are included.
 - ``"ShopAddition"`` for appending to scenes (e.g. Amber's item shop) with a :ref:`ShoppingMenu`.
-- ``"SkillShopAdddition"`` for appending to scenes (e.g. Elena's skill shop) with a :ref:`SkillShoppingMenu`
+- ``"SkillShopAddition"`` for appending to scenes (e.g. Elena's skill shop) with a :ref:`SkillShoppingMenu`
 
 You can make use of them through a duplicate scene in the event addition with the same ``"NameOfScene":`` value.
 Then, start with one of the three above variants depending on the function you're adding to, only one per scene.

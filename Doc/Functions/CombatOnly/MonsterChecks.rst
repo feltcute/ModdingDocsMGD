@@ -51,8 +51,8 @@ See :ref:`Status Effect`.
 
 .. code-block:: javascript
 
-  "IfMonsterHasStatusEffect", "RequireAll", "Restraint", "Charm", "SceneNameHere",
-  "IfMonsterHasStatusEffect", "Restraint", "Charm", "AnotherSceneNameHere"
+  "IfMonsterHasStatusEffect", "RequireAll", "Restrain", "Charm", "SceneNameHere",
+  "IfMonsterHasStatusEffect", "Restrain", "Charm", "AnotherSceneNameHere"
 
 ----
 
@@ -64,8 +64,8 @@ Keep in mind ``"RequireAll"`` comes after specifying the monster.
 
 .. code-block:: javascript
 
-  "IfOtherMonsterHasStatusEffect", "Himika", "RequireAll", "Charm", "Restraint", "SceneNameHere"
-  "IfOtherMonsterHasStatusEffect", "Himika", "Restraint", "AnotherSceneNameHere"
+  "IfOtherMonsterHasStatusEffect", "Himika", "RequireAll", "Charm", "Restrain", "SceneNameHere"
+  "IfOtherMonsterHasStatusEffect", "Himika", "Restrain", "AnotherSceneNameHere"
 
 ----
 
@@ -120,7 +120,7 @@ Checks if any monsters in a fight have orgasmed, and proceeds as if hit in comba
 
 .. code-block:: javascript
 
-  "CallMonsterEncounterOrgasmCheck" 
+  "CallMonsterEncounterOrgasmCheck"
 
 ----
 
