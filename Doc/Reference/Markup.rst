@@ -201,7 +201,7 @@ If you want to use both, remember ``[SexAdjective]`` words have a space at the e
 
   "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWord]!"
 
-**TTechnical Markup**
+**Technical Markup**
 ----------------------
 
 
