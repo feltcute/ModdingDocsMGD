@@ -83,6 +83,8 @@ The scene jump function must be given directly after ``"CallNextSceneJumpThenRet
 
 **This is NOT to be used with event jumps.**
 
+.. _Fishing:
+
 **Bonus - FishingMiniGame**
 ----------------------------
 Starts a basic fishing mini game, fail and pass each jump to a different event and there's a few setting you can alter.
