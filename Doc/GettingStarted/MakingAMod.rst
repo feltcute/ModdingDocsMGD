@@ -160,7 +160,7 @@ First, start with the top of the file:
 
     "name": "",
 
-Every JSON file structures has two sides, the **key** (``"name":``), and the **value** (``""``).
+Every JSON file's structure has two sides, the **key** (``"name":``), and the **value** (``""``).
 
 You will only have to modify the **value** side of these structures while modding. The **keys** side never needs their text modified.
 

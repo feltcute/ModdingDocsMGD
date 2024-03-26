@@ -27,7 +27,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv', "__pycache__"]
 source_suffix = '.rst'
 source_encoding = 'utf-8-sig'
 master_doc = 'Homepage'
@@ -54,12 +54,13 @@ notfound_urls_prefix = ''
 
 hoverxref_role_types = {
     'hoverxref': 'tooltip',
+    'term': 'tooltip',
 }
 hoverxref_roles = [
     'hover',
     'term',
 ]
-
+hoverxref_tooltip_maxwidth = 400
 hoverxref_sphinxtabs = True
 
 html_logo = 'img/banner.png'

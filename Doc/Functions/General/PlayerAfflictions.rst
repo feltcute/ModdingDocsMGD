@@ -20,7 +20,7 @@ This is mostly for cinematic purposes.
 **SetArousalToXUnlessHigherThanXThenAddY**
 -------------------------------------------
 
-Same as the above, but if the current arousal is higher than the specified value, it will add the second given value instead.
+Same as the above, but if the current arousal is higher than the specified value, it will add the second given :term:`value` instead.
 Also mostly for cinematic purposes.
 
 .. code-block:: javascript
@@ -52,7 +52,7 @@ Will flatly alter the player's current arousal with the specified number. Can be
 **ChangeEnergy & ChangeEnergyQuietly**
 ---------------------------------------
 
-Same as the above, but for the players current energy. Note negative values subtract.
+Same as the above, but for the players current energy. Note negative :term:`values` subtract.
 
 .. code-block:: javascript
 
@@ -118,7 +118,7 @@ It will be rounded to the maximum or 0 if the given number exceeds or is below r
 
 Deal randomized damage to the player via a skill and monster, the monster chosen is used as a stat reference.
 The skill chosen will not apply status effects. Displaying dialogue has to be done manually, it will not take dialogue from the skill.
-If you want to display the damage number from the skill, use [DamageToPlayer] in the following string after completing the function.
+If you want to display the damage number from the skill, use [DamageToPlayer] in the following :term:`string` after completing the function.
 
 .. code-block:: javascript
 
@@ -133,7 +133,7 @@ If you want to display the damage number from the skill, use [DamageToPlayer] in
 
 Deal randomized damage to the focused monster via a skill and called monster, the monster chosen is used as a stat reference and doesn't need to be in the active combat encounter.
 The skill chosen will not apply status effects. Displaying dialogue has to be done manually, it will not take dialogue from the skill.
-If you want to display the damage number from the skill, use `[DamageToEnemy]` in the following string after completing the function.
+If you want to display the damage number from the skill, use `[DamageToEnemy]` in the following :term:`string` after completing the function.
 
 .. code-block:: javascript
 

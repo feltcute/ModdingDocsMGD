@@ -1,7 +1,7 @@
 **Meta Creation**
 ==================
 
-Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by the Meta file,
+Breaks down the :doc:`keys and strings` </Doc/Tutorials/TheJsonFormat>` used by the Meta file,
 and gives extensive tips on what values to provide.
 
 .. image:: /img/meta.png
@@ -58,7 +58,7 @@ The last version of the game the mod has been tested against.
 MGD internally uses `semantic versioning <https://semver.org/>`_ to keep track of breaking game versions,
 following the *Major.Minor.Patch* model.
 
-**Unlike most keys for modding, this only takes an integer.**
+**Unlike most :term:`keys` for modding, this only takes an integer.**
 This means you do not enclose it in "quotation marks", you only use numbers.
 
 .. code-block:: javascript
@@ -87,7 +87,7 @@ Consider the game release `Alpha-v25.6a` to the above.
 
 The version of your mod is meant to be increased between your mod updates.
 
-**Unlike most keys for modding, this only takes a float or integer.**
+**Unlike most :term:`keys` for modding, this only takes a float or integer.**
 This means you do not enclose it in "quotation marks",
 and you only use numbers and optionally decimal values.
 
@@ -108,7 +108,7 @@ for as long as it only uses numerical values.
 Like MGD, mods are to use `semantic versioning <https://semver.org/>`_.
 following the *Major.Minor.Patch* model.
 
-**Unlike most keys for modding, this only takes an integer.**
+**Unlike most :term:`keys` for modding, this only takes an integer.**
 This means you do not enclose it in "quotation marks", you only use numbers.
 
 .. code-block:: javascript
@@ -131,7 +131,7 @@ This means you do not enclose it in "quotation marks", you only use numbers.
 ---------
 
 Few word descriptors that best describe the content of your mod,
-displayed in a horizontal row via an array of given values.
+displayed in a horizontal row via an :term:`array` of given values.
 
 .. code-block:: javascript
 
@@ -183,7 +183,7 @@ Listing credit to any online assets you used is recommended, you can hyperlink y
 
 Especially should be used to promote any artists and musicians you commissioned.
 
-It can optionally be a string instead of an array, where you can use ``\n`` to provide linebreaks instead.
+It can optionally be a :term:`string` instead of an array, where you can use ``\n`` to provide linebreaks instead.
 This will also give your text a left alignment rather than a center alignment.
 
 See the Example Mod for further reference on how you should format your credit.

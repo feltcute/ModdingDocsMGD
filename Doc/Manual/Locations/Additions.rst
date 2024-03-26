@@ -4,11 +4,11 @@ Making a Location addition is non-destructive and thus will be compatible with a
 
 Check **_ForestAdditionExample.json** in *Json/Locations/* for an example.
 
-The overview will proceed to go over each key you would find in a regular Location .json, how their role changes, and if they're required in a addition.
+The overview will proceed to go over each :term:`key` you would find in a regular Location .json, how their role changes, and if they're required in a addition.
 
 .. note:: 
   
-  All other keys outside of the ones listed aren't used, and thus should not be included for tidiness.
+  All other :term:`keys` outside of the ones listed aren't used, and thus should not be included for tidiness.
 
 **name & exploreTitle**
 ------------------------
@@ -42,10 +42,10 @@ Required so the game knows you wish to make an addition. Can be added into almos
     }
   ],
 
-Using these keys in an addition adds to the existing arrays, so the strings provided in the original keys will still be present, and will not be overridden.
+Using these :term:`keys` in an addition adds to the existing arrays, so the :term:`strings` provided in the original :term:`keys` will still be present, and will not be overridden.
 As such, you are only increasing the selection of monster and monster groups, not replacing.
 
-These keys are required, but the arrays can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
+These :term:`keys` are required, but the :term:`arrays` can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
 
 **Events**
 -----------
@@ -53,7 +53,7 @@ These keys are required, but the arrays can be left empty if you do not wish to 
 
     "Events": ["NewEvent"],
 
-Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
+Appends to the existing array. Leave a blank :term:`string` in the :term:`array` if you don't intend to use it.
 
 Duplicates are checked for and ignored, avoiding mod conflicts.
 
@@ -64,7 +64,7 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
 
     "Quests": ["NewQuest"],
 
-Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
+Appends to the existing array. Leave a blank :term:`string` in the :term:`array` if you don't intend to use it.
 
 Duplicates are checked for and ignored, avoiding mod conflicts.
 
@@ -75,7 +75,7 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
 
     "Adventures": ["NewAdventure"],
 
-Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
+Appends to the existing array. Leave a blank :term:`string` in the :term:`array` if you don't intend to use it.
 
 Duplicates are checked for and ignored, avoiding mod conflicts.
 
@@ -98,7 +98,7 @@ Duplicates are checked for and ignored, avoiding mod conflicts.
     }
   ],
 
-Using this key in a addition adds to the existing array, so the strings provided in the original key will still be present, and will not be overridden.
+Using this :term:`key` in a addition adds to the existing array, so the :term:`strings` provided in the original :term:`key` will still be present, and will not be overridden.
 As such, you are only increasing the selection of loot, not replacing.
 
-``"Treasure":`` and its objects are required, but the arrays can be left empty if you do not wish to use it.
+``"Treasure":`` and its :term:`objects` are required, but the :term:`arrays` can be left empty if you do not wish to use it.

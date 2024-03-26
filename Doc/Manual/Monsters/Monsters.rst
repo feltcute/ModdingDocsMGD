@@ -1,11 +1,11 @@
 **Monster Creation**
 =====================
 
-Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
+Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Monsters. Despite its name, this does encompass all characters, including town NPCs.
 
 Go to */Json/Monsters/*, and then see the .json files present for examples, and **_BlankMonster.json** for a template.
 
-**Assume all keys are required, unless stated otherwise.**
+**Assume all :term:`keys` are required, unless stated otherwise.**
 
 **name & IDname**
 ------------------
@@ -20,7 +20,7 @@ Sets the name of the monster that will be displayed to the player in-game.
 
   "IDname": "monster IDname",
 
-The internal name of the monster for use in json files. You will be working with this whenever a function or key asks for which monster you wish to refer to.
+The internal name of the monster for use in json files. You will be working with this whenever a function or :term:`key` asks for which monster you wish to refer to.
 
 **species**
 ------------
@@ -53,7 +53,7 @@ The description of a monster. This is given to the player in a card if the monst
 
 See :ref:`DialogueTextMarkup` for more information on the markup example in the above.
 
-The string can technically be left blank if you intend to use art from the get-go, but it's still recommended.
+The :term:`string` can technically be left blank if you intend to use art from the get-go, but it's still recommended.
 
 .. code-block:: javascript
 
@@ -61,7 +61,7 @@ The string can technically be left blank if you intend to use art from the get-g
 
 Lore related information given about monsters on the right hand side of the Grimoire during exploration. Doesn't necessarily need to be a generic enemy.
 
-The string can be left blank if you don't intend for the Monster to be available by themselves via the monster selection in the Grimoire.
+The :term:`string` can be left blank if you don't intend for the Monster to be available by themselves via the monster selection in the Grimoire.
 
 **tags**
 ---------
@@ -70,7 +70,7 @@ The string can be left blank if you don't intend for the Monster to be available
 
   "tags": "none",
 
-Like ``"species":``, it currently has no functionality, but is best included in case of future use. All monsters are currently given a value of ``"none"``.
+Like ``"species":``, it currently has no functionality, but is best included in case of future use. All monsters are currently given a :term:`value` of ``"none"``.
 
 **generic**
 ------------
@@ -82,7 +82,7 @@ Like ``"species":``, it currently has no functionality, but is best included in 
 Decides whether system related combat dialogue should refer to the monster as a generic character, e.g. slimes, elves, etc. or as a unique character, e.g.
 Trisha, Perpetua, etc.
 
-If they are generic, provide a value of ``"True"``. If they are unique, a value of ``"False"``.
+If they are generic, provide a :term:`value` of ``"True"``. If they are unique, a :term:`value` of ``"False"``.
 
 **requires & requiresEvent**
 -----------------------------
@@ -91,8 +91,8 @@ If they are generic, provide a value of ``"True"``. If they are unique, a value 
 
   "requires": ["Vandal Note"],
 
-Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the monster, primarily for the Grimoire. Typically a Key Item.
-The key must be included, but the array can be left empty. You can leave either a blank string or none at all.
+Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the monster, primarily for the Grimoire. Typically a :term:`key` Item.
+The :term:`key` must be included, but the :term:`array` can be left empty. You can leave either a blank :term:`string` or none at all.
 
 .. code-block:: javascript
 
@@ -105,14 +105,14 @@ The key must be included, but the array can be left empty. You can leave either 
     }
   ],
 
-A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+A more complex and optional :term:`key` that contains :term:`objects` that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate :term:`objects` for as long as it contains all four of the given keys.
 
-You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
+You need to provide a :term:`value` for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default :term:`values` above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
 
-If in use, you cannot exclude unused keys in the object, they must all be present.
+If in use, you cannot exclude unused :term:`keys` in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
 
 **skillList**
@@ -122,12 +122,12 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
   "skillList": ["Caress", "Kiss", "Kiss"],
 
-The list of :doc:`Skills </Doc/Manual/Skills/Skills>` the monster can use while in combat, based on the exact value provided to a Skill's ``"name":`` key.
+The list of :doc:`Skills </Doc/Manual/Skills/Skills>` the monster can use while in combat, based on the exact :term:`value` provided to a Skill's ``"name":`` key.
 Repeating a skill will increase the chances the monster shall randomly call it.
 
 See */Json/Skills/* for skills found in the base game that the monster can use. This does include player skills.
 
-Provide a blank string if you don't wish to use the key.
+Provide a blank :term:`string` if you don't wish to use the key.
 
 **perks**
 ----------
@@ -136,12 +136,12 @@ Provide a blank string if you don't wish to use the key.
 
   "perks": ["Semen Eater", "Semen Eater", "Monster Pacing"],
 
-The list of :doc:`Perks </Doc/Manual/Perks/Perks>` the monster can use while in combat, based on the exact value provided to a Perk's ``"name":`` key.
+The list of :doc:`Perks </Doc/Manual/Perks/Perks>` the monster can use while in combat, based on the exact :term:`value` provided to a Perk's ``"name":`` key.
 Repeating a Perk will apply it twice.
 
 See */Json/Perks/* for perks found in the base game. Of note is the folder */EnemyOnlyPerks/*.
 
-Provide a blank string if you don't wish to use the key.
+Provide a blank :term:`string` if you don't wish to use the key.
 
 **stats**
 ----------
@@ -161,7 +161,7 @@ Provide a blank string if you don't wish to use the key.
     "Luck": "3"
   },
 
-The stats of the monster in combat. While otherwise straightforward, there are three keys in particular to be aware of:
+The stats of the monster in combat. While otherwise straightforward, there are three :term:`keys` in particular to be aware of:
 
 * ``"max_ep":`` only pertains towards how quickly the monster can fall asleep. They will recover it in its entirety on orgasm. Threshold likes to use 30-50 for normal enemies, 100 for most bosses.
 * ``"lvl":`` does effect exp gain modifiers relative to the player's level, so be sure to scale it appropriately to be a rough match for the location and general stats of the monster. Do remember you still have total creative freedom though.
@@ -177,9 +177,9 @@ The stats of the monster in combat. While otherwise straightforward, there are t
 The list of fetishes a monster may have. See */Json/Fetishes/* for all base game fetishes. This does include addictions.
 
 To apply the level of the fetish, use \|/\| as a separator between the fetish and the level within the same string,
-and then provide a positive numerical value on the other side.
+and then provide a positive numerical :term:`value` on the other side.
 
-Provide a blank string if you don't wish to use the key.
+Provide a blank :term:`string` if you don't wish to use the key.
 
 **BodySensitivity**
 --------------------
@@ -216,7 +216,7 @@ The sensitivities of the monster. Going above 100 makes them more sensitive, goi
       "Debuff": "0"
   },
 
-The status effect resistances of the monster. A positive value increases their resistance, a negative value will decrease.
+The status effect resistances of the monster. A positive :term:`value` increases their resistance, a negative :term:`value` will decrease.
 
 **moneyDropped & itemDropList**
 -------------------------------
@@ -242,7 +242,7 @@ The amount of eros the monster provides.
   ],
 
 Specify the name of the :doc:`Item </Doc/Manual/Items/Items>` in ``"name":``, and provide the percent chance the item drops in ``"dropChance":``.
-Make a new object for every additional item the monster can drop. Repeating items will increase the potential quantity of times they drop the item.
+Make a new :term:`object` for every additional item the monster can drop. Repeating items will increase the potential quantity of times they drop the item.
 
 .. _lossScenes and victoryScenes:
 
@@ -279,7 +279,7 @@ Make a new object for every additional item the monster can drop. Repeating item
     }
   ],
 
-Each object represents a scene that will play on loss. Each must be individually identified via the ``"NameOfScene":`` key.
+Each :term:`object` represents a scene that will play on loss. Each must be individually identified via the ``"NameOfScene":`` key.
 
 **Requirements**
 """""""""""""""""
@@ -329,7 +329,7 @@ Functions exactly the same as ``"lossScenes":``, but for when the player wins.
     "lineTrigger": "HitWith",
     "move": "Thrust",
     "theText":[
-      "The chosen string displayed is random.",
+      "The chosen :term:`string` displayed is random.",
       "You can have as many as you want, and repeat as many as you want for increased odds.",
       "You can have as many as you want, and repeat as many as you want for increased odds.",
       "'Put something in single quotes if you want it to be seen as something the character is saying.'"
@@ -339,30 +339,30 @@ Functions exactly the same as ``"lossScenes":``, but for when the player wins.
     "lineTrigger": "UsesMove",
     "move": "Tighten",
     "theText": [
-      "You don't need to use multiple strings if you're looking for a singular result.",
+      "You don't need to use multiple :term:`strings` if you're looking for a singular result.",
       ]
     }
   ],
 
-``"combatDialogue":`` contains triggers in the form of objects that are checked for during combat to bring a result if it's matched.
+``"combatDialogue":`` contains triggers in the form of :term:`objects` that are checked for during combat to bring a result if it's matched.
 It extends well beyond just dialogue responses and reactions during combat.
 
 ``"lineTrigger":`` decides what the trigger is checking for. **For a list of all possible triggers and how they work**, see :ref:`lineTriggers`.
 
 ``"move":`` a conditional parameter, most commonly used to represent a skill that was used.
-**Can be an array to compact responses into one object, as it's an** *or* **parameter, not an** *and***.**
+**Can be an :term:`array` to compact responses into one object, as it's an** *or* **parameter, not an** *and***.**
 Compacting where possible is recommended as it does help reduce game load times.
 
-``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat strings to make some more common than others.
+``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat :term:`strings` to make some more common than others.
 
-Note all matching ``"lineTrigger":`` and ``"move":`` values will ultimately go into the same pool the game randomly pulls from, as the game takes every
-trigger in combatDialogue and translates the values from ``"theText:"`` into the same pool.
+Note all matching ``"lineTrigger":`` and ``"move":`` :term:`values` will ultimately go into the same pool the game randomly pulls from, as the game takes every
+trigger in combatDialogue and translates the :term:`values` from ``"theText:"`` into the same pool.
 
 **pictures**
 -------------
 
-You can give a blank array if you intend to use a text-based card based on the
-given value to ``"description":`` for temporary or permanent use:
+You can give a blank :term:`array` if you intend to use a text-based card based on the
+given :term:`value` to ``"description":`` for temporary or permanent use:
 
 .. code-block:: javascript
 
@@ -438,11 +438,11 @@ Otherwise, this section will go over the following example:
           "setYalign": "0.0"
       }]}]
 
-The ``"pictures":`` key contains an array of objects, each representing a functional layer of images for the character.
+The ``"pictures":`` :term:`key` contains an :term:`array` of objects, each representing a functional layer of images for the character.
 
 The Bubble Slime above is chosen as an example of a standard setup, featuring a body (e.g. Clothed or Nude), face (e.g. Blush or no-blush), and expression (e.g. Happy, Pouting) setup.
 
-There are many keys to unpack so each object will be gone over in separate parts,
+There are many :term:`keys` to unpack so each :term:`object` will be gone over in separate parts,
 starting with the base object, representing a single image layer.
 Here is an overview:
 
@@ -463,7 +463,7 @@ Here is an overview:
       ]
     }
 
-The following keys are required:
+The following :term:`keys` are required:
 
 .. list-table::
   :widths: 1 5
@@ -491,15 +491,15 @@ The following predetermined key-value combinations are optional, there should on
   :widths: 1 5
 
   * - ``"Player": "Yes"``
-    - If the image layer is for representing the player, use this key-value combination. This will recolor the layer based on the player's appearance settings. Excluding the key causes it to be considered off.
+    - If the image layer is for representing the player, use this key-value combination. This will recolor the layer based on the player's appearance settings. Excluding the :term:`key` causes it to be considered off.
   * - ``"Player": "Silhouette"``
     - When representing the player in an image layer, you need to make another variant of it for use with this key-value combination. If the player set their appearance to silhouette, this image layer will be automatically used by the game.
 
 
-The ``"Images":`` key in these layer objects feature an array where the image and all its variants are declared,
+The ``"Images":`` :term:`key` in these layer :term:`objects` feature an :term:`array` where the image and all its variants are declared,
 each image variant being contained in its object.
 They are handled using functions found in the :ref:`Image Layers` documentation.
-The object works as follows:
+The :term:`object` works as follows:
 
 .. list-table::
   :widths: 1 5
@@ -522,7 +522,7 @@ The object works as follows:
 **Image Sets**
 """""""""""""""
 
-``"Set":`` is an optional array for making preset image layer setups intended for especially complex characters.
+``"Set":`` is an optional :term:`array` for making preset image layer setups intended for especially complex characters.
 
 They can range from minor to drastic changes in character presentation for
 immense ease of use when swapping between certain looks in various scenarios.
@@ -631,12 +631,12 @@ It is highly recommended to look these files over to help understand this system
     ]}]}
   ]
 
-``"Role:"`` is an alternative object with different keys compared to the typical image layer object, for use only under ``"Set"``.
+``"Role:"`` is an alternative :term:`object` with different :term:`keys` compared to the typical image layer object, for use only under ``"Set"``.
 
 When a monster uses a role, it takes the role's 'slot',
 meaning only one instance of the monster can use a single role at a time.
 
-Each role object is checked in the order they are added to the image set.
+Each role :term:`object` is checked in the order they are added to the image set.
 Roles are checked relative to the encounter order.
 (e.g. Each listed role checks Imp 1 -> Imp 2 -> Imp 12).
 
@@ -644,7 +644,7 @@ This means you can declare as many roles as you want,
 but only up to 12 will ever be used at a time,
 as that is the maximum number of monsters in an encounter.
 
-All keys are required, but all values can be blank ``""`` or empty ``[]`` unless stated otherwise:
+All :term:`keys` are required, but all :term:`values` can be blank ``""`` or empty ``[]`` unless stated otherwise:
 
 .. list-table::
   :widths: 1 5
@@ -656,7 +656,7 @@ All keys are required, but all values can be blank ``""`` or empty ``[]`` unless
   * - ``"MonsterRequired":``
     - Looks for the given ``"nameID":`` of the monster that is required to consider the role active and fulfilled.
 
-``"CGTranslator":`` takes objects in its array for translating
+``"CGTranslator":`` takes :term:`objects` in its :term:`array` for translating
 any number of image layers (e.g. Expressions) to their equivalent image layer elsewhere
 while the role is allotted to the instance of the monster.
 
@@ -678,7 +678,7 @@ This allows for different layers to automatically utilize the same :ref:`ChangeI
       "Out": "FaceImpExpressionRide"
     }],
 
-``"TogglesLayers":`` Turns on the given array of image layers, still adhering to the layer's settings.
+``"TogglesLayers":`` Turns on the given :term:`array` of image layers, still adhering to the layer's settings.
 They will turn off when the role is no longer allotted to any monster.
 
 .. code-block:: javascript
@@ -689,7 +689,7 @@ They will turn off when the role is no longer allotted to any monster.
   ],
 
 ``"ActiveRequirment": "Yes"`` will require this role for the image set CG to be enabled, otherwise, the CG will automatically be turned off.
-Any number of roles can have this key set to ``"Yes"``.
+Any number of roles can have this :term:`key` set to ``"Yes"``.
 
 .. tip::
 

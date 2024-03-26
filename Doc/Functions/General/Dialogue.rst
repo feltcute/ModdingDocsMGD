@@ -34,7 +34,7 @@ Generally for use in combat events where the skill name is called still, and quo
 **Speak**
 ----------
 
-Displays the given text in the text box header for the following string of text. Doesn't need to be in ``"Speaker":``, see :ref:`SpeaksFunc` for that.
+Displays the given text in the text box header for the following :term:`string` of text. Doesn't need to be in ``"Speaker":``, see :ref:`SpeaksFunc` for that.
 
 .. code-block:: javascript
 
@@ -48,11 +48,11 @@ Displays the given text in the text box header for the following string of text.
 **SetStoredColor**
 -------------------
 
-A given numerical value from 1-7 will set the corresponding :ref:`coloredtextmarkup` ``[StoredColor]``
-to use the colored specific in the next string value of text.
+A given numerical :term:`value` from 1-7 will set the corresponding :ref:`coloredtextmarkup` ``[StoredColor]``
+to use the colored specific in the next :term:`value` of text.
 Can be repeated for every variant of ``[StoredColor]``.
 
-Can instead provide a value of ``"Reset"`` to reset all stored colors back to their defaults.
+Can instead provide a :term:`value` of ``"Reset"`` to reset all stored colors back to their defaults.
 
 .. code-block:: javascript
 

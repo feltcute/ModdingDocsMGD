@@ -27,7 +27,7 @@ Gets an event, and sets the specified choice to the given string.
 
 **ChoiceToDisplayPlayerFromOtherEvent & ChoiceToDisplayMonsterFromOtherEvent**
 -------------------------------------------------------------------------------
-``"ChoiceToDisplayPlayerFromOtherEvent"`` & ``"ChoiceToDisplayMonsterFromOtherEvent"`` grabs the specified choice from an external event's string value for
+``"ChoiceToDisplayPlayerFromOtherEvent"`` & ``"ChoiceToDisplayMonsterFromOtherEvent"`` grabs the specified choice from an external event's :term:`value` for
 the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it's called again, so it will affect other events. Thus, it should be called at the start
 of a scene or event.
 

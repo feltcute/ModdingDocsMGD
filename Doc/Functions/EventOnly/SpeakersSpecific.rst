@@ -3,7 +3,7 @@
 
 .. seealso:: 
 
-  This page contains functions in direct relation to the :ref:`SpeakersCreation` key. See the hyperlink for more information on the keys themselves.
+  This page contains functions in direct relation to the :ref:`SpeakersCreation` key. See the hyperlink for more information on the :term:`keys` themselves.
 
   Additionally, see :doc:`Dialogue </Doc/Functions/General/Dialogue>` for functions independent of the :ref:`SpeakersCreation` key.
 
@@ -28,10 +28,10 @@ Instead of a number you can also use the nameID of that monster file to specify 
 
 **Speaks**
 -----------
-Puts the first character's name in the ``"Speakers":`` key in the next box for the next string.
+Puts the first character's name in the ``"Speakers":`` :term:`key` in the next box for the next string.
 Supplying a number in the function will make it move to the next character in ``"Speakers:"``.
 
-Adding a numerical value directly at the end within the function will use the other speakers in the order their objects are included. Up to 12.
+Adding a numerical :term:`value` directly at the end within the function will use the other speakers in the order their :term:`objects` are included. Up to 12.
 
 .. code-block:: javascript
 
@@ -43,7 +43,7 @@ Adding a numerical value directly at the end within the function will use the ot
     "Hello it's me, an imp."
 
 
-``"Speaks"`` is also capable of being used in :ref:`lossScenes and victoryScenes`, which will refer to the :doc:`Monster Creation </Doc/Manual/Monsters/Monsters>`'s ``"name"`` key within the json.
+``"Speaks"`` is also capable of being used in :ref:`lossScenes and victoryScenes`, which will refer to the :doc:`Monster Creation </Doc/Manual/Monsters/Monsters>`'s ``"name"`` :term:`key` within the json.
 
 .. code-block:: javascript
 
@@ -60,7 +60,7 @@ Sets the end of a monsters name to a thing, can be used to make attack titles ap
 
 .. code-block:: javascript
 
-  "SetPostName", " – Fancy Attack Name!"
+  "SetPostName", " - Fancy Attack Name!"
 
 After the attack is performed...
 
@@ -72,7 +72,7 @@ After the attack is performed...
 
 **SetFlexibleSpeaker & FlexibleSpeaks**
 ----------------------------------------
-Using ``"SetFlexibleSpeaker"`` sets a speaker to be used from the ``"Speakers":`` key whenever ``"FlexibleSpeaks"`` is called.
+Using ``"SetFlexibleSpeaker"`` sets a speaker to be used from the ``"Speakers":`` :term:`key` whenever ``"FlexibleSpeaks"`` is called.
 
 ``"FlexibleSpeaks"`` otherwise works just like the ``"Speaks"`` function. Used for niche cases where you want to change the speaker, but not the entire scene.
 See Manticore, Onis, or Shizu.

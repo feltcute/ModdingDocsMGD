@@ -40,7 +40,7 @@ Refer to any near any monster's ``combatDialogue":`` as an example.
 
   "Oh, oh no..|n|..That's not good.",
 
-``|f|`` places a function in the string, which will be immediately called upon displaying the text. Use \|/\| to make the equivalent of another string for additional
+``|f|`` places a function in the string, which will be immediately called upon displaying the text. Use \|/\| to make the equivalent of another :term:`string` for additional
 function parameters. **End the last function parameter with** ``|n|``.  To use another function, simply start using ``|f|`` again.
 After ``|n|`` is called, you may now proceed with any text you may wish to display.
 
@@ -48,10 +48,10 @@ After ``|n|`` is called, you may now proceed with any text you may wish to displ
 
   "|f|PlaySoundEffect|/|sfx/Magic/Hypnosis effect 3.wav|n||f|ChangeImageLayer|/|Expression|/|1|/|Base|n|Oh, hello [ThePlayerName]."
 
-``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a string after it's called is removed.
+``|c|`` exists specifically for technical use with :ref:`OnPlayerOrgasm`, ensuring any text in a :term:`string` after it's called is removed.
 
-``\n`` causes a line break, i.e. hitting the enter key in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Manual/Monsters/Monsters>`.
-It can also be used as the equivalent of a blank string for functions done via ``|f|``
+``\n`` causes a line break, i.e. hitting the enter :term:`key` in a text editor. Used primarily for description and encyclopedia entries in :doc:`Monster Creation </Doc/Manual/Monsters/Monsters>`.
+It can also be used as the equivalent of a blank :term:`string` for functions done via ``|f|``
 
 
 .. _TextStylingMarkup:
@@ -78,8 +78,8 @@ This section is a mix of `Ren'Py derivative markup <https://www.renpy.org/doc/ht
 
 **Advanced Styling**
 """""""""""""""""""""
-``{size=int}`` will make the following text size equal to the given integer value after ``=`` in the markup. Close with ``{/size}``.
-You can also make it relatively bigger or smaller compared to its previous state based on the given value through the use of either ``+int`` or ``-int``.
+``{size=int}`` will make the following text size equal to the given integer :term:`value` after ``=`` in the markup. Close with ``{/size}``.
+You can also make it relatively bigger or smaller compared to its previous state based on the given :term:`value` through the use of either ``+int`` or ``-int``.
 
 You can layer them inside one another, but note ``{/size}`` will not end all instances of ``{size=int}``, only one instance at a time.
 
@@ -91,7 +91,7 @@ You can layer them inside one another, but note ``{/size}`` will not end all ins
 
 ``{vspace=int}`` functions the same as ``{space=int}``, but instead for vertical space.
 
-``{w}`` will delay the displayed text till user input is given to signal it to continue. It can be given an integer value via ``{w=int}`` to make it wait the
+``{w}`` will delay the displayed text till user input is given to signal it to continue. It can be given an integer :term:`value` via ``{w=int}`` to make it wait the
 given integer number in seconds, though it can continue early through user input before the given time has elapsed.
 
 .. code-block:: javascript
@@ -107,10 +107,10 @@ Useful given the game by default has all text displayed instantly.
 
     "{cps=34}A fairly fast text speed,{/cps} {cps=8}a fairly slow text speed.{/cps}"
 
-``{nw}`` placed anywhere in the string causes the displayed text to automatically move to the next screen once the final character has been displayed.
+``{nw}`` placed anywhere in the :term:`string` causes the displayed text to automatically move to the next screen once the final character has been displayed.
 Given MGD by default has all text display instantly, this typically won't be too useful unless combined with the ``{cps}``.
 
-``{fast}`` placed anywhere in the string causes the displayed text to instantly move towards the markup declaration.
+``{fast}`` placed anywhere in the :term:`string` causes the displayed text to instantly move towards the markup declaration.
 Given MGD by default has all text display instantly, this typically won't be too useful unless combined with the ``{cps}``.
 
 .. _coloredtextmarkup:
@@ -130,7 +130,7 @@ You can combine it with text styling markup as you please.
 ``{color=hex}`` can be used for custom text color. Close with ``{/color}``. 
 ``hex`` is where you provide a `hex color code <https://www.color-hex.com/>`_. Accepts #rgb, #rgba, #rrggbb, and #rrggbbaa format.
 
-``[StoredColor]`` can be alternatively used, utilizing values set from :ref:`SetStoredColor`. They are by default `#F6BADC`.
+``[StoredColor]`` can be alternatively used, utilizing :term:`values` set from :ref:`SetStoredColor`. They are by default `#F6BADC`.
 Closes with ``[ColorEnd]``.
 
 .. code-block:: javascript
@@ -161,7 +161,7 @@ To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing
 **Damage Text Markup**
 -----------------------
 
-``[DamageToPlayer]``, ``[DamageToEnemy]``, and ``[FinalDamage]`` provide damage values for relevant functions.
+``[DamageToPlayer]``, ``[DamageToEnemy]``, and ``[FinalDamage]`` provide damage :term:`values` for relevant functions.
 
 **Skill Text Markup**
 ----------------------
@@ -189,7 +189,7 @@ means it can roll a blank.
 
 * **Anal**: ["", "tight ", "tight ", "curved ", "rounded ", "receptive "]
 
-``[SexWord]`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a string randomly from an array, depending on either sex or anal stance:
+``[SexWord]`` gets a sex word from the bank, Vaginal or Anal based depending on stance. It will pick a :term:`string` randomly from an array, depending on either sex or anal stance:
 
 * **Sex**: ["pussy", "pussy", "slit", "honeypot"]
 

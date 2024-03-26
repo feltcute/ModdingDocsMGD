@@ -42,6 +42,7 @@
     --link-color-hover: #E470B2;
     --link-color-active: #E470B2;
     --link-color-visited: #E470B2;
+    --term-link-color: #F6BADC;
 
     /* --tab-border-color: #868686;  Unused? - fcmcl*/
     --hr-color: #404040;
@@ -368,6 +369,16 @@ a:visited {
 a.btn:hover {
     text-decoration: none;
 }
+
+/* Style external links differently to make them easier to distinguish from internal links. */
+.hxr-hoverxref {
+    color: var(--term-link-color); 
+}
+
+.hxr-hoverxref:hover {
+    color: var(--term-link-color); 
+}
+
 
 /* Style external links differently to make them easier to distinguish from internal links. */
 .reference.external {

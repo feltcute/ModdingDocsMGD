@@ -7,10 +7,10 @@
 
 **StoreCurrentEventSpotSkippingLines**
 ---------------------------------------
-Stores the current event, scene, and string you’re on.
-The following string is provided with a numerical value to skip the number of lines after it when called by ``GoBackToStoredEvent``
+Stores the current event, scene, and :term:`string` you're on.
+The following :term:`string` is provided with a numerical :term:`value` to skip the number of lines after it when called by ``GoBackToStoredEvent``
 then add on any number of lines to jump forward when called by ``"GoBackToStoredEvent"``.
-Will stay stored until called again or it’s used.
+Will stay stored until called again or it's used.
 
 .. code-block:: javascript
 

@@ -10,7 +10,7 @@ This excludes scenes solely using :ref:`MenuAdditions <SceneAdditions>`, for exa
 
 Check **_EventAdditionExample.json** in *Json/Events/* for an example.
 
-The overview will proceed to go over valid keys in event additions, how they're added to the base event json, and if their inclusion is required.
+The overview will proceed to go over valid :term:`keys` in event additions, how they're added to the base event json, and if their inclusion is required.
 
 .. note::
 
@@ -45,12 +45,12 @@ Required so the game knows you are making an addition.
     }
   ],
 
-While required, it can be left without any objects if you don't intend to use it. All added objects will be additions, no exceptions.
+While required, it can be left without any :term:`objects` if you don't intend to use it. All added :term:`objects` will be additions, no exceptions.
 
 This means if you want to say, add a ``"postName":`` to a character, you will be limited to appending the character again and using the appropriate
 ``"Speaks"`` function to use it. This isn't behavior specific to Additions either, this is intended base game behavior as seen for labeling multiple generics.
 
-Note multiple mods adding to the Speakers key *could* throw ``"Speaks"`` out of order depending on which mod is loaded first.
+Note multiple mods adding to the Speakers :term:`key` *could* throw ``"Speaks"`` out of order depending on which mod is loaded first.
 Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to avoid compatibility issues between mods.
 
 **EventText**
@@ -62,7 +62,7 @@ Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to
     {
     "NameOfScene": "Name of a Scene already in the game.",
     "theScene": [
-      "The new strings provided to theScene."
+      "The new :term:`strings` provided to theScene."
       "Entirely replacing the original one."
       "JumpToScene", "A New Scene"
       ]
@@ -77,7 +77,7 @@ Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to
 
 Required, though you technically don't have to provide it with any objects.
 
-Every new object will be appended, unless ``"NameOfScene":`` within the object matches an existing ``"NameOfScene":`` within the event, in which case
+Every new :term:`object` will be appended, unless ``"NameOfScene":`` within the :term:`object` matches an existing ``"NameOfScene":`` within the event, in which case
 it will override and replace the entirety of ``"theScene":`` with the one provided via the new object.
 The exception to this behavior is when using ``"MenuAddition"``.
 
@@ -95,11 +95,11 @@ The game supports special :doc:`functions </Doc/Functions/index>` for this purpo
 
 You can make use of them through a duplicate scene in the event addition with the same ``"NameOfScene":`` value.
 Then, start with one of the three above variants depending on the function you're adding to, only one per scene.
-**The first and last string of the scene must be the variant, and ``"EndLoop"`` respectively.**
+**The first and last :term:`string` of the scene must be the variant, and ``"EndLoop"`` respectively.**
 
 For ``MenuAddition"``, if the menu you are appending to doesn't have a ``"FinalOption"`` in use already, you will have to add it yourself.
 it's intended to be applied to 'back out' or 'leave' options, ensuring they are always at the bottom of the game menu.
-When addressing this, duplicate the 'leave' choice of the base game, and prepend it with the strings ``"OverrideOption", "FinalOption"``.
+When addressing this, duplicate the 'leave' choice of the base game, and prepend it with the :term:`strings` ``"OverrideOption", "FinalOption"``.
 This ensures it ignores duplicates from other mods also trying to address the issue.
 
 See the examples below for details of the implementation, and the **_SceneAdditionExample.json** file in the  *Json/Events/* for more advanced examples.

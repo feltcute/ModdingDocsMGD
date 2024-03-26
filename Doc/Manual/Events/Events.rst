@@ -1,14 +1,14 @@
 **Event Creation**
 ===================
 
-Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Events.
+Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Events.
 
 Base game Event .jsons are located at *Json/Events/*.
 The bubble slime events showcase modern practices well, located at *Mountain/FizzySpring.json*, and *CombatEvents/BubbleSlimeCombatEvents.json*.
 
 A blank template can be found at *Events/_BlankEvent.json*.
 
-**Assume all keys are required, unless stated otherwise.**
+**Assume all :term:`keys` are required, unless stated otherwise.**
 
 **name**
 ---------
@@ -38,37 +38,37 @@ Changes how the game calls and utilizes the event. See `CardType Values`_ below 
 **CardType Values**
 """"""""""""""""""""
 
-=================== =========================================================================================================== ================================================== 
-Grimoire CardType   Description                                                                                                 Example                                           
-=================== =========================================================================================================== ================================================== 
-``"Event"``         Will appear in the Grimoire in the "Events:" section. The only value with interacts with ``"CardLimit":``.  *Events/Labyrinth/ExploreLaby/WanderingVenefica*  
-``"Quest"``         Will appear in the Grimoire in the "Quests:" section.                                                       *Events/Quests/*                                  
-=================== =========================================================================================================== ================================================== 
+=================== =================================================================================================================== ================================================== 
+Grimoire CardType   Description                                                                                                         Example                                           
+=================== =================================================================================================================== ================================================== 
+``"Event"``         Will appear in the Grimoire in the "Events:" section. The only :term:`value` with interacts with ``"CardLimit":``.  *Events/Labyrinth/ExploreLaby/WanderingVenefica*  
+``"Quest"``         Will appear in the Grimoire in the "Quests:" section.                                                               *Events/Quests/*                                  
+=================== =================================================================================================================== ================================================== 
 
-+----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| Town CardType  | Description                                                                                                                                                                                                        | Example         |
-+================+====================================================================================================================================================================================================================+=================+
-| ``"Shopping"`` |                                                                                                                                                                                                                    |                 |
-+----------------+                                                                                                                                                                                                                    |                 |
-| ``"Church"``   | Will appear as an option for the respective location in the town. Putting ``"EnterArea"`` in the ``"Description":`` key will make it trigger when the player enters that location.                                 |  *Events/Town/* |
-+----------------+                                                                                                                                                                                                                    |                 |
-| ``"Guild"``    |                                                                                                                                                                                                                    |                 |
-+----------------+                                                                                                                                                                                                                    |                 |
-| ``"Inn"``      |                                                                                                                                                                                                                    |                 |
-+----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
++----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Town CardType  | Description                                                                                                                                                                                                               | Example         |
++================+===========================================================================================================================================================================================================================+=================+
+| ``"Shopping"`` |                                                                                                                                                                                                                           |                 |
++----------------+                                                                                                                                                                                                                           |                 |
+| ``"Church"``   | Will appear as an option for the respective location in the town. Putting ``"EnterArea"`` in the ``"Description":`` :term:`key` will make it trigger when the player enters that location.                                |  *Events/Town/* |
++----------------+                                                                                                                                                                                                                           |                 |
+| ``"Guild"``    |                                                                                                                                                                                                                           |                 |
++----------------+                                                                                                                                                                                                                           |                 |
+| ``"Inn"``      |                                                                                                                                                                                                                           |                 |
++----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
-+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| Brothel CardType     | Description                                                                                                                                                                                                         | Example                |
-+======================+=====================================================================================================================================================================================================================+========================+
-| ``"BarShift"``       |                                                                                                                                                                                                                     |                        |
-+----------------------+                                                                                                                                                                                                                     |                        |
-| ``"WaiterShift"``    | Will be called for the shift choice the player or Belle makes. Putting another shift type in the ``"Description":`` key will make it count for that shift too. Repeating the same shift type increases its chances. | *Events/Town/Brothel/* |
-+----------------------+                                                                                                                                                                                                                     |                        |
-| ``"GloryHoleShift"`` |                                                                                                                                                                                                                     |                        |
-|                      |                                                                                                                                                                                                                     |                        |
-+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+                        |
-| ``"DayShift"``       | Used for shifts during the day. Can also be combined with the previous three shift types via ``"Description":``, or repeated for higher chances.                                                                    |                        |
-+----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
+| Brothel CardType     | Description                                                                                                                                                                                                                 | Example                |
++======================+=============================================================================================================================================================================================================================+========================+
+| ``"BarShift"``       |                                                                                                                                                                                                                             |                        |
++----------------------+                                                                                                                                                                                                                             |                        |
+| ``"WaiterShift"``    | Will be called for the shift choice the player or Belle makes. Putting another shift type in the ``"Description":`` :term:`key` will make it count for that shift too. Repeating the same shift type increases its chances. | *Events/Town/Brothel/* |
++----------------------+                                                                                                                                                                                                                             |                        |
+| ``"GloryHoleShift"`` |                                                                                                                                                                                                                             |                        |
+|                      |                                                                                                                                                                                                                             |                        |
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+                        |
+| ``"DayShift"``       | Used for shifts during the day. Can also be combined with the previous three shift types via ``"Description":``, or repeated for higher chances.                                                                            |                        |
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
 
 ===================== ============================================================================================================================================================================================== ========================================================
 Triggered CardType    Description                                                                                                                                                                                    Example                                                
@@ -92,9 +92,9 @@ Triggered CardType    Description                                               
 
   "Description": "A description of the event",
 
-When used for a Grimoire `CardType`_, it will present the string you provide on the right hand side of in the Grimoire when players are reviewing events and quests for selection.
+When used for a Grimoire `CardType`_, it will present the :term:`string` you provide on the right hand side of in the Grimoire when players are reviewing events and quests for selection.
 
-When used for town card types, providing it with the string ``"EnterArea"`` will make it trigger when the player enters that location.
+When used for town card types, providing it with the :term:`string` ``"EnterArea"`` will make it trigger when the player enters that location.
 
 When used for brothel shift card types, using a different shift type will make it count for that shift too. Repeating the same shift type increase its chances.
 
@@ -105,8 +105,8 @@ When used for brothel shift card types, using a different shift type will make i
 
   "requires": ["Vandal Note"],
 
-Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the event, primarily for the Grimoire. Typically a Key Item.
-The key must be included, but the array can be left empty. You can leave either a blank string or none at all.
+Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the event, primarily for the Grimoire. Typically a :term:`key` Item.
+The :term:`key` must be included, but the :term:`array` can be left empty. You can leave either a blank :term:`string` or none at all.
 
 .. code-block:: javascript
 
@@ -119,14 +119,14 @@ The key must be included, but the array can be left empty. You can leave either 
     }
   ],
 
-A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+A more complex and optional :term:`key` that contains :term:`objects` that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate :term:`objects` for as long as it contains all four of the given keys.
 
-You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
+You need to provide a :term:`value` for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default :term:`values` above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
 
-If in use, you cannot exclude unused keys in the object, they must all be present.
+If in use, you cannot exclude unused :term:`keys` in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
 
 .. _SpeakersCreation:
@@ -150,21 +150,21 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
   ],
 
 ``"Speakers":`` gives functionality for the ``"Speaks"`` function, used in dialogue. Each speaker will need to be put in a separate object.
-Each object added is correlated to a number in the ``"Speaks"`` function, starting from 2 for the second object to a maximum of 12 added speakers,
-ordered by each object added from top to bottom.
+Each :term:`object` added is correlated to a number in the ``"Speaks"`` function, starting from 2 for the second :term:`object` to a maximum of 12 added speakers,
+ordered by each :term:`object` added from top to bottom.
 See :doc:`Dialogue </Doc/Functions/General/Dialogue>` for more information on the ``"Speaks"`` function.
 
-``"name":`` must be from the ``"IDname":`` key of a :doc:`Monster </Doc/Manual/Monsters/Monsters>`. Don't worry, it will proceed to display the string in the monster's ``"name":``,
+``"name":`` must be from the ``"IDname":`` :term:`key` of a :doc:`Monster </Doc/Manual/Monsters/Monsters>`. Don't worry, it will proceed to display the :term:`string` in the monster's ``"name":``,
 not the IDname.
 
-``"postName":`` will place the data provided in the string after their name, for example, if you wanted to differentiate multiple generic monsters (Elf 1, Elf 2, etc).
+``"postName":`` will place the data provided in the :term:`string` after their name, for example, if you wanted to differentiate multiple generic monsters (Elf 1, Elf 2, etc).
 Can use the ``"SetPostName"`` function to override it for all characters. See the function page :doc:`Speakers Specific </Doc/Functions/EventOnly/SpeakersSpecific>` for more information.
 
 ``"SpeakerType":`` currently only serves one purpose. If set to ``"?"`` will let you put in any name you wish for the ``"name":`` key, regardless if they even have a monster json.
 Alternatively, the ``"Speak"`` function can be used instead. Otherwise, it can be left with an empty string.
 
-While ``"Speakers":`` and at least one object with the listed keys must be included, it doesn't necessarily need to be used.
-All keys in the objects require at least an empty string.
+While ``"Speakers":`` and at least one :term:`object` with the listed :term:`keys` must be included, it doesn't necessarily need to be used.
+All :term:`keys` in the :term:`objects` require at least an empty string.
 
 **EventText**
 --------------
@@ -196,12 +196,12 @@ All keys in the objects require at least an empty string.
     }
   ]
 
-``"EventText":`` is an array of objects containing the series of scenes that will make up your event. Each object will contain the exact same keys.
+``"EventText":`` is an :term:`array` of :term:`objects` containing the series of scenes that will make up your event. Each :term:`object` will contain the exact same keys.
 
-``"NameOfScene":``, which takes a string you provide it to uniquely identify the scene. They can contain whatever you please.
+``"NameOfScene":``, which takes a :term:`string` you provide it to uniquely identify the scene. They can contain whatever you please.
 
-``"theScene":`` which takes an array of strings that make up the scene. These objects are plainly called scenes.
-Your strings will be displayed to the user as narrative text, unless it's identified as a function.
+``"theScene":`` which takes an :term:`array` of :term:`strings` that make up the scene. These :term:`objects` are plainly called scenes.
+Your :term:`strings` will be displayed to the user as narrative text, unless it's identified as a function.
 
 The first scene added will always display first for your average event jump from any of the ``"CardType":`` values.
 However, specific scenes in a event can be jumped to, either by a game feature or by a function.
@@ -212,7 +212,7 @@ See :doc:`functions </Doc/Functions/index>` for the vast range of functions that
 """"""""""""""""""""
 
 When debugging scenes (see :ref:`notJumping` in FAQ), you may find yourself with scenes you don't intend to ever be linked to by a function. 
-In this case, you can declare it as an optional scene to the game by prepending its ``"NameOfScene":`` value with any of the following:
+In this case, you can declare it as an optional scene to the game by prepending its ``"NameOfScene":`` :term:`value` with any of the following:
 
 - An ``_`` underscore. Intended for any scenario where you want the debugger to ignore the scene, such as internal notes, cut content, or in-progress work not meant to be accessed by the player yet.
 - ``event`` or uppercased ``Event``. Loosely intended for your starting and ending scenes, such as ``"EventStart"`` (your very first scene) and ``"EventBroke"`` (your very last scene).

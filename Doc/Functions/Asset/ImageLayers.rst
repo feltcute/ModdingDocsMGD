@@ -69,7 +69,7 @@ however while in an active combat, for both the monsters file and combat events,
 
   "ChangeImageLayer", "ImageSet", "1", "Plush"
 
-``"ImageSet"`` will swap a set of images to the name of the set in the final string as seen above. It will automatically carry over any current expressions and related.
+``"ImageSet"`` will swap a set of images to the name of the set in the final :term:`string` as seen above. It will automatically carry over any current expressions and related.
 Note this is not held persistently and would need to be called every time the character is called.
 
 ``"ImageSetPersist"`` will swap to the stated image set and stay on it whenever that character is called again, even in combat. Used for Aiko's body type variants.
@@ -108,7 +108,7 @@ See :ref:`CGRoles` for more information on role CGs.
 ---------------
 Turns off any active role-based CG started via :ref:`ImageSetRoleStart`.
 
-If the CG doesn't have any ``"ActiveRequirment"`` keys to turn it off, 
+If the CG doesn't have any ``"ActiveRequirment"`` :term:`keys` to turn it off, 
 this must be called before leaving the encounter. 
 
 See :ref:`CGRoles` for more information on role CGs.
@@ -132,7 +132,7 @@ Check Aiko's titfuck scene in BedMimic.json for an example of this in use.
       "Monsters/Aiko/Paizuri/AikoBoobsSqueeze__AikoPaizuri_Titfuck.png",
   "EndLoop",
 
-Disambiguation in order of strings used in the first row:
+Disambiguation in order of :term:`strings` used in the first row:
 
 .. list-table::
   :widths: 1 5
