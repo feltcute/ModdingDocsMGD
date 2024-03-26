@@ -3,11 +3,11 @@
 **lineTriggers**
 =================
 
-See :ref:`combatDialogueCreation` for general information on the keys used for lineTriggers.
+See :ref:`combatDialogueCreation` for general information on the :term:`keys` used for lineTriggers.
 
-Remember that The \"move\": key can be given an array, for any lineTrigger seen here. **However, it's so responses can be made compact**.
-It does not at any point use the array as a multi-check requirement before it can trigger. That is, it's an *or* parameter, not an *and* parameter.
-All matching lineTriggers matching the same ``"move":`` value will ultimately go into the same pool for it to randomly pull from.
+Remember that The \"move\": :term:`key` can be given an array, for any lineTrigger seen here. **However, it's so responses can be made compact**.
+It does not at any point use the :term:`array` as a multi-check requirement before it can trigger. That is, it's an *or* parameter, not an *and* parameter.
+All matching lineTriggers matching the same ``"move":`` :term:`value` will ultimately go into the same pool for it to randomly pull from.
 
 For putting combat functions in strings, see :ref:`DialogueTextMarkup`
 
@@ -31,7 +31,7 @@ For putting combat functions in strings, see :ref:`DialogueTextMarkup`
 
 Will change the current BGM at the start of combat.
 
-Specify the song path in ``"theText":``. Paths start from */game/*. Additional strings will form a playlist, causing it to loop between each song, from top to bottom.
+Specify the song path in ``"theText":``. Paths start from */game/*. Additional :term:`strings` will form a playlist, causing it to loop between each song, from top to bottom.
 
 Other monsters at the start of the encounter will append to the playlist. Does not include monsters that are added to the encounter.
 

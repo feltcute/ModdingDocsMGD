@@ -1,11 +1,11 @@
 **Adventure Creation**
 =======================
 
-Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Adventures.
+Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Adventures.
 
 Go to *Json/Adventures/*, and then see the *.json* files present for examples, and **_BlankAdventure.json** for a template.
 
-**Assume all keys are required, unless stated otherwise.**
+**Assume all :term:`keys` are required, unless stated otherwise.**
 
 **name**
 ---------
@@ -32,9 +32,9 @@ Give a brief description of the adventure. Currently unused in-game, but is expe
 
   "requires": ["Name of a required item", "Another item that may be required"],
 
-Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the adventure. Typically a Key Item.
+Retrieve the ``"name:"`` key(s) of an :doc:`Item </Doc/Manual/Items/Items>` to use as a requirement for players to access the adventure. Typically a :term:`key` Item.
 
-While the key must still be included, the array can be left empty if you do not wish to use it. You can leave either a blank string or none at all.
+While the :term:`key` must still be included, the :term:`array` can be left empty if you do not wish to use it. You can leave either a blank :term:`string` or none at all.
 
 .. code-block:: javascript
 
@@ -47,14 +47,14 @@ While the key must still be included, the array can be left empty if you do not 
     }
   ],
 
-A more complex and optional key that contains objects that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
+A more complex and optional :term:`key` that contains :term:`objects` that will check for progress or choice in a event. It can be used in alongside or as an alternative to ``"requires":``.
 
-Given it's an array, you can introduce multiple requirements of the same type by providing duplicate objects for as long as it contains all four of the given keys.
+Given it's an array, you can introduce multiple requirements of the same type by providing duplicate :term:`objects` for as long as it contains all four of the given keys.
 
-You need to provide a value for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default values above.
+You need to provide a :term:`value` for ``"Progress":`` and ``"ChoiceNumber":``, else it will not work. If you don't wish to use one of them, use the default :term:`values` above.
 ``"NameOfEvent":`` and ``"Choice":`` need at least empty strings.
 
-If in use, you cannot exclude unused keys in the object, they must all be present.
+If in use, you cannot exclude unused :term:`keys` in the object, they must all be present.
 If ``"requiresEvent":`` isn't being used at all, it can be excluded from the file entirely.
 
 **MusicList**
@@ -64,7 +64,7 @@ If ``"requiresEvent":`` isn't being used at all, it can be excluded from the fil
 
     "MusicList": [ "music/Mountain/Purple Planet Music - Chilled - Desert Winds (3_12).mp3"],
 
-An optional key for a default selection of music to loop through during adventures outside of events and encounters.
+An optional :term:`key` for a default selection of music to loop through during adventures outside of events and encounters.
 
 **Deck**
 ---------
@@ -83,24 +83,24 @@ An optional key for a default selection of music to loop through during adventur
 Specify the order of encounters and events the player will face upon starting the adventure, linearly as given from start to finish.
 It can technically be left empty, but doing so will just send players straight back to town upon selection of the adventure, giving the adventure no purpose.
 
-Below are all the values you can provide within the array to trigger various interactions.
+Below are all the :term:`values` you can provide within the :term:`array` to trigger various interactions.
 
-========================= ============================================================================================================================================================================================================================= 
-Value                     Description                                                                                                                                                                                                                  
-========================= ============================================================================================================================================================================================================================= 
-``"Event",``              Jumps to an event given in the following string.                                                                                                                                                                             
-``"Monster",``            Starts a monster encounter. Provide a string of the IDname of each included monster, close the list with ``"EndLoop"``.                                                                                                      
-``"RandomEvent",``        Random event from the **RandomEvents** key below.                                                                                                                                                                            
-``"RandomMonsters",``     Random encounter from the `RandomMonsters & MonsterGroups`_ keys below.                                                                                                                                                      
-``"RandomTreasure",``     Random treasure of random rarity from the `Treasure & Eros`_ keys below.                                                                                                                                                     
-``"CommonTreasure",``     Random common treasure from the `Treasure & Eros`_ ``"Common":`` keys below.                                                                                                                                                 
-``"UncommonTreasure",``   Random uncommon treasure from the `Treasure & Eros`_ ``"Uncommon":`` keys below.                                                                                                                                             
-``"RareTreasure",``       Random rare treasure treasure from the `Treasure & Eros`_ ``"Rare":`` keys below.                                                                                                                                            
-``"BreakSpot",``          Break spot. The player can choose to move on, rest, or return to town.                                                                                                                                                       
-``"Unrepeatable"``        Upon reaching this string in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**.  
-========================= ============================================================================================================================================================================================================================= 
+========================= =====================================================================================================================================================================================================================================
+Value                     Description                                                                                                                                                                                                                          
+========================= =====================================================================================================================================================================================================================================
+``"Event",``              Jumps to an event given in the following string.                                                                                                                                                                                     
+``"Monster",``            Starts a monster encounter. Provide a :term:`string` of the IDname of each included monster, close the list with ``"EndLoop"``.                                                                                                      
+``"RandomEvent",``        Random event from the **RandomEvents** :term:`key` below.                                                                                                                                                                            
+``"RandomMonsters",``     Random encounter from the `RandomMonsters & MonsterGroups`_ :term:`keys` below.                                                                                                                                                      
+``"RandomTreasure",``     Random treasure of random rarity from the `Treasure & Eros`_ :term:`keys` below.                                                                                                                                                     
+``"CommonTreasure",``     Random common treasure from the `Treasure & Eros`_ ``"Common":`` :term:`keys` below.                                                                                                                                                 
+``"UncommonTreasure",``   Random uncommon treasure from the `Treasure & Eros`_ ``"Uncommon":`` :term:`keys` below.                                                                                                                                             
+``"RareTreasure",``       Random rare treasure treasure from the `Treasure & Eros`_ ``"Rare":`` :term:`keys` below.                                                                                                                                            
+``"BreakSpot",``          Break spot. The player can choose to move on, rest, or return to town.                                                                                                                                                               
+``"Unrepeatable"``        Upon reaching this :term:`string` in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**.  
+========================= =====================================================================================================================================================================================================================================
 
-Remember to make sure the last string you provide doesn't have a trailing comma.
+Remember to make sure the last :term:`string` you provide doesn't have a trailing comma.
 
 **RandomEvents**
 -----------------
@@ -108,9 +108,9 @@ Remember to make sure the last string you provide doesn't have a trailing comma.
 
   "RandomEvents": ["Lust Rune", "Elven Ambush"],
 
-Set the random events that can be selected by the ``"RandomEvent"`` string for the ``"Deck":`` key above. If you wish to make certain events more likely, put it in multiple times.
+Set the random events that can be selected by the ``"RandomEvent"`` :term:`string` for the ``"Deck":`` :term:`key` above. If you wish to make certain events more likely, put it in multiple times.
 
-.. Perhaps the string name should be consistent to the key name like the others, or the key consistent to the string?
+.. Perhaps the :term:`string` name should be consistent to the :term:`key` name like the others, or the :term:`key` consistent to the string?
 
 **RandomMonsters & MonsterGroups**
 -----------------------------------
@@ -118,7 +118,7 @@ Set the random events that can be selected by the ``"RandomEvent"`` string for t
 
   "RandomMonsters": ["Blue Slime", "Lizard Girl"],
 
-Set the random monsters you can encounter for the ``"RandomMonsters"`` string for the ``"Deck":`` key above.
+Set the random monsters you can encounter for the ``"RandomMonsters"`` :term:`string` for the ``"Deck":`` :term:`key` above.
 If you wish to make a certain monster more likely, put them in multiple times.
 Requires use of the ``"MonsterGroups":``, found below.
 
@@ -134,12 +134,12 @@ Requires use of the ``"MonsterGroups":``, found below.
     }
   ],
 
-Sets the possible formations monsters in the ``"RandomMonsters":`` can take. Each object with a ``"Group":`` key will represent a different possible formation.
+Sets the possible formations monsters in the ``"RandomMonsters":`` can take. Each :term:`object` with a ``"Group":`` :term:`key` will represent a different possible formation.
 You can intermix different monsters via the arrays, even if the monster isn't present in ``"RandomMonsters":``.
-Repeat an object with a certain formation multiple times if you wish to make it more likely.
+Repeat an :term:`object` with a certain formation multiple times if you wish to make it more likely.
 Works the same as a :doc:`Location's </Doc/Manual/Locations/Locations>` ``"MonsterGroups":``.
 
-While the key is required, you do not have to provide an object if you do not wish to use formations.
+While the :term:`key` is required, you do not have to provide an :term:`object` if you do not wish to use formations.
 
 **Treasure & Eros**
 --------------------
@@ -160,7 +160,7 @@ While the key is required, you do not have to provide an object if you do not wi
   ],
 
 Sets the possible items that can be earned from chests for each type of treasure rarity.
-The listed objects and their keys must be included, and each array must have at least one item.
+The listed :term:`objects` and their :term:`keys` must be included, and each :term:`array` must have at least one item.
 
 .. code-block:: javascript
 
@@ -179,4 +179,4 @@ The listed objects and their keys must be included, and each array must have at 
   ]
 
 Sets the amount of eros given from chests for each type of treasure rarity in the adventure from treasure in the `Deck`_.
-The listed objects and their keys must be included, and each key must provide a value in their string.
+The listed :term:`objects` and their :term:`keys` must be included, and each :term:`key` must provide a :term:`value` in their string.

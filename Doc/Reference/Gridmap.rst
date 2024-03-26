@@ -135,7 +135,7 @@ It must be called after everything else, nor should any of the other functions i
 
 The ``"Tileset"`` function loop defines the tiles that will visually make up your Gridmap.
 
-Each tile is defined on a 6-string interval. Even if a string value goes unused, an empty string will still count towards the tile.
+Each tile is defined on a 6-string interval. Even if a :term:`value` goes unused, an empty :term:`string` will still count towards the tile.
 
 The disambiguation will use the following tile example:
 
@@ -143,8 +143,8 @@ The disambiguation will use the following tile example:
 
   ``"T", "GridMap/floorPoisoned.png", "Auto", "Labyrinth", "Poison", "The ground is laden in aphrodisiac.",``
 
-**First String Value**:
-~~~~~~~~~~~~~~~~~~~~~~~~
+**First Value**:
+~~~~~~~~~~~~~~~~~
 
 The tile ID used to tell the game which tile to place, in this case ``"T"`` to denote a poisoned tile.
 
@@ -155,17 +155,17 @@ as the similar width will make the later placement of these tiles easier to visu
 
   Also see setting a monospace font in your respective text editors settings to make all characters the same width.
 
-**Second String Value**:
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**Second Value**:
+~~~~~~~~~~~~~~~~~~~
 
 The image path used for your tile.
 
 The pixel width and length used by MGD is 50x50 tiles. Any other size, such as 64x64 tilesets, will not work as expected.
 
-**Third-Sixth String Values**:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Third-Sixth Values**:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-The third string value defines the type of tile, defining how it behaves.
+The third :term:`value` defines the type of tile, defining how it behaves.
 
 .. list-table::
   :widths: 1 5
@@ -179,19 +179,19 @@ The third string value defines the type of tile, defining how it behaves.
   * - ``"Auto"``
     - Calls an Event after the player steps on it no matter what. NPCs traverse them like a Floor.
 
-The fourth and fifth string value is for Interactables and Auto tiles to define the name of the Event and then Scene to call. Floors and Walls leave it blank.
+The fourth and fifth :term:`value` is for Interactables and Auto tiles to define the name of the Event and then Scene to call. Floors and Walls leave it blank.
 
 In this case, the tile type is ``"Auto"``, and calls the event ``"Labyrinth"``, and goes to the scene ``"Poison"``.
 
-The sixth string value is for optionally displaying flavor text when the tile is stepped by the player.
+The sixth :term:`value` is for optionally displaying flavor text when the tile is stepped by the player.
 Walls can't make use of it, given players cannot step in Walls.
 
 In this case, ``"The ground is laden in aphrodisiac.",`` will play after the Auto tile event is done being called.
 
 **YAdjust**
 """""""""""""
-``"YAdjust"`` alters the position of the Gridmap on the screen via the following string value.
-The value necessary  will vary depending on the amount of Rows your Gridmap has.
+``"YAdjust"`` alters the position of the Gridmap on the screen via the following :term:`string` value.
+The :term:`value` necessary  will vary depending on the amount of Rows your Gridmap has.
 
 You'll likely need to adjust this manually from reviewing the Gridmap in-game till the positioning is considered correct.
 
@@ -201,10 +201,10 @@ You'll likely need to adjust this manually from reviewing the Gridmap in-game ti
 
 **PlayerCoord**
 """"""""""""""""
-``"PlayerCoord"`` sets the players starting coordinates on the Gridmap in the following two string values.
+``"PlayerCoord"`` sets the players starting coordinates on the Gridmap in the following two :term:`string` values.
 
-The first given string value represents the X position, increasing in numerical value from left to right.
-The second string value represents the Y position, increasing in numerical value from top to bottom.
+The first given :term:`value` represents the X position, increasing in numerical :term:`value` from left to right.
+The second :term:`value` represents the Y position, increasing in numerical :term:`value` from top to bottom.
 
 Note how in the above example Gridmap, the player spawns on the Floor tile of ID ``"3"``, with the given player coordinates of ``"2", "4"``.
 
@@ -214,8 +214,8 @@ Note how in the above example Gridmap, the player spawns on the Floor tile of ID
 
 **Sight**
 """"""""""
-Declaring ``"Sight"`` enables the fog of war, only letting player see as far as the following string value.
-Each numerical value increases the players sight radius in a 50px interval. Vision is blocked by Wall tiles.
+Declaring ``"Sight"`` enables the fog of war, only letting player see as far as the following :term:`string` value.
+Each numerical :term:`value` increases the players sight radius in a 50px interval. Vision is blocked by Wall tiles.
 
 It's optional and can thus be excluded if you want to disable fog of war and let the player see the entire Gridmap, including through walls.
 
@@ -274,7 +274,7 @@ The following table breaks down all following sub-functions you can provide it b
   * - ``"Name"``
     - Name of your NPC, for what other Gridmap functions will call the NPC by.
   * - ``"Img"``
-    - Image to display on map in the following string value, which is either the file path, or ``"Invisible"`` to not use any image.
+    - Image to display on map in the following :term:`string` value, which is either the file path, or ``"Invisible"`` to not use any image.
   * - ``"Event"``
     - Upon player collision with the NPC, calls an event, featuring the same possible paramaters as :ref:`Tileset`.
   * - ``"Movement"``
@@ -296,12 +296,12 @@ The following table breaks down all following sub-functions you can provide it b
   "SpawnNPC", "Key", "5", "10",
   "SpawnNPC", "CharmShooterDownOverlay",  "Timer", "6", "TimerMax", "7", "8", "0",
 
-``"SpawnNPC"`` spawns the given NPC at the coordinates provided in the following two string values.
+``"SpawnNPC"`` spawns the given NPC at the coordinates provided in the following two :term:`string` values.
 
 The NPC must be defined in the Gridmap when it's created to avoid issues.
 
-The first given string value represents the X position, increasing in numerical value from left to right.
-The second string value represents the Y position, increasing in numerical value from top to bottom.
+The first given :term:`value` represents the X position, increasing in numerical :term:`value` from left to right.
+The second :term:`value` represents the Y position, increasing in numerical :term:`value` from top to bottom.
 
 Timer and Timer max can also be called before the coordinates to alter the timer of the NPC if it already has a timer given to it.
 

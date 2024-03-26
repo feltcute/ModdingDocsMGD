@@ -84,7 +84,7 @@ Arrays allow any number of values to be provided in the scenario a key is meant 
 Note, each string you provide within the array must still be separated from one another with a comma.
 The last string marks the end of the array, and thus has no comma so it knows to exit the array.
 
-Arrays cannot contain keys, only objects can. However, arrays can contain objects.
+Arrays cannot contain keys, only objects can. However, :term:`arrays` can contain objects.
 
 **Nested Objects**
 -------------------

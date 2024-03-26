@@ -36,7 +36,7 @@ Changes the events progress based on the given value. Can be negative.
 
 **ChangeProgressBasedOnVirility**
 ----------------------------------
-Changes progress based on virility, with the following with the value in the following string being a multiplier.
+Changes progress based on virility, with the following with the :term:`value` in the following :term:`string` being a multiplier.
 Base number in the example translates to 0.1x scaling of the players virility total. So if the player has 100 virility, it will result in progress increasing by 10.
 
 .. code-block:: javascript
@@ -60,7 +60,7 @@ Can be negative.
 
 **IfProgressEqualsOrGreater**
 ------------------------------
-Works the same as the previous function, but is still true even if the event's value is greater than the checked value.
+Works the same as the previous function, but is still true even if the event's :term:`value` is greater than the checked value.
 Can be negative.
 
 .. code-block:: javascript
@@ -71,7 +71,7 @@ Can be negative.
 
 **IfProgressEqualsOrLess**
 ---------------------------
-Same as the previous function, but instead is still true if the event's value is less than the checked value.
+Same as the previous function, but instead is still true if the event's :term:`value` is less than the checked value.
 Can be negative.
 
 .. code-block:: javascript

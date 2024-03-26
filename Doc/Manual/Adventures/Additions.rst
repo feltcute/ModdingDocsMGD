@@ -1,14 +1,14 @@
 **Adventure Additions**
 ========================
 
-Adventure additions cover overwriting the base Adventure's ``"Deck":`` key with your own data,
+Adventure additions cover overwriting the base Adventure's ``"Deck":`` :term:`key` with your own data,
 expanding the random monsters, monster groups, events, and loot from treasure.
 
-This does mean your addition would be incompatible with other mods that make changes to the ``"Deck":`` key for the same Adventure.
+This does mean your addition would be incompatible with other mods that make changes to the ``"Deck":`` :term:`key` for the same Adventure.
 
 Check **_AdventureAdditionExample.json** in *Json/Adventures/* for an example.
 
-The overview will proceed to go over each key you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.
+The overview will proceed to go over each :term:`key` you would find in a regular Adventure .json, how their role changes, and if they're required in a addition.
 
 .. note::
 
@@ -44,7 +44,7 @@ Required so you can tell the game that you're wishing to make an addition. Can b
 
 Required, ``"Deck":`` **cannot** be excluded, nor left empty, even if your goal isn't to modify the deck.
 
-It's advised to copy and paste the array from the Adventure's original ``"Deck":`` key as the basis of your addition, and go from there.
+It's advised to copy and paste the :term:`array` from the Adventure's original ``"Deck":`` :term:`key` as the basis of your addition, and go from there.
 
 **RandomEvents**
 -----------------
@@ -53,7 +53,7 @@ It's advised to copy and paste the array from the Adventure's original ``"Deck":
 
   "RandomEvents": ["Lust Rune", "Ninja Rest Ambush"],
 
-Using this key in a addition adds to the existing array. The strings provided in the original ``"RandomEvents":`` key will still be present, and not overridden.
+Using this :term:`key` in a addition adds to the existing array. The :term:`strings` provided in the original ``"RandomEvents":`` :term:`key` will still be present, and not overridden.
 As such, you are only increasing the selection of events, not replacing, unlike the ``"Deck":`` key.
 
 **RandomMonsters & MonsterGroups**
@@ -68,10 +68,10 @@ As such, you are only increasing the selection of events, not replacing, unlike 
     }
   ],
 
-Using these keys in an addition adds to the existing arrays, so the strings and objects provided in the original keys will still be present, not overwritten.
+Using these :term:`keys` in an addition adds to the existing arrays, so the :term:`strings` and :term:`objects` provided in the original :term:`keys` will still be present, not overwritten.
 As such, you are only increasing the selection of monster groups, not replacing.
 
-These keys are required, but the arrays can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
+These :term:`keys` are required, but the :term:`arrays` can be left empty if you do not wish to use it. ``"MonsterGroups":`` does not require an object.
 
 **Treasure**
 -------------
@@ -92,7 +92,7 @@ These keys are required, but the arrays can be left empty if you do not wish to 
     }
   ],
 
-Using this key in a addition adds to the existing array, so the strings provided in the original key will still be present, and will not be overridden.
+Using this :term:`key` in a addition adds to the existing array, so the :term:`strings` provided in the original :term:`key` will still be present, and will not be overridden.
 As such, you are only increasing the selection of loot, not replacing.
 
-``"Treasure":`` and its objects are required, but the arrays can be left empty if you do not wish to use it.
+``"Treasure":`` and its :term:`objects` are required, but the :term:`arrays` can be left empty if you do not wish to use it.

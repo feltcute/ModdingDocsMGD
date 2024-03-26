@@ -51,7 +51,7 @@ Can state ``"All"`` instead of a stance to remove all currently active stances t
 
 **IfPlayerHasStance & IfPlayerDoesntHaveStance**
 -------------------------------------------------
-Checks if the player does or does not have this stance with anyone respectively. You can also provide a value of ``"Any"`` or ``"None"``.
+Checks if the player does or does not have this stance with anyone respectively. You can also provide a :term:`value` of ``"Any"`` or ``"None"``.
 
 .. code-block:: javascript
 

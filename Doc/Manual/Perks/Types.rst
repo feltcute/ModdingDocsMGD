@@ -48,7 +48,7 @@ note sleeping till morning will take a variable number of ticks depending on the
   "PerkType": ["RemovedOnOrgasm"],
   "EffectPower": ["0"],
 
-Perk is removed when the wielder orgasms. Set a value of 0, as ``"EffectPower":`` is not needed.
+Perk is removed when the wielder orgasms. Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **EndMessage**
 """""""""""""""
@@ -58,7 +58,7 @@ Perk is removed when the wielder orgasms. Set a value of 0, as ``"EffectPower":`
   "PerkType": ["EndMessage"],
   "EffectPower": ["PerkName's effects have faded away!"],
 
-Displays the given text via its correlating ``"EffectPower":`` string when the perk ends via `TurnDuration`_ or `TimeDuration`_.
+Displays the given text via its correlating ``"EffectPower":`` :term:`string` when the perk ends via `TurnDuration`_ or `TimeDuration`_.
 This can use :doc:`text markup </Doc/Reference/Markup>`, and thus in extension, :doc:`functions </Doc/Functions/index>`.
 
 .. _NonPersistentEffectType:
@@ -72,7 +72,7 @@ This can use :doc:`text markup </Doc/Reference/Markup>`, and thus in extension, 
   "EffectPower": ["0"],
 
 Declare the perk as a NonPersistentEffect, removing it whenever a Non-Persistent Status Effect (e.g. Charm) would be removed by the game.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **RemovablePersistantEffect**
 """"""""""""""""""""""""""""""
@@ -83,7 +83,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "EffectPower": ["0"],
 
 Declare the perk as a RemovablePersistantEffect, removing it whenever a RemovablePersistantEffect Status Effect (e.g. Aphrodisiac) would be removed by the game. Aka sleep or church wake up.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **RemovableEffect**
 """"""""""""""""""""
@@ -94,7 +94,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "EffectPower": ["0"],
 
 Declare the perk as a RemovableEffect , that allows the effect to be cleared on use of a panacea(currently just this), or on combat end like NonPersistentEffect.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 
 **Reward**
@@ -114,7 +114,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "EffectPower": ["10"],
 
 Alters eros found by a percent.
-If wielded by a monster, alters their own eros dropped. Positive values increase eros, negative values decrease.
+If wielded by a monster, alters their own eros dropped. Positive :term:`values` increase eros, negative :term:`values` decrease.
 
 **ItemDropChance**
 """""""""""""""""""
@@ -125,7 +125,7 @@ If wielded by a monster, alters their own eros dropped. Positive values increase
   "EffectPower": ["-10"],
 
 Alters item drop chance from monsters by a percent.
-If wielded by a monster, alters their own item drop chance. Positive values increase the chance, negative values decrease.
+If wielded by a monster, alters their own item drop chance. Positive :term:`values` increase the chance, negative :term:`values` decrease.
 
 **TreasureFindChance**
 """""""""""""""""""""""
@@ -136,7 +136,7 @@ If wielded by a monster, alters their own item drop chance. Positive values incr
   "EffectPower": ["15"],
 
 Alters percent chance of finding treasure during exploration, and by extension, higher chance of rare treasure.
-Positive values increase the chance, negative values decrease.
+Positive :term:`values` increase the chance, negative :term:`values` decrease.
 
 **BetterPrices**
 """""""""""""""""
@@ -147,7 +147,7 @@ Positive values increase the chance, negative values decrease.
   "EffectPower": ["-5"],
 
 Alter all shop prices by a percent, for both selling and buying.
-Positive values lower purchase cost and increases sale price, negative values increase cost and lowers sale price.
+Positive :term:`values` lower purchase cost and increases sale price, negative :term:`values` increase cost and lowers sale price.
 
 **BuyPrices**
 """"""""""""""
@@ -158,7 +158,7 @@ Positive values lower purchase cost and increases sale price, negative values in
   "EffectPower": ["50"],
 
 
-Alter all shop prices by a percent, for both selling and buying. Positive values lower cost, negative values increase cost.
+Alter all shop prices by a percent, for both selling and buying. Positive :term:`values` lower cost, negative :term:`values` increase cost.
 
 **SellPrices**
 """""""""""""""
@@ -168,7 +168,7 @@ Alter all shop prices by a percent, for both selling and buying. Positive values
   "PerkType": ["SellPrices"],
   "EffectPower": ["-50"],
 
-Alter all shop prices by a percent, for both selling and buying. Positive values increase sale price, negative values lower sell price.
+Alter all shop prices by a percent, for both selling and buying. Positive :term:`values` increase sale price, negative :term:`values` lower sell price.
 
 **ExpBoost**
 """""""""""""
@@ -179,7 +179,7 @@ Alter all shop prices by a percent, for both selling and buying. Positive values
   "EffectPower": ["120"],
 
 Alter all exp gains by a percent. Effect is halved when applied to LossExp effects, see below.
-If wielded by a monster, alters their own exp drop amount. Positive values increase exp, negative values decrease.
+If wielded by a monster, alters their own exp drop amount. Positive :term:`values` increase exp, negative :term:`values` decrease.
 
 **LossExp**
 """"""""""""
@@ -189,7 +189,7 @@ If wielded by a monster, alters their own exp drop amount. Positive values incre
   "PerkType": ["LossExp"],
   "EffectPower": ["-20"],
 
-Alter exp gains from monster exp on loss by a percent. Positive values increase exp, negative values decrease.
+Alter exp gains from monster exp on loss by a percent. Positive :term:`values` increase exp, negative :term:`values` decrease.
 
 **Damage**
 -----------
@@ -206,7 +206,7 @@ Alter exp gains from monster exp on loss by a percent. Positive values increase 
   "PerkType": ["DamageBoost"],
   "EffectPower": ["50"],
 
-Alters all types of damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters all types of damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **MagicBoost**
 """""""""""""""
@@ -216,7 +216,7 @@ Alters all types of damage dealt by a percent. Positive values increase damage, 
   "PerkType": ["MagicBoost"],
   "EffectPower": ["-30"],
 
-Alters magic damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters magic damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **NonPenMagicBoost**
 """""""""""""""""""""
@@ -226,7 +226,7 @@ Alters magic damage dealt by a percent. Positive values increase damage, negativ
   "PerkType": ["NonPenMagicBoost"],
   "EffectPower": ["19"],
 
-Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **BreastBoost**
 """"""""""""""""
@@ -236,7 +236,7 @@ Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage
   "PerkType": ["BreastBoost"],
   "EffectPower": ["40"],
 
-Alters breast/nipple damage by a percent. Positive values increase damage, negative values decrease.
+Alters breast/nipple damage by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **NonPenSeductionBoost**
 """""""""""""""""""""""""""
@@ -246,7 +246,7 @@ Alters breast/nipple damage by a percent. Positive values increase damage, negat
   "PerkType": ["NonPenSeductionBoost"],
   "EffectPower": ["-30"],
 
-Alters non-penetrative seduction damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters non-penetrative seduction damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **SeductionBoost**
 """""""""""""""""""
@@ -256,7 +256,7 @@ Alters non-penetrative seduction damage dealt by a percent. Positive values incr
   "PerkType": ["SeductionBoost"],
   "EffectPower": ["-30"],
 
-Alters seduction damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters seduction damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **KissBoost**
 """"""""""""""
@@ -266,7 +266,7 @@ Alters seduction damage dealt by a percent. Positive values increase damage, neg
   "PerkType": ["KissBoost"],
   "EffectPower": ["69"],
 
-Alters kiss damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters kiss damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **SexBoost**
 """""""""""""
@@ -276,7 +276,7 @@ Alters kiss damage dealt by a percent. Positive values increase damage, negative
   "PerkType": ["SexBoost"],
   "EffectPower": ["5"],
 
-Alters sex damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters sex damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **NonPenSexBoost**
 """""""""""""""""""
@@ -286,7 +286,7 @@ Alters sex damage dealt by a percent. Positive values increase damage, negative 
   "PerkType": ["NonPenSexBoost"],
   "EffectPower": ["20"],
 
-Alters non-penetrative sex (e.g. dildo, fingering, stroking, etc.) damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters non-penetrative sex (e.g. dildo, fingering, stroking, etc.) damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **AssBoost**
 """""""""""""
@@ -296,7 +296,7 @@ Alters non-penetrative sex (e.g. dildo, fingering, stroking, etc.) damage dealt 
   "PerkType": ["AssBoost"],
   "EffectPower": ["-10"],
 
-Alters ass damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters ass damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **NonPenAssBoost**
 """""""""""""""""""
@@ -306,7 +306,7 @@ Alters ass damage dealt by a percent. Positive values increase damage, negative 
   "PerkType": ["NonPenAssBoost"],
   "EffectPower": ["20"],
 
-Alters non-penetrative ass (e.g. dildo, fingering, etc.) damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters non-penetrative ass (e.g. dildo, fingering, etc.) damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **PainBoost**
 """"""""""""""
@@ -316,7 +316,7 @@ Alters non-penetrative ass (e.g. dildo, fingering, etc.) damage dealt by a perce
   "PerkType": ["PainBoost"],
   "EffectPower": ["50"],
 
-Alters pain damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters pain damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **PenetrationBoost**
 """""""""""""""""""""
@@ -326,7 +326,7 @@ Alters pain damage dealt by a percent. Positive values increase damage, negative
   "PerkType": ["PenetrationBoost"],
   "EffectPower": ["15"],
 
-Alters penetration damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters penetration damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **OralBoost**
 """"""""""""""
@@ -336,7 +336,7 @@ Alters penetration damage dealt by a percent. Positive values increase damage, n
   "PerkType": ["OralBoost"],
   "EffectPower": ["-35"],
 
-Alters oral damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters oral damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **ForeplayBoost**
 """"""""""""""""""
@@ -346,7 +346,7 @@ Alters oral damage dealt by a percent. Positive values increase damage, negative
   "PerkType": ["ForeplayBoost"],
   "EffectPower": ["8"],
 
-Alters foreplay damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters foreplay damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **IndulgentBoost**
 """""""""""""""""""
@@ -356,7 +356,7 @@ Alters foreplay damage dealt by a percent. Positive values increase damage, nega
   "PerkType": ["IndulgentBoost"],
   "EffectPower": ["-1"],
 
-Alters indulgent damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters indulgent damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **SexToyBoost**
 """"""""""""""""
@@ -366,7 +366,7 @@ Alters indulgent damage dealt by a percent. Positive values increase damage, neg
   "PerkType": ["SexToyBoost"],
   "EffectPower": ["34"],
 
-Alters sex toy damage dealt by a percent. Positive values increase damage, negative values decrease.
+Alters sex toy damage dealt by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **BaselineAllureFlatBuff**
 """""""""""""""""""""""""""
@@ -376,7 +376,7 @@ Alters sex toy damage dealt by a percent. Positive values increase damage, negat
   "PerkType": ["BaselineAllureFlatBuff"],
   "EffectPower": ["15"],
 
-Alters Allure’s natural flat damage buff scaling to everything by a flat amount. Positive values increase damage, negative values decrease.
+Alters Allure’s natural flat damage buff scaling to everything by a flat amount. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **BaselineAllureFlatPercentBoost**
 """""""""""""""""""""""""""""""""""
@@ -386,7 +386,7 @@ Alters Allure’s natural flat damage buff scaling to everything by a flat amoun
   "PerkType": ["BaselineAllureFlatPercentBoost"],
   "EffectPower": ["2"],
 
-Alters Allure’s natural flat damage buff scaling to everything by a percent. Positive values increase damage, negative values decrease.
+Alters Allure’s natural flat damage buff scaling to everything by a percent. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **ForeplayFlatDamage**
 """""""""""""""""""""""
@@ -396,7 +396,7 @@ Alters Allure’s natural flat damage buff scaling to everything by a percent. P
   "PerkType": ["ForeplayFlatDamage"],
   "EffectPower": ["5"],
 
-Alters foreplay damage dealt by a flat amount. Positive values increase damage, negative values decrease.
+Alters foreplay damage dealt by a flat amount. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **CritChanceBoost**
 """"""""""""""""""""
@@ -406,7 +406,7 @@ Alters foreplay damage dealt by a flat amount. Positive values increase damage, 
   "PerkType": ["CritChanceBoost"],
   "EffectPower": ["20"],
 
-Alters chance for the wielder's skills to crit by a flat amount. Positive values increase chance, negative values decrease.
+Alters chance for the wielder's skills to crit by a flat amount. Positive :term:`values` increase chance, negative :term:`values` decrease.
 
 **CritDamageBoost**
 """"""""""""""""""""
@@ -416,7 +416,7 @@ Alters chance for the wielder's skills to crit by a flat amount. Positive values
   "PerkType": ["CritDamageBoost"],
   "EffectPower": ["-100"],
 
-Alters critical damage dealt by a percent amount on top of the original calculation. Positive values increase damage, negative values decrease.
+Alters critical damage dealt by a percent amount on top of the original calculation. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **RecoilBoost**
 """"""""""""""""
@@ -426,7 +426,7 @@ Alters critical damage dealt by a percent amount on top of the original calculat
   "PerkType": ["RecoilBoost"],
   "EffectPower": ["10"],
 
-Alters overall recoil damage dealt to opponents. Positive values increase damage, negative values decrease.
+Alters overall recoil damage dealt to opponents. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **AllureRecoilBoost**
 """"""""""""""""""""""
@@ -436,7 +436,7 @@ Alters overall recoil damage dealt to opponents. Positive values increase damage
   "PerkType": ["AllureRecoilBoost"],
   "EffectPower": ["33"],
 
-Alters the percent of allure based recoil damage dealt to opponents. Positive values increase damage, negative values decrease.
+Alters the percent of allure based recoil damage dealt to opponents. Positive :term:`values` increase damage, negative :term:`values` decrease.
 
 **Defense**
 ------------
@@ -453,7 +453,7 @@ Alters the percent of allure based recoil damage dealt to opponents. Positive va
   "PerkType": ["DamageReduction"],
   "EffectPower": ["-10"],
 
-Alters all damage taken by a percent, take caution. Positive values increase mitigation, negative values decrease.
+Alters all damage taken by a percent, take caution. Positive :term:`values` increase mitigation, negative :term:`values` decrease.
 
 **ForeplayEnergyRegen**
 """"""""""""""""""""""""
@@ -463,7 +463,7 @@ Alters all damage taken by a percent, take caution. Positive values increase mit
   "PerkType": ["ForeplayEnergyRegen"],
   "EffectPower": ["40"],
 
-Alters energy regeneration through foreplay skills by a percent of the wielders max. Positive values recover energy, negative values remove energy.
+Alters energy regeneration through foreplay skills by a percent of the wielders max. Positive :term:`values` recover energy, negative :term:`values` remove energy.
 
 **ForeplayArousalRegen**
 """""""""""""""""""""""""
@@ -473,7 +473,7 @@ Alters energy regeneration through foreplay skills by a percent of the wielders 
   "PerkType": ["ForeplayArousalRegen"],
   "EffectPower": ["20"],
 
-Alters arousal regeneration through foreplay skills by a percent of the wielders max. Positive values recover arousal, negative values remove arousal.
+Alters arousal regeneration through foreplay skills by a percent of the wielders max. Positive :term:`values` recover arousal, negative :term:`values` remove arousal.
 
 **RegenMaxArousal**
 """"""""""""""""""""
@@ -483,7 +483,7 @@ Alters arousal regeneration through foreplay skills by a percent of the wielders
   "PerkType": ["RegenMaxArousal"],
   "EffectPower": ["5"],
 
-Restores a percent of the max arousal of the wielder. Take caution. Positive values recover arousal, negative values remove arousal.
+Restores a percent of the max arousal of the wielder. Take caution. Positive :term:`values` recover arousal, negative :term:`values` remove arousal.
 
 **RegenMaxEnergy**
 """""""""""""""""""
@@ -493,7 +493,7 @@ Restores a percent of the max arousal of the wielder. Take caution. Positive val
   "PerkType": ["RegenMaxEnergy"],
   "EffectPower": ["2"],
 
-Restores a percent of the max arousal of the wielder. Take caution. Positive values recover energy, negative values remove energy.
+Restores a percent of the max arousal of the wielder. Take caution. Positive :term:`values` recover energy, negative :term:`values` remove energy.
 
 **VirilityBoost**
 """"""""""""""""""
@@ -503,7 +503,7 @@ Restores a percent of the max arousal of the wielder. Take caution. Positive val
   "PerkType": ["VirilityBoost"],
   "EffectPower": ["40"],
 
-Alters the players Virility by a percent. Positive values increase virility, negative values reduce. **Player only**.
+Alters the players Virility by a percent. Positive :term:`values` increase virility, negative :term:`values` reduce. **Player only**.
 
 **RecoilDamageTaken**
 
@@ -512,7 +512,7 @@ Alters the players Virility by a percent. Positive values increase virility, neg
   "PerkType": ["RecoilDamageTaken"],
   "EffectPower": ["-66"],
 
-Alters recoil damage taken by a percent. Positive values increase recoil damage taken, negative values reduce.
+Alters recoil damage taken by a percent. Positive :term:`values` increase recoil damage taken, negative :term:`values` reduce.
 
 **CritDamageBoostSelf**
 """"""""""""""""""""""""
@@ -522,7 +522,7 @@ Alters recoil damage taken by a percent. Positive values increase recoil damage 
   "PerkType": ["CritDamageBoostSelf"],
   "EffectPower": ["-20"],
 
-Alters critical damage the wielder receives prior to the final calculation. Positive values increase damage received, negative values reduce.
+Alters critical damage the wielder receives prior to the final calculation. Positive :term:`values` increase damage received, negative :term:`values` reduce.
 
 **Edging**
 """""""""""
@@ -532,7 +532,7 @@ Alters critical damage the wielder receives prior to the final calculation. Posi
   "PerkType": ["Edging"],
   "EffectPower": ["50"],
 
-Experimental perk type that gives percent chance to resist orgasm, stacks with other sources. Positive values increase the base percent chance, negative values reduce.
+Experimental perk type that gives percent chance to resist orgasm, stacks with other sources. Positive :term:`values` increase the base percent chance, negative :term:`values` reduce.
 
 **MultiplySpiritLoss**
 """""""""""""""""""""""""
@@ -563,7 +563,7 @@ Multiply the spirit lost by the given number. Caution going above 2, for a base 
   "PerkType": ["StatusEffectDuration"],
   "EffectPower": ["1"],
 
-Alters the duration of the users status effects, take caution. Positive values increase duration, negative values reduce.
+Alters the duration of the users status effects, take caution. Positive :term:`values` increase duration, negative :term:`values` reduce.
 
 **StatusChanceBoost**
 """""""""""""""""""""""
@@ -573,7 +573,7 @@ Alters the duration of the users status effects, take caution. Positive values i
   "PerkType": ["StatusChanceBoost"],
   "EffectPower": ["-10"],
 
-Alter status effect application chances from skills. Positive values increase chance, negative values reduce.
+Alter status effect application chances from skills. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **StartDeeperInTrance**
 """""""""""""""""""""""""
@@ -594,7 +594,7 @@ Player starts this many steps deeper in trance when hit with a trance related mo
   "EffectPower": ["0"],
 
 Can no longer automatically start to break free of trance after 3 consecutive turns without getting stunned.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **TranceStunChance**
 """""""""""""""""""""
@@ -604,7 +604,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "PerkType": ["TranceStunChance"],
   "EffectPower": ["10"],
 
-Alters the chance for the player to be stunned each turn while fully tranced by a percent. Positive values increase chance, negative values reduce.
+Alters the chance for the player to be stunned each turn while fully tranced by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **ForeplayDefDown**
 """"""""""""""""""""
@@ -616,7 +616,7 @@ Alters the chance for the player to be stunned each turn while fully tranced by 
 
 
 Applies a status effect that reduces the defense to the enemy targeted with a foreplay skill for 3 turns.
-Positive values reduce defense, negative values increase.
+Positive :term:`values` reduce defense, negative :term:`values` increase.
 
 **StunDelay**
 """"""""""""""
@@ -626,7 +626,7 @@ Positive values reduce defense, negative values increase.
   "PerkType": ["StunDelay"],
   "EffectPower": ["1"],
 
-Alters the delay between stun status effects. Positive values increase the delay, negative values reduce.
+Alters the delay between stun status effects. Positive :term:`values` increase the delay, negative :term:`values` reduce.
 
 **SleepAmp**
 """""""""""""
@@ -637,7 +637,7 @@ Alters the delay between stun status effects. Positive values increase the delay
   "EffectPower": ["-50"],
 
 
-Alters the flat amount of energy lost per turn upon being afflicted by Sleep. Positive values increase drain energy, negative values reduce drained energy.
+Alters the flat amount of energy lost per turn upon being afflicted by Sleep. Positive :term:`values` increase drain energy, negative :term:`values` reduce drained energy.
 
 **ParalysisAmp**
 """""""""""""""""
@@ -647,7 +647,7 @@ Alters the flat amount of energy lost per turn upon being afflicted by Sleep. Po
   "PerkType": ["ParalysisAmp"],
   "EffectPower": ["-10"],
 
-Alters the chance to be stunned by paralysis. Positive values increase chance, negative values reduce.
+Alters the chance to be stunned by paralysis. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **AphrodisiacAmp**
 """"""""""""""""""""
@@ -657,7 +657,7 @@ Alters the chance to be stunned by paralysis. Positive values increase chance, n
   "PerkType": ["AphrodisiacAmp"],
   "EffectPower": ["10"],
 
-Alters the damage taken from aphrodisiacs by a percent. Positive values increase damage, negative values reduce.
+Alters the damage taken from aphrodisiacs by a percent. Positive :term:`values` increase damage, negative :term:`values` reduce.
 
 **AphrodisiacTurnCure**
 """"""""""""""""""""""""
@@ -667,7 +667,7 @@ Alters the damage taken from aphrodisiacs by a percent. Positive values increase
   "PerkType": ["AphrodisiacTurnCure"],
   "EffectPower": ["5"],
 
-Removes set amount from aphrodisiac potency every turn.  Positive values reduce set potency, negative values increase set potency.
+Removes set amount from aphrodisiac potency every turn.  Positive :term:`values` reduce set potency, negative :term:`values` increase set potency.
 
 **DisableRun**
 """""""""""""""
@@ -677,7 +677,7 @@ Removes set amount from aphrodisiac potency every turn.  Positive values reduce 
   "PerkType": ["DisableRun"],
   "EffectPower": ["0"],
 
-Can disable the players ability to run from all fights. Set a value of 0, as ``"EffectPower":`` is not needed.
+Can disable the players ability to run from all fights. Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **Stances & Evasion**
 ----------------------
@@ -694,7 +694,7 @@ Can disable the players ability to run from all fights. Set a value of 0, as ``"
   "PerkType": ["GetOutOfStance"],
   "EffectPower": ["20"],
 
-Alters chance to get out of stance by a percent. Positive values increase chance, negative values reduce.
+Alters chance to get out of stance by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **OutOfStanceEvade**
 """""""""""""""""""""
@@ -704,7 +704,7 @@ Alters chance to get out of stance by a percent. Positive values increase chance
   "PerkType": ["OutOfStanceEvade"],
   "EffectPower": ["-25"],
 
-Alters evade chance when out of stances by a percent. Positive values increase chance, negative values reduce.
+Alters evade chance when out of stances by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **RemoveRestraints**
 """""""""""""""""""""
@@ -714,7 +714,7 @@ Alters evade chance when out of stances by a percent. Positive values increase c
   "PerkType": ["RemoveRestraints"],
   "EffectPower": ["15"],
 
-Alters restraint escape chance by a percent. Positive values increase chance, negative values reduce.
+Alters restraint escape chance by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **RestraintBoost**
 """""""""""""""""""
@@ -724,7 +724,7 @@ Alters restraint escape chance by a percent. Positive values increase chance, ne
   "PerkType": ["RestraintBoost"],
   "EffectPower": ["30"],
 
-Increases the effectiveness of your own restraints. Positive values improve effectiveness, negative values reduce.
+Increases the effectiveness of your own restraints. Positive :term:`values` improve effectiveness, negative :term:`values` reduce.
 
 **StanceBoost**
 """"""""""""""""""""
@@ -734,7 +734,7 @@ Increases the effectiveness of your own restraints. Positive values improve effe
   "PerkType": ["StanceBoost"],
   "EffectPower": ["-20"],
 
-Increases the effectiveness of your own stances. Positive values improve effectiveness, negative values reduce.
+Increases the effectiveness of your own stances. Positive :term:`values` improve effectiveness, negative :term:`values` reduce.
 
 **RunChance**
 """"""""""""""
@@ -744,7 +744,7 @@ Increases the effectiveness of your own stances. Positive values improve effecti
   "PerkType": ["RunChance"],
   "EffectPower": ["25"],
 
-Alters run chance by a percent. Positive values increase chance, negative values reduce.
+Alters run chance by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **OpponentRunChance**
 """"""""""""""""""""""""
@@ -754,7 +754,7 @@ Alters run chance by a percent. Positive values increase chance, negative values
   "PerkType": ["OpponentRunChance"],
   "EffectPower": ["25"],
 
-Monsters with this perk type alters the players run chance by a percent. Positive values increase chance, negative values reduce.
+Monsters with this perk type alters the players run chance by a percent. Positive :term:`values` increase chance, negative :term:`values` reduce.
 
 **Unbounded**
 """"""""""""""
@@ -765,7 +765,7 @@ Monsters with this perk type alters the players run chance by a percent. Positiv
   "EffectPower": ["0"],
 
 If your action is interrupted by a restraint, you will struggle instead of doing nothing by default.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **Unshackled**
 """""""""""""""
@@ -776,7 +776,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "EffectPower": ["0"],
 
 If you break a restraint with struggle, you get to act immediately.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 **OrgasmEnergyDrain**
 """"""""""""""""""""""
@@ -787,7 +787,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "EffectPower": ["25"],
 
 Drains flat amount of energy upon the target orgasming. Has no stance restrictions.
-Positive values drain energy.
+Positive :term:`values` drain energy.
 
 **StanceStuck**
 """"""""""""""""
@@ -797,7 +797,7 @@ Positive values drain energy.
   "PerkType": ["StanceStuck"],
   "EffectPower": ["-20"],
 
-Alters chance of stance escape by a percent. Positive values reduce chance, negative values increase.
+Alters chance of stance escape by a percent. Positive :term:`values` reduce chance, negative :term:`values` increase.
 
 **InitiativeBonus**
 """"""""""""""""""""
@@ -807,7 +807,7 @@ Alters chance of stance escape by a percent. Positive values reduce chance, nega
   "PerkType": ["InitiativeBonus"],
   "EffectPower": ["25"],
 
-Flatly alters perk type owners initiative, influencing turn order. Positive values increase initiative, negative values reduce.
+Flatly alters perk type owners initiative, influencing turn order. Positive :term:`values` increase initiative, negative :term:`values` reduce.
 
 **MinStatCheckDie**
 """"""""""""""""""""
@@ -817,7 +817,7 @@ Flatly alters perk type owners initiative, influencing turn order. Positive valu
   "PerkType": ["MinStatCheckDie"],
   "EffectPower": ["2"],
 
-Flatly alters the minimum dice your d20 can roll in a stat check, take caution. Positive values increases base number, negative values reduce.
+Flatly alters the minimum dice your d20 can roll in a stat check, take caution. Positive :term:`values` increases base number, negative :term:`values` reduce.
 
 **RestSpiritRestored**
 """""""""""""""""""""""
@@ -827,7 +827,7 @@ Flatly alters the minimum dice your d20 can roll in a stat check, take caution. 
   "PerkType": ["RestSpiritRestored"],
   "EffectPower": ["1"],
 
-Recovers flat amount of spirit when resting at rest points, take caution. Positive values increase, negative values reduce.
+Recovers flat amount of spirit when resting at rest points, take caution. Positive :term:`values` increase, negative :term:`values` reduce.
 
 **RestEnergyRestored**
 """""""""""""""""""""""
@@ -837,7 +837,7 @@ Recovers flat amount of spirit when resting at rest points, take caution. Positi
   "PerkType": ["RestEnergyRestored"],
   "EffectPower": ["20"],
 
-Recovers percent amount of max energy when resting at rest points, take caution. Positive values increase, negative values reduce.
+Recovers percent amount of max energy when resting at rest points, take caution. Positive :term:`values` increase, negative :term:`values` reduce.
 
 **RestArousalRestored**
 """"""""""""""""""""""""
@@ -847,14 +847,14 @@ Recovers percent amount of max energy when resting at rest points, take caution.
   "PerkType": ["RestArousalRestored"],
   "EffectPower": ["-20"],
 
-Recovers percent amount of max arousal when resting at rest points, take caution. Positive values increase, negative values reduce.
+Recovers percent amount of max arousal when resting at rest points, take caution. Positive :term:`values` increase, negative :term:`values` reduce.
 
 .. _StatPerkTypes:
 
 **Stat Perk Types**
 --------------------
 
-Alters the given stat of the wielder by the given amount. Positive values increase, negative values reduce. See :ref:`Stats`.
+Alters the given stat of the wielder by the given amount. Positive :term:`values` increase, negative :term:`values` reduce. See :ref:`Stats`.
 
 * ``"GainEnergy"``
 * ``"GainArousal"``
@@ -953,7 +953,7 @@ Refer to *Json/Perks/LevelUp/Will/HeroicCumback.json* for how it works.
   "EffectPower": ["20"],
 
 Player loses given amount of energy on orgasm with monster if in sex, anal, blowjob, tailfuck, or titfuck stance.
-Positive values increase base flat drain, negative values reduce.
+Positive :term:`values` increase base flat drain, negative :term:`values` reduce.
 
 .. _SemenHealPerkType:
 
@@ -966,7 +966,7 @@ Positive values increase base flat drain, negative values reduce.
   "EffectPower": ["-10"],
 
 Monster recovers given amount of arousal on player orgasm if in sex, anal, blowjob, tailfuck, or titfuck stance.
-Positive values increase base flat drain, negative values reduce.
+Positive :term:`values` increase base flat drain, negative :term:`values` reduce.
 
 **SemenAttackBoost**
 """""""""""""""""""""
@@ -977,7 +977,7 @@ Positive values increase base flat drain, negative values reduce.
   "EffectPower": ["25"],
 
 Percent damage alteration if player orgasms in sex, anal, blowjob, tailfuck, or titfuck stance.
-Positive values increase, negative values reduce.
+Positive :term:`values` increase, negative :term:`values` reduce.
 
 .. _AdversePerkTypes:
 
@@ -985,7 +985,7 @@ Positive values increase, negative values reduce.
 """""""""""""""""""""""
 
 The following perk types tell the monster to try to get out of the related stance even if they have a skill for it, unless they're charmed.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 * ``"KissingAdverse"``
 * ``"AnalAdverse"``
@@ -1003,7 +1003,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 
 The following perk types make it impossible for the player to initiate or attack the given stances, excluding grope attacks on chests.
 It's highly recommend you use combat events instead of them, but they do still work.
-Set a value of 0, as ``"EffectPower":`` is not needed.
+Set a :term:`value` of 0, as ``"EffectPower":`` is not needed.
 
 * ``"NoAnus"``
 * ``"NoChest"``
@@ -1020,7 +1020,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
 **Monster Damage Boost Perk Types**
 """""""""""""""""""""""""""""""""""""
 
-Damage boosts by a percent for the related fetish. Positive values increase, negative values reduce.
+Damage boosts by a percent for the related fetish. Positive :term:`values` increase, negative :term:`values` reduce.
 
 * ``"MonstrousBoost"``
 * ``"FeetUseBoost"``

@@ -20,7 +20,7 @@ In order to utilize the function, you must use an option alongside it. The below
 Random has no checks and will pick one of the lines at random to display. You cannot provide it with sub-functions, you would need to use something other than
 ``"SwapLineIf"`` or use :doc:`Text Markup </Doc/Reference/Markup>` to achieve something to that effect.
 
-You can repeat a string to increase the chances that it's the chosen line.
+You can repeat a :term:`string` to increase the chances that it's the chosen line.
 
 .. code-block:: javascript
 
@@ -132,7 +132,7 @@ Checks the player for their current virility, each line featuring a certain nume
 """"""""""""""
 Checks to see if the player qualifies for a given fetish (which requires a minimum of 25 levels in the fetish).
 
-It's binary, in that it checks for the given fetish for the fetish line, and then a blank string for the line if the player doesn't qualify for the fetish.
+It's binary, in that it checks for the given fetish for the fetish line, and then a blank :term:`string` for the line if the player doesn't qualify for the fetish.
 
 .. code-block:: javascript
 
@@ -191,7 +191,7 @@ Checks the current size of a combat encounter, each line featuring a certain num
 """""""""
 Checks the player to see if they have an item.
 
-It's binary, in that you check for the given item for the item line, and then a blank string for the line if the player doesn't have the item.
+It's binary, in that you check for the given item for the item line, and then a blank :term:`string` for the line if the player doesn't have the item.
 
 .. code-block:: javascript
 
@@ -253,10 +253,10 @@ Using ``"Progress"`` checks the current progress of the event, each line featuri
 
 **Choice & OtherEventsChoice**
 """""""""""""""""""""""""""""""
-Using ``"Choice"`` checks the chosen choice number's string value, each line representing a potential choice and value as its condition.
+Using ``"Choice"`` checks the chosen choice number's :term:`string` value, each line representing a potential choice and :term:`value` as its condition.
 
 The order of priority in this case depends entirely on the context of the reason you're using the given choice number.
-However, do remember to account for if the choice number's string value is blank, if relevant to your use case.
+However, do remember to account for if the choice number's :term:`value` is blank, if relevant to your use case.
 
 
 .. code-block:: javascript
@@ -268,7 +268,7 @@ However, do remember to account for if the choice number's string value is blank
     "1", "", "Line 3",
   "EndLoop"
 
-Using ``"OtherEventsChoice"`` checks the specified event's chosen choice number's string value, each line representing a potential choice and value as its condition.
+Using ``"OtherEventsChoice"`` checks the specified event's chosen choice number's :term:`string` value, each line representing a potential choice and :term:`value` as its condition.
 
 .. code-block:: javascript
 

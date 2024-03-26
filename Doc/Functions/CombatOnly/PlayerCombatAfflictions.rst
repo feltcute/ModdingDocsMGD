@@ -29,7 +29,7 @@ It will only damage the target and can crit. It will never miss the target. Uses
   "HitPlayerWith", "Caress"
 
 Displaying dialogue has to be done manually, it will not take dialogue from the skill.
-If you want to display the damage number from the skill, use [DamageToPlayer] in the following string after completing the function.
+If you want to display the damage number from the skill, use [DamageToPlayer] in the following :term:`string` after completing the function.
 
 Check :ref:`DamagePlayerFromMonsterFunc` for an out of combat equivalent.
 Check :ref:`DamageMonsterFromMonsterFunc` for an in of combat way to hit monsters with another monster.

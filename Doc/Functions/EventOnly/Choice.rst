@@ -7,7 +7,7 @@
 
 **SetChoice**
 --------------
-Will set the specified choice number to the following string value. Think of them as numerically organized flag markers you can set for an event, not as variables.
+Will set the specified choice number to the following :term:`string` value. Think of them as numerically organized flag markers you can set for an event, not as variables.
 
 .. code-block:: javascript
 
@@ -17,14 +17,14 @@ Will set the specified choice number to the following string value. Think of the
 
 **IfChoice**
 -------------
-Will check for a choice. If the choice number's possible string value is a match to the stored value, it then goes to the specified scene.
+Will check for a choice. If the choice number's possible :term:`value` is a match to the stored value, it then goes to the specified scene.
 If it's not a match, it will ignore the scene jump, and continue the scene.
 
 .. code-block:: javascript
 
   "IfChoice", "1", "Stole the panty", "PlayerGoesToHornyJail"
 
-By default, all ``"SetChoice"`` functions not yet triggered by the player exist as blank strings ``""``, which can be checked for.
+By default, all ``"SetChoice"`` functions not yet triggered by the player exist as blank :term:`strings` ``""``, which can be checked for.
 
 ----
 
@@ -32,7 +32,7 @@ By default, all ``"SetChoice"`` functions not yet triggered by the player exist 
 
 **ChoiceToDisplayPlayer and ChoiceToDisplayMonster**
 -----------------------------------------------------
-``"ChoiceToDisplayPlayer"`` & ``ChoiceToDisplayMonster`` grabs the specified choice's string value for
+``"ChoiceToDisplayPlayer"`` & ``ChoiceToDisplayMonster`` grabs the specified choice's :term:`value` for
 the :doc:`Text Markup </Doc/Reference/Markup>` specified below, and is not reset until it's called again, so it will affect other events. Thus, it should be called at the start
 of an event.
 

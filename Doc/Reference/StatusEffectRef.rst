@@ -15,7 +15,7 @@ to tick down. Status effects labeled 'non-persistent' means they will be immedia
 -------------
 
 ``"Any"`` and ``"None"`` can sometimes be called in certain cases to cover all types of status effects, or the lack of any status effect.
-The documentation for relevant functions and keys will state whether these values are an option.
+The documentation for relevant functions and :term:`keys` will state whether these :term:`values` are an option.
 
 **Technical Status Effects**
 -----------------------------
@@ -60,7 +60,7 @@ These all feature potency as well, directly being the final amount their modifie
 * ``"Willpower"``
 * ``"Luck"``
 
-For modifiers based on a percent of the target's max stats. As an example, a value of 100 given to a key is equal to 100% of their max stat.
+For modifiers based on a percent of the target's max stats. As an example, a :term:`value` of 100 given to a :term:`key` is equal to 100% of their max stat.
 
 * ``"%Power"``
 * ``"%Technique"``
@@ -78,7 +78,7 @@ For modifiers based on a percent of the target's max stats. As an example, a val
 **Status Effect Resistances**
 ------------------------------
 
-Covers resistances relating to the above status effects. Positive values improve resistance, and negative values decrease. Baseline of 0.
+Covers resistances relating to the above status effects. Positive :term:`values` improve resistance, and negative :term:`values` decrease. Baseline of 0.
 
 * ``"Aphrodisiac"``
 * ``"Charm"``

@@ -1,12 +1,12 @@
 **Skill Creation**
 ===================
 
-Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Skills.
+Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Skills.
 
 Go to *Json/Skill/*, and then see the .json files present for examples, and **_BlankSkill.json** for a template.
 
-Assume all keys are required, unless stated otherwise.
-If it requires a non-blank (e.g. ``""``) value depends on the given ``"skillType":`` value and any noted technicalities.
+Assume all :term:`keys` are required, unless stated otherwise.
+If it requires a non-blank (e.g. ``""``) :term:`value` depends on the given ``"skillType":`` :term:`value` and any noted technicalities.
 
 **name**
 ---------
@@ -26,7 +26,7 @@ Sets the name of the skill, presented to the player in various locations through
 
   "costType": "ep",
 
-The type of cost the skill requires in order to be casted. The ``"cost":`` key seen below decides the amount based on its given value.
+The type of cost the skill requires in order to be casted. The ``"cost":`` :term:`key` seen below decides the amount based on its given value.
 
 There are three possible types:
 
@@ -56,7 +56,7 @@ intended to be countered in a combat event.
 Level required for the player to learn the skill from a vendor.
 Does not prevent the player from using the skill if they later don't meet its requirements while still possessing the skill.
 
-The key does not apply to monsters, and thus can be safely removed for tidiness in such cases.
+The :term:`key` does not apply to monsters, and thus can be safely removed for tidiness in such cases.
 
 .. code-block:: javascript
 
@@ -64,7 +64,7 @@ The key does not apply to monsters, and thus can be safely removed for tidiness 
 
 Ero cost of the skill from vendors in-game.
 
-The key does not apply to monsters, and thus can be safely removed for tidiness in such cases.
+The :term:`key` does not apply to monsters, and thus can be safely removed for tidiness in such cases.
 
 **skillType**
 --------------
@@ -74,7 +74,7 @@ The key does not apply to monsters, and thus can be safely removed for tidiness 
   "skillType": "attack",
 
 The type of skill it's, deciding its overall functionality. This influences the behavior of later keys.
-The following table presents all possible values it can be given.
+The following table presents all possible :term:`values` it can be given.
 
 
 .. list-table::
@@ -184,7 +184,7 @@ What participants in the encounter are intended to be struck by the caster's ski
 **Stance & Control Keys**
 --------------------------
 
-Take heed to think through the logic of your stance control keys to avoid any potential mishaps or errors that'd prevent them from working as expected.
+Take heed to think through the logic of your stance control :term:`keys` to avoid any potential mishaps or errors that'd prevent them from working as expected.
 Ensure capitalization is correct. Also keep in mind that stances are nebulous, see :doc:`Stance Reference </Doc/Reference/StanceRef>`.
 
 You can optionally apply or remove a stance via the following keys.
@@ -211,7 +211,7 @@ Critically, the skill can be made unavailable to the player or monster AI depend
   * - ``"unusableIfTarget": ["Cuddle"],``
     - **Target** cannot be in any of the specified stances. You can also use ``"Any"`` or ``"None"``.
   * - ``"unusableIfTargetHasTheseSets": [[ "Blowjob", "Blowjob", "Blowjob", "Blowjob", "Blowjob"]],``
-    - **Target** cannot have any of these sets of arrays for active stances, meaning all of the listed stances at once. As per the example, if the target is in the blowjob stance 5 times (see imps), the skill cant be used.
+    - **Target** cannot have any of these sets of :term:`arrays` for active stances, meaning all of the listed stances at once. As per the example, if the target is in the blowjob stance 5 times (see imps), the skill cant be used.
   * - ``"requiresStatusEffect": "Charm",``
     - Requires **target** to have this status effect. You can also use ``"None"``/``""``.
   * - ``"requiresStatusPotency": "1",``
@@ -251,13 +251,13 @@ Critically, the skill can be made unavailable to the player or monster AI depend
   "maxrange": "110",
   "recoil": "25",
 
-The following keys are required for ``"attack"`` or any healing based ``"skillType":`` skills.
+The following :term:`keys` are required for ``"attack"`` or any healing based ``"skillType":`` skills.
 
 .. list-table::
   :widths: 1 5
 
   * - ``"power": "25",``
-    - Base damage or healing value of the skill.
+    - Base damage or healing :term:`value` of the skill.
   * - ``"minRange": "70",``
     - The randomized percent minimum damage or healing range of the skill.
   * - ``"maxRange": "125",``
@@ -275,7 +275,7 @@ The following keys are required for ``"attack"`` or any healing based ``"skillTy
   "initiative": "30",
   "accuracy": "-10",
 
-The following keys are optional for ``"attack"`` or any healing based ``"skillType":`` skills.
+The following :term:`keys` are optional for ``"attack"`` or any healing based ``"skillType":`` skills.
 
 .. list-table::
   :widths: 1 5
@@ -293,7 +293,7 @@ The following keys are optional for ``"attack"`` or any healing based ``"skillTy
   * - ``"flatDamageSF-PercentScaling": "10",``
     - Percent damage boost for each stack of ``"scalesWithStatusEffect":``. Take caution with high percent values.
   * - ``"TotalDamageSF-PercentScaling": "5",``
-    - Boost to **total** skill damage for each stack of ``"scalesWithStatusEffect":``. This means it bypasses defense reductions, and applies *after* other damage boosts. **Take extreme care.** If using this key, set the other SF damage scaling key values to ``"0"``, or remove entirely.
+    - Boost to **total** skill damage for each stack of ``"scalesWithStatusEffect":``. This means it bypasses defense reductions, and applies *after* other damage boosts. **Take extreme care.** If using this key, set the other SF damage scaling :term:`key` :term:`values` to ``"0"``, or remove entirely.
 
 Lastly, see ``"statusOutcome":`` in `Dialogue Keys`_ below for a note on combat event based skills.
 
@@ -310,7 +310,7 @@ Lastly, see ``"statusOutcome":`` in `Dialogue Keys`_ below for a note on combat 
   "statusText": "Laced Magnum Rod",
   "statusResistedBy": "Power",
 
-The following keys are required for ``"statusEffect"`` or ``"Afflict"`` ``"skillType":`` skills,
+The following :term:`keys` are required for ``"statusEffect"`` or ``"Afflict"`` ``"skillType":`` skills,
 optional for all others depending on if they use the ``"statusEffect"`` key. See :ref:`Status Effect`.
 
 .. list-table::
@@ -330,13 +330,13 @@ optional for all others depending on if they use the ``"statusEffect"`` key. See
     - Will change status effect name in game. Making it unique for Buff/Debuff skills ensures they don't overlap with others in tracking.
 
 
-The following keys are optional for all possible ``"skillType":`` values.
+The following :term:`keys` are optional for all possible ``"skillType":`` values.
 
 .. list-table::
   :widths: 1 5
 
   * - ``"statusEffectScaling": "25"``
-    - For stat buff/debuff skills, deciding their scaling based on the set ``"statType":`` value of the caster's stats. 100% of a given stat is equal to ``stat * 1``, 50% ``stat * 0.5``, etc. Can also be used for scaling healing ``"skillType:"`` skills with the skill's given ``"statType":``.
+    - For stat buff/debuff skills, deciding their scaling based on the set ``"statType":`` :term:`value` of the caster's stats. 100% of a given stat is equal to ``stat * 1``, 50% ``stat * 0.5``, etc. Can also be used for scaling healing ``"skillType:"`` skills with the skill's given ``"statType":``.
 
 **descrip**
 ------------
@@ -347,13 +347,13 @@ The following keys are optional for all possible ``"skillType":`` values.
 
 The skill's tooltip description. Duration is automatically provided in the tooltip, refer to existing skills in-game, and compare it to their JSON's ``"descrip":`` key.
 
-``"PlayWhilePlayerSleeping"`` can be provided as a value for Monster skills to trigger the skills ``"statusOutcome":`` while the player is asleep.
+``"PlayWhilePlayerSleeping"`` can be provided as a :term:`value` for Monster skills to trigger the skills ``"statusOutcome":`` while the player is asleep.
 Useful for combat events. Refer to Sofia's InciteDreams.json skill for reference.
 
 **Dialogue Keys**
 ------------------
 
-The following keys are conditional triggers based on the outcome of the skill, similar to :ref:`lineTriggers`.
+The following :term:`keys` are conditional triggers based on the outcome of the skill, similar to :ref:`lineTriggers`.
 This can use :doc:`text markup </Doc/Reference/Markup>`, and thus in extension, :doc:`functions </Doc/Functions/index>` for starting combat events, using vfx/sfx, and so forth.
 
 The following are required for ``"attack"`` or any healing based ``"skillType":`` skills.
@@ -388,7 +388,7 @@ The following are optional for ``"statusEffect"`` or ``"Afflict"`` ``skillType:`
   * - ``"restraintOnLoss": "",``
     - Triggers displayable text if the target loses while restrained. Made for Pin, but could have other uses.
 
-The following keys are required for ``"statusEffect"`` or ``"Afflict"`` based  ``skillType:`` skills.
+The following :term:`keys` are required for ``"statusEffect"`` or ``"Afflict"`` based  ``skillType:`` skills.
 
 .. list-table::
   :widths: 1 5

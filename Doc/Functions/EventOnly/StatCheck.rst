@@ -37,7 +37,7 @@ There is no surpassing 'failure' for this variant, and the Surrender status effe
 
    .. tab:: Temptation Formula
 
-      **Note**: The combined values of Willpower, Allure, and Intelligence in the below formula has a combined ceiling cap of 15.
+      **Note**: The combined :term:`values` of Willpower, Allure, and Intelligence in the below formula has a combined ceiling cap of 15.
 
       .. code-block:: python
 
@@ -73,7 +73,7 @@ relative to the monster's level for reference.
 """"""""""""""""""""""""""""""
 A sub-function that can be used before the check to alter the stat check's difficulty. Each entry of the sub-function is checked for, regardless of any previous
 entries found to be true or false.
-The last given value in each instance of the sub-function is the stat check modifier and can be a negative number to subtract instead.
+The last given :term:`value` in each instance of the sub-function is the stat check modifier and can be a negative number to subtract instead.
 
 .. code-block:: javascript
 

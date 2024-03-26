@@ -183,7 +183,7 @@ except it will select images in a random order. random plays randomly order. End
   "PlayCustomBarrage", "PulseSpeed, 0.2-2, default 1", "Opacity, 0.1-1",
 
 
-Display a barrage of images, values are for PulseSpeed and Opacity respectively. Ends with ``"EndCustomBarrage"``.
+Display a barrage of images, :term:`values` are for PulseSpeed and Opacity respectively. Ends with ``"EndCustomBarrage"``.
 
 ``"PlayCustomBarrage2"`` & ``"EndCustomBarrage2"`` - channel 2
 

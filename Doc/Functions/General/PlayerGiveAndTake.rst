@@ -7,7 +7,7 @@
 ------------
 
 Despite its name, flatly alters the amount of exp the player has. This means it can both remove and give exp, depending on if you give a negative
-or positive value respectively. After altering the exp, it checks to see if the player can level up. The value ignores exp modifiers such as from perks.
+or positive :term:`value` respectively. After altering the exp, it checks to see if the player can level up. The :term:`value` ignores exp modifiers such as from perks.
 
 .. code-block:: javascript
 
@@ -20,7 +20,7 @@ or positive value respectively. After altering the exp, it checks to see if the 
 -------------------------------
 
 Despite its name, ``"GiveItem"`` changes the specified amount of the following item that the player owns. This means it can both remove and give items, depending on if
-you give a negative or positive value respectively. You are free to remove as much of the given item as you please, it will not cause any technical issues.
+you give a negative or positive :term:`value` respectively. You are free to remove as much of the given item as you please, it will not cause any technical issues.
 
 .. code-block:: javascript
 

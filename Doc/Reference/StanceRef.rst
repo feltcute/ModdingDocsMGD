@@ -9,7 +9,7 @@
 --------------
 
 ``"Any"``, or ``"None"`` can sometimes be checked for in certain cases to either cover any stance, or the lack of any stance.
-The documentation for relevant functions and keys will state whether these values are an option.
+The documentation for relevant functions and :term:`keys` will state whether these :term:`values` are an option.
 
 
 **Player & Monster Stances**

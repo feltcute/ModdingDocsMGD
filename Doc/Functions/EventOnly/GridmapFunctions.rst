@@ -40,10 +40,10 @@ If true, jumps to the given event scene, else, silently continues the scene.
 
 **SetPlayerGridPosition**
 -----------------------------------------------
-Move the player to another location on the map using the coordinates provided in the following two string values.
+Move the player to another location on the map using the coordinates provided in the following two :term:`string` values.
 
-The first given string value represents the X position, increasing in numerical value from left to right.
-The second string value represents the Y position, increasing in numerical value from top to bottom.
+The first given :term:`value` represents the X position, increasing in numerical :term:`value` from left to right.
+The second :term:`value` represents the Y position, increasing in numerical :term:`value` from top to bottom.
 
 .. code-block:: javascript
 
@@ -74,7 +74,7 @@ Lastly, declare the scene name it's meant to jump to if true. If false, silently
 -----------------------------------------------
 ``"ChangeGridVision"`` changes the active :ref:`Grid Sight` of the player for the active Gridmap.
 
-Can be set to a string value of ``"0"`` to toggle vision back to global range.
+Can be set to a :term:`value` of ``"0"`` to toggle vision back to global range.
 
 .. code-block:: javascript
 
@@ -99,10 +99,10 @@ Can be set to a string value of ``"0"`` to toggle vision back to global range.
 **ChangeGridNPCMovement**
 -----------------------------------------------
 ``"ChangeGridNPCMovement"`` changes the FocusedEvent NPCs movement type given
-in the following string values.
+in the following :term:`string` values.
 
   * - ``"", ""``
-    - Empty string means none, meaning they always stand still. Needs two empty strings.
+    - Empty :term:`string` means none, meaning they always stand still. Needs two empty strings.
   * - ``"Chase"``
     - Directly chases the defined target. Uses Astar pathfinding.
   * - ``"Ambush"``
@@ -114,9 +114,9 @@ in the following string values.
   * - ``"Projectile'Direction'"``
     - These go in a straight line and if they hit a wall they destroy themselves.
 
-Targets can be any of the following string values:
+Targets can be any of the following :term:`string` values:
 * ``"Player"`` for targeting the players position.
-* ``"NPCName"`` meaning for targeting a NPCs position. Value is meant to be their Gridmap NPC Name.
+* ``"NPCName"`` meaning for targeting a NPCs position. :term:`value` is meant to be their Gridmap NPC Name.
 * ``"Coord"", "", ""`` for targeting a specific X and Y coordinate on the grid.
 
 .. code-block:: javascript
@@ -172,7 +172,7 @@ You can also alter the timer of an NPC if it has one.
 **RemoveGridNPC**
 -----------------------------------------------
 ``RemoveGridNPC`` removes a Gridmap :ref:`Gridmap NPC` from the map,
-taking either the following string value of ``"Current"`` or ``"Specific"``.
+taking either the following :term:`value` of ``"Current"`` or ``"Specific"``.
 
 ``"Current"`` uses the NPCs TurnEvent triggered event to select the NPC.
 

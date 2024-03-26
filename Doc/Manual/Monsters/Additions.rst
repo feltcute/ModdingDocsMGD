@@ -8,11 +8,11 @@ and using the related functions found :doc:`here </Doc/Functions/General/ChangeM
 
 Check **_MonsterAdditionExample.json** in */Json/Monsters/* for an example.
 
-The overview will proceed to go over each key you would find in a regular Monster .json, how their role changes, and if they're required in a addition.
+The overview will proceed to go over each :term:`key` you would find in a regular Monster .json, how their role changes, and if they're required in a addition.
 
 .. note::
 
-    All other keys outside of the ones listed aren't used, and thus should be excluded for tidiness.
+    All other :term:`keys` outside of the ones listed aren't used, and thus should be excluded for tidiness.
 
 **IDname & Addition**
 ----------------------
@@ -36,7 +36,7 @@ Required so the game knows you are making an addition.
 
   "skillList": ["Blowjob", "Thirsty Blowjob", "Super Succ"],
 
-Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
+Appends to the existing array. Leave a blank :term:`string` in the :term:`array` if you don't intend to use it.
 
 **perks**
 ----------
@@ -45,7 +45,7 @@ Appends to the existing array. Leave a blank string in the array if you don't in
 
     "perks": ["Pacing"],
 
-Appends to the existing array. Leave a blank string in the array if you don't intend to use it.
+Appends to the existing array. Leave a blank :term:`string` in the :term:`array` if you don't intend to use it.
 
 **itemDropList**
 -----------------
@@ -64,7 +64,7 @@ Appends to the existing array. Leave a blank string in the array if you don't in
     }
   ],
 
-Appends to the existing array of objects. Don't give the key an object if you don't wish to use it.
+Appends to the existing :term:`array` of objects. Don't give the :term:`key` an :term:`object` if you don't wish to use it.
 
 **lossScenes & victoryScenes**
 -------------------------------
@@ -99,7 +99,7 @@ Appends to the existing array of objects. Don't give the key an object if you do
     }
   ],
 
-Appends to the existing array of objects. Don't give the keys an object if you don't wish to use it.
+Appends to the existing :term:`array` of objects. Don't give the :term:`keys` an :term:`object` if you don't wish to use it.
 
 You currently cannot replace existing scenes by copying their conditions and scene name.
 
@@ -125,10 +125,10 @@ You currently cannot replace existing scenes by copying their conditions and sce
     }
   ],
 
-Appends to the existing array of objects, if there are no other objects that match it in exact requirements.
-Otherwise, if it matches the ``"move":`` and ``"lineTrigger":`` keys in values, it will replace ``"theText":`` key data, not append to it.
-Remember that ``"move":`` arrays is an *or* parameter,
-so any skills or stances listed across multiple objects for the same type of lineTrigger will add to the same pool.
+Appends to the existing :term:`array` of objects, if there are no other :term:`objects` that match it in exact requirements.
+Otherwise, if it matches the ``"move":`` and ``"lineTrigger":`` :term:`keys` in values, it will replace ``"theText":`` :term:`key` data, not append to it.
+Remember that ``"move":`` :term:`arrays` is an *or* parameter,
+so any skills or stances listed across multiple :term:`objects` for the same type of lineTrigger will add to the same pool.
 
 **pictures**
 -------------
@@ -139,9 +139,9 @@ so any skills or stances listed across multiple objects for the same type of lin
 
   ]
 
-You can and should exclude the pictures key entirely if you don't intend to use it.
-Otherwise, it's recommended to copy and paste the character's pictures key and work from there.
+You can and should exclude the pictures :term:`key` entirely if you don't intend to use it.
+Otherwise, it's recommended to copy and paste the character's pictures :term:`key` and work from there.
 A more in-depth explanation on how to do minimal image related additions will be given in the future as soon as some unexpected issues are resolved,
 in the meanwhile, building on top of a copy/paste will work.
 
-.. Making additions to blank pictures key data and general picture data additions to existing sets seems to have some issues, need to review before completing this section. I suck.
+.. Making additions to blank pictures :term:`key` data and general picture data additions to existing sets seems to have some issues, need to review before completing this section. I suck.

@@ -137,7 +137,7 @@ Threshold usually prefers to disable it via `HideOptionOnRequirementFail`_ where
 
 **RequiresStat**
 """""""""""""""""
-Checks the player's stat in the following string with the provided value. Passes if it's equal or greater than. See :ref:`Stats`.
+Checks the player's stat in the following :term:`string` with the provided value. Passes if it's equal or greater than. See :ref:`Stats`.
 
 .. code-block:: javascript
 
@@ -251,7 +251,7 @@ Checks to see if it's the given :doc:`Time </Doc/Functions/General/Time>`.
 
 **RequiresFetishLevelEqualOrGreater & RequiresFetishLevelEqualOrLess**
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Will check the specified fetish for the given value to be equal or greater, or equal or less respectively.
+Will check the specified fetish for the given :term:`value` to be equal or greater, or equal or less respectively.
 
 .. code-block:: javascript
 
