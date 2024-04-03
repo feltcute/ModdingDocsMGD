@@ -206,7 +206,7 @@ These happen prior to UsesMove and HitWith respectively, allowing you to enforce
   "theText":[
     "Triggers when the player successfully uses an escape skill.",
     "Examples would be Teleport, or Distract.",
-    "If "move": is given a blank string, it will apply to any instance of an escape skill."
+    "If \"move\": is given a blank string, it will apply to any instance of an escape skill."
     ]
   },
 
