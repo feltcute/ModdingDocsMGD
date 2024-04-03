@@ -433,7 +433,7 @@ The trigger order of priority for Counters matches the listed order, from top to
   "move": ["Caress"],
   "theText":[
     "Triggers before the player uses the skill.",
-    "Wait, Struggle, Run Away, Push Away, and Defend can also be used in "move":",
+    "Wait, Struggle, Run Away, Push Away, and Defend can also be used in \"move\":",
     "Note this can include skills used by items, or the item name itself."
     ]
   },
@@ -447,7 +447,7 @@ The trigger order of priority for Counters matches the listed order, from top to
   "lineTrigger": "AutoCounterSkillTag",
   "move": ["Seduction"],
   "theText":[
-    "Same as AutoCounter, but will instead check a skill's "skillTags": list."
+    "Same as AutoCounter, but will instead check a skill's \"skillTags\": list."
     ]
   },
 
@@ -460,7 +460,7 @@ The trigger order of priority for Counters matches the listed order, from top to
   "lineTrigger": "AutoCounterSkillFetish",
   "move": ["Legs"],
   "theText":[
-    "Same as AutoCounterSkillTag, but for the skill's "fetishTags": list."
+    "Same as AutoCounterSkillTag, but for the skill's \"fetishTags\": list."
     ]
   },
 
