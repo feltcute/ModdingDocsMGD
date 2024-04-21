@@ -49,13 +49,6 @@ Most importantly, the below are guaranteed to provide download links that work w
 * `Gitlab <https://gitlab.com/explore/projects>`_ is a larger platform than Gitgud with the same interface, but has the open risk of less permissive `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
 * `Github <https://github.com/>`_ is the largest platform. While historically fairly permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_. **It also requires 2-factor authentication to use.**
 
-You can follow this :doc:`step-by-step tutorial </Doc/Tutorials/FileHostingYourMod>` for any of these three platforms to begin.
-
-There are also these two hosts you can use to host your mod, **however, they don't support downloading via links using the in-game mod installer.**
-
-* `Mega <https://mega.nz/start>`_ for its more than sufficient user-side download limit of 10GB, and download speed. Features lifetime hosting, though users have had difficulties with this claim, including once MGD. It also requires an account to upload.
-* The :ref:`MGDDiscord` can serve as a direct file host for mods up to 100MB. The download link it generates does not require users to open or login to Discord. **Discord is on track to make these links temporary, making it impractical to host links to your mod outside of Discord.**
-
 **Where To Share**
 -------------------
 

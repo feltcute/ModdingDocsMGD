@@ -1498,6 +1498,14 @@ kbd.compound > .kbd,
     padding: 0.5em 0.75em;
 }
 
+/* hoverxref tooltipster */
+.tooltipster-sidetip .tooltipster-content .tooltister-base {
+    color: var(--tooltip-background);
+}
+.hoverxref
+    {
+        background: var(--tooltip-background);
+    }
 /* Allow :abbr: tags' content to be displayed on mobile platforms by tapping the word */
 @media (hover: none), (hover: on-demand), (-moz-touch-enabled: 1), (pointer:coarse) {
     /* Do not enable on desktop platforms to avoid doubling the tooltip */
