@@ -17,9 +17,11 @@ also useful for people wanting to know what's been changed or added since they l
 
 The mod will need to be compressed before uploading it to a file host on the web.
 
-Your mod **must** be packaged as a ``.zip`` file, for the following reasons.
+Your mod **must** be packaged as a ``.zip`` file, for the following reasons:
+
 * The Mods screen in-game will only extract ``.zip`` files.
 * Not everyone will be able or know how to extract something like a ``.rar`` or ``.7z`` file on their platform.
+
 See the instructions on how to make a ``.zip`` file for your given platform:
 
 .. tabs::
