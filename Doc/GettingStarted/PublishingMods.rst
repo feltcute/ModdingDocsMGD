@@ -45,7 +45,7 @@ See the instructions on how to make a ``.zip`` file for your given platform:
 Feel free to use other resources beyond the ones mentioned here, but keep in mind not all may be willing to host NSFW games. 
 Other file hosts will often have information on their content policies at the bottom of their web pages.
 
-Most importantly, the below are guaranteed to provide download links that work with the in-game mod installer, and a release pages that list the latest versions of your mod.
+Most importantly, the below are guaranteed to provide download links that work with the in-game mod installer, and release pages that list the latest versions of your mod.
 
 * `Gitgud <https://gitgud.io>`_ has no restrictions on NSFW content, and has many of their top repositories as examples, though smaller and less proven than the alternative hosts.
 * `Gitlab <https://gitlab.com/explore/projects>`_ is a larger platform than Gitgud with the same interface, but has the open risk of less permissive `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
