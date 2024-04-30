@@ -44,6 +44,7 @@ This page will break down the following example:
     "EndLoop",
     "YAdjust", "75",
     "PlayerCoord", "2", "4",
+    "PlayerIcon", "GridMap/kunoichiIcon.png",
     "Sight", "4",
   "NPC",
     "Name", "Key",
@@ -209,6 +210,10 @@ The second :term:`value` represents the Y position, increasing in numerical :ter
 Note how in the above example Gridmap, the player spawns on the Floor tile of ID ``"3"``, with the given player coordinates of ``"2", "4"``.
 
 **Avoid placing the player inside a wall**, it's currently unknown what this will cause.
+
+**PlayerIcon**
+""""""""""""""""
+``"PlayerIcon"`` followed by an image will let you change the players icon for that map. Don't use this if you just want to use the default icon.
 
 .. _Grid Sight:
 
