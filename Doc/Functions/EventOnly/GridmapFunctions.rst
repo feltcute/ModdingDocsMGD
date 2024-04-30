@@ -58,6 +58,8 @@ within the given sub-function paramaters.
 
 First, optinally declare ``"IgnoreWalls"`` if the NPC is meant to see through Wall tiles.
 
+Next you can add  ``"NPC", "theNameOfGridNPC"`` to make them look for an npc with a name instead of the player. This must be called before Range.
+
 Then, optionally declare ``"Range"`` to declare a limited Tile range to their vision. By default, they see as far as possible.
 
 Lastly, declare the scene name it's meant to jump to if true. If false, silently continues the scene.
@@ -67,6 +69,7 @@ Lastly, declare the scene name it's meant to jump to if true. If false, silently
   "IfGridNPCSeesPlayer", "EnsuredChase",
   "IfGridNPCSeesPlayer", "Range", "3", "SceneJumpy",
   "IfGridNPCSeesPlayer", "IgnoreWalls", "Range", "4", "SceneJumpy",
+  "IfGridNPCSeesPlayer", "NPC", "WayPoint1", "Range", "1", "GoToWaypoint2",
 
 .. _ChangeGridVision:
 
@@ -151,7 +154,7 @@ If true, jump to the given scene, else, silently continues the scene.
 
 .. code-block:: javascript
 
-  "SetActiveGridNPC", "Ushris", 
+  "SetActiveGridNPC", "Ushris",
 
 .. _SpawnGridNPC:
 
