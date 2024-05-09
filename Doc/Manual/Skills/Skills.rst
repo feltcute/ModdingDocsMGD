@@ -197,7 +197,8 @@ You can optionally apply or remove a stance via the following keys.
   * - ``"removesStance": ["Penetration"],``
     - Removes the listed stances for both the caster and target. ``"All"`` removes all current stances. ``"Target"`` removes all stances from the target.
 
-Critically, the skill can be made unavailable to the player or monster AI depending on the conditions of the following technically optional keys.
+Critically, the skill can be made unavailable to the player or monster AI depending on the conditions of the following technically optional keys. 
+If you aren't using it and it doesn't mention using ``""``, ``"0"``, or ``"None"``, you should remove it to avoid confusing the AI.
 
 .. list-table::
   :widths: 1 5
@@ -217,7 +218,7 @@ Critically, the skill can be made unavailable to the player or monster AI depend
   * - ``"requiresStatusPotency": "1",``
     - Required **target** status effect must have a minimum of the given potency value. A reminder that it's optional, such as if only checking for Charm.
   * - ``"unusableIfStatusEffect": ["Paralyze"],``
-    - **Target** cannot have any of the specified status effects. You can also use ``"None"``/``""``.
+    - **Target** cannot have any of the specified status effects.
   * - ``"unusableIfStatusPotency": ["5"],``
     - **Target** cannot have potency equal to or higher for specified status effects in the previous key. You can also use ``"0"`` to simply check if it exists.
   * - ``"requiresStatusEffectSelf": "Trance",``
@@ -227,17 +228,17 @@ Critically, the skill can be made unavailable to the player or monster AI depend
   * - ``"unusableIfStatusEffectSelf": [""],``
     - **Caster** cannot have any of the specified status effects. You can also use ``"None"``/``""``.
   * - ``"requiresPerk": ["Action Rune!"],``
-    - **Target** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk. You can also use ``"None"``/``""``.
+    - **Target** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk.
   * - ``"requiresOnePerk": "Swift",``
-    - **Target** must have the specified perk. You can also use ``"None"``/``""``.
+    - **Target** must have the specified perk.
   * - ``"unusableIfPerk": ["Rut"],``
-    - **Target** cannot have any of the specified perks. You can also use ``"None"``/``""``.
+    - **Target** cannot have any of the specified perks.
   * - ``"requiresPerkSelf": ["Pacing"],``
-    - **Caster** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk. You can also use ``"None"``/``""``.
+    - **Caster** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk.
   * - ``"requiresOnePerkSelf": ["Overlimit"],``
-    - **Caster** must have the specified perk. Can repeat a perk to require multiple stacks of the same perk. You can also use ``"None"``/``""``.
+    - **Caster** must have the specified perk. Can repeat a perk to require multiple stacks of the same perk.
   * - ``"unusableIfPerkSelf": ["Well Fed"],``
-    - **Caster** cannot have any of the specified perks. You can also use ``"None"``/``""``.
+    - **Caster** cannot have any of the specified perks.
 
 .. _attack healing Keys:
 
