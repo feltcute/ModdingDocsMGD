@@ -249,3 +249,15 @@ Note not all status effects use potency, see :ref:`Status Effect`.
 .. code-block:: javascript
 
   "IfPlayerHasStatusEffectWithPotencyEqualOrGreater", "Trance", "11", "SceneNameHere"
+
+----
+
+**IfDifficultyIs**
+--------------------
+Checks the current difficulty of the playthrough, of the three possible ``"Easy"``, ``"Normal"``, and ``"Hard"`` difficulties you can give. 
+If true, jumps to the given scene.
+
+
+.. code-block:: javascript
+
+  "IfDifficultyIs", "Hard", "SceneNameHere"

@@ -191,6 +191,18 @@ If wielded by a monster, alters their own exp drop amount. Positive :term:`value
 
 Alter exp gains from monster exp on loss by a percent. Positive :term:`values` increase exp, negative :term:`values` decrease.
 
+**NoExp**
+""""""""""""
+
+.. code-block:: javascript
+
+  "PerkType": ["NoExp"],
+  "EffectPower": ["0"],
+
+Prevents the player from gaining any amount of exp from encounters, regardless of other perks.
+Please remember to remove this perk if applying it through something other than a item.
+
+
 **Damage**
 -----------
 
