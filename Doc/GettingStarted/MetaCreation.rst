@@ -1,7 +1,7 @@
 **Meta Creation**
 ==================
 
-Breaks down the :doc:`keys and strings` </Doc/Tutorials/TheJsonFormat>` used by the Meta file,
+Breaks down the :doc:`keys and strings </Doc/Doc/Tutorials/TheJsonFormat>` used by the Meta file,
 and gives extensive tips on what values to provide.
 
 .. image:: /img/meta.png

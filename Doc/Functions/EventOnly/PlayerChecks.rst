@@ -142,9 +142,12 @@ Takes a list of skills the play can have, and if all is true it jumps to the giv
 
 ----
 
+.. _itemFunctions:
+
 **IfHasItem & IfDoesntHaveItem**
 ---------------------------------
 Checks if the player does or doesn't respectively have an item in their inventory or equipped.
+**Supports checking for :ref:`Item Tags <itemTags>` instead of specific items.**
 
 .. code-block:: javascript
 
@@ -152,37 +155,64 @@ Checks if the player does or doesn't respectively have an item in their inventor
 
 .. code-block:: javascript
 
-  "IfDoesntHaveItem", "Vandal's Note", "SceneNameHere"
+  "IfDoesntHaveItem", "Tags", "Collar", "Venefica's Confectioneries", "EndLoop", "SceneNameHere"
 
 ----
 
-**IfHasItems**
----------------------------------
-Takes a list of items that the player has equipped or in their inventor, and if all is true it jumps to the given scene, else it continues.
+**IfHasItems & IfDoesntHaveItems**
+------------------------------------
+Takes a list of items that the player has equipped or in their inventory, and if all are found or not found respectively, it jumps to the given scene, else it continues.
 
 .. code-block:: javascript
 
   "IfHasItems", "Anaph Herb", "Ardor Potion", "EndLoop", "SceneNameHere",
 
+.. code-block:: javascript
+
+  "IfDoesntHaveItems", "Anaph Herb", "Ardor Potion", "EndLoop", "SceneNameHere",
+
+
 ----
 
-**IfHasItemEquipped**
-----------------------
-Checks if the player has the specified item equipped. If true, it jumps to the given scene, else it continues.
+**IfHasItemEquipped  & IfDoesntHaveItemEquipped**
+--------------------------------------------------
+Checks if the player does or does not respectively have the specified item equipped. If true, it jumps to the given scene, else it continues.
+**Supports checking for :ref:`Item Tags <itemTags>` instead of specific items.**
 
 .. code-block:: javascript
 
   "IfHasItemEquipped", "Hero's Cape", "SceneNameHere"
 
+.. code-block:: javascript
+
+  "IfDoesntHaveItemEquipped", "Tags", "Sofia's Rewards", "Camilla's Secret", "EndLoop", "SceneNameHere"
+
 ----
 
-**IfHasItemInInventory**
--------------------------
-Checks if the player has the specified amount of an item in their inventory, ignoring their equipment slots. If true, it jumps to the given scene, else it continues.
+**IfHasRunesEquipped**
+--------------------------------------------------------
+Checks if the player does or does not respectively have equal to or more of the specified amount of the given rune equipped. If true, it jumps to the given scene, else it continues.
+**Supports checking for :ref:`Item Tags <itemTags>` instead of specific items.**
+
+.. code-block:: javascript
+
+  "IfHasRunesEquipped", "Heart Rune", "2", "SceneNameHere",
+  "IfHasRunesEquipped", "Tags", "Graffiti Queen", "EndLoop", "1", "SceneNameHere"
+
+----
+
+**IfHasItemInInventory & IfDoesntHaveItemInInventory**
+--------------------------------------------------------
+Checks if the player does or does not respectively have equal to or more of the specified amount of the given item in their inventory, ignoring their equipment slots. If true, it jumps to the given scene, else it continues.
+**Supports checking for :ref:`Item Tags <itemTags>` instead of specific items.**
 
 .. code-block:: javascript
 
   "IfHasItemInInventory", "Anaph Herb", "1", "SceneNameHere"
+
+.. code-block:: javascript
+
+  "IfDoesntHaveItemInInventory", "Tags", "Healing", "Combat", "EndLoop", "1", "SceneNameHere"
 
 ----
 

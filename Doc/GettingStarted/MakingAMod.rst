@@ -154,7 +154,7 @@ It will warn you if something went wrong with the files structure that would oth
 
 But there are some general words you should know, so you can better understand other parts of the modding documentation in the future.
 
-First, start with the top of the file:
+First, let's start by examining the top of the file:
 
 .. code-block:: javascript
 

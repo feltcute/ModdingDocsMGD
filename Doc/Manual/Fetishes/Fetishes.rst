@@ -5,7 +5,7 @@
 
 .. * **Fetishes** | Contains both fetishes **and addictions** for the game. That's right, mods can go as far as introducing new fetishes. Lesser known are addictions, which track particular milestones with characters. They work in a very similar manner and fall under the same system, but are typically hidden from the player. Use them both with care.
 
-Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Fetishes and Addictions.
+Breaks down the :doc:`keys and strings </Doc/Tutorials/TheJsonFormat>` used by Fetishes and Addictions.
 
 See *Json/Fetishes/* for all related fetish **and** addiction .json files for reference and the template *_BlankFetish.json*.
 

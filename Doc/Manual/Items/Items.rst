@@ -67,6 +67,18 @@ The cost of the item in shops. For reference, the sell cost will always be 50% o
 
 The description of the item that is displayed both in shops and the character inventory.
 
+.. _itemTags:
+
+**tags**
+---------
+
+.. code-block:: javascript
+
+  "tags": ["Tag Name Here", "Another Tag"],
+
+Categorizes items together when they share a tag value, such as for use in :ref:`Item Functions <itemFunctions>`.
+
+
 **requires & requiresEvent**
 -----------------------------
 
