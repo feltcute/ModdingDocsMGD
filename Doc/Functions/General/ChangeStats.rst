@@ -71,13 +71,13 @@ At level 25, the player is considered to have the fetish. Maximum of level 100, 
 
 **PermanentlyChangeFetish**
 ----------------------------
-Same as above but will permanently affect the player. This prevents the church from recovering the player stats. Take caution.
+Same as above but will permanently affect the player. This prevents the church from recovering the player stats. **Use with caution**.
 
 ----
 
 **SetFetish**
 ----------------------------
-Same as above but sets the fetish/addiction to the number given. This change is permanent and prevents the church from recovering the player stats. Take caution. It's primary intent is for event based addictions and fetishes to be managed easier.
+Same as above but sets the fetish/addiction to the number given. This change is permanent and prevents the church from recovering the player stats. The primary intent is for event based addictions and fetishes to be managed easier. **Use with caution**.
 
 ----
 

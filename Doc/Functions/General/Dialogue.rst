@@ -25,7 +25,7 @@ Generally for use in combat events where the skill name is called still, and quo
 .. code-block:: javascript
 
   "PlayerSpeaksSkill",
-    "I don't get to talk very often."
+    "I don't get to talk very often in combat either."
 
 ----
 

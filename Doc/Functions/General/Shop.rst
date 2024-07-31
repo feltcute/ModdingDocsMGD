@@ -10,7 +10,7 @@
 Opens a shop menu based on the provided items, up till ``"EndLoop"``.
 Good whitespace formatting is highly recommended for sanity, see how shops in the base game are done.
 
-PurchasesToProgress can be added to anywhere an item could be to make any purchases add to the current events progress. Selling has no effect.
+``"PurchasesToProgress"`` can be added to anywhere an item could be to make any purchases add to the current events progress. Selling has no effect.
 
 .. code-block:: javascript
 

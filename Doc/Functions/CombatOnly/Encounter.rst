@@ -36,6 +36,15 @@ Is always added to the end of the encounter list.
 
   "AddMonsterToEncounter", "Blue Slime"
 
+**ChangeForm**
+"""""""""""""""
+``"ChangeForm"`` is used with ``"AddMonsterToEncounter"``, switching out the currently focused monster with the given Monster.
+Maintains arousal, spirit, stances, and status effects. See :ref:`Focus` for information on focus functions.
+
+.. code-block:: javascript
+
+  "AddMonsterToEncounter", "ChangeForm", "Imp"
+
 ----
 
 **AllowRunning**
@@ -47,14 +56,3 @@ Allows the player to run from the current combat encounter if it started off dis
 .. code-block:: javascript
 
   "AllowRunning",
-
-----
-
-**ChangeForm**
-"""""""""""""""
-``"ChangeForm"`` is used with AddMonsterToEncounter, switching out the currently focused monster with the given Monster.
-Maintains arousal, spirit, stances, and status effects. See :ref:`Focus` for information on focus functions.
-
-.. code-block:: javascript
-
-  "AddMonsterToEncounter", "ChangeForm", "Imp"

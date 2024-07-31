@@ -75,11 +75,17 @@ An example use case would be to remove skills at the end of combat you gave to t
 
 ----
 
-**GiveSkillThatWasTemporarilyRemoved & RemoveSkillFromPlayerTemporarily**
+**RemoveSkillFromPlayerTemporarily & GiveSkillThatWasTemporarilyRemoved**
 --------------------------------------------------------------------------
 
-``"GiveSkillThatWasTemporarilyRemoved"`` & ``"RemoveSkillFromPlayerTemporarily"`` a quiet variant of give skill specifically for temporarily removing skills then giving them back, ensuring they go back into the same spot in skill order to not disorganize player skills. 
+``"RemoveSkillFromPlayerTemporarily"`` & ``"GiveSkillThatWasTemporarilyRemoved"`` a quiet variant of give skill specifically for temporarily removing skills then giving them back, ensuring they go back into the same spot in skill order to not disorganize player skills. 
 Check the skill ``"Pin"`` for an example. If you want to give the player a temp skill for a fight, like, tail cuddle, you do not need to use this set of functions.
+
+.. code-block:: javascript
+
+  "RemoveSkillFromPlayerTemporarily", "Calm Mind",
+  "Some time later...",
+  "GiveSkillThatWasTemporarilyRemoved"
 
 ----
 
@@ -99,3 +105,8 @@ Using ``"GivePerk"`` gives the player a perk, even if they already have it. ``"R
 ----------------------------------------
 
 ``"GivePerkQuietly"`` & ``"RemovePerkQuietly"`` are, as expected, quiet variants of the above functions that won't notify the player.
+
+.. code-block:: javascript
+
+  "GivePerkQuietly", "Pacing",
+  "RemovePerkQuietly", "Pacing"
