@@ -97,3 +97,28 @@ Optional, adds to the existing array. The :term:`strings` provided in the origin
 Optional, adds to the existing array. The :term:`strings` provided in the original ``"removeStance":`` :term:`key` will still be present, and not overridden.
 
 Does not require the original file to have the :term:`key` marked as an array.
+
+.. _stanceConditions:
+
+**stanceConditions**
+---------------------
+
+.. code-block:: javascript
+
+  "stanceConditions": [
+      {
+          "theStance": "Leg Lock",
+          "addingToSkills": {
+              "unusableIfStance": ["Arousara"],
+              "requiresStance": ["Arousero"],
+              "unusableIfTarget": ["Arousara"],
+              "requiresTargetStance": ["Calm Mind"]
+          }
+      },
+      {
+          "theStanceSet": ["Leg Lock", "Leg Lock"],
+          "unusableIfTargetHasTheseSets": ["Caress"]
+      }
+  ]
+
+Optional key structure that allows you to append to the :ref:`stance control keys` of other skills in a single location. While meant for modders, this can be done in any skill json, not just additions. You can freely choose to use either or both the original keys or ``"stanceConditions":`` to manage stances.

@@ -350,7 +350,7 @@ It extends well beyond just dialogue responses and reactions during combat.
 ``"lineTrigger":`` decides what the trigger is checking for. **For a list of all possible triggers and how they work**, see :ref:`lineTriggers`.
 
 ``"move":`` a conditional parameter, most commonly used to represent a skill that was used.
-**Can be an :term:`array` to compact responses into one object, as it's an** *or* **parameter, not an** *and***.**
+**Can be an** :term:`array` ** to compact responses into one object, as it's an** *or* **parameter, not an** *and* **parameter.**
 Compacting where possible is recommended as it does help reduce game load times.
 
 ``"theText":`` contains a list of all possible results of the trigger. It's random, but you can repeat :term:`strings` to make some more common than others.

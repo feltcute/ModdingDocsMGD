@@ -92,6 +92,9 @@ The game supports special :doc:`functions </Doc/Functions/index>` for this purpo
 - ``"MenuAddition"`` for appending to scenes (e.g. night life menu via Brothel) with :ref:`MenuFunc`. Meta functions are included.
 - ``"ShopAddition"`` for appending to scenes (e.g. Amber's item shop) with a :ref:`ShoppingMenu`.
 - ``"SkillShopAddition"`` for appending to scenes (e.g. Elena's skill shop) with a :ref:`SkillShoppingMenu`
+- ``"PrependScenes"`` for prepending to scenes. (e.g. NPC scene jump congratulations for beating a new location dungeon)
+- ``"AppendScenes"`` for appending to scenes. (e.g. extra fluff dialogue to a scene without a jump at the end.)
+
 
 You can make use of them through a duplicate scene in the event addition with the same ``"NameOfScene":`` value.
 Then, start with one of the three above variants depending on the function you're adding to, only one per scene.
@@ -144,6 +147,19 @@ See the examples below for details of the implementation, and the **_SceneAdditi
         "A new mod skill",
         "Another new mod skill",
       "EndLoop"
+      ]
+    }
+  ]
+
+.. code-block:: javascript
+
+  "EventText": [
+    {
+    "NameOfScene": "NPC Intro Jump Event",
+    "theScene": [
+      "PrependScene",
+      "GetEventAndIfChoice", "Dungeon's Tracking Event"
+        "1", "DungeonCompletedValue", "NPCCongratulationToJumpToHere"
       ]
     }
   ]

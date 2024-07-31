@@ -1,7 +1,7 @@
 **Event Creation**
 ===================
 
-Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Events.
+Breaks down the :term:`keys` and :term:`strings` used by Events.
 
 Base game Event .jsons are located at *Json/Events/*.
 The bubble slime events showcase modern practices well, located at *Mountain/FizzySpring.json*, and *CombatEvents/BubbleSlimeCombatEvents.json*.

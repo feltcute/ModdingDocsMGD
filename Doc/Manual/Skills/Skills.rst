@@ -1,7 +1,7 @@
 **Skill Creation**
 ===================
 
-Breaks down the :doc:`keys and :term:`strings` </Doc/Tutorials/TheJsonFormat>` used by Skills.
+Breaks down the :term:`keys` and :term:`strings` used by Skills.
 
 Go to *Json/Skill/*, and then see the .json files present for examples, and **_BlankSkill.json** for a template.
 
@@ -239,6 +239,8 @@ If you aren't using it and it doesn't mention using ``""``, ``"0"``, or ``"None"
     - **Caster** must have the specified perk. Can repeat a perk to require multiple stacks of the same perk.
   * - ``"unusableIfPerkSelf": ["Well Fed"],``
     - **Caster** cannot have any of the specified perks.
+
+Also see :ref:`stanceconditions` for adding stance logic in a single spot, which works in any skill json, not just skill additions.
 
 .. _attack healing Keys:
 
