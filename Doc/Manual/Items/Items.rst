@@ -65,7 +65,8 @@ The cost of the item in shops. For reference, the sell cost will always be 50% o
 
   "descrip": "",
 
-The description of the item that is displayed both in shops and the character inventory.
+The description of the item that is displayed both in shops and the character inventory. 
+Be sure to use :ref:`itemmarkup` to grab the values from the item's :ref:`itemflatstatkeys`.
 
 .. _itemTags:
 
@@ -132,6 +133,8 @@ For equipment item types, the :term:`key` will give all listed skills for as lon
 
 For consumable item types, it will utilize the given skill upon use. **Note it can only take one skill, even if the :term:`key` technically accepts an array.**
 You have the option to provide a :term:`value` of ``"UseableItem"``, which older consumable items used to directly apply the `Flat Stats Keys`_. Modern practices encourage using skills directly over ``"UseableItem"``.
+
+.. _ItemFlatStatKeys:
 
 **Flat Stats Keys**
 --------------------
