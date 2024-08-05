@@ -201,10 +201,15 @@ If you want to use both, remember ``[SexAdjective]`` words have a space at the e
 
   "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWord]!"
 
+.. _ItemMarkup:
+
+**Item Markup**
+----------------
+
+``[ItemEnergy]``, ``[ItemArousal]``, and ``[ItemSpirit]`` displays the values from an item's :ref:`itemflatstatkeys` for use in the item's ``"descrip":`` key.
+
 **Technical Markup**
 ----------------------
-
-
 
 ``[PlayersInput]`` will display either ``Tap`` if the user is on a device with touch screen input, or ``Click`` if no touch input is found.
 You can alternatively use ``[playersinput]`` to get it in lowercase. It is intended for rare situations that explain the controls for a game mechanic, such as in the :ref:`Fishing` minigame.
