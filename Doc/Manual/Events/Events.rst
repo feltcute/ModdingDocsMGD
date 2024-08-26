@@ -38,12 +38,12 @@ Changes how the game calls and utilizes the event. See `CardType Values`_ below 
 **CardType Values**
 """"""""""""""""""""
 
-=================== =================================================================================================================== ================================================== 
-Grimoire CardType   Description                                                                                                         Example                                           
-=================== =================================================================================================================== ================================================== 
-``"Event"``         Will appear in the Grimoire in the "Events:" section. The only :term:`value` with interacts with ``"CardLimit":``.  *Events/Labyrinth/ExploreLaby/WanderingVenefica*  
-``"Quest"``         Will appear in the Grimoire in the "Quests:" section.                                                               *Events/Quests/*                                  
-=================== =================================================================================================================== ================================================== 
+=================== =================================================================================================================== ==================================================
+Grimoire CardType   Description                                                                                                         Example
+=================== =================================================================================================================== ==================================================
+``"Event"``         Will appear in the Grimoire in the "Events:" section. The only :term:`value` with interacts with ``"CardLimit":``.  *Events/Labyrinth/ExploreLaby/WanderingVenefica*
+``"Quest"``         Will appear in the Grimoire in the "Quests:" section.                                                               *Events/Quests/*
+=================== =================================================================================================================== ==================================================
 
 +----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | Town CardType  | Description                                                                                                                                                                                                               | Example         |
@@ -71,18 +71,18 @@ Grimoire CardType   Description                                                 
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
 
 ===================== ============================================================================================================================================================================================== ========================================================
-Triggered CardType    Description                                                                                                                                                                                    Example                                                
+Triggered CardType    Description                                                                                                                                                                                    Example
 ===================== ============================================================================================================================================================================================== ========================================================
 ``""``                Not automatically triggered by anything. Typically used for combat events and dedicated loss/victory events. Can be accessed through :ref:`Event Jumps`.                                       *Events/CombatEvents/Mountain/CamillaCombatEvents.json*
-``"EndOfDay"``        Triggers upon the start of a new day. Useful for tracking addictions.                                                                                                                          *Events/TimePassing/EndOfDay.json*                     
-``"TimePassed"``      Triggers when any amount of time has passed. Useful for tracking player status effects.                                                                                                        *Events/TimePassing/TimePassed.json*                   
-``"StepTaken"``       Triggers when players transition between events or encounters during adventures. Also useful for triggering player status effects.                                                             *Events/TimePassing/StepTaken.json*                    
-``"EndOfTurn"``       Triggers specifically at the end of turn, primarily for player functions as it triggers every turn regardless of who's fighting.                                                               *Events/CombatEvents/PlayerEndOfTurn.json*             
-``"EndOfCombat"``     Triggers at the end of combat. For specific player skills such as Pin, see as an example.                                                                                                      *Events/CombatEvents/Player/PlayerEndOfCombat.json*    
-``"StartOfTurn"``     Triggers specifically at the start of turn, primarily for player functions as they Triggers every turn regardless of who's fighting.                                                           *Events/CombatEvents/PlayerStartOfTurn.json*           
-``"StartOfCombat"``   Triggers at the start of every combat, generally for player combat event use.                                                                                                                  *Events/CombatEvents/Player/PlayerStartOfCombat.json*  
-``"PlayerOrgasm"``    Triggers every time the player orgasms, including out of combat.                                                                                                                               *Events/CombatEvents/OrgasmEvents.json*                
-``"Dream"``           Called when the player sleeps, via the :ref:`SleepPlayerFunc` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.                     *Events/TimePassing/Dreams/*                           
+``"EndOfDay"``        Triggers upon the start of a new day. Useful for tracking addictions.                                                                                                                          *Events/TimePassing/EndOfDay.json*
+``"TimePassed"``      Triggers when any amount of time has passed. Useful for tracking player status effects.                                                                                                        *Events/TimePassing/TimePassed.json*
+``"StepTaken"``       Triggers when players transition between events or encounters during adventures. Also useful for triggering player status effects.                                                             *Events/TimePassing/StepTaken.json*
+``"EndOfTurn"``       Triggers specifically at the end of turn, primarily for player functions as it triggers every turn regardless of who's fighting.                                                               *Events/CombatEvents/PlayerEndOfTurn.json*
+``"EndOfCombat"``     Triggers at the end of combat. For specific player skills such as Pin, see as an example.                                                                                                      *Events/CombatEvents/Player/PlayerEndOfCombat.json*
+``"StartOfTurn"``     Triggers specifically at the start of turn, primarily for player functions as they Triggers every turn regardless of who's fighting.                                                           *Events/CombatEvents/PlayerStartOfTurn.json*
+``"StartOfCombat"``   Triggers at the start of every combat, generally for player combat event use.                                                                                                                  *Events/CombatEvents/Player/PlayerStartOfCombat.json*
+``"PlayerOrgasm"``    Triggers every time the player orgasms, including out of combat.                                                                                                                               *Events/CombatEvents/OrgasmEvents.json*
+``"Dream"``           Called when the player sleeps, via the :ref:`SleepPlayerFunc` function. Note that no dreams will be called if ``"SleepPlayer"`` is followed with ``"DelayNotifications"``.                     *Events/TimePassing/Dreams/*
 ===================== ============================================================================================================================================================================================== ========================================================
 
 **Description**
@@ -166,6 +166,25 @@ Alternatively, the ``"Speak"`` function can be used instead. Otherwise, it can b
 While ``"Speakers":`` and at least one :term:`object` with the listed :term:`keys` must be included, it doesn't necessarily need to be used.
 All :term:`keys` in the :term:`objects` require at least an empty string.
 
+**IgnoredDebugChoices**
+-------------------------
+
+.. code-block:: javascript
+
+  "IgnoredDebugChoices": [
+    {"11": []},
+    {"12": ["SpecificValue1", "SpecificValue2"]}
+  ],
+
+``"IgnoredDebugChoices":`` is an optional :term:`key` that allows you to specify which choices should be ignored by the 'Debug Game Data On Startup' feature (found in game options) when checking for unused choices.
+Used when implementing choices for not yet developed content and other edge cases.
+
+In the example above, the event's choices will be handled as follows:
+- All values for choice number 11 will be ignored. It *has* to be formatted like this with the empty list in order to be accepted by the game.
+- Only "SpecificValue1" and "SpecificValue2" will be ignored for choice number 12.
+
+See :doc:`Choice </Doc/Functions/EventOnly/Choice>` for more information on event choices.
+
 **EventText**
 --------------
 
@@ -211,7 +230,7 @@ See :doc:`functions </Doc/Functions/index>` for the vast range of functions that
 **Optional Scenes**
 """"""""""""""""""""
 
-When debugging scenes (see :ref:`notJumping` in FAQ), you may find yourself with scenes you don't intend to ever be linked to by a function. 
+When debugging scenes (see :ref:`notJumping` in FAQ), you may find yourself with scenes you don't intend to ever be linked to by a function.
 In this case, you can declare it as an optional scene to the game by prepending its ``"NameOfScene":`` :term:`value` with any of the following:
 
 - An ``_`` underscore. Intended for any scenario where you want the debugger to ignore the scene, such as internal notes, cut content, or in-progress work not meant to be accessed by the player yet.
@@ -241,7 +260,7 @@ In this case, you can declare it as an optional scene to the game by prepending 
 .. tip::
 
   Using ``"EventStart"``and ``"EventBroke"`` as advised is a recommended practice.
-  
+
   The games in certain scenarios will jump to the first event in your scene, meaning you may not have any links to your first scene at all. Using ``"EventStart"`` consistently for this makes it never a guess to remember, and causes it to be flagged as optional.
 
   If you accidentally jump to a scene that doesn't exist due to accidents like spelling errors, the game will always jump to the last scene in the event. Having ``"EventBroke"`` as your last scene with an error message will better inform you when testing your mod, and causes it to be flagged as optional.
