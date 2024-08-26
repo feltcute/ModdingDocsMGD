@@ -53,12 +53,12 @@ This means if you want to say, add a ``"postName":`` to a character, you will be
 Note multiple mods adding to the Speakers :term:`key` *could* throw ``"Speaks"`` out of order depending on which mod is loaded first.
 Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to avoid compatibility issues between mods.
 
-**IgnoredChoices**
-------------------
+**IgnoredDebugChoices**
+------------------------
 
 .. code-block:: javascript
 
-  "IgnoredChoices": [
+  "IgnoredDebugChoices": [
     {"11": []},
     {"12": ["SpecificValue1", "SpecificValue2"]}
   ],

@@ -166,17 +166,17 @@ Alternatively, the ``"Speak"`` function can be used instead. Otherwise, it can b
 While ``"Speakers":`` and at least one :term:`object` with the listed :term:`keys` must be included, it doesn't necessarily need to be used.
 All :term:`keys` in the :term:`objects` require at least an empty string.
 
-**IgnoredChoices**
-------------------
+**IgnoredDebugChoices**
+-------------------------
 
 .. code-block:: javascript
 
-  "IgnoredChoices": [
+  "IgnoredDebugChoices": [
     {"11": []},
     {"12": ["SpecificValue1", "SpecificValue2"]}
   ],
 
-``"IgnoredChoices":`` is an optional :term:`key` that allows you to specify which choices should be ignored by the 'Debug Game Data On Startup' feature (found in game options) when checking for unused choices.
+``"IgnoredDebugChoices":`` is an optional :term:`key` that allows you to specify which choices should be ignored by the 'Debug Game Data On Startup' feature (found in game options) when checking for unused choices.
 Used when implementing choices for not yet developed content and other edge cases.
 
 In the example above, the event's choices will be handled as follows:
