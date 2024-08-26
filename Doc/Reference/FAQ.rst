@@ -38,8 +38,8 @@ you will want to go to the options menu and update your save to apply the change
 **I'm not jumping to the scene I set!**
 ----------------------------------------
 
-You can check your event's scene jumping validity by enabling **Scene Debug**.
-If you want to turn it on, you can go to the in-game options menu and toggle ``"Enable Scene Debug on Startup"``, 
+You can check your event's scene jumping validity by enabling the game's debug log.
+If you want to turn it on, you can go to the in-game options menu and toggle **``'Debug Game Data On Startup'``**, 
 or press the debug button on the game reload prompt via the in-game mod menu.
 
 Then, on game startup or reload, the game will rewrite the files in the *game/debug* folder, where you can either view individual error types per file, or all error types in one file via *scene_validator.json*.
