@@ -183,6 +183,8 @@ In the example above, the event's choices will be handled as follows:
 - All values for choice number 11 will be ignored. It *has* to be formatted like this with the empty list in order to be accepted by the game.
 - Only "SpecificValue1" and "SpecificValue2" will be ignored for choice number 12.
 
+See :doc:`Choice </Doc/Functions/EventOnly/Choice>` for more information on event choices.
+
 **EventText**
 --------------
 

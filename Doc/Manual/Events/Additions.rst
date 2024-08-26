@@ -63,8 +63,10 @@ Thus, it may be best to rely on :ref:`SpeakFunc` for any new speakers instead to
     {"12": ["SpecificValue1", "SpecificValue2"]}
   ],
 
-Not required, will append additional event choices for the game to ignore,
-including new choices and choice values specific to your mod.
+Not required, will append additional event choices for the 'Debug Game Data On Startup' feature (found in game options) to ignore,
+including new event choices and choice values specific to your mod.
+
+See :doc:`Choice </Doc/Functions/EventOnly/Choice>` for more information on event choices.
 
 **EventText**
 --------------
