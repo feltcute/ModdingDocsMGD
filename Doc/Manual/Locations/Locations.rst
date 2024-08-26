@@ -61,8 +61,7 @@ The background image to be used at the location when exploring and adventuring.
 
 ``"mapIcon":`` will utilize the filepath you provide it to add your location to the map.
 
-``"mapIconXpos":`` and ``"mapIconYpos":`` offset the position of the location on the map. Not typically used in favor of making a 1920x1080 transparent .png and simply placing
-the map icon accordingly to where it'd appear on the map.
+``"mapIconXpos":`` and ``"mapIconYpos":`` to set the position of the icon's location. See :ref:`GetImagePos` for a tutorial on how to get these values.
 
 ``"mapIconZorder":`` is for instances where there is possible overlap with other icons. This is useful for situations where you have intentionally overlapping locations, say,
 a building icon inside a larger forest icon.
