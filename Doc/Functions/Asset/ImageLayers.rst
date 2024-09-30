@@ -120,7 +120,7 @@ This is optimal for performance and convenience when setting an expression for m
 
 **ForSpecific**
 """"""""""""""""
-``"ForEvery"`` can be alternatively given in place of the speaker value.
+``"ForSpecific"`` can be alternatively given in place of the speaker value.
 You can change the image layer in mass for specific instances of a given monster type based on their order of instance in the scene, rather than the order they are displayed.
 
 Take the example:
