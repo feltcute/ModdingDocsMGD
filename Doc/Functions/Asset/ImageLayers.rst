@@ -102,6 +102,46 @@ See :ref:`CGRoles` for more information on role CGs.
 
 ----
 
+**ForEvery**
+""""""""""""
+``"ForEvery"`` can be alternatively given in place of the speaker value.
+You use it to change every instance of the given monster to the assigned expression.
+
+Optionally, you can use a ``"Random"`` block closed with ``"EndLoop"`` to randomly select from a number of expressions for each instance of the monster.
+
+.. code-block:: javascript
+
+  "ChangeImageLayer", "Expression", "ForEvery", "Imp", "Sleeping",
+  "ChangeImageLayer", "Expression", "ForEvery", "Imp", "Random" "Smile", "Smug", "XD", "EndLoop",
+
+This is optimal for performance and convenience when setting an expression for multiples of the same generic monster in a scene.
+
+----
+
+**ForSpecific**
+""""""""""""""""
+``"ForEvery"`` can be alternatively given in place of the speaker value.
+You can change the image layer in mass for specific instances of a given monster type based on their order of instance in the scene, rather than the order they are displayed.
+
+Take the example:
+
+.. code-block:: javascript
+
+  "ChangeImageLayer", "Expression", "ForSpecific", "Imp", 
+    "3" "Smile", "8", "Smug", 
+  "EndLoop",
+  "ChangeImageLayer", "Blush", "ForSpecific", "Imp", 
+    "2" "Blush", "5", "", 
+  "EndLoop",
+
+If there are 8 imps present, the 8th imp will have a smug expression, even if it is the 12th displayed character. 
+
+If there are only 3, even if the 3rd imp is the 8th displayed monster, 
+it will not be set to the smug expression, it will be set to the smile expression,
+as that is what the third imp present is being set to.
+
+----
+
 .. _RoledCGEnd:
 
 **RoledCGEnd**
