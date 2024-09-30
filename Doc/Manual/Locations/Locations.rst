@@ -271,3 +271,24 @@ The listed :term:`objects` and their :term:`keys` must be included, and each :te
 
 Sets the amount of eros given from chests in exploration via the Grimoire for each type of treasure rarity.
 The listed :term:`objects` and their :term:`keys` must be included, and each :term:`key` must provide a :term:`value` in their string.
+
+**Night Icons**
+----------------
+By default, the game will apply a basic night effect to map clouds and icons without a Night image variant.
+A manually made one will be more accurate in color, and optionally allows for adding light sources.
+
+- Download the night filter overlay: 
+
+:download:`mapnightfilter.zip </img/mapnightfilter.zip>`
+
+- Open your original map icon/cloud in your preferred .psd file compatible image editor. (such as the web-based https://www.photopea.com/ or Krita)
+- Add the night filter as a new layer on top of your icon/cloud.
+- Ensure the night filter is masked by the icon alpha.
+- Export with the exact file name of your original icon, but with ``Night`` appended to the end. 
+
+For example:
+
+- Original icon: "modMapIcon.png"
+- Night variant: "modMapIconNight.png"
+
+Ensure it is in the same location as your original icon/cloud. The game will automatically use the night variant.

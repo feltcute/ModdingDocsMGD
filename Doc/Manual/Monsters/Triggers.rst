@@ -82,11 +82,16 @@ Other monsters at the start of the encounter will append to the playlist. Does n
   {
   "lineTrigger": "EndOfRound",
   "move": [""],
+  "triggersOnce": "ForAllMonsters",
   "theText":[
     "Triggers at the end of every round of combat, before status effects tick down.",
-    "A round would be whenever the player and all monsters present have each had at least one turn.",
-    "Also must be called within the first 10 lineTriggers.",
-    "Note that upon reaching the end of the round, it will trigger for each monster in the encounter."
+      "A round would be whenever the player and all monsters present have each had at least one turn.",
+      "Also must be called within the first 10 lineTriggers.",
+      "Note that upon reaching the end of the round, it will trigger for each monster in the encounter.",
+    "triggersOnce is a optional key unique to EndOfRound and StartOfRound.",
+      "If set to 'ForAllMonsters', it will prevent the EndOfRound for any monsters after this one from being called.",
+      "If set to 'ForSameMonsters', it will only prevent monsters of the same nameID from doing additional triggers.",
+      "You can exclud the key entirely if you don't need it."
     ]
   },
 
@@ -100,11 +105,16 @@ Other monsters at the start of the encounter will append to the playlist. Does n
   {
   "lineTrigger": "StartOfRound",
   "move": [""],
+  "triggersOnce": "ForSameMonsters",
   "theText":[
     "Triggers at the start of a round.",
     "That is, when the player and all monsters have not yet had their turn.",
     "Also must be called within the first 10 lineTriggers.",
     "Note that upon reaching the start of the round, it will trigger for each monster in the encounter."
+    "triggersOnce is a optional key unique to EndOfRound and StartOfRound.",
+      "If set to 'ForAllMonsters', it will prevent the StartOfRound for any monsters after this one from being called.",
+      "If set to 'ForSameMonsters', it will only prevent monsters of the same nameID from doing additional triggers.",
+      "You can exclud the key entirely if you don't need it."
     ]
   },
 
