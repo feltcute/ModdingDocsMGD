@@ -1,7 +1,7 @@
 .. _GetImagePos:
 
-Getting Image Position Coordinates
-==================================
+**Getting Image Position Coordinates**
+======================================
 
 This tutorial will show you how to get the X and Y coordinates for positioning location icons and clouds on the MGD world map using Photopea, 
 a free photo editor you can use within your browser without any download or sign up. Any other image editor should allow for similar functionality if you already have a prefered choice.
