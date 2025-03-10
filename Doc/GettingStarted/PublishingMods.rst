@@ -51,6 +51,8 @@ Most importantly, the below are guaranteed to provide download links that work w
 * `Gitlab <https://gitlab.com/explore/projects>`_ is a larger platform than Gitgud with the same interface, but has the open risk of less permissive `use policies <https://about.gitlab.com/handbook/legal/policies/website-terms-of-use/>`_.
 * `Github <https://github.com/>`_ is the largest platform. While historically fairly permissive of various NSFW projects, keep in mind their `use policies <https://docs.github.com/en/github/site-policy/github-acceptable-use-policies>`_. **It also requires 2-factor authentication to use.**
 
+You can follow step by step instructions for every one of these platforms :doc:`in this tutorial</Doc/Tutorials/FileHostingYourMod>`.
+
 **Where To Share**
 -------------------
 

@@ -1,7 +1,7 @@
 **Introduction**
 =================
 
-**Welcome to the Monster Girl Dreams Modding Documentation for  v26.3**.
+**Welcome to the Monster Girl Dreams Modding Documentation for  v26.8**.
 Here you can find a curated starter guide, optional tutorials, manuals, and various quick reference for all supported MGD modding practices.
 
 The documentation assumes you already have at least a fair bit of experience with the game and understand its various stats from hovering over them in the in-game character menu's 'Stats' tab.
