@@ -16,6 +16,11 @@
 
 **IfPlayerStunnedByParalysis**
 -------------------------------
+
+.. warning:: 
+  This function can never be triggered, as paralysis no longer has a stun. It remains documented for awareness as the game still detects the function.
+
+
 If player is currently stunned by paralysis, jump to the given scene.
 
 .. code-block:: javascript
