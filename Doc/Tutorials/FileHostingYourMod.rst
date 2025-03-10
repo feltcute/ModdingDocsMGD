@@ -301,3 +301,5 @@ Lastly, to help prevent people from getting lost on the homepage of your repo:
 
         .. image:: img/GithubREADME2.png
             :align: center
+
+Now that your mod is published, you can proceed with :doc:`reading information on where to optimally share it</Doc/GettingStarted/MetaCreation>`.
