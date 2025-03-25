@@ -65,16 +65,25 @@ Using ``"Level"`` checks the current player level, each line featuring a certain
 
 ----
 
-**Arousal & MaxArousal**
+**Arousal & ArousalByPercent & MaxArousal**
 """""""""""""""""""""""""
 Using ``"Arousal"`` checks the current condition of the players arousal, each line featuring a certain numerical amount as its condition.
-
 
 .. code-block:: javascript
 
   "SwapLineIf", "Arousal",
     "200", "Line 1",
     "86", "Line 2",
+    "0", "Line 3",
+  "EndLoop"
+
+Using ``"ArousalByPercent"`` checks the current condition of the players arousal against their maximum, each line featuring a certain percent amount as its condition.
+
+.. code-block:: javascript
+
+  "SwapLineIf", "Arousal",
+    "100", "Line 1",
+    "50", "Line 2",
     "0", "Line 3",
   "EndLoop"
 
@@ -90,7 +99,7 @@ Using ``"Arousal"`` checks the current condition of the players arousal, each li
 
 ----
 
-**Energy & MaxEnergy**
+**Energy & EnergyByPercent & MaxEnergy**
 """""""""""""""""""""""
 Using ``"Energy"`` checks the current condition of the players energy, each line featuring a certain numerical amount as its condition.
 
@@ -101,6 +110,17 @@ Using ``"Energy"`` checks the current condition of the players energy, each line
     "49", "Line 2",
     "0" "Line 3",
   "EndLoop"
+
+Using ``"EnergyByPercent"`` checks the current condition of the players energy against their maximum, each line featuring a certain percent amount as its condition.
+
+.. code-block:: javascript
+
+  "SwapLineIf", "Arousal",
+    "100", "Line 1",
+    "50", "Line 2",
+    "0", "Line 3",
+  "EndLoop"
+
 
 ``"MaxEnergy"`` checks the player for their maximum amount of energy they have, each line featuring a certain numerical amount as its condition.
 
