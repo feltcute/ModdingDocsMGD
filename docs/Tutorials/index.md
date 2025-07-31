@@ -5,7 +5,7 @@ novice to advanced modders.
 
 If you are new to modding, you should begin in the [Getting Started](../GettingStarted/Editors.md) section instead, it features a tutorial that will get you to visible results in-game as quickly as possible.
 
-# Overview
+## Overview
 
 <div class="grid cards" markdown>
 - :material-cloud-upload: __File Hosting Your Mod__

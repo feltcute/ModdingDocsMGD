@@ -56,33 +56,6 @@
     margin: 1rem 0;
 }
 
-/* Dark theme adjustments */
-[data-md-color-scheme="mgd"] .md-typeset table.span-table th {
-    background-color: var(--md-default-fg-color--lightest);
-    color: var(--md-default-bg-color);
-}
-
-[data-md-color-scheme="mgd"] .md-typeset table.span-table td {
-    border-color: var(--md-default-bg-color--light);
-}
-
-[data-md-color-scheme="mgd"]
-    .md-typeset
-    table.span-table
-    tbody
-    tr:nth-child(even)
-    td {
-    background-color: var(--md-default-fg-color--table);
-}
-
-[data-md-color-scheme="mgd"] .md-typeset table.span-table th {
-    background-color: var(--md-default-fg-color--lightest);
-}
-
-[data-md-color-scheme="mgd"] .md-typeset table.span-table td strong {
-    color: var(--md-default-fg-color);
-}
-
 /* Ensure proper spacing for nested content */
 .md-typeset table.span-table td p {
     margin: 0;
@@ -124,4 +97,63 @@
     .md-typeset table.span-table td {
         padding: 0.5rem;
     }
+}
+
+
+/* Dark theme adjustments */
+[data-md-color-scheme="mgd"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="mgd"] .md-typeset table.span-table td {
+    border-color: var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="mgd"]
+    .md-typeset
+    table.span-table
+    tbody
+    tr:nth-child(even)
+    td {
+    background-color: var(--md-default-fg-color--table);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td strong {
+    color: var(--md-default-fg-color);
+}
+
+/* Light theme adjustments */
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td {
+    border-color: var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="mgd-light"]
+    .md-typeset
+    table.span-table
+    tbody
+    tr:nth-child(even)
+    td {
+    background-color: var(--md-default-fg-color--table);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td strong {
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset .tabbed-labels {
+    box-shadow: 0 -.05rem var(--md-default-fg-color) inset;
 }
