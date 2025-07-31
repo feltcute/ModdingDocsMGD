@@ -12,7 +12,7 @@ if [ -x "$PYTHON" ]; then
     exit_code=$?
 else
     echo "⚠ ERROR: Python venv not found at mkenv/bin/python"
-    echo "Run: python3 -m venv mkenv && source mkenv/bin/activate && $PIP install -r requirements.txt"
+    echo "Run: python3 -m venv mkenv && source mkenv/bin/activate"
     exit 1
 fi
 

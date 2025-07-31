@@ -86,14 +86,16 @@ def check_dependencies():
             missing.append(pkg)
     
     if missing:
-        print_success(f"Installing missing dependencies: {', '.join(missing)}")
-        
-        # Install packages
+        print_success(f"Installing missing dependencies from requirements.txt...")
+        requirements_path = Path("requirements.txt")
+        if not requirements_path.exists():
+            print_error("requirements.txt not found. Please create it with the required packages.")
+            return False
         try:
             subprocess.check_call([
-                sys.executable, "-m", "pip", "install"
-            ] + missing)
-            print_success("Dependencies installed")
+                sys.executable, "-m", "pip", "install", "-r", str(requirements_path)
+            ])
+            print_success("Dependencies installed from requirements.txt")
         except Exception as e:
             print_error(f"Failed to install dependencies: {e}")
             return False
