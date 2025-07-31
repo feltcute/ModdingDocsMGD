@@ -13,7 +13,7 @@ if exist "%PYTHON_EXE%" (
     "%PYTHON_EXE%" build.py
     set EXIT_CODE=%ERRORLEVEL%
 ) else (
-    echo ⚠ ERROR: Python venv not found at %PYTHON_EXE%
+    echo ERROR: Python venv not found at %PYTHON_EXE%
     echo Copy/paste the following: python -m venv mkenv && call mkenv\Scripts\activate.bat
     pause
     exit /b 1

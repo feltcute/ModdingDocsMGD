@@ -16,13 +16,13 @@ def print_step(step, total, message):
     print(f"[{step}/{total}] {message}")
 
 def print_success(message):
-    print(f"✓ {message}")
+    print(f" {message}")
 
 def print_error(message):
-    print(f"⚠ ERROR: {message}", file=sys.stderr)
+    print(f" ERROR: {message}", file=sys.stderr)
 
 def print_warning(message):
-    print(f"⚠ WARNING: {message}")
+    print(f" WARNING: {message}")
 
 def check_python_version():
     version = sys.version_info
