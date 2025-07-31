@@ -4,7 +4,7 @@ Built using MkDocs Material.
 
 ## Building
 
-To get started, run one of:
+To get started, run one of the following:
 
 ```bash
 ./build.bat       # Windows wrapper to build.py
@@ -14,22 +14,17 @@ python ./build.py # The actual build script
 
 ## Manual Build
 
-Note the dependencies listed. Can also see them in mkdocs.yml
-
 ```bash
-pip install mkdocs mkdocs-material mkdocs-macros-plugin mkdocs-redirects neoteroi_mkdocs
+pip install -r requirements.txt
 python generate_nav.py
 mkdocs build
 ```
 
-Use mkdocs build for more error information.
-
 ## Iterating
 
-`mkdocs serve` gives you live reloading in the browser.
-The best choice for editing existing files or even css. `mkdocs build`
-can be used for manual rebuilds but is slower for iterating.
-Use `python ./build.py` to regenerate navigation.
+- `mkdocs serve` gives you live reloading in the browser, the best choice for editing existing files or even css. 
+- `mkdocs build` can be used for manual rebuilds but is slower for iterating.
+- Use `python ./genereate_nav.py` directly to regenerate navigation when not using the build scripts.
 
 ## Resources
 
